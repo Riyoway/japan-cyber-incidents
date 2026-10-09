@@ -1,0 +1,13 @@
+{
+  "name": "japan-cyber-incidents",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Structured dataset for cyber incidents affecting organizations in Japan",
+  "scripts": {
+    "validate": "node scripts/validate.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

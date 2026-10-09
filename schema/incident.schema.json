@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Riyoway/japan-cyber-incidents/schema/incident.schema.json",
+  "title": "Japan Cyber Incidents Dataset",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "incidents"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "coverage": { "type": "object" },
+    "incidents": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/incident" }
+    }
+  },
+  "$defs": {
+    "nullableDate": {
+      "oneOf": [
+        { "type": "string", "format": "date" },
+        { "type": "null" }
+      ]
+    },
+    "nullableCount": {
+      "oneOf": [
+        { "type": "integer", "minimum": 0 },
+        { "type": "null" }
+      ]
+    },
+    "estimate": {
+      "type": "object",
+      "required": ["value", "unit", "estimate_type", "basis", "confidence"],
+      "properties": {
+        "value": { "$ref": "#/$defs/nullableCount" },
+        "unit": { "type": "string" },
+        "estimate_type": { "type": "string" },
+        "basis": { "type": ["string", "null"] },
+        "confidence": { "enum": ["high", "medium", "low", "unknown"] }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "required": ["kind", "publisher", "published_at", "url"],
+      "properties": {
+        "kind": { "type": "string" },
+        "publisher": { "type": "string" },
+        "published_at": { "$ref": "#/$defs/nullableDate" },
+        "url": { "type": "string", "format": "uri" }
+      },
+      "additionalProperties": false
+    },
+    "statusSnapshot": {
+      "type": "object",
+      "required": ["value", "as_of"],
+      "properties": {
+        "value": { "type": "string" },
+        "as_of": { "type": "string", "format": "date" }
+      },
+      "additionalProperties": false
+    },
+    "incident": {
+      "type": "object",
+      "required": ["id", "organization", "incident", "impact", "sources", "confidence", "last_updated"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$" },
+        "organization": {
+          "type": "object",
+          "required": ["name", "name_en", "type", "size", "industry", "business_model", "service", "country", "estimated_total_users"],
+          "properties": {
+            "name": { "type": "string" },
+            "name_en": { "type": ["string", "null"] },
+            "type": { "type": "string" },
+            "size": { "type": "string" },
+            "industry": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+            "business_model": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "enum": ["b2b", "b2c", "b2g", "public", "internal", "nonprofit", "other"] }
+            },
+            "service": { "type": ["string", "null"] },
+            "country": { "const": "JP" },
+            "estimated_total_users": { "$ref": "#/$defs/estimate" }
+          },
+          "additionalProperties": false
+        },
+        "incident": {
+          "type": "object",
+          "required": ["title", "types", "occurred_at", "detected_at", "disclosed_at", "status", "attack_vector", "threat_actor", "ransomware"],
+          "properties": {
+            "title": { "type": "string" },
+            "types": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+            "occurred_at": { "$ref": "#/$defs/nullableDate" },
+            "detected_at": { "$ref": "#/$defs/nullableDate" },
+            "disclosed_at": { "type": "string", "format": "date" },
+            "status": {
+              "oneOf": [
+                { "type": "string", "description": "Legacy point-in-time status. Its as-of date is the date portion of last_updated." },
+                { "$ref": "#/$defs/statusSnapshot" }
+              ]
+            },
+            "attack_vector": { "type": ["string", "null"] },
+            "threat_actor": { "type": ["string", "null"] },
+            "ransomware": { "type": ["boolean", "null"] }
+          },
+          "additionalProperties": false
+        },
+        "impact": {
+          "type": "object",
+          "required": ["confirmed_breach", "affected_users", "affected_users_note", "affected_organizations", "records", "data_exposed", "service_disruption", "service_disruption_note"],
+          "properties": {
+            "confirmed_breach": { "type": ["boolean", "null"] },
+            "affected_users": { "$ref": "#/$defs/nullableCount" },
+            "affected_users_note": { "type": ["string", "null"] },
+            "affected_organizations": { "$ref": "#/$defs/nullableCount" },
+            "records": { "$ref": "#/$defs/nullableCount" },
+            "data_exposed": { "type": "array", "items": { "type": "string" } },
+            "service_disruption": { "type": "boolean" },
+            "service_disruption_note": { "type": ["string", "null"] }
+          },
+          "additionalProperties": false
+        },
+        "sources": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/source" } },
+        "confidence": { "enum": ["high", "medium", "low", "unknown"] },
+        "last_updated": { "type": "string", "format": "date-time" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
