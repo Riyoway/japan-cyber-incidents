@@ -494,6 +494,16 @@
               "items": {
                 "type": "string"
               }
+            },
+            "threat_actor_attribution": {
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/threatActorAttribution"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           },
           "additionalProperties": false
@@ -571,16 +581,6 @@
         "last_updated": {
           "type": "string",
           "format": "date-time"
-        },
-        "threat_actor_attribution": {
-          "oneOf": [
-            {
-              "$ref": "#/$defs/threatActorAttribution"
-            },
-            {
-              "type": "null"
-            }
-          ]
         }
       },
       "additionalProperties": false
