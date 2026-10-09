@@ -3,200 +3,656 @@
   "$id": "https://github.com/Riyoway/japan-cyber-incidents/schema/incident.schema.json",
   "title": "Japan Cyber Incidents Dataset",
   "type": "object",
-  "required": ["schema_version", "generated_at", "incidents"],
+  "required": [
+    "schema_version",
+    "generated_at",
+    "incidents"
+  ],
   "properties": {
-    "schema_version": { "type": "string" },
-    "generated_at": { "type": "string", "format": "date-time" },
-    "coverage": { "type": "object" },
+    "schema_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "coverage": {
+      "type": "object"
+    },
     "incidents": {
       "type": "array",
-      "items": { "$ref": "#/$defs/incident" }
+      "items": {
+        "$ref": "#/$defs/incident"
+      }
     }
   },
   "$defs": {
     "nullableDate": {
       "oneOf": [
-        { "type": "string", "format": "date" },
-        { "type": "null" }
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
       ]
     },
     "nullableCount": {
       "oneOf": [
-        { "type": "integer", "minimum": 0 },
-        { "type": "null" }
+        {
+          "type": "integer",
+          "minimum": 0
+        },
+        {
+          "type": "null"
+        }
       ]
     },
     "nullableUri": {
       "oneOf": [
-        { "type": "string", "format": "uri" },
-        { "type": "null" }
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "null"
+        }
       ]
     },
     "estimate": {
       "type": "object",
-      "required": ["value", "unit", "estimate_type", "basis", "confidence"],
+      "required": [
+        "value",
+        "unit",
+        "estimate_type",
+        "basis",
+        "confidence"
+      ],
       "properties": {
-        "value": { "$ref": "#/$defs/nullableCount" },
-        "unit": { "type": "string" },
-        "estimate_type": { "type": "string" },
-        "basis": { "type": ["string", "null"] },
-        "confidence": { "enum": ["high", "medium", "low", "unknown"] }
+        "value": {
+          "$ref": "#/$defs/nullableCount"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "estimate_type": {
+          "type": "string"
+        },
+        "basis": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "unknown"
+          ]
+        }
       },
       "additionalProperties": false
     },
     "source": {
       "type": "object",
-      "required": ["kind", "publisher", "published_at", "url"],
+      "required": [
+        "kind",
+        "publisher",
+        "published_at",
+        "url"
+      ],
       "properties": {
-        "kind": { "type": "string" },
-        "publisher": { "type": "string" },
-        "title": { "type": ["string", "null"] },
-        "published_at": { "$ref": "#/$defs/nullableDate" },
-        "url": { "type": "string", "format": "uri" }
+        "kind": {
+          "type": "string"
+        },
+        "publisher": {
+          "type": "string"
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "published_at": {
+          "$ref": "#/$defs/nullableDate"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
       },
       "additionalProperties": false
     },
     "statusSnapshot": {
       "type": "object",
-      "required": ["value", "as_of"],
+      "required": [
+        "value",
+        "as_of"
+      ],
       "properties": {
-        "value": { "type": "string" },
-        "as_of": { "type": "string", "format": "date" }
+        "value": {
+          "type": "string"
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        }
       },
       "additionalProperties": false
     },
     "eventTime": {
       "type": "object",
-      "required": ["start", "end", "timezone", "precision", "time_band", "basis"],
+      "required": [
+        "start",
+        "end",
+        "timezone",
+        "precision",
+        "time_band",
+        "basis"
+      ],
       "properties": {
         "start": {
           "oneOf": [
-            { "type": "string", "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$" },
-            { "type": "null" }
+            {
+              "type": "string",
+              "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "end": {
           "oneOf": [
-            { "type": "string", "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$" },
-            { "type": "null" }
+            {
+              "type": "string",
+              "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+            },
+            {
+              "type": "null"
+            }
           ]
         },
-        "timezone": { "type": ["string", "null"] },
-        "precision": { "enum": ["exact", "approximate", "range", "time_band", "unknown"] },
-        "time_band": { "enum": ["overnight", "morning", "afternoon", "evening", "night", "unknown"] },
-        "basis": { "type": ["string", "null"] }
+        "timezone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "precision": {
+          "enum": [
+            "exact",
+            "approximate",
+            "range",
+            "time_band",
+            "unknown"
+          ]
+        },
+        "time_band": {
+          "enum": [
+            "overnight",
+            "morning",
+            "afternoon",
+            "evening",
+            "night",
+            "unknown"
+          ]
+        },
+        "basis": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       },
       "additionalProperties": false
     },
     "headquarters": {
       "type": "object",
-      "required": ["address", "prefecture", "city", "latitude", "longitude", "precision", "source"],
+      "required": [
+        "address",
+        "prefecture",
+        "city",
+        "latitude",
+        "longitude",
+        "precision",
+        "source"
+      ],
       "properties": {
-        "address": { "type": ["string", "null"] },
-        "prefecture": { "type": ["string", "null"] },
-        "city": { "type": ["string", "null"] },
+        "address": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "prefecture": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "city": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "latitude": {
           "oneOf": [
-            { "type": "number", "minimum": -90, "maximum": 90 },
-            { "type": "null" }
+            {
+              "type": "number",
+              "minimum": -90,
+              "maximum": 90
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "longitude": {
           "oneOf": [
-            { "type": "number", "minimum": -180, "maximum": 180 },
-            { "type": "null" }
+            {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            },
+            {
+              "type": "null"
+            }
           ]
         },
-        "precision": { "enum": ["exact", "city", "prefecture", "unknown"] },
-        "source": { "$ref": "#/$defs/nullableUri" }
+        "precision": {
+          "enum": [
+            "exact",
+            "city",
+            "prefecture",
+            "unknown"
+          ]
+        },
+        "source": {
+          "$ref": "#/$defs/nullableUri"
+        }
       },
       "additionalProperties": false
     },
     "listing": {
       "type": "object",
-      "required": ["is_listed", "market", "ticker"],
+      "required": [
+        "is_listed",
+        "market",
+        "ticker"
+      ],
       "properties": {
-        "is_listed": { "type": ["boolean", "null"] },
-        "market": { "type": ["string", "null"] },
-        "ticker": { "type": ["string", "null"] }
+        "is_listed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "market": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ticker": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       },
       "additionalProperties": false
     },
     "incident": {
       "type": "object",
-      "required": ["id", "organization", "incident", "impact", "sources", "confidence", "last_updated"],
+      "required": [
+        "id",
+        "organization",
+        "incident",
+        "impact",
+        "sources",
+        "confidence",
+        "last_updated"
+      ],
       "properties": {
-        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$" },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]+$"
+        },
         "organization": {
           "type": "object",
-          "required": ["name", "name_en", "type", "size", "industry", "business_model", "service", "country", "estimated_total_users"],
+          "required": [
+            "name",
+            "name_en",
+            "type",
+            "size",
+            "industry",
+            "business_model",
+            "service",
+            "country",
+            "estimated_total_users"
+          ],
           "properties": {
-            "name": { "type": "string" },
-            "name_en": { "type": ["string", "null"] },
-            "type": { "type": "string" },
-            "size": { "type": "string" },
-            "industry": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+            "name": {
+              "type": "string"
+            },
+            "name_en": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "type": {
+              "type": "string"
+            },
+            "size": {
+              "type": "string"
+            },
+            "industry": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string"
+              }
+            },
             "business_model": {
               "type": "array",
               "minItems": 1,
-              "items": { "enum": ["b2b", "b2c", "b2g", "public", "internal", "nonprofit", "other"] }
+              "items": {
+                "enum": [
+                  "b2b",
+                  "b2c",
+                  "b2g",
+                  "public",
+                  "internal",
+                  "nonprofit",
+                  "other"
+                ]
+              }
             },
-            "service": { "type": ["string", "null"] },
-            "country": { "const": "JP" },
-            "website": { "$ref": "#/$defs/nullableUri" },
-            "headquarters": { "$ref": "#/$defs/headquarters" },
-            "employee_count": { "$ref": "#/$defs/estimate" },
-            "listing": { "$ref": "#/$defs/listing" },
-            "estimated_total_users": { "$ref": "#/$defs/estimate" }
+            "service": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "country": {
+              "const": "JP"
+            },
+            "website": {
+              "$ref": "#/$defs/nullableUri"
+            },
+            "headquarters": {
+              "$ref": "#/$defs/headquarters"
+            },
+            "employee_count": {
+              "$ref": "#/$defs/estimate"
+            },
+            "listing": {
+              "$ref": "#/$defs/listing"
+            },
+            "estimated_total_users": {
+              "$ref": "#/$defs/estimate"
+            }
           },
           "additionalProperties": false
         },
         "incident": {
           "type": "object",
-          "required": ["title", "types", "occurred_at", "detected_at", "disclosed_at", "status", "attack_vector", "threat_actor", "ransomware"],
+          "required": [
+            "title",
+            "types",
+            "occurred_at",
+            "detected_at",
+            "disclosed_at",
+            "status",
+            "attack_vector",
+            "threat_actor",
+            "ransomware"
+          ],
           "properties": {
-            "title": { "type": "string" },
-            "types": { "type": "array", "minItems": 1, "items": { "type": "string" } },
-            "occurred_at": { "$ref": "#/$defs/nullableDate" },
-            "occurred_time": { "$ref": "#/$defs/eventTime" },
-            "detected_at": { "$ref": "#/$defs/nullableDate" },
-            "detected_time": { "$ref": "#/$defs/eventTime" },
-            "disclosed_at": { "type": "string", "format": "date" },
+            "title": {
+              "type": "string"
+            },
+            "types": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string"
+              }
+            },
+            "occurred_at": {
+              "$ref": "#/$defs/nullableDate"
+            },
+            "occurred_time": {
+              "$ref": "#/$defs/eventTime"
+            },
+            "detected_at": {
+              "$ref": "#/$defs/nullableDate"
+            },
+            "detected_time": {
+              "$ref": "#/$defs/eventTime"
+            },
+            "disclosed_at": {
+              "type": "string",
+              "format": "date"
+            },
             "status": {
               "oneOf": [
-                { "type": "string", "description": "Legacy point-in-time status. Its as-of date is the date portion of last_updated." },
-                { "$ref": "#/$defs/statusSnapshot" }
+                {
+                  "type": "string",
+                  "description": "Legacy point-in-time status. Its as-of date is the date portion of last_updated."
+                },
+                {
+                  "$ref": "#/$defs/statusSnapshot"
+                }
               ]
             },
-            "attack_vector": { "type": ["string", "null"] },
-            "threat_actor": { "type": ["string", "null"] },
-            "ransomware": { "type": ["boolean", "null"] },
-            "malware_family": { "type": ["string", "null"] },
-            "vulnerabilities": { "type": "array", "items": { "type": "string" } },
-            "affected_systems": { "type": "array", "items": { "type": "string" } },
-            "affected_regions": { "type": "array", "items": { "type": "string" } }
+            "attack_vector": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "threat_actor": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "ransomware": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "malware_family": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "vulnerabilities": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "affected_systems": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "affected_regions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
           },
           "additionalProperties": false
         },
         "impact": {
           "type": "object",
-          "required": ["confirmed_breach", "affected_users", "affected_users_note", "affected_organizations", "records", "data_exposed", "service_disruption", "service_disruption_note"],
+          "required": [
+            "confirmed_breach",
+            "affected_users",
+            "affected_users_note",
+            "affected_organizations",
+            "records",
+            "data_exposed",
+            "service_disruption",
+            "service_disruption_note"
+          ],
           "properties": {
-            "confirmed_breach": { "type": ["boolean", "null"] },
-            "affected_users": { "$ref": "#/$defs/nullableCount" },
-            "affected_users_note": { "type": ["string", "null"] },
-            "affected_organizations": { "$ref": "#/$defs/nullableCount" },
-            "records": { "$ref": "#/$defs/nullableCount" },
-            "data_exposed": { "type": "array", "items": { "type": "string" } },
-            "service_disruption": { "type": "boolean" },
-            "service_disruption_note": { "type": ["string", "null"] },
-            "service_recovered_at": { "$ref": "#/$defs/nullableDate" }
+            "confirmed_breach": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "affected_users": {
+              "$ref": "#/$defs/nullableCount"
+            },
+            "affected_users_note": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "affected_organizations": {
+              "$ref": "#/$defs/nullableCount"
+            },
+            "records": {
+              "$ref": "#/$defs/nullableCount"
+            },
+            "data_exposed": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "service_disruption": {
+              "type": "boolean"
+            },
+            "service_disruption_note": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "service_recovered_at": {
+              "$ref": "#/$defs/nullableDate"
+            }
           },
           "additionalProperties": false
         },
-        "sources": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/source" } },
-        "confidence": { "enum": ["high", "medium", "low", "unknown"] },
-        "last_updated": { "type": "string", "format": "date-time" }
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/source"
+          }
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "unknown"
+          ]
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "threat_actor_attribution": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/threatActorAttribution"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "threatActorAttribution": {
+      "type": "object",
+      "required": [
+        "name",
+        "actor_type",
+        "aliases",
+        "status",
+        "confidence",
+        "basis",
+        "sources",
+        "reviewed_at"
+      ],
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "actor_type": {
+          "enum": [
+            "ransomware_group",
+            "cybercrime_group",
+            "state_sponsored",
+            "hacktivist",
+            "individual",
+            "unknown"
+          ]
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "enum": [
+            "confirmed",
+            "suspected",
+            "attacker_claim",
+            "unknown"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "unknown"
+          ]
+        },
+        "basis": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "reviewed_at": {
+          "type": "string",
+          "format": "date"
+        }
       },
       "additionalProperties": false
     }
