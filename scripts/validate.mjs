@@ -9,6 +9,8 @@ const allowedBusinessModels = new Set(["b2b", "b2c", "b2g", "public", "internal"
 const allowedTimePrecision = new Set(["exact", "approximate", "range", "time_band", "unknown"]);
 const allowedTimeBands = new Set(["overnight", "morning", "afternoon", "evening", "night", "unknown"]);
 const allowedLocationPrecision = new Set(["exact", "city", "prefecture", "unknown"]);
+const allowedThreatActorTypes = new Set(["ransomware_group", "cybercrime_group", "state_sponsored", "hacktivist", "individual", "unknown"]);
+const allowedAttributionStatuses = new Set(["confirmed", "suspected", "attacker_claim", "unknown"]);
 
 const isDate = (v) => v === null || /^\d{4}-\d{2}-\d{2}$/.test(v);
 const isDateTime = (v) => typeof v === "string" && !Number.isNaN(Date.parse(v));
@@ -49,6 +51,30 @@ function validateEventTime(value, p) {
   if (!allowedTimePrecision.has(value.precision)) errors.push(`${p}.precision is invalid`);
   if (!allowedTimeBands.has(value.time_band)) errors.push(`${p}.time_band is invalid`);
   if (!(value.basis === null || typeof value.basis === "string")) errors.push(`${p}.basis must be string or null`);
+}
+
+function validateThreatActorAttribution(value, p, threatActor) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    errors.push(`${p} must be an object`);
+    return;
+  }
+
+  if (!(value.name === null || typeof value.name === "string")) errors.push(`${p}.name must be string or null`);
+  if (!allowedThreatActorTypes.has(value.actor_type)) errors.push(`${p}.actor_type is invalid`);
+  if (!Array.isArray(value.aliases) || value.aliases.some((alias) => typeof alias !== "string")) errors.push(`${p}.aliases must be an array of strings`);
+  if (!allowedAttributionStatuses.has(value.status)) errors.push(`${p}.status is invalid`);
+  if (!allowedConfidence.has(value.confidence)) errors.push(`${p}.confidence is invalid`);
+  if (!(value.basis === null || typeof value.basis === "string")) errors.push(`${p}.basis must be string or null`);
+  if (!Array.isArray(value.sources) || value.sources.some((url) => !isHttpUrl(url) || url === null)) errors.push(`${p}.sources must be an array of http(s) URLs`);
+  if (!isDate(value.reviewed_at) || value.reviewed_at === null) errors.push(`${p}.reviewed_at must be YYYY-MM-DD`);
+
+  if (value.status === "unknown") {
+    if (value.name !== null) errors.push(`${p}.name must be null when status is unknown`);
+    if (threatActor !== null) errors.push(`${p} requires incident.threat_actor to be null when status is unknown`);
+  } else {
+    if (typeof value.name !== "string" || value.name.length === 0) errors.push(`${p}.name is required for a named attribution`);
+    if (threatActor !== value.name) errors.push(`${p}.name must match incident.threat_actor`);
+  }
 }
 
 if (typeof data.schema_version !== "string") errors.push("root.schema_version is required");
@@ -122,6 +148,8 @@ for (const [index, item] of (data.incidents ?? []).entries()) {
     errors.push(`${p}.incident.status must be a legacy string or { value, as_of } snapshot`);
   }
 
+  if (!(incident.threat_actor === null || typeof incident.threat_actor === "string")) errors.push(`${p}.incident.threat_actor must be string or null`);
+  if (incident.threat_actor_attribution !== undefined) validateThreatActorAttribution(incident.threat_actor_attribution, `${p}.incident.threat_actor_attribution`, incident.threat_actor);
   if (!(incident.ransomware === null || typeof incident.ransomware === "boolean")) errors.push(`${p}.incident.ransomware must be boolean or null`);
   if (!(incident.malware_family === undefined || incident.malware_family === null || typeof incident.malware_family === "string")) errors.push(`${p}.incident.malware_family must be string or null`);
   for (const key of ["vulnerabilities", "affected_systems", "affected_regions"]) {
