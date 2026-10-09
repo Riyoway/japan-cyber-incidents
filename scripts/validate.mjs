@@ -6,10 +6,50 @@ const errors = [];
 const ids = new Set();
 const allowedConfidence = new Set(["high", "medium", "low", "unknown"]);
 const allowedBusinessModels = new Set(["b2b", "b2c", "b2g", "public", "internal", "nonprofit", "other"]);
+const allowedTimePrecision = new Set(["exact", "approximate", "range", "time_band", "unknown"]);
+const allowedTimeBands = new Set(["overnight", "morning", "afternoon", "evening", "night", "unknown"]);
+const allowedLocationPrecision = new Set(["exact", "city", "prefecture", "unknown"]);
 
 const isDate = (v) => v === null || /^\d{4}-\d{2}-\d{2}$/.test(v);
 const isDateTime = (v) => typeof v === "string" && !Number.isNaN(Date.parse(v));
 const isCount = (v) => v === null || (Number.isInteger(v) && v >= 0);
+const isTime = (v) => v === null || (typeof v === "string" && /^([01]\d|2[0-3]):[0-5]\d$/.test(v));
+const isHttpUrl = (v) => {
+  if (v === null) return true;
+  try {
+    const url = new URL(v);
+    return /^https?:$/.test(url.protocol);
+  } catch {
+    return false;
+  }
+};
+
+function validateEstimate(estimate, p) {
+  if (!estimate || typeof estimate !== "object" || Array.isArray(estimate)) {
+    errors.push(`${p} must be an object`);
+    return;
+  }
+  if (!(estimate.value === null || (Number.isInteger(estimate.value) && estimate.value >= 0))) {
+    errors.push(`${p}.value must be null or a non-negative integer`);
+  }
+  if (typeof estimate.unit !== "string") errors.push(`${p}.unit is required`);
+  if (typeof estimate.estimate_type !== "string") errors.push(`${p}.estimate_type is required`);
+  if (!(estimate.basis === null || typeof estimate.basis === "string")) errors.push(`${p}.basis must be string or null`);
+  if (!allowedConfidence.has(estimate.confidence)) errors.push(`${p}.confidence is invalid`);
+}
+
+function validateEventTime(value, p) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    errors.push(`${p} must be an object`);
+    return;
+  }
+  if (!isTime(value.start)) errors.push(`${p}.start must be HH:MM or null`);
+  if (!isTime(value.end)) errors.push(`${p}.end must be HH:MM or null`);
+  if (!(value.timezone === null || typeof value.timezone === "string")) errors.push(`${p}.timezone must be string or null`);
+  if (!allowedTimePrecision.has(value.precision)) errors.push(`${p}.precision is invalid`);
+  if (!allowedTimeBands.has(value.time_band)) errors.push(`${p}.time_band is invalid`);
+  if (!(value.basis === null || typeof value.basis === "string")) errors.push(`${p}.basis must be string or null`);
+}
 
 if (typeof data.schema_version !== "string") errors.push("root.schema_version is required");
 if (!isDateTime(data.generated_at)) errors.push("root.generated_at must be an ISO datetime");
@@ -31,9 +71,36 @@ for (const [index, item] of (data.incidents ?? []).entries()) {
     if (!allowedBusinessModels.has(model)) errors.push(`${p}.organization.business_model contains unsupported value: ${model}`);
   }
 
-  const estimate = org.estimated_total_users ?? {};
-  if (!(estimate.value === null || (Number.isInteger(estimate.value) && estimate.value >= 0))) errors.push(`${p}.organization.estimated_total_users.value must be null or a non-negative integer`);
-  if (!allowedConfidence.has(estimate.confidence)) errors.push(`${p}.organization.estimated_total_users.confidence is invalid`);
+  validateEstimate(org.estimated_total_users ?? {}, `${p}.organization.estimated_total_users`);
+
+  if (org.website !== undefined && !isHttpUrl(org.website)) errors.push(`${p}.organization.website must be an http(s) URL or null`);
+  if (org.employee_count !== undefined) validateEstimate(org.employee_count, `${p}.organization.employee_count`);
+
+  if (org.headquarters !== undefined) {
+    const hq = org.headquarters;
+    if (!hq || typeof hq !== "object" || Array.isArray(hq)) {
+      errors.push(`${p}.organization.headquarters must be an object`);
+    } else {
+      if (!(hq.address === null || typeof hq.address === "string")) errors.push(`${p}.organization.headquarters.address must be string or null`);
+      if (!(hq.prefecture === null || typeof hq.prefecture === "string")) errors.push(`${p}.organization.headquarters.prefecture must be string or null`);
+      if (!(hq.city === null || typeof hq.city === "string")) errors.push(`${p}.organization.headquarters.city must be string or null`);
+      if (!(hq.latitude === null || (typeof hq.latitude === "number" && hq.latitude >= -90 && hq.latitude <= 90))) errors.push(`${p}.organization.headquarters.latitude is invalid`);
+      if (!(hq.longitude === null || (typeof hq.longitude === "number" && hq.longitude >= -180 && hq.longitude <= 180))) errors.push(`${p}.organization.headquarters.longitude is invalid`);
+      if (!allowedLocationPrecision.has(hq.precision)) errors.push(`${p}.organization.headquarters.precision is invalid`);
+      if (!isHttpUrl(hq.source)) errors.push(`${p}.organization.headquarters.source must be an http(s) URL or null`);
+    }
+  }
+
+  if (org.listing !== undefined) {
+    const listing = org.listing;
+    if (!listing || typeof listing !== "object" || Array.isArray(listing)) {
+      errors.push(`${p}.organization.listing must be an object`);
+    } else {
+      if (!(listing.is_listed === null || typeof listing.is_listed === "boolean")) errors.push(`${p}.organization.listing.is_listed must be boolean or null`);
+      if (!(listing.market === null || typeof listing.market === "string")) errors.push(`${p}.organization.listing.market must be string or null`);
+      if (!(listing.ticker === null || typeof listing.ticker === "string")) errors.push(`${p}.organization.listing.ticker must be string or null`);
+    }
+  }
 
   const incident = item.incident ?? {};
   if (!incident.title) errors.push(`${p}.incident.title is required`);
@@ -42,6 +109,9 @@ for (const [index, item] of (data.incidents ?? []).entries()) {
     if (!isDate(incident[key])) errors.push(`${p}.incident.${key} must be YYYY-MM-DD or null`);
   }
   if (!incident.disclosed_at) errors.push(`${p}.incident.disclosed_at is required`);
+
+  if (incident.occurred_time !== undefined) validateEventTime(incident.occurred_time, `${p}.incident.occurred_time`);
+  if (incident.detected_time !== undefined) validateEventTime(incident.detected_time, `${p}.incident.detected_time`);
 
   if (typeof incident.status === "string") {
     if (!incident.status) errors.push(`${p}.incident.status must not be empty`);
@@ -53,6 +123,12 @@ for (const [index, item] of (data.incidents ?? []).entries()) {
   }
 
   if (!(incident.ransomware === null || typeof incident.ransomware === "boolean")) errors.push(`${p}.incident.ransomware must be boolean or null`);
+  if (!(incident.malware_family === undefined || incident.malware_family === null || typeof incident.malware_family === "string")) errors.push(`${p}.incident.malware_family must be string or null`);
+  for (const key of ["vulnerabilities", "affected_systems", "affected_regions"]) {
+    if (incident[key] !== undefined && (!Array.isArray(incident[key]) || incident[key].some((v) => typeof v !== "string"))) {
+      errors.push(`${p}.incident.${key} must be an array of strings`);
+    }
+  }
 
   const impact = item.impact ?? {};
   if (!(impact.confirmed_breach === null || typeof impact.confirmed_breach === "boolean")) errors.push(`${p}.impact.confirmed_breach must be boolean or null`);
@@ -61,19 +137,16 @@ for (const [index, item] of (data.incidents ?? []).entries()) {
   }
   if (!Array.isArray(impact.data_exposed)) errors.push(`${p}.impact.data_exposed must be an array`);
   if (typeof impact.service_disruption !== "boolean") errors.push(`${p}.impact.service_disruption must be boolean`);
+  if (impact.service_recovered_at !== undefined && !isDate(impact.service_recovered_at)) errors.push(`${p}.impact.service_recovered_at must be YYYY-MM-DD or null`);
 
   if (!Array.isArray(item.sources) || item.sources.length === 0) {
     errors.push(`${p}.sources must contain at least one source`);
   } else {
     for (const [sourceIndex, source] of item.sources.entries()) {
-      try {
-        const url = new URL(source.url);
-        if (!/^https?:$/.test(url.protocol)) throw new Error();
-      } catch {
-        errors.push(`${p}.sources[${sourceIndex}].url is invalid`);
-      }
+      if (!isHttpUrl(source.url)) errors.push(`${p}.sources[${sourceIndex}].url is invalid`);
       if (!source.publisher || !source.kind) errors.push(`${p}.sources[${sourceIndex}] needs publisher and kind`);
       if (!isDate(source.published_at)) errors.push(`${p}.sources[${sourceIndex}].published_at must be YYYY-MM-DD or null`);
+      if (!(source.title === undefined || source.title === null || typeof source.title === "string")) errors.push(`${p}.sources[${sourceIndex}].title must be string or null`);
     }
   }
 
