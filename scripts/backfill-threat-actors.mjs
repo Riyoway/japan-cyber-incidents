@@ -133,7 +133,9 @@ schema.$defs.threatActorAttribution = {
   additionalProperties: false
 };
 
-schema.$defs.incident.properties.threat_actor_attribution = {
+// threat_actor_attribution belongs inside the nested incident object.
+delete schema.$defs.incident.properties.threat_actor_attribution;
+schema.$defs.incident.properties.incident.properties.threat_actor_attribution = {
   oneOf: [
     { $ref: "#/$defs/threatActorAttribution" },
     { type: "null" }
