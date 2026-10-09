@@ -24,7 +24,7 @@ jobs:
       - name: Restore researched dataset
         shell: bash
         run: |
-          cat .backfill/part1.b64 .backfill/part2.b64 .backfill/part3.b64 .backfill/part4.b64 | base64 --decode > data/incidents.json
+          cat .backfill/part*.b64 | base64 --decode > data/incidents.json
           npm run validate
 
       - name: Commit backfill
