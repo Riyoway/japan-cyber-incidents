@@ -1,4 +1,4 @@
-name: Audit missing threat actors
+name: Apply one-time threat actor backfill
 
 on:
   push:
@@ -10,60 +10,154 @@ permissions:
   contents: write
 
 jobs:
-  audit:
+  backfill:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Find exact claim matches
+
+      - name: Apply supported threat actor attributions
         shell: python
         run: |
-          import json, re
+          import json
+          from datetime import datetime, timezone
           from pathlib import Path
-          from urllib.parse import urlparse
 
-          data = json.loads(Path("data/incidents.json").read_text(encoding="utf-8"))
-          claims = json.loads(Path("tmp-ransomware-live-jp-2026.json").read_text(encoding="utf-8"))
-          corp = ["株式会社","有限会社","合同会社","一般社団法人","一般財団法人","学校法人","国立大学法人","国立研究開発法人","co.,ltd.","co., ltd.","co., ltd","co ltd","co ltd.","corporation","company limited","limited","inc.","inc","ltd.","ltd"]
+          p = Path("data/incidents.json")
+          data = json.loads(p.read_text(encoding="utf-8"))
 
-          def norm(s):
-              if not s: return ""
-              s = str(s).lower()
-              for x in corp: s = s.replace(x, "")
-              return re.sub(r"[\W_]+", "", s, flags=re.UNICODE)
+          reviewed_at = "2026-10-10"
+          now = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+          tracker = "https://api.ransomware.live/v2/countryvictims/JP"
 
-          def dom(s):
-              if not s: return ""
-              s = str(s).strip()
-              if not s.startswith(("http://","https://")): s = "https://" + s
-              try:
-                  d = urlparse(s).netloc.lower().split(":")[0]
-                  return d[4:] if d.startswith("www.") else d
-              except Exception: return ""
+          mappings = {
+              "2026-06-30-musashino-university": {
+                  "name": "Qilin",
+                  "basis": "Qilin listed Musashino University on its data-leak site; the victim name and university domain match the incident. This is recorded as an attacker claim, not independent technical attribution.",
+                  "sources": [tracker, "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/"],
+              },
+              "2026-06-30-higuchi-shokai": {
+                  "name": "Stormous",
+                  "basis": "Stormous listed higuchi-inc.co.jp on its leak site; the domain corresponds to Higuchi Shokai. This is an attacker claim, not independent technical attribution.",
+                  "sources": [tracker, "https://cyberthreatintelligence.net/ransomware-victim/higuchi-inc-co-jp-stormous-2026"],
+              },
+              "2026-04-14-shin-fa-com": {
+                  "name": "cmdorganization",
+                  "basis": "cmdorganization listed New FACOM Co., Ltd. / s-facom.jp as a victim. The company and domain match Shin FA-COM. This is an attacker claim, not independent technical attribution.",
+                  "sources": [tracker, "https://www.dexpose.io/cmdorganization-targets-japanese-tech-firm-new-facom-co-ltd/"],
+              },
+              "2026-05-12-oriental-diamond": {
+                  "name": "The Gentlemen",
+                  "basis": "The Gentlemen listed Oriental Diamond / orientaldiamond.jp as a victim. This is an attacker claim, not independent technical attribution.",
+                  "sources": [tracker, "https://www.dexpose.io/the-gentlemen-ransomware-attack-on-oriental-diamond-inc/"],
+              },
+              "2026-05-08-nostram": {
+                  "name": "The Gentlemen",
+                  "basis": "The Gentlemen listed Nostrum / nostrum.co.jp as a victim. The company/domain match the incident. This is an attacker claim, not independent technical attribution.",
+                  "sources": [tracker, "https://www.dexpose.io/the-gentlemen-target-japans-nostrum-corporation-in-ransomware-attack/"],
+              },
+              "2026-03-17-medica-publishing": {
+                  "name": "The Gentlemen",
+                  "basis": "The Gentlemen listed MEDICUS SHUPPAN / medica.co.jp as a victim. The name and domain match Medica Publishing. This is an attacker claim, not independent technical attribution.",
+                  "sources": [tracker, "https://www.dexpose.io/the-gentlemen-launch-ransomware-attack-on-medicus-shuppan/"],
+              },
+              "2026-01-23-makimura-ransomware": {
+                  "name": "NightSpire",
+                  "basis": "NightSpire listed Makimura Co., Ltd. / makimura.co.jp as a victim. This is an attacker claim, not independent technical attribution.",
+                  "sources": [tracker, "https://www.dexpose.io/nightspire-targets-makimura-co-ltd-in-ransomware-attack/"],
+              },
+              "2026-01-18-sincere-ransomware": {
+                  "name": "The Gentlemen",
+                  "basis": "The Gentlemen listed Sincere Corporation / sincerehq.com as a victim. This is an attacker claim, not independent technical attribution.",
+                  "sources": [tracker, "https://www.dexpose.io/thegentlemen-ransomware-attack-on-sincere-corporation/"],
+              },
+              "2026-04-28-marutake": {
+                  "name": "The Gentlemen",
+                  "basis": "The Gentlemen claimed Marutake Co., Ltd. / kk-marutake.co.jp; the official Marutake site confirms this is the same company affected by the April 2026 ransomware incident. This is an attacker claim, not independent technical attribution.",
+                  "sources": [tracker, "https://www.dexpose.io/the-gentlemen-ransomware-attack-on-marutake-co-ltd/", "https://www.kk-marutake.co.jp/2026/05/08/6669"],
+              },
+              "2026-05-14-nihon-shisan-soken": {
+                  "name": "SafePay",
+                  "basis": "Public ransomware tracking attributes the May 2026 Aoyama Zaisan Networks / Japan Asset Research Institute incident to a SafePay leak-site claim; the victim later confirmed that stolen customer data appeared on the attacker's leak site. This remains an attacker-claim attribution.",
+                  "sources": ["https://ransomnews.com/ransomware-attacks/2026-05/", "https://www.nssg.co.jp/news/2026/0911-1600.html"],
+              },
+          }
 
-          rows=[]
-          for r in data.get("incidents", []):
-              inc=r.get("incident",{})
-              attr=inc.get("threat_actor_attribution") or {}
-              if inc.get("threat_actor") or attr.get("name"): continue
-              org=r.get("organization",{})
-              names=[norm(org.get("name")),norm(org.get("name_en"))]
-              names=[x for x in names if x]
-              od=dom(org.get("website"))
-              matches=[]
-              for c in claims:
-                  cn=norm(c.get("victim")); cd=dom(c.get("website"))
-                  exact_domain=bool(od and cd and od==cd)
-                  exact_name=bool(cn and cn in names)
-                  name_contains=bool(cn and any(len(n)>=5 and len(cn)>=5 and (n in cn or cn in n) for n in names))
-                  if exact_domain or exact_name or name_contains:
-                      matches.append({**c,"exact_domain":exact_domain,"exact_name":exact_name,"name_contains":name_contains})
-              if matches:
-                  rows.append({"id":r.get("id"),"organization":org.get("name"),"organization_en":org.get("name_en"),"website":org.get("website"),"ransomware":inc.get("ransomware"),"matches":matches})
-          Path("tmp-exact-actor-matches.json").write_text(json.dumps(rows,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-      - name: Commit report
+          changed = 0
+          named = 0
+          reviewed_unknown = 0
+
+          for record in data.get("incidents", []):
+              incident = record.get("incident", {})
+              rid = record.get("id")
+
+              if rid in mappings:
+                  m = mappings[rid]
+                  incident["threat_actor"] = m["name"]
+                  incident["threat_actor_attribution"] = {
+                      "name": m["name"],
+                      "actor_type": "ransomware_group",
+                      "aliases": [],
+                      "status": "attacker_claim",
+                      "confidence": "high",
+                      "basis": m["basis"],
+                      "sources": m["sources"],
+                      "reviewed_at": reviewed_at,
+                  }
+                  record["last_updated"] = now
+                  changed += 1
+                  named += 1
+                  continue
+
+              # Complete the one-time ransomware backlog review without inventing an actor.
+              # Existing named/structured attributions are preserved.
+              if incident.get("ransomware") is True and not incident.get("threat_actor") and incident.get("threat_actor_attribution") is None:
+                  incident["threat_actor_attribution"] = {
+                      "name": None,
+                      "actor_type": "unknown",
+                      "aliases": [],
+                      "status": "unknown",
+                      "confidence": "unknown",
+                      "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+                      "sources": [],
+                      "reviewed_at": reviewed_at,
+                  }
+                  record["last_updated"] = now
+                  changed += 1
+                  reviewed_unknown += 1
+
+          missing_mapping_ids = sorted(set(mappings) - {r.get("id") for r in data.get("incidents", [])})
+          if missing_mapping_ids:
+              raise SystemExit(f"Mapping IDs not found: {missing_mapping_ids}")
+
+          if changed:
+              data["generated_at"] = now
+              p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+          print(f"Changed {changed} records: {named} named attributions, {reviewed_unknown} reviewed unknowns")
+          print(f"generated_at={data.get('generated_at')}")
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - run: npm install
+      - run: npm run validate
+
+      - name: Remove temporary audit artifacts
+        run: |
+          rm -f \
+            tmp-missing-actors.json \
+            tmp-missing-ransomware-actors.json \
+            tmp-ransomware-live-jp.json \
+            tmp-ransomware-live-jp-2026.json \
+            tmp-actor-candidates.json \
+            tmp-exact-actor-matches.json \
+            .github/workflows/tmp-audit-missing-actors.yml
+
+      - name: Commit canonical backfill and cleanup
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tmp-exact-actor-matches.json
-          git commit -m "chore: add exact actor match report"
+          git add -A
+          git commit -m "data: backfill ransomware threat actor attribution"
           git push
