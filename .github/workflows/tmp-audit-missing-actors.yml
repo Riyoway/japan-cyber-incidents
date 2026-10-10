@@ -14,123 +14,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build high-confidence ransomware actor candidates
+      - name: Compact 2026 Japan ransomware.live claims
         shell: python
         run: |
-          import json, re
-          from datetime import datetime, timezone
-          from difflib import SequenceMatcher
+          import json
           from pathlib import Path
-          from urllib.parse import urlparse
 
-          dataset = json.loads(Path("data/incidents.json").read_text(encoding="utf-8"))
           victims = json.loads(Path("tmp-ransomware-live-jp.json").read_text(encoding="utf-8"))
-
-          corp_tokens = [
-              "株式会社", "有限会社", "合同会社", "一般社団法人", "一般財団法人", "学校法人", "国立大学法人", "国立研究開発法人",
-              "co ltd", "co., ltd.", "co., ltd", "co.,ltd", "co ltd.", "corporation", "corp", "inc", "inc.", "limited", "ltd", "ltd.",
-          ]
-
-          def norm(s):
-              if not s: return ""
-              s = str(s).lower().strip()
-              for token in corp_tokens:
-                  s = s.replace(token, "")
-              s = re.sub(r"[\W_]+", "", s, flags=re.UNICODE)
-              return s
-
-          def domain(url):
-              if not url: return ""
-              value = str(url).strip()
-              if not value.startswith(("http://", "https://")):
-                  value = "https://" + value
-              try:
-                  d = urlparse(value).netloc.lower().split(":")[0]
-                  return d[4:] if d.startswith("www.") else d
-              except Exception:
-                  return ""
-
-          def parse_date(value):
-              if not value: return None
-              try:
-                  return datetime.fromisoformat(str(value).replace("Z", "+00:00")).astimezone(timezone.utc)
-              except Exception:
-                  try:
-                      return datetime.fromisoformat(str(value)[:10]).replace(tzinfo=timezone.utc)
-                  except Exception:
-                      return None
-
-          output = []
-          for r in dataset.get("incidents", []):
-              inc = r.get("incident", {})
-              attr = inc.get("threat_actor_attribution") or {}
-              if inc.get("ransomware") is not True or inc.get("threat_actor") or attr.get("name"):
-                  continue
-
-              org = r.get("organization", {})
-              names = [x for x in [org.get("name"), org.get("name_en")] if x]
-              normalized_names = [norm(x) for x in names if norm(x)]
-              org_domain = domain(org.get("website"))
-              incident_date = parse_date(inc.get("occurred_at") or inc.get("detected_at") or inc.get("disclosed_at"))
-              matches = []
-
-              for v in victims:
-                  if not isinstance(v, dict): continue
-                  victim_name = v.get("post_title") or v.get("victim") or v.get("name") or ""
-                  vn = norm(victim_name)
-                  if not vn: continue
-                  v_domain = domain(v.get("website") or v.get("domain") or "")
-                  claim_date = parse_date(v.get("published") or v.get("discovered") or v.get("date"))
-                  days = abs((claim_date - incident_date).days) if claim_date and incident_date else None
-                  exact_domain = bool(org_domain and v_domain and org_domain == v_domain)
-
-                  best_ratio = max((SequenceMatcher(None, n, vn).ratio() for n in normalized_names), default=0)
-                  exact_name = any(n == vn for n in normalized_names)
-                  substring = any(len(n) >= 4 and (n in vn or vn in n) for n in normalized_names)
-
-                  score = 0
-                  reasons = []
-                  if exact_domain:
-                      score = max(score, 100); reasons.append("exact_domain")
-                  if exact_name:
-                      score = max(score, 95); reasons.append("exact_name")
-                  if substring:
-                      score = max(score, 88); reasons.append("name_substring")
-                  if best_ratio >= 0.88:
-                      score = max(score, 84); reasons.append(f"name_ratio:{best_ratio:.2f}")
-                  elif best_ratio >= 0.78 and days is not None and days <= 180:
-                      score = max(score, 76); reasons.append(f"name_ratio:{best_ratio:.2f}")
-                  if days is not None and days <= 120 and score:
-                      score += 4; reasons.append(f"date_delta:{days}d")
-
-                  if score >= 80:
-                      matches.append({
-                          "score": score,
-                          "reasons": reasons,
-                          "victim": victim_name,
-                          "group": v.get("group_name") or v.get("group") or v.get("gang"),
-                          "victim_domain": v_domain or None,
-                          "published": v.get("published"),
-                          "discovered": v.get("discovered"),
-                          "claim_url": v.get("post_url") or v.get("permalink") or v.get("url"),
-                      })
-
-              matches.sort(key=lambda x: x["score"], reverse=True)
-              output.append({
-                  "id": r.get("id"),
-                  "organization": org.get("name"),
-                  "organization_en": org.get("name_en"),
-                  "website_domain": org_domain or None,
-                  "incident_date": (inc.get("occurred_at") or inc.get("detected_at") or inc.get("disclosed_at")),
-                  "matches": matches[:5],
+          rows = []
+          for v in victims:
+              if not isinstance(v, dict): continue
+              date = v.get("published") or v.get("discovered") or ""
+              if not str(date).startswith("2026-"): continue
+              rows.append({
+                  "victim": v.get("post_title") or v.get("victim") or v.get("name"),
+                  "group": v.get("group_name") or v.get("group") or v.get("gang"),
+                  "website": v.get("website") or v.get("domain"),
+                  "published": v.get("published"),
+                  "discovered": v.get("discovered"),
+                  "post_url": v.get("post_url") or v.get("permalink") or v.get("url"),
               })
-
-          Path("tmp-actor-candidates.json").write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          rows.sort(key=lambda x: str(x.get("published") or x.get("discovered") or ""), reverse=True)
+          Path("tmp-ransomware-live-jp-2026.json").write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
       - name: Commit report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tmp-actor-candidates.json
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m "chore: refine temporary ransomware actor candidates"
+          git add tmp-ransomware-live-jp-2026.json
+          git commit -m "chore: add compact 2026 Japan ransomware claims"
           git push
