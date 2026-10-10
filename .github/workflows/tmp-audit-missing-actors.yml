@@ -1,0 +1,58 @@
+name: Audit missing threat actors
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/tmp-audit-missing-actors.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract missing actor records
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+
+          p = Path("data/incidents.json")
+          data = json.loads(p.read_text(encoding="utf-8"))
+          rows = []
+          for r in data.get("incidents", []):
+              inc = r.get("incident", {})
+              attr = inc.get("threat_actor_attribution")
+              actor = inc.get("threat_actor") or (attr or {}).get("name")
+              if actor:
+                  continue
+              rows.append({
+                  "id": r.get("id"),
+                  "organization": r.get("organization", {}).get("name"),
+                  "website": r.get("organization", {}).get("website"),
+                  "title": inc.get("title"),
+                  "ransomware": inc.get("ransomware"),
+                  "types": inc.get("types", []),
+                  "occurred_at": inc.get("occurred_at"),
+                  "detected_at": inc.get("detected_at"),
+                  "disclosed_at": inc.get("disclosed_at"),
+                  "malware_family": inc.get("malware_family"),
+                  "sources": [s.get("url") for s in r.get("sources", []) if s.get("url")],
+              })
+          report = {
+              "total_incidents": len(data.get("incidents", [])),
+              "missing_actor_total": len(rows),
+              "missing_ransomware_actor": sum(1 for x in rows if x["ransomware"] is True),
+              "records": rows,
+          }
+          Path("tmp-missing-actors.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tmp-missing-actors.json
+          git commit -m "chore: add temporary missing actor audit"
+          git push
