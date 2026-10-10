@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1.0",
-  "generated_at": "2026-10-10T10:27:46.784Z",
+  "generated_at": "2026-10-10T12:17:32Z",
   "coverage": {
     "country": "JP",
     "scope": "publicly disclosed cyber incidents affecting Japanese organizations",
@@ -75,7 +75,17 @@
         "affected_systems": [
           "VIEW's NET会員向けメール配信"
         ],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": false,
@@ -100,7 +110,7 @@
         }
       ],
       "confidence": "high",
-      "last_updated": "2026-10-09T15:01:40Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-10-09-temairazu-reservation",
@@ -282,7 +292,17 @@
           "えきねっと会員向けメール配信",
           "大人の休日倶楽部会員向けメール配信"
         ],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": false,
@@ -317,7 +337,7 @@
         }
       ],
       "confidence": "high",
-      "last_updated": "2026-10-09T15:01:40Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-10-09-commune-platform",
@@ -1024,7 +1044,17 @@
         ],
         "affected_regions": [
           "東日本リージョン1"
-        ]
+        ],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -1066,7 +1096,7 @@
         }
       ],
       "confidence": "high",
-      "last_updated": "2026-10-09T07:59:05Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-10-06-mrmax",
@@ -2859,7 +2889,17 @@
           "京王電鉄グループのサーバー",
           "一部グループ会社の営業システム"
         ],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": false,
@@ -2894,7 +2934,7 @@
         }
       ],
       "confidence": "high",
-      "last_updated": "2026-10-09T07:59:05Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-09-26-ikegami-tsushinki",
@@ -3530,7 +3570,17 @@
           "事務情報システム",
           "事務用端末"
         ],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -3566,7 +3616,7 @@
         }
       ],
       "confidence": "high",
-      "last_updated": "2026-10-09T07:59:05Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-09-22-kufu-company",
@@ -5410,7 +5460,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": false,
@@ -5433,7 +5493,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-09-01-trunk-mail",
@@ -6376,7 +6436,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": true,
@@ -6399,7 +6469,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-08-13-charm-ec",
@@ -6810,7 +6880,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": false,
@@ -6833,7 +6913,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-08-05-tokai-univ-yamanakako",
@@ -8262,7 +8342,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -8285,7 +8375,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-07-13-nihon-kotsu",
@@ -8500,7 +8590,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": true,
@@ -8523,7 +8623,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-07-11-sapporo-international-univ",
@@ -8633,7 +8733,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -8656,7 +8766,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-07-09-nostram-smart-spi",
@@ -8770,7 +8880,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -8793,7 +8913,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-07-08-weleda-japan",
@@ -8978,7 +9098,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -9001,7 +9131,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-07-06-shinto-world",
@@ -9585,12 +9715,25 @@
           "as_of": "2026-06-30"
         },
         "attack_vector": null,
-        "threat_actor": null,
+        "threat_actor": "Qilin",
         "ransomware": true,
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": "Qilin",
+          "actor_type": "ransomware_group",
+          "aliases": [],
+          "status": "attacker_claim",
+          "confidence": "high",
+          "basis": "Qilin listed Musashino University on its data-leak site; the victim name and university domain match the incident. This is recorded as an attacker claim, not independent technical attribution.",
+          "sources": [
+            "https://api.ransomware.live/v2/countryvictims/JP",
+            "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/"
+          ],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -9613,7 +9756,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-06-30-higuchi-shokai",
@@ -9652,12 +9795,25 @@
           "as_of": "2026-06-30"
         },
         "attack_vector": null,
-        "threat_actor": null,
+        "threat_actor": "Stormous",
         "ransomware": true,
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": "Stormous",
+          "actor_type": "ransomware_group",
+          "aliases": [],
+          "status": "attacker_claim",
+          "confidence": "high",
+          "basis": "Stormous listed higuchi-inc.co.jp on its leak site; the domain corresponds to Higuchi Shokai. This is an attacker claim, not independent technical attribution.",
+          "sources": [
+            "https://api.ransomware.live/v2/countryvictims/JP",
+            "https://cyberthreatintelligence.net/ransomware-victim/higuchi-inc-co-jp-stormous-2026"
+          ],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -9680,7 +9836,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-06-30-aflac",
@@ -9791,7 +9947,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -9814,7 +9980,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-06-24-sapporo-holdings",
@@ -10076,7 +10242,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -10106,7 +10282,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-06-23-kddi-mail",
@@ -10294,7 +10470,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -10317,7 +10503,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-06-19-sado-city-toki",
@@ -11050,7 +11236,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": false,
@@ -11073,7 +11269,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-06-10-kyushu-university",
@@ -11117,7 +11313,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": false,
@@ -11142,7 +11348,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-06-05-sen-photo",
@@ -11465,7 +11671,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -11488,7 +11704,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-06-04-healthcare-consultants-iwate",
@@ -12285,7 +12501,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -12308,7 +12534,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-05-19-ishikawa-computer-center",
@@ -12421,7 +12647,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -12444,7 +12680,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-05-14-nihon-shisan-soken",
@@ -12507,7 +12743,7 @@
         "disclosed_at": "2026-05-14",
         "status": "recovered",
         "attack_vector": "第三者が何らかの方法で認証情報を窃取し、サーバ環境に不正アクセスしてランサムウェアを実行。",
-        "threat_actor": null,
+        "threat_actor": "SafePay",
         "ransomware": true,
         "malware_family": null,
         "vulnerabilities": [],
@@ -12515,7 +12751,20 @@
           "サーバ環境",
           "業務用PC"
         ],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": "SafePay",
+          "actor_type": "ransomware_group",
+          "aliases": [],
+          "status": "attacker_claim",
+          "confidence": "high",
+          "basis": "Public ransomware tracking attributes the May 2026 Aoyama Zaisan Networks / Japan Asset Research Institute incident to a SafePay leak-site claim; the victim later confirmed that stolen customer data appeared on the attacker's leak site. This remains an attacker-claim attribution.",
+          "sources": [
+            "https://ransomnews.com/ransomware-attacks/2026-05/",
+            "https://www.nssg.co.jp/news/2026/0911-1600.html"
+          ],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": true,
@@ -12562,7 +12811,7 @@
         }
       ],
       "confidence": "high",
-      "last_updated": "2026-10-09T07:59:05Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-05-12-tokyo-hoso",
@@ -12683,12 +12932,25 @@
           "as_of": "2026-05-12"
         },
         "attack_vector": null,
-        "threat_actor": null,
+        "threat_actor": "The Gentlemen",
         "ransomware": true,
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": "The Gentlemen",
+          "actor_type": "ransomware_group",
+          "aliases": [],
+          "status": "attacker_claim",
+          "confidence": "high",
+          "basis": "The Gentlemen listed Oriental Diamond / orientaldiamond.jp as a victim. This is an attacker claim, not independent technical attribution.",
+          "sources": [
+            "https://api.ransomware.live/v2/countryvictims/JP",
+            "https://www.dexpose.io/the-gentlemen-ransomware-attack-on-oriental-diamond-inc/"
+          ],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -12711,7 +12973,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-05-12-dnet",
@@ -12816,12 +13078,25 @@
           "as_of": "2026-05-08"
         },
         "attack_vector": null,
-        "threat_actor": null,
+        "threat_actor": "The Gentlemen",
         "ransomware": true,
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": "The Gentlemen",
+          "actor_type": "ransomware_group",
+          "aliases": [],
+          "status": "attacker_claim",
+          "confidence": "high",
+          "basis": "The Gentlemen listed Nostrum / nostrum.co.jp as a victim. The company/domain match the incident. This is an attacker claim, not independent technical attribution.",
+          "sources": [
+            "https://api.ransomware.live/v2/countryvictims/JP",
+            "https://www.dexpose.io/the-gentlemen-target-japans-nostrum-corporation-in-ransomware-attack/"
+          ],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -12844,7 +13119,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-05-07-tokyo-seimitsu-us",
@@ -13039,7 +13314,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -13062,7 +13347,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-05-07-nikkei-america-bec",
@@ -13801,12 +14086,26 @@
           "as_of": "2026-04-28"
         },
         "attack_vector": null,
-        "threat_actor": null,
+        "threat_actor": "The Gentlemen",
         "ransomware": true,
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": "The Gentlemen",
+          "actor_type": "ransomware_group",
+          "aliases": [],
+          "status": "attacker_claim",
+          "confidence": "high",
+          "basis": "The Gentlemen claimed Marutake Co., Ltd. / kk-marutake.co.jp; the official Marutake site confirms this is the same company affected by the April 2026 ransomware incident. This is an attacker claim, not independent technical attribution.",
+          "sources": [
+            "https://api.ransomware.live/v2/countryvictims/JP",
+            "https://www.dexpose.io/the-gentlemen-ransomware-attack-on-marutake-co-ltd/",
+            "https://www.kk-marutake.co.jp/2026/05/08/6669"
+          ],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -13829,7 +14128,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-04-27-alps-alpine",
@@ -14287,7 +14586,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -14310,7 +14619,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-04-22-ecommit",
@@ -14494,7 +14803,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -14517,7 +14836,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-04-15-daiichi-shiko",
@@ -14562,7 +14881,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -14585,7 +14914,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-04-14-shin-fa-com",
@@ -14626,12 +14955,25 @@
           "as_of": "2026-04-14"
         },
         "attack_vector": null,
-        "threat_actor": null,
+        "threat_actor": "cmdorganization",
         "ransomware": true,
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": "cmdorganization",
+          "actor_type": "ransomware_group",
+          "aliases": [],
+          "status": "attacker_claim",
+          "confidence": "high",
+          "basis": "cmdorganization listed New FACOM Co., Ltd. / s-facom.jp as a victim. The company and domain match Shin FA-COM. This is an attacker claim, not independent technical attribution.",
+          "sources": [
+            "https://api.ransomware.live/v2/countryvictims/JP",
+            "https://www.dexpose.io/cmdorganization-targets-japanese-tech-firm-new-facom-co-ltd/"
+          ],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -14654,7 +14996,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-04-13-miraiku-sr",
@@ -14834,7 +15176,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": false,
@@ -14857,7 +15209,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-04-08-jorsa",
@@ -15040,7 +15392,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -15063,7 +15425,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-04-03-campfire",
@@ -15671,7 +16033,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -15694,7 +16066,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-03-17-medica-publishing",
@@ -15734,12 +16106,25 @@
           "as_of": "2026-03-17"
         },
         "attack_vector": null,
-        "threat_actor": null,
+        "threat_actor": "The Gentlemen",
         "ransomware": true,
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": "The Gentlemen",
+          "actor_type": "ransomware_group",
+          "aliases": [],
+          "status": "attacker_claim",
+          "confidence": "high",
+          "basis": "The Gentlemen listed MEDICUS SHUPPAN / medica.co.jp as a victim. The name and domain match Medica Publishing. This is an attacker claim, not independent technical attribution.",
+          "sources": [
+            "https://api.ransomware.live/v2/countryvictims/JP",
+            "https://www.dexpose.io/the-gentlemen-launch-ransomware-attack-on-medicus-shuppan/"
+          ],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": true,
@@ -15762,7 +16147,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-03-09-nippon-telenet",
@@ -15836,7 +16221,17 @@
           "業務用PC",
           "社内ネットワーク"
         ],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": false,
@@ -15875,7 +16270,7 @@
         }
       ],
       "confidence": "high",
-      "last_updated": "2026-10-09T07:59:05Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-03-16-iwatani",
@@ -15985,7 +16380,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -16011,7 +16416,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-03-10-university-of-tokyo",
@@ -16212,7 +16617,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -16235,7 +16650,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-03-06-white-essence-megury",
@@ -16418,7 +16833,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -16441,7 +16866,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-03-06-nihon-univ-sangenjaya",
@@ -16630,7 +17055,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -16653,7 +17088,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-02-14-washington-hotel",
@@ -16698,7 +17133,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -16721,7 +17166,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-02-13-sakata-seed-us",
@@ -16832,7 +17277,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": false,
@@ -16855,7 +17310,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-02-13-beenos-sekaimon",
@@ -16969,7 +17424,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -16992,7 +17457,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-02-05-fujita-plating",
@@ -17397,7 +17862,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": false,
@@ -17420,7 +17895,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-01-29-kyoritsu-solutions",
@@ -17465,7 +17940,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -17488,7 +17973,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-01-26-interix-just-curtain",
@@ -17666,12 +18151,25 @@
           "as_of": "2026-01-23"
         },
         "attack_vector": null,
-        "threat_actor": null,
+        "threat_actor": "NightSpire",
         "ransomware": true,
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": "NightSpire",
+          "actor_type": "ransomware_group",
+          "aliases": [],
+          "status": "attacker_claim",
+          "confidence": "high",
+          "basis": "NightSpire listed Makimura Co., Ltd. / makimura.co.jp as a victim. This is an attacker claim, not independent technical attribution.",
+          "sources": [
+            "https://api.ransomware.live/v2/countryvictims/JP",
+            "https://www.dexpose.io/nightspire-targets-makimura-co-ltd-in-ransomware-attack/"
+          ],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -17694,7 +18192,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-01-21-cocoloni-account",
@@ -17807,7 +18305,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -17830,7 +18338,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-01-20-balance-ransomware",
@@ -17874,7 +18382,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -17897,7 +18415,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-01-18-sincere-ransomware",
@@ -17936,12 +18454,25 @@
           "as_of": "2026-01-18"
         },
         "attack_vector": null,
-        "threat_actor": null,
+        "threat_actor": "The Gentlemen",
         "ransomware": true,
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": "The Gentlemen",
+          "actor_type": "ransomware_group",
+          "aliases": [],
+          "status": "attacker_claim",
+          "confidence": "high",
+          "basis": "The Gentlemen listed Sincere Corporation / sincerehq.com as a victim. This is an attacker claim, not independent technical attribution.",
+          "sources": [
+            "https://api.ransomware.live/v2/countryvictims/JP",
+            "https://www.dexpose.io/thegentlemen-ransomware-attack-on-sincere-corporation/"
+          ],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -17964,7 +18495,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-01-16-aoyama-main-kikaku",
@@ -18008,7 +18539,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -18031,7 +18572,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-01-09-sakai-cycle",
@@ -18209,7 +18750,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": null,
@@ -18232,7 +18783,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-01-06-mizuho-leasing",
@@ -18342,7 +18893,17 @@
         "malware_family": null,
         "vulnerabilities": [],
         "affected_systems": [],
-        "affected_regions": []
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "Reviewed against the incident's existing public sources and a 2026 Japan ransomware leak-site tracker snapshot; no sufficiently supported named actor/group was identified. No actor has been inferred from the ransomware label alone.",
+          "sources": [],
+          "reviewed_at": "2026-10-10"
+        }
       },
       "impact": {
         "confirmed_breach": false,
@@ -18365,7 +18926,7 @@
         }
       ],
       "confidence": "medium",
-      "last_updated": "2026-10-09T16:08:05.662Z"
+      "last_updated": "2026-10-10T12:17:32Z"
     },
     {
       "id": "2026-01-05-cac-academic-support-navi",
