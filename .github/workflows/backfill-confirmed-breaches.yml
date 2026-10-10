@@ -1,0 +1,34 @@
+name: Confirmed breach correction
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/backfill-confirmed-breaches.mjs"
+      - ".github/workflows/backfill-confirmed-breaches.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node scripts/backfill-confirmed-breaches.mjs
+      - run: npm run validate
+      - name: Commit canonical data changes
+        run: |
+          if git diff --quiet -- data/incidents.json; then
+            echo "No canonical data changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/incidents.json
+          git commit -m "data: correct confirmed breach classifications"
+          git push
