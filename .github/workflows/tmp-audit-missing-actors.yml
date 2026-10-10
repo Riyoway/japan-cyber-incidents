@@ -14,36 +14,102 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Extract ransomware records missing actor
+      - name: Fetch Japan ransomware claims and build candidates
         shell: python
         run: |
-          import json
+          import json, re, urllib.request
+          from difflib import SequenceMatcher
           from pathlib import Path
+          from urllib.parse import urlparse
 
-          data = json.loads(Path("data/incidents.json").read_text(encoding="utf-8"))
-          rows = []
-          for r in data.get("incidents", []):
+          dataset = json.loads(Path("data/incidents.json").read_text(encoding="utf-8"))
+          missing = []
+          for r in dataset.get("incidents", []):
               inc = r.get("incident", {})
-              attr = inc.get("threat_actor_attribution")
-              actor = inc.get("threat_actor") or (attr or {}).get("name")
-              if actor or inc.get("ransomware") is not True:
+              attr = inc.get("threat_actor_attribution") or {}
+              if inc.get("ransomware") is not True or inc.get("threat_actor") or attr.get("name"):
                   continue
-              rows.append({
+              missing.append(r)
+
+          req = urllib.request.Request(
+              "https://api.ransomware.live/v2/countryvictims/JP",
+              headers={"User-Agent": "Riyoway/japan-cyber-incidents actor-audit"},
+          )
+          with urllib.request.urlopen(req, timeout=30) as resp:
+              raw = json.loads(resp.read().decode("utf-8"))
+
+          victims = raw.get("victims", raw) if isinstance(raw, dict) else raw
+          if not isinstance(victims, list):
+              raise SystemExit(f"Unexpected ransomware.live payload type: {type(victims)}")
+
+          def norm(s):
+              if not s: return ""
+              s = str(s).lower()
+              s = re.sub(r"https?://", "", s)
+              s = re.sub(r"^www\.", "", s)
+              s = re.sub(r"[^a-z0-9]+", "", s)
+              return s
+
+          def domain(url):
+              if not url: return ""
+              try:
+                  d = urlparse(url).netloc.lower().split(":")[0]
+                  return d[4:] if d.startswith("www.") else d
+              except Exception:
+                  return ""
+
+          candidates = []
+          for r in missing:
+              org = r.get("organization", {})
+              inc = r.get("incident", {})
+              org_name = org.get("name") or ""
+              org_name_en = org.get("name_en") or ""
+              org_domain = domain(org.get("website"))
+              source_domains = sorted({domain(s.get("url")) for s in r.get("sources", []) if s.get("url")})
+              rows = []
+              for v in victims:
+                  if not isinstance(v, dict):
+                      continue
+                  victim = v.get("victim") or v.get("post_title") or v.get("title") or v.get("name") or ""
+                  group = v.get("group_name") or v.get("group") or v.get("gang") or ""
+                  v_domain = (v.get("website") or v.get("domain") or v.get("url") or "")
+                  if v_domain.startswith("http"):
+                      v_domain = domain(v_domain)
+                  else:
+                      v_domain = v_domain.lower().removeprefix("www.").split("/")[0]
+                  score = max(
+                      SequenceMatcher(None, norm(org_name_en), norm(victim)).ratio() if org_name_en else 0,
+                      SequenceMatcher(None, norm(org_name), norm(victim)).ratio() if org_name else 0,
+                  )
+                  exact_domain = bool(org_domain and v_domain and (org_domain == v_domain or org_domain.endswith("." + v_domain) or v_domain.endswith("." + org_domain)))
+                  if exact_domain or score >= 0.52:
+                      rows.append({
+                          "score": round(score, 3),
+                          "exact_domain": exact_domain,
+                          "victim": victim,
+                          "group": group,
+                          "victim_domain": v_domain or None,
+                          "discovered": v.get("discovered") or v.get("date") or v.get("published") or v.get("published_at"),
+                          "claim_url": v.get("permalink") or v.get("post_url") or v.get("url"),
+                          "raw": v,
+                      })
+              rows.sort(key=lambda x: (x["exact_domain"], x["score"]), reverse=True)
+              candidates.append({
                   "id": r.get("id"),
-                  "organization": r.get("organization", {}).get("name"),
-                  "website": r.get("organization", {}).get("website"),
-                  "title": inc.get("title"),
-                  "occurred_at": inc.get("occurred_at"),
-                  "detected_at": inc.get("detected_at"),
+                  "organization": org_name,
+                  "organization_en": org_name_en or None,
+                  "website_domain": org_domain or None,
+                  "source_domains": source_domains,
                   "disclosed_at": inc.get("disclosed_at"),
-                  "malware_family": inc.get("malware_family"),
-                  "sources": [s.get("url") for s in r.get("sources", []) if s.get("url")],
+                  "candidates": rows[:10],
               })
-          Path("tmp-missing-ransomware-actors.json").write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-      - name: Commit report
+
+          Path("tmp-ransomware-live-jp.json").write_text(json.dumps(victims, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          Path("tmp-actor-candidates.json").write_text(json.dumps(candidates, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+      - name: Commit reports
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tmp-missing-ransomware-actors.json
-          git commit -m "chore: add temporary ransomware actor audit"
+          git add tmp-ransomware-live-jp.json tmp-actor-candidates.json
+          git commit -m "chore: add temporary ransomware actor candidates"
           git push
