@@ -1,0 +1,175 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-13-arcadia-speecan-raiden",
+        "organization": {
+          "name": "株式会社アルカディア",
+          "name_en": "Arcadia, Inc.",
+          "type": "company",
+          "size": "small_enterprise",
+          "industry": ["information_technology", "emergency_communications", "saas"],
+          "business_model": ["b2b", "b2g"],
+          "service": "SpeeCAN RAIDEN / ライデン・スクール",
+          "country": "JP",
+          "website": "https://www.arcadia.co.jp/",
+          "headquarters": {
+            "address": "〒562-0043 大阪府箕面市桜井1丁目10番28号",
+            "prefecture": "大阪府",
+            "city": "箕面市",
+            "latitude": null,
+            "longitude": null,
+            "precision": "city",
+            "source": "https://www.arcadia.co.jp/outline"
+          },
+          "employee_count": {
+            "value": 53,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "株式会社アルカディア会社概要に記載（役員12名を含む）。",
+            "confidence": "high"
+          },
+          "listing": {"is_listed": false, "market": null, "ticker": null},
+          "estimated_total_users": {"value": null, "unit": "people", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "SpeeCAN RAIDENへの不正アクセスによる登録情報漏えいの可能性",
+          "types": ["unauthorized_access", "potential_data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-11",
+          "detected_time": {
+            "start": "16:30",
+            "end": null,
+            "timezone": "Asia/Tokyo",
+            "precision": "exact",
+            "time_band": "afternoon",
+            "basis": "公式情報で2026年10月11日16時30分に不正アクセスが疑われる不審な挙動を確認したと公表。"
+          },
+          "disclosed_at": "2026-10-13",
+          "status": {"value": "investigating", "as_of": "2026-10-14"},
+          "attack_vector": "第三者による不正アクセス。10月13日の調査で外部からの不正な侵入経路を特定し遮断したが、具体的な侵入手法は公表されていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["SpeeCAN RAIDEN", "ライデン・スクール"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "公式発表および関連報道を確認したが、支持できる攻撃者名・グループ帰属は公表されていない。",
+            "sources": ["https://www.arcadia.co.jp/info/4076", "https://raiden.site.ktaiwork.jp/archives/4597"],
+            "reviewed_at": "2026-10-14"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "ユニークな被害人数は未確定。事業者推計の最大対象はメールアドレス約313万6,000件、電話番号約10万5,000件、FAX番号約1万5,000件で、重複し得るため人数として合算しない。",
+          "affected_organizations": null,
+          "records": 3136000,
+          "data_exposed": ["name", "email_address", "phone_number", "fax_number", "contact_person_information", "contract_information", "message_body"],
+          "service_disruption": true,
+          "service_disruption_note": "侵入経路となったSpeeCAN RAIDENの一部環境とライデン・スクールの一部環境を10月13日11時から緊急停止。複数自治体で防災メール等の配信停止が発生。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "official", "publisher": "株式会社アルカディア", "published_at": "2026-10-13", "url": "https://www.arcadia.co.jp/info/4076", "title": "SpeeCAN RAIDENへの不正アクセスによる個人情報漏洩の可能性について"},
+          {"kind": "official", "publisher": "SpeeCAN RAIDEN公式ブログ", "published_at": "2026-10-13", "url": "https://raiden.site.ktaiwork.jp/archives/4597", "title": "SpeeCAN RAIDENへの不正アクセスによる個人情報漏洩の可能性について"},
+          {"kind": "news", "publisher": "ITmedia NEWS", "published_at": "2026-10-14", "url": "https://www.itmedia.co.jp/news/article/2610/14/2000002239/", "title": "さいたま市や横須賀市など、防災情報システムに不正アクセス　全国でメアド最大313万漏えいか"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-14T15:04:12Z"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-14-aena-ec-app",
+        "organization": {
+          "name": "株式会社アエナ",
+          "name_en": "AENA Corporation",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["retail", "ecommerce", "beauty"],
+          "business_model": ["b2c"],
+          "service": "アエナ ECアプリ",
+          "country": "JP",
+          "website": "https://www.aena.co.jp/",
+          "headquarters": {
+            "address": "〒154-0024 東京都世田谷区三軒茶屋2-2-16 YKビル10F",
+            "prefecture": "東京都",
+            "city": "世田谷区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "city",
+            "source": "https://www.aena.co.jp/summary/"
+          },
+          "employee_count": {
+            "value": 2624,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "株式会社アエナ会社概要、2026年4月1日現在。パート・アルバイトを含む。",
+            "confidence": "high"
+          },
+          "listing": {"is_listed": false, "market": null, "ticker": null},
+          "estimated_total_users": {"value": null, "unit": "people", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "ECアプリへの不正アクセスによる会員マイページ情報の不正閲覧",
+          "types": ["unauthorized_access", "potential_data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-13",
+          "detected_time": {
+            "start": "05:58",
+            "end": null,
+            "timezone": "Asia/Tokyo",
+            "precision": "exact",
+            "time_band": "overnight",
+            "basis": "公式発表でシステムログ解析により2026年10月13日5時58分に会員マイページの不正閲覧が判明したと公表。これは検知時刻であり攻撃開始時刻ではない。"
+          },
+          "disclosed_at": "2026-10-14",
+          "status": {"value": "investigating", "as_of": "2026-10-14"},
+          "attack_vector": "第三者による不正アクセス後、会員マイページに対する機械的な連続アクセスが行われた。詳細原因は調査中。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["アエナ ECアプリ", "ECサイト"],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "公式発表および報道を確認したが、支持できる攻撃者名・グループ帰属は公表されていない。",
+            "sources": ["https://www.aena.co.jp/news/detail/7826/"],
+            "reviewed_at": "2026-10-14"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": 817215,
+          "affected_users_note": "閲覧された可能性がある本会員の最大人数。全員分の全項目が実際に取得・流出したと確定した人数ではない。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": ["name", "name_kana", "address", "phone_number", "email_address", "date_of_birth", "gender", "occupation", "shipping_address", "shipping_recipient_name", "shipping_recipient_phone", "favorite_store", "email_preferences", "credit_card_last_four", "credit_card_expiration_date", "credit_card_holder_name"],
+          "service_disruption": true,
+          "service_disruption_note": "不正アクセス遮断と再発防止策構築のためECサイトへのアクセスを遮断。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "official", "publisher": "株式会社アエナ", "published_at": "2026-10-14", "url": "https://www.aena.co.jp/news/detail/7826/", "title": "外部からの不正アクセスによるお客様情報流出の可能性について"},
+          {"kind": "news", "publisher": "テレビ朝日", "published_at": "2026-10-14", "url": "https://news.tv-asahi.co.jp/news_economy/articles/900201246.html", "title": "【更新中】化粧品など扱う小売店「アエナ」に不正アクセス、会員情報が約81万人分流出か"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-14T15:04:12Z"
+      }
+    }
+  ]
+}
