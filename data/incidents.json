@@ -1,12 +1,520 @@
 {
   "schema_version": "1.1.0",
-  "generated_at": "2026-10-14T15:05:20.896Z",
+  "generated_at": "2026-10-15T15:05:17.120Z",
   "coverage": {
     "country": "JP",
     "scope": "publicly disclosed cyber incidents affecting Japanese organizations",
     "seed_note": "Initial seed focuses on recent high-signal incidents with official disclosures."
   },
   "incidents": [
+    {
+      "id": "2026-10-15-bk-japan-app",
+      "organization": {
+        "name": "株式会社ビーケー・ジャパン",
+        "name_en": "BK Japan Co., Ltd.",
+        "type": "company",
+        "size": "large_enterprise",
+        "industry": [
+          "food_service",
+          "restaurant",
+          "mobile_app"
+        ],
+        "business_model": [
+          "b2c"
+        ],
+        "service": "バーガーキング公式アプリ",
+        "country": "JP",
+        "website": "https://www.burgerking.co.jp/",
+        "headquarters": {
+          "address": "〒102-0082 東京都千代田区一番町23-3 フロントプレイス千代田一番町 2F・3F",
+          "prefecture": "東京都",
+          "city": "千代田区",
+          "latitude": null,
+          "longitude": null,
+          "precision": "exact",
+          "source": "https://www.burgerking.co.jp/story/about"
+        },
+        "employee_count": {
+          "value": null,
+          "unit": "employees",
+          "estimate_type": "unknown",
+          "basis": null,
+          "confidence": "unknown"
+        },
+        "listing": {
+          "is_listed": false,
+          "market": null,
+          "ticker": null
+        },
+        "estimated_total_users": {
+          "value": null,
+          "unit": "accounts",
+          "estimate_type": "unknown",
+          "basis": null,
+          "confidence": "unknown"
+        }
+      },
+      "incident": {
+        "title": "バーガーキング公式アプリ会員情報管理システムへの不正アクセスによる会員情報漏えい",
+        "types": [
+          "unauthorized_access",
+          "data_breach"
+        ],
+        "occurred_at": "2026-10-02",
+        "detected_at": "2026-10-13",
+        "disclosed_at": "2026-10-15",
+        "status": {
+          "value": "contained",
+          "as_of": "2026-10-15"
+        },
+        "attack_vector": "公式アプリの会員情報を管理するシステムに対する第三者による不正アクセス。10月2日から7日にかけて不正アクセスが確認され、把握後に当該通信元からのアクセスを遮断。",
+        "threat_actor": null,
+        "ransomware": false,
+        "malware_family": null,
+        "vulnerabilities": [],
+        "affected_systems": [
+          "バーガーキング公式アプリ会員情報管理システム"
+        ],
+        "affected_regions": [
+          "Japan"
+        ],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "被害企業の公表および確認した報道では、攻撃者グループ・個人への裏付けある帰属は示されていない。",
+          "sources": [
+            "https://www.burgerking.co.jp/dist/company",
+            "https://www.itmedia.co.jp/news/article/2610/15/2000002306/"
+          ],
+          "reviewed_at": "2026-10-15"
+        }
+      },
+      "impact": {
+        "confirmed_breach": true,
+        "affected_users": null,
+        "affected_users_note": "公式発表は会員情報約1,118万件の漏えいとしており、重複排除済みのユニーク人数は確認できないため affected_users は未確定。",
+        "affected_organizations": 1,
+        "records": 11180000,
+        "data_exposed": [
+          "member_id",
+          "email_address",
+          "registration_type",
+          "prefecture",
+          "gender",
+          "date_of_birth",
+          "name",
+          "phone_number",
+          "mobile_order_history_flag",
+          "email_verification_flag"
+        ],
+        "service_disruption": false,
+        "service_disruption_note": null,
+        "service_recovered_at": null
+      },
+      "sources": [
+        {
+          "kind": "official",
+          "publisher": "株式会社ビーケー・ジャパン",
+          "published_at": "2026-10-15",
+          "url": "https://www.burgerking.co.jp/dist/company",
+          "title": "不正アクセスによる公式アプリ会員情報漏えいに関するお詫びとお知らせ"
+        },
+        {
+          "kind": "news",
+          "publisher": "ITmedia NEWS",
+          "published_at": "2026-10-15",
+          "url": "https://www.itmedia.co.jp/news/article/2610/15/2000002306/",
+          "title": "バーガーキング、約1118万件漏えい 公式アプリ会員システムに不正アクセス"
+        }
+      ],
+      "confidence": "high",
+      "last_updated": "2026-10-15T15:05:17.120Z"
+    },
+    {
+      "id": "2026-10-15-medley-atlink",
+      "organization": {
+        "name": "株式会社メドレー",
+        "name_en": "MEDLEY, INC.",
+        "type": "company",
+        "size": "large_enterprise",
+        "industry": [
+          "healthcare_it",
+          "saas",
+          "software"
+        ],
+        "business_model": [
+          "b2b",
+          "b2c"
+        ],
+        "service": "@link（アットリンク）/ アットリンクアプリ",
+        "country": "JP",
+        "website": "https://www.medley.jp/",
+        "headquarters": {
+          "address": "〒106-6113 東京都港区六本木6-10-1 六本木ヒルズ森タワー13F",
+          "prefecture": "東京都",
+          "city": "港区",
+          "latitude": null,
+          "longitude": null,
+          "precision": "exact",
+          "source": "https://www.medley.jp/about/company/"
+        },
+        "employee_count": {
+          "value": null,
+          "unit": "employees",
+          "estimate_type": "unknown",
+          "basis": null,
+          "confidence": "unknown"
+        },
+        "listing": {
+          "is_listed": true,
+          "market": "Tokyo Stock Exchange Prime",
+          "ticker": "4480"
+        },
+        "estimated_total_users": {
+          "value": 787,
+          "unit": "organizations",
+          "estimate_type": "reported",
+          "basis": "公表時点で@link等を利用する全医療機関は最大787件。患者数ではない。",
+          "confidence": "high"
+        }
+      },
+      "incident": {
+        "title": "@link・アットリンクアプリ等への不正アクセスと患者情報漏えい可能性",
+        "types": [
+          "unauthorized_access",
+          "potential_data_breach",
+          "service_disruption"
+        ],
+        "occurred_at": null,
+        "detected_at": "2026-10-11",
+        "disclosed_at": "2026-10-15",
+        "status": {
+          "value": "investigating",
+          "as_of": "2026-10-15"
+        },
+        "attack_vector": "第三者による不正アクセス。10月11日に外部専門機関から不正アクセスの可能性について情報提供を受け、調査の結果侵害を確認。具体的な侵入経路は公表時点で調査中。",
+        "threat_actor": null,
+        "ransomware": null,
+        "malware_family": null,
+        "vulnerabilities": [],
+        "affected_systems": [
+          "@link",
+          "アットリンクアプリ",
+          "周辺サービス"
+        ],
+        "affected_regions": [
+          "Japan"
+        ],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "被害企業の公表および確認した報道では、攻撃者グループ・個人への裏付けある帰属は示されていない。",
+          "sources": [
+            "https://www.medley.jp/notice/20161015.html",
+            "https://internet.watch.impress.co.jp/docs/news/2148459.html"
+          ],
+          "reviewed_at": "2026-10-15"
+        }
+      },
+      "impact": {
+        "confirmed_breach": false,
+        "affected_users": null,
+        "affected_users_note": "患者等の個人情報が外部に漏えいした可能性があるが、漏えいの有無・情報項目・対象範囲は調査中。787は利用医療機関の最大数であり患者数ではない。",
+        "affected_organizations": 787,
+        "records": null,
+        "data_exposed": [],
+        "service_disruption": true,
+        "service_disruption_note": "被害拡大防止と調査のため10月14日深夜から@link、アットリンクアプリおよび周辺サービスを一時停止。再開見通しは調査結果を踏まえて案内予定。",
+        "service_recovered_at": null
+      },
+      "sources": [
+        {
+          "kind": "official",
+          "publisher": "株式会社メドレー",
+          "published_at": "2026-10-15",
+          "url": "https://www.medley.jp/notice/20161015.html",
+          "title": "アットリンクへの不正アクセスおよびサービスの一時停止に関する最新情報"
+        },
+        {
+          "kind": "news",
+          "publisher": "INTERNET Watch",
+          "published_at": "2026-10-15",
+          "url": "https://internet.watch.impress.co.jp/docs/news/2148459.html",
+          "title": "産婦人科に特化した業務支援サービス／アプリ「アットリンク」、不正アクセスで個人情報漏えいの可能性"
+        }
+      ],
+      "confidence": "high",
+      "last_updated": "2026-10-15T15:05:17.120Z"
+    },
+    {
+      "id": "2026-10-15-sourcenext-member-api",
+      "organization": {
+        "name": "ソースネクスト株式会社",
+        "name_en": "SOURCENEXT CORPORATION",
+        "type": "company",
+        "size": "medium_enterprise",
+        "industry": [
+          "software",
+          "consumer_technology",
+          "ecommerce"
+        ],
+        "business_model": [
+          "b2c",
+          "b2b"
+        ],
+        "service": "ソースネクスト会員システム",
+        "country": "JP",
+        "website": "https://www.sourcenext.co.jp/",
+        "headquarters": {
+          "address": "〒102-0075 東京都千代田区三番町3-8 泉館三番町3階",
+          "prefecture": "東京都",
+          "city": "千代田区",
+          "latitude": null,
+          "longitude": null,
+          "precision": "exact",
+          "source": "https://www.sourcenext.co.jp/business/profile/"
+        },
+        "employee_count": {
+          "value": 167,
+          "unit": "employees",
+          "estimate_type": "reported",
+          "basis": "公式会社概要、2025年12月31日現在の連結従業員数。",
+          "confidence": "high"
+        },
+        "listing": {
+          "is_listed": true,
+          "market": "Tokyo Stock Exchange Prime",
+          "ticker": "4344"
+        },
+        "estimated_total_users": {
+          "value": null,
+          "unit": "accounts",
+          "estimate_type": "unknown",
+          "basis": null,
+          "confidence": "unknown"
+        }
+      },
+      "incident": {
+        "title": "会員情報取得APIへの不正アクセスによる会員情報流出",
+        "types": [
+          "unauthorized_access",
+          "data_breach",
+          "api_abuse"
+        ],
+        "occurred_at": "2026-10-09",
+        "detected_at": "2026-10-13",
+        "detected_time": {
+          "start": "09:00",
+          "end": null,
+          "timezone": "Asia/Tokyo",
+          "precision": "approximate",
+          "time_band": "morning",
+          "basis": "公表では10月13日9時頃に会員情報管理システムへの不正アクセスを確認。"
+        },
+        "disclosed_at": "2026-10-15",
+        "status": {
+          "value": "contained",
+          "as_of": "2026-10-15"
+        },
+        "attack_vector": "10月9日から会員情報取得APIが第三者に不正利用された。10月13日に検知後、外部からの不正通信を遮断し、同日13時36分までに封じ込めを完了。",
+        "threat_actor": null,
+        "ransomware": false,
+        "malware_family": null,
+        "vulnerabilities": [],
+        "affected_systems": [
+          "会員情報管理システム",
+          "会員情報取得API"
+        ],
+        "affected_regions": [
+          "Japan"
+        ],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "被害企業公表および確認した報道では、攻撃者グループ・個人への裏付けある帰属は示されていない。",
+          "sources": [
+            "https://www.watch.impress.co.jp/docs/news/2148547.html"
+          ],
+          "reviewed_at": "2026-10-15"
+        }
+      },
+      "impact": {
+        "confirmed_breach": true,
+        "affected_users": null,
+        "affected_users_note": "流出した可能性のある会員情報は22,519,960件。登録状況により対象項目が異なり、ユニーク人数として公表されていないため affected_users は未確定。",
+        "affected_organizations": 1,
+        "records": 22519960,
+        "data_exposed": [
+          "email_address",
+          "password",
+          "name",
+          "name_kana",
+          "address",
+          "gender",
+          "phone_number",
+          "fax_number",
+          "date_of_birth",
+          "company_name",
+          "job_title",
+          "department",
+          "service_registration_metadata"
+        ],
+        "service_disruption": false,
+        "service_disruption_note": "不正通信を遮断して封じ込め。会員にはログイン時のパスワード再設定を求めている。",
+        "service_recovered_at": null
+      },
+      "sources": [
+        {
+          "kind": "news",
+          "publisher": "Impress Watch",
+          "published_at": "2026-10-15",
+          "url": "https://www.watch.impress.co.jp/docs/news/2148547.html",
+          "title": "ソースネクスト、最大2251万件の情報流出 パスワード再設定を"
+        },
+        {
+          "kind": "news",
+          "publisher": "ITmedia PC USER",
+          "published_at": "2026-10-15",
+          "url": "https://www.itmedia.co.jp/pcuser/amp/2610/15/news100.html",
+          "title": "ソースネクストに不正アクセス、会員情報2251万件流出のおそれ パスワードや住所、生年月日など"
+        }
+      ],
+      "confidence": "high",
+      "last_updated": "2026-10-15T15:05:17.120Z"
+    },
+    {
+      "id": "2026-10-15-yellowhat-web-reservation-followup",
+      "organization": {
+        "name": "株式会社イエローハット",
+        "name_en": "YELLOW HAT LTD.",
+        "type": "company",
+        "size": "large_enterprise",
+        "industry": [
+          "automotive_retail",
+          "retail"
+        ],
+        "business_model": [
+          "b2c"
+        ],
+        "service": "イエローハットWEB作業予約システム",
+        "country": "JP",
+        "website": "https://www.yellowhat.jp/",
+        "headquarters": {
+          "address": "〒145-0062 東京都大田区北千束一丁目4番6号",
+          "prefecture": "東京都",
+          "city": "大田区",
+          "latitude": null,
+          "longitude": null,
+          "precision": "exact",
+          "source": "https://www.yellowhat.jp/corp/about/profile.html"
+        },
+        "employee_count": {
+          "value": 4176,
+          "unit": "employees",
+          "estimate_type": "reported",
+          "basis": "公式会社概要、2026年3月31日現在の連結従業員数。",
+          "confidence": "high"
+        },
+        "listing": {
+          "is_listed": true,
+          "market": "Tokyo Stock Exchange Prime",
+          "ticker": "9882"
+        },
+        "estimated_total_users": {
+          "value": null,
+          "unit": "people",
+          "estimate_type": "unknown",
+          "basis": null,
+          "confidence": "unknown"
+        }
+      },
+      "incident": {
+        "title": "イエローハットWEB作業予約システムへの不正アクセスによる顧客情報漏えい",
+        "types": [
+          "unauthorized_access",
+          "data_breach"
+        ],
+        "occurred_at": null,
+        "detected_at": null,
+        "disclosed_at": "2026-10-15",
+        "status": {
+          "value": "investigation_completed",
+          "as_of": "2026-10-15"
+        },
+        "attack_vector": "第三者による不正侵入。第三者調査機関によるフォレンジック調査とアクセスログ解析で顧客データの外部流出を確認。具体的な侵入手法は確認した公開情報では特定できない。",
+        "threat_actor": null,
+        "ransomware": false,
+        "malware_family": null,
+        "vulnerabilities": [],
+        "affected_systems": [
+          "イエローハットWEB作業予約システム"
+        ],
+        "affected_regions": [
+          "Japan"
+        ],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "被害企業の第二報および確認した報道では、攻撃者グループ・個人への裏付けある帰属は示されていない。",
+          "sources": [
+            "https://www.yellowhat.jp/corp/about/profile.html",
+            "https://rocket-boys.co.jp/security-measures-lab/yellowhat-data-leak-confirmed-1797124-20261015/"
+          ],
+          "reviewed_at": "2026-10-15"
+        }
+      },
+      "impact": {
+        "confirmed_breach": true,
+        "affected_users": 1797124,
+        "affected_users_note": "第三者調査機関の調査で1,797,124人分の顧客データの外部流出を確認。第一報の最大1,801,499人分から確定値へ更新された。",
+        "affected_organizations": 1,
+        "records": 1797124,
+        "data_exposed": [
+          "name",
+          "address",
+          "date_of_birth",
+          "gender",
+          "phone_number",
+          "email_address",
+          "member_number",
+          "login_id",
+          "password_hash"
+        ],
+        "service_disruption": true,
+        "service_disruption_note": "発覚後に対象システムを遮断・停止し、改修とセキュリティ強化、第三者による有効性確認後に稼働を再開。",
+        "service_recovered_at": null
+      },
+      "sources": [
+        {
+          "kind": "official",
+          "publisher": "株式会社イエローハット",
+          "published_at": "2026-10-15",
+          "url": "https://www.yellowhat.jp/corp/",
+          "title": "イエローハットにおける不正アクセスによる個人情報漏えいに関するお詫びとお知らせ【第二報】"
+        },
+        {
+          "kind": "news",
+          "publisher": "Security Measures Lab",
+          "published_at": "2026-10-15",
+          "url": "https://rocket-boys.co.jp/security-measures-lab/yellowhat-data-leak-confirmed-1797124-20261015/",
+          "title": "イエローハット、不正アクセスによるサイバー攻撃で179万7,124人分の個人情報漏えいを確認"
+        }
+      ],
+      "confidence": "high",
+      "last_updated": "2026-10-15T15:05:17.120Z"
+    },
     {
       "id": "2026-10-14-aena-ec-app",
       "organization": {
