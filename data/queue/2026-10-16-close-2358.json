@@ -1,0 +1,220 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-16-nikkei-cloud-breach",
+        "organization": {
+          "name": "株式会社日本経済新聞社",
+          "name_en": "Nikkei Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["media", "publishing", "news"],
+          "business_model": ["b2c", "b2b"],
+          "service": "システム開発用クラウドサービス",
+          "country": "JP",
+          "website": "https://www.nikkei.co.jp/nikkeiinfo/",
+          "headquarters": {"address":"〒100-8066 東京都千代田区大手町1-3-7","prefecture":"東京都","city":"千代田区","latitude":null,"longitude":null,"precision":"exact","source":"https://events.nikkei.co.jp/notice_commerce/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"people","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "システム開発用クラウドへの不正アクセスによる約183万件の情報漏えい",
+          "types": ["unauthorized_access", "data_breach", "credential_compromise"],
+          "occurred_at": "2026-10-07",
+          "occurred_time": {"start":null,"end":null,"timezone":"Asia/Tokyo","precision":"time_band","time_band":"overnight","basis":"日本経済新聞社の発表として、10月7日未明から朝にかけて不正アクセスを受けたと報道されている。未明と朝をまたぐため時計時刻は未公表。"},
+          "detected_at": null,
+          "disclosed_at": "2026-10-16",
+          "status": {"value":"investigating","as_of":"2026-10-16"},
+          "attack_vector": "クラウドサービスへのアクセスに用いる認証情報が何らかの手段で窃取され、その認証情報を用いて第三者が不正アクセスした。認証情報の窃取手段は公表されていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["システム開発用クラウドサービス"],
+          "affected_regions": [],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"被害企業および確認できた報道は第三者による不正アクセスを説明しているが、特定の攻撃者・グループへの帰属は公表していない。","sources":["https://internet.watch.impress.co.jp/docs/news/2148878.html"],"reviewed_at":"2026-10-16"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "漏えい確認は約183万件。うち氏名・メールアドレス・住所・電話番号・生年月日のいずれかを含む情報が約15万件、うちメールアドレスを含むものが約12万件。残る約168万件は単体では個人を特定できない識別子。件数はユニーク人数とは限らないため affected_users は未確定。",
+          "affected_organizations": 1,
+          "records": 1830000,
+          "data_exposed": ["name", "email_address", "address", "phone_number", "date_of_birth", "identifier"],
+          "service_disruption": false,
+          "service_disruption_note": "2026-10-16時点でシステム停止やデータ改ざんなどの異常は確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"news","publisher":"INTERNET Watch","published_at":"2026-10-16","url":"https://internet.watch.impress.co.jp/docs/news/2148878.html","title":"日経新聞社、クラウドサービスへの不正アクセスで約183万件の個人情報漏えい"},
+          {"kind":"news","publisher":"ITmedia NEWS","published_at":"2026-10-16","url":"https://www.itmedia.co.jp/news/article/2610/16/2000002337/","title":"日経新聞、不正アクセスで183万件の個人情報流出　開発用クラウドの認証情報盗まれ"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-16T14:58:00Z"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-16-fancl-ec-breach",
+        "organization": {
+          "name": "株式会社ファンケル",
+          "name_en": "FANCL CORPORATION",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["cosmetics", "healthcare", "ecommerce", "retail"],
+          "business_model": ["b2c"],
+          "service": "ファンケルECサイト",
+          "country": "JP",
+          "website": "https://www.fancl.jp/",
+          "headquarters": {"address":"〒231-8528 横浜市中区山下町89-1","prefecture":"神奈川県","city":"横浜市中区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.fancl.jp/about/outline/index.html"},
+          "employee_count": {"value":920,"unit":"employees","estimate_type":"reported","basis":"ファンケル会社概要、2026年1月1日現在。契約社員・パート等を除く。","confidence":"high"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"people","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "ECサイトへの不正アクセスによる会員情報漏えい",
+          "types": ["unauthorized_access", "data_breach"],
+          "occurred_at": "2026-10-03",
+          "detected_at": "2026-10-15",
+          "disclosed_at": "2026-10-16",
+          "status": {"value":"investigating","as_of":"2026-10-16"},
+          "attack_vector": "第三者によるECサイトへの不正アクセス。具体的な侵入方法は公表されていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["ファンケルECサイト"],
+          "affected_regions": [],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"公表情報では第三者による不正アクセスは確認されているが、攻撃者名・グループへの帰属は示されていない。","sources":["https://www.itmedia.co.jp/news/article/2610/16/2000002340/"],"reviewed_at":"2026-10-16"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": 368184,
+          "affected_users_note": "ファンケル分は393,785件、368,184人。アテニアとは別レコードとし、両社間で同一人物が重複する可能性があるため横断合算時は注意が必要。",
+          "affected_organizations": 1,
+          "records": 393785,
+          "data_exposed": ["email_address", "name", "address", "phone_number", "date_of_birth", "gender", "customer_number", "secondary_email_address", "hashed_secondary_password", "authentication_question", "points", "membership_stage"],
+          "service_disruption": true,
+          "service_disruption_note": "不正アクセスを受けた機能を特定し停止。事業活動・サービスへの重大な影響は確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"news","publisher":"ITmedia NEWS","published_at":"2026-10-16","url":"https://www.itmedia.co.jp/news/article/2610/16/2000002340/","title":"ファンケルとアテニア、計約83万件の会員情報漏えい　ECサイトに不正アクセス"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-16T14:58:00Z"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-16-attenir-ec-breach",
+        "organization": {
+          "name": "株式会社アテニア",
+          "name_en": "ATTENIR CORPORATION",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["cosmetics", "healthcare", "ecommerce", "retail"],
+          "business_model": ["b2c"],
+          "service": "アテニアECサイト",
+          "country": "JP",
+          "website": "https://www.attenir.co.jp/",
+          "headquarters": {"address":"〒231-0023 横浜市中区山下町89-1","prefecture":"神奈川県","city":"横浜市中区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.attenir.co.jp/brand/company/index.html"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"people","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "ECサイトへの不正アクセスによる会員情報漏えい",
+          "types": ["unauthorized_access", "data_breach"],
+          "occurred_at": "2026-10-03",
+          "detected_at": "2026-10-15",
+          "disclosed_at": "2026-10-16",
+          "status": {"value":"investigating","as_of":"2026-10-16"},
+          "attack_vector": "第三者によるECサイトへの不正アクセス。具体的な侵入方法は公表されていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["アテニアECサイト"],
+          "affected_regions": [],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"公表情報では第三者による不正アクセスは確認されているが、攻撃者名・グループへの帰属は示されていない。","sources":["https://www.itmedia.co.jp/news/article/2610/16/2000002340/"],"reviewed_at":"2026-10-16"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": 417312,
+          "affected_users_note": "アテニア分は441,162件、417,312人。ファンケルとは別レコードとし、両社間で同一人物が重複する可能性があるため横断合算時は注意が必要。",
+          "affected_organizations": 1,
+          "records": 441162,
+          "data_exposed": ["email_address", "name", "address", "phone_number", "date_of_birth", "gender", "customer_number", "secondary_email_address", "hashed_secondary_password", "authentication_question", "points", "membership_stage"],
+          "service_disruption": true,
+          "service_disruption_note": "不正アクセスを受けた機能を特定し停止。事業活動・サービスへの重大な影響は確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"news","publisher":"ITmedia NEWS","published_at":"2026-10-16","url":"https://www.itmedia.co.jp/news/article/2610/16/2000002340/","title":"ファンケルとアテニア、計約83万件の会員情報漏えい　ECサイトに不正アクセス"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-16T14:58:00Z"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-16-ntt-solmare-comic-cmoa",
+        "organization": {
+          "name": "NTTソルマーレ株式会社",
+          "name_en": "NTT Solmare Corporation",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["digital_content", "ecommerce", "publishing", "software"],
+          "business_model": ["b2c"],
+          "service": "コミックシーモア",
+          "country": "JP",
+          "website": "https://www.nttsolmare.com/",
+          "headquarters": {"address":null,"prefecture":"大阪府","city":"大阪市中央区","latitude":null,"longitude":null,"precision":"city","source":"https://www.nttsolmare.com/press/2026/0324.html"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"accounts","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "コミックシーモアへの不正アクセスによる会員情報流出",
+          "types": ["unauthorized_access", "data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-15",
+          "detected_time": {"start":"11:35","end":null,"timezone":"Asia/Tokyo","precision":"exact","time_band":"morning","basis":"10月15日11時35分にサービスを緊急停止したと公表。これは不正アクセスの可能性が高いと判断した後の対応時刻であり、攻撃発生時刻ではない。"},
+          "disclosed_at": "2026-10-16",
+          "status": {"value":"investigating","as_of":"2026-10-16"},
+          "attack_vector": "第三者による会員情報管理システムへの不正アクセス。具体的な侵入手法は調査中。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["コミックシーモア会員情報管理システム", "コミックシーモア", "読み放題", "レビュー", "シーモア島"],
+          "affected_regions": [],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"NTTソルマーレは第三者による不正アクセスを確認しているが、特定の攻撃者・グループへの帰属は公表していない。","sources":["https://www.nttsolmare.com/press/2026/1016.html"],"reviewed_at":"2026-10-16"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "一部会員の情報流出を確認したが、2026-10-16時点で対象件数は精査中。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": ["email_address", "password_hash", "date_of_birth", "gender", "nickname"],
+          "service_disruption": true,
+          "service_disruption_note": "10月15日11時35分からサービスを緊急停止。10月16日時点で再開に向けて対応中。事前に本棚アプリへダウンロード済みの作品は閲覧可能と案内された。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"NTTソルマーレ株式会社","published_at":"2026-10-16","url":"https://www.nttsolmare.com/press/2026/1016.html","title":"『コミックシーモア』会員情報の流出に関するお詫びとお願い"},
+          {"kind":"news","publisher":"ITmedia NEWS","published_at":"2026-10-16","url":"https://www.itmedia.co.jp/news/article/2610/16/2000002345/","title":"コミックシーモア、会員のメールアドレスや生年月日など流出　件数は精査中"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-16T14:58:00Z"
+      }
+    }
+  ]
+}
