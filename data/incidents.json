@@ -1,12 +1,138 @@
 {
   "schema_version": "1.1.0",
-  "generated_at": "2026-10-15T15:05:17.120Z",
+  "generated_at": "2026-10-16T03:03:21.013Z",
   "coverage": {
     "country": "JP",
     "scope": "publicly disclosed cyber incidents affecting Japanese organizations",
     "seed_note": "Initial seed focuses on recent high-signal incidents with official disclosures."
   },
   "incidents": [
+    {
+      "id": "2026-10-15-beautygarage-ec",
+      "organization": {
+        "name": "株式会社ビューティガレージ",
+        "name_en": "BEAUTY GARAGE Inc.",
+        "type": "company",
+        "size": "medium_enterprise",
+        "industry": [
+          "beauty",
+          "ecommerce",
+          "wholesale"
+        ],
+        "business_model": [
+          "b2b"
+        ],
+        "service": "BEAUTY GARAGE / EYELASH GARAGE",
+        "country": "JP",
+        "website": "https://www.beautygarage.co.jp/",
+        "headquarters": {
+          "address": "〒154-0015 東京都世田谷区桜新町1-34-25",
+          "prefecture": "東京都",
+          "city": "世田谷区",
+          "latitude": null,
+          "longitude": null,
+          "precision": "exact",
+          "source": "https://www.beautygarage.co.jp/about/base/"
+        },
+        "employee_count": {
+          "value": 628,
+          "unit": "employees",
+          "estimate_type": "reported",
+          "basis": "公式会社概要、2026年4月末現在のグループ全体従業員数。",
+          "confidence": "high"
+        },
+        "listing": {
+          "is_listed": true,
+          "market": "Tokyo Stock Exchange Prime",
+          "ticker": "3180"
+        },
+        "estimated_total_users": {
+          "value": null,
+          "unit": "accounts",
+          "estimate_type": "unknown",
+          "basis": null,
+          "confidence": "unknown"
+        }
+      },
+      "incident": {
+        "title": "ECサイトへの不正侵入による顧客情報流出",
+        "types": [
+          "unauthorized_access",
+          "data_breach"
+        ],
+        "occurred_at": "2026-10-10",
+        "detected_at": "2026-10-13",
+        "disclosed_at": "2026-10-15",
+        "status": {
+          "value": "contained",
+          "as_of": "2026-10-15"
+        },
+        "attack_vector": "10月10日から12日にかけてECサイトのサーバーへの不正侵入が発生。10月13日に事象を検知し、不正アクセス経路を特定して同日中に遮断した。具体的な侵入手法は公表されていない。",
+        "threat_actor": null,
+        "ransomware": false,
+        "malware_family": null,
+        "vulnerabilities": [],
+        "affected_systems": [
+          "BEAUTY GARAGE EC system",
+          "EYELASH GARAGE EC system"
+        ],
+        "affected_regions": [
+          "Japan"
+        ],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "被害企業の公表および確認した報道では、攻撃者グループ・個人への裏付けある帰属は示されていない。",
+          "sources": [
+            "https://www.beautygarage.jp/topics/news_unauthorizedaccess2026"
+          ],
+          "reviewed_at": "2026-10-16"
+        }
+      },
+      "impact": {
+        "confirmed_breach": true,
+        "affected_users": null,
+        "affected_users_note": "公式発表は顧客情報775,725件の流出を確認しているが、ユニーク人数として公表されていないため affected_users は未確定。",
+        "affected_organizations": 1,
+        "records": 775725,
+        "data_exposed": [
+          "company_name",
+          "salon_name",
+          "name",
+          "business_type",
+          "salon_url",
+          "phone_number",
+          "email_address",
+          "password_hash",
+          "password_reset_question_hash",
+          "password_reset_answer_hash"
+        ],
+        "service_disruption": false,
+        "service_disruption_note": "不正アクセス経路は10月13日に遮断。公表時点でECサイトを含むサービスは利用可能。",
+        "service_recovered_at": null
+      },
+      "sources": [
+        {
+          "kind": "official",
+          "publisher": "株式会社ビューティガレージ",
+          "published_at": "2026-10-15",
+          "url": "https://www.beautygarage.jp/topics/news_unauthorizedaccess2026",
+          "title": "不正アクセスによるお客様情報漏洩に関するお詫びとお知らせ"
+        },
+        {
+          "kind": "news",
+          "publisher": "通販通信ECMO",
+          "published_at": "2026-10-16",
+          "url": "https://www.tsuhannews.jp/news/detail/76008",
+          "title": "ビューティガレージ、通販サイトで約77万件の情報漏えい"
+        }
+      ],
+      "confidence": "high",
+      "last_updated": "2026-10-16T03:03:21.013Z"
+    },
     {
       "id": "2026-10-15-bk-japan-app",
       "organization": {
@@ -134,6 +260,124 @@
       "last_updated": "2026-10-15T15:05:17.120Z"
     },
     {
+      "id": "2026-10-15-koike-sanso-cyberattack-followup",
+      "organization": {
+        "name": "小池酸素工業株式会社",
+        "name_en": "KOIKE SANSO KOGYO CO., LTD.",
+        "type": "company",
+        "size": "large_enterprise",
+        "industry": [
+          "industrial_machinery",
+          "manufacturing",
+          "industrial_gas"
+        ],
+        "business_model": [
+          "b2b"
+        ],
+        "service": null,
+        "country": "JP",
+        "website": "https://koike-japan.com/",
+        "headquarters": {
+          "address": "〒130-0012 東京都墨田区太平3-4-8 KOIKE Bld. 7F",
+          "prefecture": "東京都",
+          "city": "墨田区",
+          "latitude": null,
+          "longitude": null,
+          "precision": "exact",
+          "source": "https://koike-japan.com/company/about/"
+        },
+        "employee_count": {
+          "value": 1034,
+          "unit": "employees",
+          "estimate_type": "reported",
+          "basis": "公式会社資料に記載された2024年3月31日現在の連結従業員数。",
+          "confidence": "high"
+        },
+        "listing": {
+          "is_listed": true,
+          "market": "Tokyo Stock Exchange Standard",
+          "ticker": "6137"
+        },
+        "estimated_total_users": {
+          "value": null,
+          "unit": "people",
+          "estimate_type": "unknown",
+          "basis": null,
+          "confidence": "unknown"
+        }
+      },
+      "incident": {
+        "title": "サイバー攻撃によるデータ漏えいと流出疑いファイルの公開",
+        "types": [
+          "unauthorized_access",
+          "data_breach",
+          "service_disruption",
+          "extortion"
+        ],
+        "occurred_at": null,
+        "detected_at": "2026-10-05",
+        "disclosed_at": "2026-10-15",
+        "status": {
+          "value": "recovering",
+          "as_of": "2026-10-15"
+        },
+        "attack_vector": "一部サーバーに不正アクセスが疑われる痕跡を確認。具体的な侵入経路は公表されていない。被害拡大防止のため社内ネットワーク接続を制限し、原因・影響範囲の特定調査は完了。",
+        "threat_actor": "Exitium",
+        "ransomware": null,
+        "malware_family": null,
+        "vulnerabilities": [],
+        "affected_systems": [
+          "company servers",
+          "internal network"
+        ],
+        "affected_regions": [
+          "Japan"
+        ],
+        "threat_actor_attribution": {
+          "name": "Exitium",
+          "actor_type": "ransomware_group",
+          "aliases": [],
+          "status": "attacker_claim",
+          "confidence": "low",
+          "basis": "Exitiumが小池酸素工業を名指しし約5.8TBのデータ保有を主張。被害企業は流出が疑われる電子ファイルのネット公開を確認したが、Exitiumを侵入主体として帰属させておらず、5.8TBも裏付けていない。",
+          "sources": [
+            "https://rocket-boys.co.jp/security-measures-lab/koike-sanso-cyberattack-exitium-publication-followup/",
+            "https://koike-japan.com/"
+          ],
+          "reviewed_at": "2026-10-16"
+        }
+      },
+      "impact": {
+        "confirmed_breach": true,
+        "affected_users": null,
+        "affected_users_note": "データ漏えいと流出疑い電子ファイルのネット公開は会社が確認しているが、個人情報の漏えい有無・対象人数・範囲は調査中。Exitium主張の5.8TBは未確認のため records に計上しない。",
+        "affected_organizations": 1,
+        "records": null,
+        "data_exposed": [],
+        "service_disruption": true,
+        "service_disruption_note": "社内ネットワークの接続を制限し、一部システム障害と業務への支障が継続。復旧対応中。",
+        "service_recovered_at": null
+      },
+      "sources": [
+        {
+          "kind": "official",
+          "publisher": "小池酸素工業株式会社",
+          "published_at": "2026-10-15",
+          "url": "https://koike-japan.com/",
+          "title": "当社に対するサイバー攻撃に関するお知らせ（第3報）"
+        },
+        {
+          "kind": "security_news",
+          "publisher": "セキュリティ対策Lab",
+          "published_at": "2026-10-16",
+          "url": "https://rocket-boys.co.jp/security-measures-lab/koike-sanso-cyberattack-exitium-publication-followup/",
+          "title": "小池酸素工業、不正アクセスによるサイバー攻撃で流出疑いの電子ファイルがネット上に公開―ランサムウェア グループ Exitiumは「5.8TB」窃取を主張"
+        }
+      ],
+      "confidence": "high",
+      "last_updated": "2026-10-16T03:03:21.013Z"
+    },
+    {
       "id": "2026-10-15-medley-atlink",
       "organization": {
         "name": "株式会社メドレー",
@@ -251,6 +495,238 @@
       ],
       "confidence": "high",
       "last_updated": "2026-10-15T15:05:17.120Z"
+    },
+    {
+      "id": "2026-10-15-moonstar-online-store",
+      "organization": {
+        "name": "株式会社ムーンスター",
+        "name_en": "MoonStar Company",
+        "type": "company",
+        "size": "large_enterprise",
+        "industry": [
+          "footwear",
+          "manufacturing",
+          "ecommerce"
+        ],
+        "business_model": [
+          "b2c",
+          "b2b"
+        ],
+        "service": "ムーンスター公式オンラインストア等",
+        "country": "JP",
+        "website": "https://www.moonstar.co.jp/",
+        "headquarters": {
+          "address": "福岡県久留米市白山町60",
+          "prefecture": "福岡県",
+          "city": "久留米市",
+          "latitude": null,
+          "longitude": null,
+          "precision": "exact",
+          "source": "https://www.moonstar.co.jp/corporate/profile/"
+        },
+        "employee_count": {
+          "value": 754,
+          "unit": "employees",
+          "estimate_type": "reported",
+          "basis": "公式企業情報、2026年6月期。",
+          "confidence": "high"
+        },
+        "listing": {
+          "is_listed": false,
+          "market": null,
+          "ticker": null
+        },
+        "estimated_total_users": {
+          "value": null,
+          "unit": "people",
+          "estimate_type": "unknown",
+          "basis": null,
+          "confidence": "unknown"
+        }
+      },
+      "incident": {
+        "title": "システムサーバーへの不正ログインによるオンラインストア顧客情報漏えい可能性",
+        "types": [
+          "unauthorized_access",
+          "potential_data_breach"
+        ],
+        "occurred_at": "2026-05-14",
+        "detected_at": "2026-03-01",
+        "disclosed_at": "2026-10-15",
+        "status": {
+          "value": "investigating",
+          "as_of": "2026-10-15"
+        },
+        "attack_vector": "外部専門機関との技術調査で、システムサーバーに対する不正なログインと情報取得の可能性を確認。具体的な手法・対象システム・脆弱性は安全上の理由から非公表。2026年5月14日から19日に個人情報が漏えいした可能性が高い。",
+        "threat_actor": null,
+        "ransomware": false,
+        "malware_family": null,
+        "vulnerabilities": [],
+        "affected_systems": [
+          "MoonStar system server",
+          "online store order data"
+        ],
+        "affected_regions": [
+          "Japan"
+        ],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "公式第3報に攻撃主体の帰属情報はなく、確認した公開情報でも裏付けある帰属は示されていない。",
+          "sources": [
+            "https://www.moonstar.co.jp/information/2026/10/gg.html"
+          ],
+          "reviewed_at": "2026-10-16"
+        }
+      },
+      "impact": {
+        "confirmed_breach": false,
+        "affected_users": 593000,
+        "affected_users_note": "公式第3報が情報漏えいの可能性のある対象人数を最大59万3千人と公表。個別対象者には順次メール連絡。",
+        "affected_organizations": 1,
+        "records": null,
+        "data_exposed": [
+          "name",
+          "address",
+          "phone_number",
+          "email_address",
+          "order_history"
+        ],
+        "service_disruption": false,
+        "service_disruption_note": "不正アクセスを受けたシステムサーバーの外部接続を遮断し、パスワードを強制変更。",
+        "service_recovered_at": null
+      },
+      "sources": [
+        {
+          "kind": "official",
+          "publisher": "株式会社ムーンスター",
+          "published_at": "2026-10-15",
+          "url": "https://www.moonstar.co.jp/information/2026/10/gg.html",
+          "title": "【重要】弊社システムサーバーに対する不正アクセスの疑いに関するお知らせ【第3報】"
+        }
+      ],
+      "confidence": "high",
+      "last_updated": "2026-10-16T03:03:21.013Z"
+    },
+    {
+      "id": "2026-10-15-ntt-solmare-comic-cmoa",
+      "organization": {
+        "name": "NTTソルマーレ株式会社",
+        "name_en": "NTT Solmare Corporation",
+        "type": "company",
+        "size": "medium_enterprise",
+        "industry": [
+          "digital_content",
+          "ecommerce",
+          "publishing"
+        ],
+        "business_model": [
+          "b2c"
+        ],
+        "service": "コミックシーモア",
+        "country": "JP",
+        "website": "https://www.nttsolmare.com/",
+        "headquarters": {
+          "address": "〒541-0041 大阪市中央区北浜4丁目1番1号 淀屋橋ゲートタワー17F",
+          "prefecture": "大阪府",
+          "city": "大阪市中央区",
+          "latitude": null,
+          "longitude": null,
+          "precision": "exact",
+          "source": "https://www.nttsolmare.com/corporateinfo/profile/"
+        },
+        "employee_count": {
+          "value": 436,
+          "unit": "employees",
+          "estimate_type": "reported",
+          "basis": "公式会社概要、2026年10月現在。",
+          "confidence": "high"
+        },
+        "listing": {
+          "is_listed": false,
+          "market": null,
+          "ticker": null
+        },
+        "estimated_total_users": {
+          "value": null,
+          "unit": "accounts",
+          "estimate_type": "unknown",
+          "basis": null,
+          "confidence": "unknown"
+        }
+      },
+      "incident": {
+        "title": "コミックシーモアへの不正アクセス可能性に伴う全面サービス停止",
+        "types": [
+          "suspected_unauthorized_access",
+          "service_disruption"
+        ],
+        "occurred_at": null,
+        "detected_at": "2026-10-15",
+        "disclosed_at": "2026-10-15",
+        "status": {
+          "value": "investigating",
+          "as_of": "2026-10-15"
+        },
+        "attack_vector": "コミックシーモアのサーバーに外部から不正なアクセスが行われた可能性が高いと判断。原因と影響範囲は調査中。",
+        "threat_actor": null,
+        "ransomware": null,
+        "malware_family": null,
+        "vulnerabilities": [],
+        "affected_systems": [
+          "コミックシーモア",
+          "読み放題",
+          "レビュー",
+          "シーモア島"
+        ],
+        "affected_regions": [
+          "Japan"
+        ],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "公式発表は不正アクセスの可能性を調査中としており、攻撃主体の帰属情報は公表していない。",
+          "sources": [
+            "https://www.nttsolmare.com/press/2026/0616-1.html"
+          ],
+          "reviewed_at": "2026-10-16"
+        }
+      },
+      "impact": {
+        "confirmed_breach": false,
+        "affected_users": null,
+        "affected_users_note": "個人情報流出の有無を含む影響範囲は公表時点で調査中。",
+        "affected_organizations": 1,
+        "records": null,
+        "data_exposed": [],
+        "service_disruption": true,
+        "service_disruption_note": "原因究明のため10月15日11時30分から緊急メンテナンスとしてサービスを停止。ストア、読み放題、レビュー、シーモア島などが利用不可。",
+        "service_recovered_at": null
+      },
+      "sources": [
+        {
+          "kind": "official",
+          "publisher": "NTTソルマーレ株式会社",
+          "published_at": "2026-10-15",
+          "url": "https://www.nttsolmare.com/press/2026/0616-1.html",
+          "title": "『コミックシーモア』の緊急メンテナンスについて"
+        },
+        {
+          "kind": "news",
+          "publisher": "ASCII.jp",
+          "published_at": "2026-10-16",
+          "url": "https://ascii.jp/elem/000/004/443/4443123/",
+          "title": "コミックシーモア、サービス停止 不正アクセスの可能性"
+        }
+      ],
+      "confidence": "high",
+      "last_updated": "2026-10-16T03:03:21.013Z"
     },
     {
       "id": "2026-10-15-sourcenext-member-api",
