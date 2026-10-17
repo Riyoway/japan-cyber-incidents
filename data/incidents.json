@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1.0",
-  "generated_at": "2026-10-17T03:05:35.538Z",
+  "generated_at": "2026-10-17T14:56:48.688Z",
   "coverage": {
     "country": "JP",
     "scope": "publicly disclosed cyber incidents affecting Japanese organizations",
@@ -5252,6 +5252,139 @@
       ],
       "confidence": "high",
       "last_updated": "2026-10-10T12:17:32Z"
+    },
+    {
+      "id": "2026-09-26-keio-ransomware",
+      "organization": {
+        "name": "京王電鉄株式会社",
+        "name_en": "Keio Corporation",
+        "type": "company",
+        "size": "large_enterprise",
+        "industry": [
+          "railway",
+          "transportation",
+          "real_estate"
+        ],
+        "business_model": [
+          "b2c",
+          "b2b",
+          "public"
+        ],
+        "service": null,
+        "country": "JP",
+        "website": "https://www.keio.co.jp/",
+        "headquarters": {
+          "address": "〒206-8502 東京都多摩市関戸一丁目9番地1",
+          "prefecture": "東京都",
+          "city": "多摩市",
+          "latitude": null,
+          "longitude": null,
+          "precision": "exact",
+          "source": "https://www.keio.co.jp/company/corporate/summary/"
+        },
+        "employee_count": {
+          "value": 2429,
+          "unit": "employees",
+          "estimate_type": "reported",
+          "basis": "京王電鉄会社概要掲載の従業員数。",
+          "confidence": "high"
+        },
+        "listing": {
+          "is_listed": true,
+          "market": "Tokyo Stock Exchange Prime",
+          "ticker": "9008"
+        },
+        "estimated_total_users": {
+          "value": null,
+          "unit": "people",
+          "estimate_type": "unknown",
+          "basis": null,
+          "confidence": "unknown"
+        }
+      },
+      "incident": {
+        "title": "京王グループのサーバーへのランサムウェア攻撃によるシステム障害",
+        "types": [
+          "ransomware",
+          "unauthorized_access",
+          "service_disruption",
+          "attacker_claim"
+        ],
+        "occurred_at": null,
+        "detected_at": "2026-09-26",
+        "detected_time": {
+          "start": null,
+          "end": null,
+          "timezone": "Asia/Tokyo",
+          "precision": "time_band",
+          "time_band": "overnight",
+          "basis": "京王電鉄は2026年9月26日未明にランサムウェア攻撃とシステム障害を確認したと公表。攻撃発生時刻そのものは公表していない。"
+        },
+        "disclosed_at": "2026-09-26",
+        "status": {
+          "value": "investigating",
+          "as_of": "2026-10-16"
+        },
+        "attack_vector": null,
+        "threat_actor": "Qilin",
+        "ransomware": true,
+        "malware_family": null,
+        "vulnerabilities": [],
+        "affected_systems": [
+          "京王グループのサーバー",
+          "一部グループ会社の営業システム"
+        ],
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": "Qilin",
+          "actor_type": "ransomware_group",
+          "aliases": [],
+          "status": "attacker_claim",
+          "confidence": "low",
+          "basis": "京王電鉄は10月16日、攻撃を行ったと名乗る組織が京王グループ保有情報の一部を公開したと主張していることを確認した。セキュリティ報道はQilinのリークサイト上の犯行声明として報告しているが、京王電鉄・警察・フォレンジック事業者によるQilinへの技術的帰属は公表されていないため attacker_claim とする。",
+          "sources": [
+            "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20261016_newsrelease.pdf",
+            "https://rocket-boys.co.jp/security-measures-lab/keio-qilin-ransomware-claim-leak-site-samples-20261016/"
+          ],
+          "reviewed_at": "2026-10-17"
+        }
+      },
+      "impact": {
+        "confirmed_breach": false,
+        "affected_users": null,
+        "affected_users_note": "攻撃者は京王グループ保有情報の一部を公開したと主張しているが、京王電鉄は2026年10月16日時点で個人情報漏えいの事実を確認したとは公表していない。",
+        "affected_organizations": null,
+        "records": null,
+        "data_exposed": [],
+        "service_disruption": true,
+        "service_disruption_note": "一部グループ会社の営業システムに支障。京王電鉄は被害拡大防止のためネットワーク遮断措置を実施。鉄道運行への支障はないと公表。",
+        "service_recovered_at": null
+      },
+      "sources": [
+        {
+          "kind": "official",
+          "publisher": "京王電鉄株式会社",
+          "published_at": "2026-09-26",
+          "url": "https://www.keio.co.jp/news/update/announce/nr260926v13404/",
+          "title": "ランサムウェア攻撃によるシステム障害に関するお知らせとお詫び"
+        },
+        {
+          "kind": "official",
+          "publisher": "京王電鉄株式会社",
+          "published_at": "2026-10-16",
+          "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20261016_newsrelease.pdf",
+          "title": "ランサムウェア攻撃によるシステム障害に関するお知らせ 第2報"
+        },
+        {
+          "kind": "news",
+          "publisher": "Security NEXT / Rocket Boys",
+          "published_at": "2026-10-16",
+          "url": "https://rocket-boys.co.jp/security-measures-lab/keio-qilin-ransomware-claim-leak-site-samples-20261016/",
+          "title": "ランサムウェアグループQilinが京王電鉄への不正アクセスによるサイバー攻撃を主張"
+        }
+      ],
+      "confidence": "high",
+      "last_updated": "2026-10-17T14:56:48.688Z"
     },
     {
       "id": "2026-09-26-nippon-rentacar",
