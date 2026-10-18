@@ -1,12 +1,246 @@
 {
   "schema_version": "1.1.0",
-  "generated_at": "2026-10-17T14:56:48.688Z",
+  "generated_at": "2026-10-18T03:03:48.132Z",
   "coverage": {
     "country": "JP",
     "scope": "publicly disclosed cyber incidents affecting Japanese organizations",
     "seed_note": "Initial seed focuses on recent high-signal incidents with official disclosures."
   },
   "incidents": [
+    {
+      "id": "2026-10-17-tohoku-frontier-studio-breach",
+      "organization": {
+        "name": "東北電力フロンティア株式会社",
+        "name_en": "Tohoku Electric Power Frontier Co., Inc.",
+        "type": "company",
+        "size": "medium_enterprise",
+        "industry": [
+          "energy",
+          "electricity",
+          "consumer_services"
+        ],
+        "business_model": [
+          "b2c"
+        ],
+        "service": "MusuBiz",
+        "country": "JP",
+        "website": "https://www.tohoku-frontier.co.jp/",
+        "headquarters": {
+          "address": "宮城県仙台市青葉区花京院1-1-20",
+          "prefecture": "宮城県",
+          "city": "仙台市青葉区",
+          "latitude": null,
+          "longitude": null,
+          "precision": "exact",
+          "source": "https://www.tohoku-epco.co.jp/information/1248703_2521.html"
+        },
+        "employee_count": {
+          "value": null,
+          "unit": "employees",
+          "estimate_type": "unknown",
+          "basis": null,
+          "confidence": "unknown"
+        },
+        "listing": {
+          "is_listed": false,
+          "market": null,
+          "ticker": null
+        },
+        "estimated_total_users": {
+          "value": 200000,
+          "unit": "applications",
+          "estimate_type": "reported",
+          "basis": "東北電力が2026年5月19日に東北電力フロンティアの電気申込件数累計20万件突破を公表。MusuBiz利用者数ではない。",
+          "confidence": "high"
+        }
+      },
+      "incident": {
+        "title": "Studioへの不正アクセスに伴うMusuBiz問い合わせ情報の漏えい可能性",
+        "types": [
+          "third_party_incident",
+          "unauthorized_access",
+          "potential_data_breach"
+        ],
+        "occurred_at": "2026-09-30",
+        "detected_at": null,
+        "disclosed_at": "2026-10-17",
+        "status": {
+          "value": "investigating",
+          "as_of": "2026-10-17"
+        },
+        "attack_vector": "イベント関連Webサイトの制作・運用に利用していたStudioのサービスが第三者による不正アクセスを受け、問い合わせフォーム情報が外部から取得可能な状態になった可能性。",
+        "threat_actor": null,
+        "ransomware": false,
+        "malware_family": null,
+        "vulnerabilities": [],
+        "affected_systems": [
+          "MusuBiz event website inquiry forms",
+          "Studio"
+        ],
+        "affected_regions": [
+          "宮城県",
+          "山形県",
+          "東北地方"
+        ],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "公表情報ではStudioへの第三者による不正アクセスまで確認されているが、攻撃主体の帰属は示されていない。",
+          "sources": [
+            "https://www.oanda.jp/lab-education/market_news/kn_2026101701001185/"
+          ],
+          "reviewed_at": "2026-10-18"
+        }
+      },
+      "impact": {
+        "confirmed_breach": false,
+        "affected_users": null,
+        "affected_users_note": "2024年以降のイベントWebサイト問い合わせフォームに入力された情報延べ182件が漏えいした可能性。延べ件数のためユニーク人数は不明。イベント参加者の個人情報や電気・光回線契約情報は対象外と説明されている。",
+        "affected_organizations": 1,
+        "records": 182,
+        "data_exposed": [
+          "name",
+          "phone_number",
+          "inquiry_form_data"
+        ],
+        "service_disruption": true,
+        "service_disruption_note": "対象の問い合わせフォーム運用を停止。",
+        "service_recovered_at": null
+      },
+      "sources": [
+        {
+          "kind": "news",
+          "publisher": "共同通信",
+          "published_at": "2026-10-17",
+          "url": "https://www.oanda.jp/lab-education/market_news/kn_2026101701001185/",
+          "title": "東北電子会社で漏えいか"
+        }
+      ],
+      "confidence": "medium",
+      "last_updated": "2026-10-18T03:03:48.132Z"
+    },
+    {
+      "id": "2026-10-17-tosa-arcadia-119-breach",
+      "organization": {
+        "name": "土佐市",
+        "name_en": "Tosa City",
+        "type": "municipality",
+        "size": "municipality",
+        "industry": [
+          "government",
+          "public_safety",
+          "emergency_services"
+        ],
+        "business_model": [
+          "public"
+        ],
+        "service": "119RAIDEN / NET119",
+        "country": "JP",
+        "website": "https://www.city.tosa.lg.jp/",
+        "headquarters": {
+          "address": "高知県土佐市高岡町甲2017-1",
+          "prefecture": "高知県",
+          "city": "土佐市",
+          "latitude": null,
+          "longitude": null,
+          "precision": "exact",
+          "source": "https://www.city.tosa.lg.jp/"
+        },
+        "employee_count": {
+          "value": null,
+          "unit": "employees",
+          "estimate_type": "unknown",
+          "basis": null,
+          "confidence": "unknown"
+        },
+        "listing": {
+          "is_listed": false,
+          "market": null,
+          "ticker": null
+        },
+        "estimated_total_users": {
+          "value": null,
+          "unit": "people",
+          "estimate_type": "unknown",
+          "basis": null,
+          "confidence": "unknown"
+        }
+      },
+      "incident": {
+        "title": "アルカディア不正アクセスに伴う119RAIDEN・NET119登録情報の漏えい可能性",
+        "types": [
+          "third_party_incident",
+          "unauthorized_access",
+          "potential_data_breach",
+          "service_disruption"
+        ],
+        "occurred_at": null,
+        "detected_at": null,
+        "disclosed_at": "2026-10-17",
+        "status": {
+          "value": "investigating",
+          "as_of": "2026-10-17"
+        },
+        "attack_vector": "運営事業者の株式会社アルカディアが第三者による不正アクセスを受けた影響。個別の侵入手法は公表情報で確認できない。",
+        "threat_actor": null,
+        "ransomware": null,
+        "malware_family": null,
+        "vulnerabilities": [],
+        "affected_systems": [
+          "119RAIDEN",
+          "NET119"
+        ],
+        "affected_regions": [
+          "高知県",
+          "土佐市"
+        ],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "自治体・事業者の公表は第三者による不正アクセスとしているが、攻撃主体の帰属情報は確認できない。",
+          "sources": [
+            "https://www.city.tosa.lg.jp/"
+          ],
+          "reviewed_at": "2026-10-18"
+        }
+      },
+      "impact": {
+        "confirmed_breach": false,
+        "affected_users": 680,
+        "affected_users_note": "最大値。119RAIDENは土佐市消防本部職員・市役所関係部局職員・消防団関係者最大380人、NET119は高知県内登録者と家族最大300人に漏えいの可能性。両集合の重複有無は未確認。",
+        "affected_organizations": 1,
+        "records": null,
+        "data_exposed": [
+          "name",
+          "email_address",
+          "phone_number",
+          "date_of_birth",
+          "sex",
+          "address",
+          "contact_information"
+        ],
+        "service_disruption": true,
+        "service_disruption_note": "アルカディアへの不正アクセスを受けたサービス運用への影響が公表されている。",
+        "service_recovered_at": null
+      },
+      "sources": [
+        {
+          "kind": "official",
+          "publisher": "土佐市",
+          "published_at": "2026-10-17",
+          "url": "https://www.city.tosa.lg.jp/",
+          "title": "災害情報配信システム運営事業者への不正アクセスによる情報漏えいのおそれ"
+        }
+      ],
+      "confidence": "medium",
+      "last_updated": "2026-10-18T03:03:48.132Z"
+    },
     {
       "id": "2026-10-16-attenir-ec-breach",
       "organization": {
@@ -384,6 +618,134 @@
       ],
       "confidence": "high",
       "last_updated": "2026-10-16T15:00:33.450Z"
+    },
+    {
+      "id": "2026-10-16-japan-arts-google-account-breach",
+      "organization": {
+        "name": "株式会社ジャパン・アーツ",
+        "name_en": "Japan Arts Corporation",
+        "type": "company",
+        "size": "small_enterprise",
+        "industry": [
+          "arts",
+          "entertainment",
+          "artist_management"
+        ],
+        "business_model": [
+          "b2b",
+          "b2c"
+        ],
+        "service": null,
+        "country": "JP",
+        "website": "https://www.japanarts.co.jp/",
+        "headquarters": {
+          "address": "〒150-8905 東京都渋谷区渋谷2-1-6",
+          "prefecture": "東京都",
+          "city": "渋谷区",
+          "latitude": null,
+          "longitude": null,
+          "precision": "exact",
+          "source": "https://www.japanarts.co.jp/news/p10043/"
+        },
+        "employee_count": {
+          "value": 60,
+          "unit": "employees",
+          "estimate_type": "reported",
+          "basis": "Company profile published by Japan Arts lists 60 employees.",
+          "confidence": "high"
+        },
+        "listing": {
+          "is_listed": false,
+          "market": null,
+          "ticker": null
+        },
+        "estimated_total_users": {
+          "value": null,
+          "unit": "people",
+          "estimate_type": "unknown",
+          "basis": null,
+          "confidence": "unknown"
+        }
+      },
+      "incident": {
+        "title": "社員Googleアカウントへのフィッシング起点の不正アクセスと連絡先情報流出",
+        "types": [
+          "phishing",
+          "account_compromise",
+          "unauthorized_access",
+          "data_breach"
+        ],
+        "occurred_at": "2026-10-13",
+        "occurred_time": {
+          "start": "16:08",
+          "end": null,
+          "timezone": "Asia/Tokyo",
+          "precision": "exact",
+          "time_band": "afternoon",
+          "basis": "公式発表で第三者が連絡先データをダウンロードした時刻を2026年10月13日16:08頃と公表。"
+        },
+        "detected_at": "2026-10-14",
+        "detected_time": {
+          "start": "07:07",
+          "end": null,
+          "timezone": "Asia/Tokyo",
+          "precision": "approximate",
+          "time_band": "morning",
+          "basis": "公式発表で社員を騙るなりすましメールの外部送信を10月14日07:07頃に検知。"
+        },
+        "disclosed_at": "2026-10-16",
+        "status": {
+          "value": "contained_monitoring",
+          "as_of": "2026-10-16"
+        },
+        "attack_vector": "社員が知人になりすましたフィッシングメールのリンク先で認証情報を入力し端末認証を許可。その後、第三者がGoogleアカウントへ不正アクセスし連絡先データをダウンロードした。",
+        "threat_actor": null,
+        "ransomware": false,
+        "malware_family": null,
+        "vulnerabilities": [],
+        "affected_systems": [
+          "employee Google account",
+          "Google contacts"
+        ],
+        "affected_regions": [],
+        "threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "公式発表は第三者による不正アクセスとフィッシング経路を説明しているが、攻撃主体の帰属情報は公表していない。",
+          "sources": [
+            "https://www.japanarts.co.jp/news/p10043/"
+          ],
+          "reviewed_at": "2026-10-18"
+        }
+      },
+      "impact": {
+        "confirmed_breach": true,
+        "affected_users": null,
+        "affected_users_note": "氏名・メールアドレスを含む連絡先情報計5,376件の流出を確認。件数はユニーク人数とは限らないため affected_users は未確定。",
+        "affected_organizations": 1,
+        "records": 5376,
+        "data_exposed": [
+          "name",
+          "email_address"
+        ],
+        "service_disruption": false,
+        "service_disruption_note": "当該アカウントのパスワード再設定とアクセス遮断を10月14日18:55に完了。チケット会員情報の漏えいは確認されていない。",
+        "service_recovered_at": "2026-10-14"
+      },
+      "sources": [
+        {
+          "kind": "official",
+          "publisher": "株式会社ジャパン・アーツ",
+          "published_at": "2026-10-16",
+          "url": "https://www.japanarts.co.jp/news/p10043/",
+          "title": "【重要なお知らせ】当社社員を装った「なりすましメール」に関するお詫び"
+        }
+      ],
+      "confidence": "high",
+      "last_updated": "2026-10-18T03:03:48.132Z"
     },
     {
       "id": "2026-10-16-nikkei-cloud-breach",
