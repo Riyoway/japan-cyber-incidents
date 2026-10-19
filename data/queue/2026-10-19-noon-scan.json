@@ -1,0 +1,174 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-18-jfa-passport-unauthorized-access",
+        "organization": {
+          "name": "公益財団法人日本サッカー協会",
+          "name_en": "Japan Football Association",
+          "type": "nonprofit_organization",
+          "size": "large_organization",
+          "industry": ["sports", "football"],
+          "business_model": ["nonprofit"],
+          "service": "JFA Passport",
+          "country": "JP",
+          "website": "https://www.jfa.jp/",
+          "headquarters": {
+            "address": "〒112-0004 東京都文京区後楽1丁目4-18 トヨタ東京ビル",
+            "prefecture": "東京都",
+            "city": "文京区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.jfa.jp/about_jfa/organization/organization.html"
+          },
+          "employee_count": {"value": null, "unit": "employees", "estimate_type": "unknown", "basis": null, "confidence": "unknown"},
+          "listing": {"is_listed": false, "market": null, "ticker": null},
+          "estimated_total_users": {"value": null, "unit": "users", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "JFA公式アプリ「JFA Passport」への不正アクセス",
+          "types": ["unauthorized_access", "service_disruption", "potential_data_breach"],
+          "occurred_at": "2026-10-17",
+          "occurred_time": {"start": "03:25", "end": "19:00", "timezone": "Asia/Tokyo", "precision": "approximate", "time_band": "overnight", "basis": "JFAは2026年10月17日3:25頃から19:00頃まで第三者による不正アクセスが発生したと公表。"},
+          "detected_at": "2026-10-17",
+          "disclosed_at": "2026-10-18",
+          "status": {"value": "investigating", "as_of": "2026-10-18"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["JFA Passport"],
+          "affected_regions": [],
+          "threat_actor_attribution": {"name": null, "actor_type": "unknown", "aliases": [], "status": "unknown", "confidence": "unknown", "basis": "JFAは第三者による不正アクセスを確認しているが、攻撃主体を特定する帰属情報は公表していない。", "source_urls": ["https://www.jfa.jp/news/00036934/"], "reviewed_at": "2026-10-19"}
+        },
+        "impact": {
+          "confirmed_breach": null,
+          "affected_users": null,
+          "affected_users_note": "個人情報を含む利用者情報への影響は2026年10月18日時点で調査中。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "被害拡大防止措置に伴いJFA Passportの一部機能を一時停止。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "official", "publisher": "公益財団法人日本サッカー協会", "published_at": "2026-10-18", "url": "https://www.jfa.jp/news/00036934/", "title": "JFA公式アプリ「JFA Passport」への不正アクセスについて"},
+          {"kind": "news", "publisher": "ITmedia NEWS", "published_at": "2026-10-19", "url": "https://www.itmedia.co.jp/news/article/2610/19/2000002355/", "title": "サッカー協会公式アプリに不正アクセス　「JFA Passport」一部機能停止、「ログアウト控えて」"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-19T02:58:00Z"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-17-recruit-carsensor-suspicious-access",
+        "organization": {
+          "name": "株式会社リクルート",
+          "name_en": "Recruit Co., Ltd.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["internet_services", "automotive_marketplace"],
+          "business_model": ["b2b", "b2c"],
+          "service": "カーセンサーnet / カーセンサー / C-match",
+          "country": "JP",
+          "website": "https://www.recruit.co.jp/",
+          "headquarters": {"address": null, "prefecture": "東京都", "city": null, "latitude": null, "longitude": null, "precision": "prefecture", "source": "https://www.recruit.co.jp/company/profile/"},
+          "employee_count": {"value": null, "unit": "employees", "estimate_type": "unknown", "basis": null, "confidence": "unknown"},
+          "listing": {"is_listed": false, "market": null, "ticker": null},
+          "estimated_total_users": {"value": null, "unit": "users", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "カーセンサー関連システムへの外部からの不審なアクセス",
+          "types": ["suspicious_access", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-17",
+          "disclosed_at": "2026-10-17",
+          "status": {"value": "investigating", "as_of": "2026-10-19"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["カーセンサーnet", "カーセンサーアプリ", "C-match"],
+          "affected_regions": [],
+          "threat_actor_attribution": {"name": null, "actor_type": "unknown", "aliases": [], "status": "unknown", "confidence": "unknown", "basis": "外部からの不審なアクセスが検知された段階であり、攻撃主体に関する帰属情報は公表されていない。", "source_urls": ["https://www.itmedia.co.jp/news/article/2610/19/2000002354/"], "reviewed_at": "2026-10-19"}
+        },
+        "impact": {
+          "confirmed_breach": null,
+          "affected_users": null,
+          "affected_users_note": "原因と影響範囲を調査中で、情報漏えいの有無や対象人数は公表されていない。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "利用者と取引先の安全確保および影響確認のため、2026年10月17日17時頃からカーセンサー関連の全サービスを一時停止。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "news", "publisher": "ITmedia NEWS", "published_at": "2026-10-19", "url": "https://www.itmedia.co.jp/news/article/2610/19/2000002354/", "title": "「カーセンサー」停止、不審なアクセス検知　リクルートの中古車情報サイト"}
+        ],
+        "confidence": "medium",
+        "last_updated": "2026-10-19T02:58:00Z"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-17-joshin-system-unauthorized-access",
+        "organization": {
+          "name": "上新電機株式会社",
+          "name_en": "Joshin Denki Co., Ltd.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["retail", "electronics"],
+          "business_model": ["b2c"],
+          "service": null,
+          "country": "JP",
+          "website": "https://www.joshin.co.jp/",
+          "headquarters": {"address": null, "prefecture": "大阪府", "city": "大阪市", "latitude": null, "longitude": null, "precision": "city", "source": "https://www.joshin.co.jp/ja/company/profile.html"},
+          "employee_count": {"value": null, "unit": "employees", "estimate_type": "unknown", "basis": null, "confidence": "unknown"},
+          "listing": {"is_listed": true, "market": "Tokyo Stock Exchange Prime", "ticker": "8173"},
+          "estimated_total_users": {"value": null, "unit": "customers", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "ネットワークへの不正アクセスによるシステム障害",
+          "types": ["unauthorized_access", "service_disruption", "potential_data_breach"],
+          "occurred_at": null,
+          "detected_at": "2026-10-16",
+          "disclosed_at": "2026-10-17",
+          "status": {"value": "investigating", "as_of": "2026-10-17"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["Joshin network", "一部サービス"],
+          "affected_regions": [],
+          "threat_actor_attribution": {"name": null, "actor_type": "unknown", "aliases": [], "status": "unknown", "confidence": "unknown", "basis": "Joshinは外部からの不正アクセスを認識したと公表しているが、攻撃主体の帰属情報は公表していない。", "source_urls": ["https://www.joshin.co.jp/ja/news.html"], "reviewed_at": "2026-10-19"}
+        },
+        "impact": {
+          "confirmed_breach": null,
+          "affected_users": null,
+          "affected_users_note": "情報流出の有無は2026年10月17日時点で確認中。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "外部からのアクセスを制限した結果、一部サービスを提供できない状態。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "official", "publisher": "株式会社Joshin", "published_at": "2026-10-17", "url": "https://www.joshin.co.jp/ja/news.html", "title": "不正アクセスによるシステム障害発生のお詫びとお知らせ"},
+          {"kind": "news", "publisher": "innovaTopia", "published_at": "2026-10-19", "url": "https://innovatopia.jp/cyber-security/cyber-security-news/119035/", "title": "JFA Passport・カーセンサー・Joshinなど6件、不正アクセスと不審なアクセスの公表を整理｜10月17〜18日"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-19T02:58:00Z"
+      }
+    }
+  ]
+}
