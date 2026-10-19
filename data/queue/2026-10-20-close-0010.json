@@ -1,0 +1,276 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-19-ymirlink-mail-systems-unauthorized-access",
+        "organization": {
+          "name": "ユミルリンク株式会社",
+          "name_en": "YMIRLINK, Inc.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["software", "messaging_saas"],
+          "business_model": ["b2b"],
+          "service": "Cuenote / メール配信サービス",
+          "country": "JP",
+          "website": "https://www.ymir.co.jp/",
+          "headquarters": {"address": "〒151-8583 東京都渋谷区代々木2-2-1 小田急サザンタワー12F", "prefecture": "東京都", "city": "渋谷区", "latitude": null, "longitude": null, "precision": "exact", "source": "https://www.ymir.co.jp/about/corporate.html"},
+          "employee_count": {"value": 163, "unit": "employees", "estimate_type": "exact", "basis": "連結163名（2025年12月現在）", "confidence": "high"},
+          "listing": {"is_listed": true, "market": "Tokyo Stock Exchange Growth", "ticker": "4372"},
+          "estimated_total_users": {"value": null, "unit": "users", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "メール配信サービスの複数システムへの不正アクセスと個人情報持ち出し",
+          "types": ["unauthorized_access", "data_breach"],
+          "occurred_at": null,
+          "detected_at": "2026-10-16",
+          "detected_time": {"start": null, "end": null, "timezone": "Asia/Tokyo", "precision": "time_band", "time_band": "overnight", "basis": "同社は10月16日未明に担当者が一部システムへの不正アクセスを確認したと公表。具体的な時計時刻は非公表。"},
+          "disclosed_at": "2026-10-19",
+          "status": {"value": "investigating", "as_of": "2026-10-19"},
+          "attack_vector": "プログラムの脆弱性に関連してサポート・品質管理担当者のサービス用認証情報が取得され、不正プログラムが設置された。具体的な脆弱性・製品・CVEは未公表。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["メール配信サービスの一部サーバーシステム", "計5システム"],
+          "affected_regions": [],
+          "threat_actor_attribution": {"name": null, "actor_type": "unknown", "aliases": [], "status": "unknown", "confidence": "unknown", "basis": "被害企業は不正アクセス、認証情報取得、不正プログラム設置、データ出力を確認しているが、攻撃主体を特定する公的・技術的帰属情報は確認できない。", "source_urls": ["https://rocket-boys.co.jp/security-measures-lab/ymirlink_unauthorized_access_9million_records/", "https://newsdig.tbs.co.jp/articles/-/3023207"], "reviewed_at": "2026-10-20"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "5システムからメールアドレスを含む情報が延べ約900万件出力されたと試算。重複を含み得るため900万人とは扱えず、実人数は調査中。",
+          "affected_organizations": 1,
+          "records": 9000000,
+          "data_exposed": ["email_address", "other_personal_information_under_investigation"],
+          "service_disruption": true,
+          "service_disruption_note": "不正アクセスを確認したサーバーをネットワークから切り離して対処。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "news", "publisher": "TBS NEWS DIG", "published_at": "2026-10-19", "url": "https://newsdig.tbs.co.jp/articles/-/3023207", "title": "メール配信システム会社「ユミルリンク」に不正アクセス メールアドレスなど約900万件の個人情報流出の可能性"},
+          {"kind": "news", "publisher": "セキュリティ対策Lab", "published_at": "2026-10-19", "url": "https://rocket-boys.co.jp/security-measures-lab/ymirlink_unauthorized_access_9million_records/", "title": "ユミルリンクのメール配信サービスへ不正アクセスによるサイバー攻撃、最大 約900万件の個人情報漏洩の恐れ"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-20T00:01:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-19-nifty-line-application-system-unauthorized-access",
+        "organization": {
+          "name": "ニフティ株式会社",
+          "name_en": "NIFTY Corporation",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["telecommunications", "internet_services"],
+          "business_model": ["b2c"],
+          "service": "@nifty光 / @nifty MAX光 / @nifty auひかりプラス",
+          "country": "JP",
+          "website": "https://www.nifty.co.jp/",
+          "headquarters": {"address": "〒108-6226 東京都港区港南2丁目15-3 品川インターシティC棟26階", "prefecture": "東京都", "city": "港区", "latitude": null, "longitude": null, "precision": "exact", "source": "https://www.nifty.co.jp/company/outline/"},
+          "employee_count": {"value": null, "unit": "employees", "estimate_type": "unknown", "basis": null, "confidence": "unknown"},
+          "listing": {"is_listed": false, "market": null, "ticker": null},
+          "estimated_total_users": {"value": null, "unit": "users", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "回線申込・受付管理システムへの不正アクセス",
+          "types": ["unauthorized_access", "potential_data_breach"],
+          "occurred_at": null,
+          "detected_at": "2026-10-19",
+          "detected_time": {"start": "10:20", "end": null, "timezone": "Asia/Tokyo", "precision": "approximate", "time_band": "morning", "basis": "ニフティは2026年10月19日10時20分頃に外部からの不正アクセスを確認したと公表。これは検知時刻であり攻撃開始時刻ではない。"},
+          "disclosed_at": "2026-10-19",
+          "status": {"value": "investigating", "as_of": "2026-10-19"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["回線申込・受付管理システム"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name": null, "actor_type": "unknown", "aliases": [], "status": "unknown", "confidence": "unknown", "basis": "外部からの不正アクセスは確認されているが、攻撃主体の帰属情報は公表されていない。", "source_urls": ["https://www.nifty.co.jp/newsrelease/nifty202610195434.htm"], "reviewed_at": "2026-10-20"}
+        },
+        "impact": {
+          "confirmed_breach": null,
+          "affected_users": null,
+          "affected_users_note": "2019年以降に対象3回線サービスをWebサイト以外から申し込んだ利用者の情報、最大542,513件が漏えいした可能性。実漏えいの有無は調査中。",
+          "affected_organizations": 1,
+          "records": 542513,
+          "data_exposed": ["member_id", "name", "gender", "date_of_birth", "address", "phone_number", "email_address"],
+          "service_disruption": false,
+          "service_disruption_note": "当該通信元からのアクセスを遮断し暫定対策を実施。利用者向けサービス停止は公表されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "official", "publisher": "ニフティ株式会社", "published_at": "2026-10-19", "url": "https://www.nifty.co.jp/newsrelease/nifty202610195434.htm", "title": "【第一報】当社回線申込・受付管理システムへの不正アクセスの発生について"},
+          {"kind": "news", "publisher": "ITmedia ビジネスオンライン", "published_at": "2026-10-19", "url": "https://www.itmedia.co.jp/business/articles/2610/19/news101.html", "title": "ニフティ、54万件超の個人情報など流出か 「クレカ情報」は漏えいせず"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-20T00:01:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-19-hankyu-hanshin-h2o-id-data-breach",
+        "organization": {
+          "name": "株式会社阪急阪神百貨店",
+          "name_en": "Hankyu Hanshin Department Stores, Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["retail", "department_store", "ecommerce"],
+          "business_model": ["b2c"],
+          "service": "H2O ID / 阪急百貨店・阪神百貨店予約サイト / HANKYU HANSHIN E-STORES / Remo Order",
+          "country": "JP",
+          "website": "https://www.hankyu-hanshin-dept.co.jp/",
+          "headquarters": {"address": null, "prefecture": "大阪府", "city": "大阪市", "latitude": null, "longitude": null, "precision": "city", "source": "https://www.h2o-retailing.co.jp/"},
+          "employee_count": {"value": null, "unit": "employees", "estimate_type": "unknown", "basis": null, "confidence": "unknown"},
+          "listing": {"is_listed": false, "market": null, "ticker": null},
+          "estimated_total_users": {"value": 1260000, "unit": "H2O ID accounts", "estimate_type": "approximate", "basis": "公表ではH2O ID会員約126万件、ほぼ全会員が対象", "confidence": "high"}
+        },
+        "incident": {
+          "title": "百貨店予約・通販サイトへの不正アクセスとH2O ID会員情報漏えい",
+          "types": ["unauthorized_access", "data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-16",
+          "disclosed_at": "2026-10-19",
+          "status": {"value": "investigating", "as_of": "2026-10-19"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["阪急百貨店・阪神百貨店予約サイト", "HANKYU HANSHIN E-STORES", "Remo Order", "H2O ID顧客管理システム"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name": null, "actor_type": "unknown", "aliases": [], "status": "unknown", "confidence": "unknown", "basis": "第三者による不正アクセスは被害企業が確認しているが、攻撃主体の帰属情報は公表されていない。", "source_urls": ["https://www.ryutsuu.biz/it/s101915.html", "https://www.fnn.jp/articles/-/1135407"], "reviewed_at": "2026-10-20"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": 1260000,
+          "affected_users_note": "H2O ID会員約126万件の個人情報の一部漏えいが判明。ほぼ全会員が対象と報じられている。E-STORES/Remo Order固有情報の追加漏えい範囲は調査中。",
+          "affected_organizations": 1,
+          "records": 1260000,
+          "data_exposed": ["h2o_id", "name", "gender", "email_address", "postal_code", "address", "mobile_phone_number", "phone_number", "age", "date_of_birth", "used_services"],
+          "service_disruption": true,
+          "service_disruption_note": "予約サイトは10月16日、E-STORESとRemo Orderは10月17日にシステム全体を停止。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "news", "publisher": "FNNプライムオンライン / 関西テレビ", "published_at": "2026-10-19", "url": "https://www.fnn.jp/articles/-/1135407", "title": "阪急阪神百貨店が運営する3つのサイトに不正アクセス 「H2O ID」会員の個人情報が漏洩"},
+          {"kind": "news", "publisher": "流通ニュース", "published_at": "2026-10-19", "url": "https://www.ryutsuu.biz/it/s101915.html", "title": "H2O／不正アクセスで個人情報126万件漏えい、阪急阪神百貨店の予約サイト停止"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-20T00:01:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-19-trustbank-furusato-choice-suspicious-access",
+        "organization": {
+          "name": "株式会社トラストバンク",
+          "name_en": "TRUSTBANK, Inc.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["internet_services", "government_technology", "fintech"],
+          "business_model": ["b2c", "b2g"],
+          "service": "ふるさとチョイス",
+          "country": "JP",
+          "website": "https://www.trustbank.co.jp/",
+          "headquarters": {"address": null, "prefecture": "東京都", "city": null, "latitude": null, "longitude": null, "precision": "prefecture", "source": "https://www.trustbank.co.jp/"},
+          "employee_count": {"value": null, "unit": "employees", "estimate_type": "unknown", "basis": null, "confidence": "unknown"},
+          "listing": {"is_listed": false, "market": null, "ticker": null},
+          "estimated_total_users": {"value": null, "unit": "users", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "ふるさとチョイスにおける不正アクセス疑いの検知",
+          "types": ["suspicious_access", "service_disruption", "potential_data_breach"],
+          "occurred_at": null,
+          "detected_at": "2026-10-19",
+          "detected_time": {"start": null, "end": null, "timezone": "Asia/Tokyo", "precision": "time_band", "time_band": "morning", "basis": "共同通信報道では10月19日午前のサーバー点検中に不正アクセスの疑いを検知。具体的な時計時刻は非公表。"},
+          "disclosed_at": "2026-10-19",
+          "status": {"value": "investigating", "as_of": "2026-10-19"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["ふるさとチョイス", "ふるさとチョイスGCF", "ふるさとチョイス災害支援", "企業版ふるさとチョイス", "ふるさとチョイスアプリ", "チョイスPayアプリ"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name": null, "actor_type": "unknown", "aliases": [], "status": "unknown", "confidence": "unknown", "basis": "不正アクセスの疑いを検知した段階であり、攻撃主体に関する支持可能な帰属情報は確認できない。", "source_urls": ["https://www.trustbank.co.jp/newsroom/news/news261019/"], "reviewed_at": "2026-10-20"}
+        },
+        "impact": {
+          "confirmed_breach": null,
+          "affected_users": null,
+          "affected_users_note": "個人情報漏えいの有無・影響範囲は調査中。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "10月19日15:50頃から関連サービスを一時停止。全国の自治体の寄附受付等に影響。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "official", "publisher": "株式会社トラストバンク", "published_at": "2026-10-19", "url": "https://www.trustbank.co.jp/newsroom/news/news261019/", "title": "不正アクセスの疑いに伴うサービス一時停止のお知らせ"},
+          {"kind": "government", "publisher": "川本町", "published_at": "2026-10-19", "url": "https://www.town.shimane-kawamoto.lg.jp/gyosei/gyosei_news/announce/8315", "title": "ふるさと納税サイト「ふるさとチョイス」等、各種サービスの一時停止"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-20T00:01:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-19-papyles-renta-suspicious-access",
+        "organization": {
+          "name": "株式会社パピレス",
+          "name_en": "PAPYLESS CO., LTD.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["digital_content", "ebooks"],
+          "business_model": ["b2c"],
+          "service": "Renta!",
+          "country": "JP",
+          "website": "https://papy.co.jp/",
+          "headquarters": {"address": null, "prefecture": "東京都", "city": "千代田区", "latitude": null, "longitude": null, "precision": "city", "source": "https://papy.co.jp/"},
+          "employee_count": {"value": null, "unit": "employees", "estimate_type": "unknown", "basis": null, "confidence": "unknown"},
+          "listing": {"is_listed": true, "market": "Tokyo Stock Exchange Standard", "ticker": "3641"},
+          "estimated_total_users": {"value": null, "unit": "users", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "電子書籍サービスRenta!サーバーへの外部不正アクセスの可能性",
+          "types": ["suspicious_access", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-18",
+          "disclosed_at": "2026-10-19",
+          "status": {"value": "investigating", "as_of": "2026-10-19"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["Renta!"],
+          "affected_regions": [],
+          "threat_actor_attribution": {"name": null, "actor_type": "unknown", "aliases": [], "status": "unknown", "confidence": "unknown", "basis": "外部からの不正アクセスの可能性を調査中で、攻撃主体を示す帰属情報は公表されていない。", "source_urls": ["https://www.itmedia.co.jp/news/article/2610/19/2000002379/"], "reviewed_at": "2026-10-20"}
+        },
+        "impact": {
+          "confirmed_breach": null,
+          "affected_users": null,
+          "affected_users_note": "不正アクセスの詳細、情報漏えいの有無、影響人数はいずれも調査中。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "10月18日からサービスを一時停止。10月19日時点で再開時期は未定。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "news", "publisher": "ITmedia NEWS", "published_at": "2026-10-19", "url": "https://www.itmedia.co.jp/news/article/2610/19/2000002379/", "title": "「Renta!」停止は「不正アクセスの可能性」のため 詳細は調査中、再開未定"}
+        ],
+        "confidence": "medium",
+        "last_updated": "2026-10-20T00:01:00+09:00"
+      }
+    }
+  ]
+}
