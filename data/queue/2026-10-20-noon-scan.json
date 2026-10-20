@@ -1,0 +1,274 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-19-linkstation-gettiis-data-breach",
+        "organization": {
+          "name": "株式会社リンクステーション",
+          "name_en": "Link Station Co., Ltd.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["ticketing", "software", "ecommerce"],
+          "business_model": ["b2b", "b2c"],
+          "service": "GETTIIS / Gettii-Lite",
+          "country": "JP",
+          "website": "https://www.linkst.jp/",
+          "headquarters": {"address": "〒030-0947 青森県青森市浜館2丁目1-1", "prefecture": "青森県", "city": "青森市", "latitude": null, "longitude": null, "precision": "exact", "source": "https://www.linkst.jp/outline/"},
+          "employee_count": {"value": null, "unit": "employees", "estimate_type": "unknown", "basis": null, "confidence": "unknown"},
+          "listing": {"is_listed": false, "market": null, "ticker": null},
+          "estimated_total_users": {"value": null, "unit": "users", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "Gettii-Liteの脆弱性悪用によるGETTIIS会員情報漏えい",
+          "types": ["unauthorized_access", "data_breach", "vulnerability_exploitation"],
+          "occurred_at": "2026-10-18",
+          "occurred_time": {"start": null, "end": null, "timezone": "Asia/Tokyo", "precision": "time_band", "time_band": "overnight", "basis": "公式第一報は10月18日未明に第三者がGettii-Liteのプログラムの脆弱性を悪用したと説明。時計時刻は非公表。"},
+          "detected_at": "2026-10-18",
+          "disclosed_at": "2026-10-19",
+          "status": {"value": "investigating", "as_of": "2026-10-19"},
+          "attack_vector": "イベント主催者向けサービス「Gettii-Lite」のプログラムに存在する脆弱性を第三者が悪用。具体的な脆弱性名やCVEは未公表。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["Gettii-Lite", "GETTIIS会員情報"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name": null, "actor_type": "unknown", "aliases": [], "status": "unknown", "confidence": "unknown", "basis": "被害企業は第三者による脆弱性悪用を確認しているが、攻撃主体を特定する公的・技術的帰属情報は公表していない。", "source_urls": ["https://www.gettiis.jp/notice/detail/40"], "reviewed_at": "2026-10-20"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "GETTIIS会員情報の外部流出を確認。対象者の範囲・件数は第一報時点で調査中。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": ["member_id", "name", "phone_number", "email_address", "postal_code", "gender", "date_of_birth", "password_hash", "partial_credit_card_number", "cardholder_name", "encrypted_card_expiration_date"],
+          "service_disruption": true,
+          "service_disruption_note": "対象サーバーを切り替え、悪用された脆弱性への対策を完了。GettiiおよびGettii-ECは別環境で、本件の影響は確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "official", "publisher": "株式会社リンクステーション", "published_at": "2026-10-19", "url": "https://www.gettiis.jp/notice/detail/40", "title": "不正アクセスによるGETTIIS会員情報の漏えいに関するお詫びとお知らせ（第一報）"},
+          {"kind": "news", "publisher": "セキュリティ対策Lab", "published_at": "2026-10-20", "url": "https://rocket-boys.co.jp/security-measures-lab/gettiis_linkstation_gettii_lite_data_breach_20261019/", "title": "「GETTIIS」で会員情報が外部流出、リンクステーションの「Gettii-Lite」に不正アクセスによるサイバー攻撃"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-20T12:03:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-19-lixil-l-pocket-data-breach",
+        "organization": {
+          "name": "株式会社LIXIL",
+          "name_en": "LIXIL Corporation",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["building_materials", "housing", "software"],
+          "business_model": ["b2b", "b2c"],
+          "service": "L-ポケット / L-ポケットLite版",
+          "country": "JP",
+          "website": "https://www.lixil.com/jp/",
+          "headquarters": {"address": "〒141-0033 東京都品川区西品川一丁目1番1号 大崎ガーデンタワー24F", "prefecture": "東京都", "city": "品川区", "latitude": null, "longitude": null, "precision": "exact", "source": "https://www.lixil.com/jp/about/information.html"},
+          "employee_count": {"value": 52676, "unit": "employees", "estimate_type": "reported", "basis": "2026年3月時点の連結従業員数（直接雇用）", "confidence": "high"},
+          "listing": {"is_listed": true, "market": "Tokyo Stock Exchange Prime / Nagoya Stock Exchange Premier", "ticker": "5938"},
+          "estimated_total_users": {"value": null, "unit": "users", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "L-ポケットへの不正アクセスによる登録会員情報漏えい",
+          "types": ["unauthorized_access", "data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-13",
+          "disclosed_at": "2026-10-19",
+          "status": {"value": "investigating", "as_of": "2026-10-19"},
+          "attack_vector": "L-ポケットで利用している環境に対する外部からの不正アクセス。具体的な侵入経路・脆弱性は公表されていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["L-ポケット", "L-ポケットLite版"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name": null, "actor_type": "unknown", "aliases": [], "status": "unknown", "confidence": "unknown", "basis": "LIXILは第三者による不正アクセスを確認しているが、攻撃主体の帰属情報は公表していない。", "source_urls": ["https://www.lixil.co.jp/announce/notice-info-leak-20261019.htm"], "reviewed_at": "2026-10-20"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": 3379,
+          "affected_users_note": "登録会員等3,379名。うちLIXILおよびグループ会社の従業員・退職者375名。",
+          "affected_organizations": 1,
+          "records": 3379,
+          "data_exposed": ["name", "name_kana", "email_address", "date_of_birth", "gender", "member_number_or_registration_code", "company_name", "business_address", "business_phone_number", "department_name", "industry_classification"],
+          "service_disruption": true,
+          "service_disruption_note": "検知後に外部アクセスを遮断し、L-ポケットのサービス・アプリ運用およびアプリストアでの公開を一時停止。社内基幹システム・社内ネットワークへの侵入は確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "official", "publisher": "株式会社LIXIL", "published_at": "2026-10-19", "url": "https://www.lixil.co.jp/announce/notice-info-leak-20261019.htm", "title": "LIXILが提供する業務支援アプリケーション「L-ポケット」における不正アクセスに伴う登録会員情報漏えいについてのお詫びとご報告"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-20T12:03:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-19-zkai-z-id-unauthorized-login",
+        "organization": {
+          "name": "株式会社Ｚ会",
+          "name_en": "Z-kai Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["education", "edtech"],
+          "business_model": ["b2c", "b2b"],
+          "service": "Z-ID",
+          "country": "JP",
+          "website": "https://www.zkai.co.jp/",
+          "headquarters": {"address": "〒411-0033 静岡県三島市文教町一丁目9番11号", "prefecture": "静岡県", "city": "三島市", "latitude": null, "longitude": null, "precision": "exact", "source": "https://www.zkai.co.jp/home/corporate/profile/"},
+          "employee_count": {"value": null, "unit": "employees", "estimate_type": "unknown", "basis": null, "confidence": "unknown"},
+          "listing": {"is_listed": false, "market": null, "ticker": null},
+          "estimated_total_users": {"value": null, "unit": "users", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "Z-IDパスワードリセット機能を悪用した不正ログイン",
+          "types": ["unauthorized_login", "account_takeover", "potential_data_exposure"],
+          "occurred_at": "2026-10-15",
+          "occurred_time": {"start": null, "end": null, "timezone": "Asia/Tokyo", "precision": "time_band", "time_band": "overnight", "basis": "公式第一報は10月15日未明に13件の通常とは異なる短時間での連続したパスワード変更が行われたと説明。"},
+          "detected_at": "2026-10-15",
+          "detected_time": {"start": "11:00", "end": null, "timezone": "Asia/Tokyo", "precision": "approximate", "time_band": "morning", "basis": "Ｚ会は10月15日午前11時頃に第三者による不正なパスワードリセット操作の事案を確認したと公表。"},
+          "disclosed_at": "2026-10-19",
+          "status": {"value": "investigating", "as_of": "2026-10-19"},
+          "attack_vector": "Z-IDシステムのパスワードリセット機能を利用した不正なパスワード変更。不正ログインは確認されたが、サーバーやデータベースへの直接侵入による流出の形跡は確認されていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["Z-IDシステム", "パスワードリセット機能"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name": null, "actor_type": "unknown", "aliases": [], "status": "unknown", "confidence": "unknown", "basis": "第三者による不正ログインは確認されているが、攻撃主体の帰属情報は公表されていない。", "source_urls": ["https://www.zkai.co.jp/post-120678/"], "reviewed_at": "2026-10-20"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": 13,
+          "affected_users_note": "13件のアカウントで不正なパスワード変更が確認され、氏名・メールアドレス・Z-IDを第三者に閲覧された可能性がある。外部への情報流出の形跡は確認されていない。",
+          "affected_organizations": 1,
+          "records": 13,
+          "data_exposed": ["name", "email_address", "z_id"],
+          "service_disruption": true,
+          "service_disruption_note": "対象13アカウントを一時停止し、パスワードリセット機能も一時停止。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "official", "publisher": "株式会社Ｚ会", "published_at": "2026-10-19", "url": "https://www.zkai.co.jp/post-120678/", "title": "Z-IDシステムへの不正ログインについて（第一報）"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-20T12:03:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-19-softbank-my-softbank-access-attempt",
+        "organization": {
+          "name": "ソフトバンク株式会社",
+          "name_en": "SoftBank Corp.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["telecommunications", "internet_services"],
+          "business_model": ["b2c", "b2b"],
+          "service": "My SoftBank / My Y!mobile / My Menu",
+          "country": "JP",
+          "website": "https://www.softbank.jp/",
+          "headquarters": {"address": "〒105-7529 東京都港区海岸一丁目7番1号", "prefecture": "東京都", "city": "港区", "latitude": null, "longitude": null, "precision": "exact", "source": "https://www.softbank.jp/corp/aboutus/profile/"},
+          "employee_count": {"value": 19150, "unit": "employees", "estimate_type": "reported", "basis": "2026年3月31日現在の単体従業員数。連結58,432人。", "confidence": "high"},
+          "listing": {"is_listed": true, "market": "Tokyo Stock Exchange Prime", "ticker": "9434"},
+          "estimated_total_users": {"value": 41000000, "unit": "mobile_service_users", "estimate_type": "reported", "basis": "ソフトバンク企業サイト記載の携帯電話サービス約4,100万ユーザー（2026年3月末時点）", "confidence": "high"}
+        },
+        "incident": {
+          "title": "My SoftBank関連システムへの不正アクセスの試みと会員サイト停止",
+          "types": ["unauthorized_access_attempt", "service_disruption"],
+          "occurred_at": "2026-10-17",
+          "detected_at": "2026-10-17",
+          "disclosed_at": "2026-10-19",
+          "status": {"value": "mitigating", "as_of": "2026-10-19"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["My SoftBank関連システム", "My SoftBank Web", "My Y!mobile Web", "My Menu Web"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name": null, "actor_type": "unknown", "aliases": [], "status": "unknown", "confidence": "unknown", "basis": "ソフトバンクは第三者による不正アクセスの試みを確認したが、攻撃主体の帰属情報は公表していない。", "source_urls": ["https://www.softbank.jp/corp/news/press/sbkk/2026/20261019_01/"], "reviewed_at": "2026-10-20"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "10月19日の公式発表では顧客情報漏えいは公表されていない。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "安全措置とセキュリティ強化のため10月17日午前8時からMy SoftBank、My Y!mobile、My MenuのWebサイトを停止。アプリ版は利用可能。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "official", "publisher": "ソフトバンク株式会社", "published_at": "2026-10-19", "url": "https://www.softbank.jp/corp/news/press/sbkk/2026/20261019_01/", "title": "お客さま向け会員サイト「My SoftBank」の一時的な停止について"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-20T12:03:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-19-jetro-website-data-breach",
+        "organization": {
+          "name": "独立行政法人日本貿易振興機構",
+          "name_en": "Japan External Trade Organization (JETRO)",
+          "type": "government_related_organization",
+          "size": "large_enterprise",
+          "industry": ["government", "trade_promotion", "business_support"],
+          "business_model": ["public", "b2b"],
+          "service": "JETROウェブサイト",
+          "country": "JP",
+          "website": "https://www.jetro.go.jp/",
+          "headquarters": {"address": "〒107-6006 東京都港区赤坂1丁目12-32 アーク森ビル6階", "prefecture": "東京都", "city": "港区", "latitude": null, "longitude": null, "precision": "exact", "source": "https://www.jetro.go.jp/jetro/profile/"},
+          "employee_count": {"value": 1925, "unit": "employees", "estimate_type": "reported", "basis": "JETRO組織概要の2025年4月時点職員数（国内1,231、海外694）", "confidence": "high"},
+          "listing": {"is_listed": false, "market": null, "ticker": null},
+          "estimated_total_users": {"value": null, "unit": "users", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "JETROウェブサイトへの不正アクセスによる個人情報漏えい",
+          "types": ["unauthorized_access", "data_breach", "service_disruption"],
+          "occurred_at": "2026-10-14",
+          "detected_at": "2026-10-14",
+          "disclosed_at": "2026-10-19",
+          "status": {"value": "investigating", "as_of": "2026-10-20"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["JETROの一部ウェブサイト"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name": null, "actor_type": "unknown", "aliases": [], "status": "unknown", "confidence": "unknown", "basis": "JETROは外部からの不正アクセスを確認しているが、侵入手法および攻撃主体の帰属情報は公表していない。", "source_urls": ["https://www.jetro.go.jp/invest/investment_environment/whyjapan/", "https://news.tv-asahi.co.jp/news_economy/articles/000541450.html"], "reviewed_at": "2026-10-20"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "企業名や企業担当者のメールアドレスなど743件の個人情報漏えいを確認。743人または743社とは公表されていないため affected_users は未確定。",
+          "affected_organizations": 1,
+          "records": 743,
+          "data_exposed": ["company_name", "business_contact_email", "other_personal_information_not_publicly_itemized"],
+          "service_disruption": true,
+          "service_disruption_note": "被害拡大防止と調査のため10月17日から通常のウェブサイト利用を一時停止。10月20日時点でも停止案内を掲載。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "official", "publisher": "独立行政法人日本貿易振興機構", "published_at": "2026-10-19", "url": "https://www.jetro.go.jp/invest/investment_environment/whyjapan/", "title": "ウェブサイト停止のお知らせ"},
+          {"kind": "news", "publisher": "テレビ朝日", "published_at": "2026-10-20", "url": "https://news.tv-asahi.co.jp/news_economy/articles/000541450.html", "title": "JETRO 743件の個人情報漏洩を確認 不正アクセスで17日からサイトの利用を停止中"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-20T12:03:00+09:00"
+      }
+    }
+  ]
+}
