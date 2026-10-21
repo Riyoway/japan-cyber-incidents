@@ -1,0 +1,113 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-19-crypton-sonicwire-d2r",
+        "organization": {
+          "name": "クリプトン・フューチャー・メディア株式会社",
+          "name_en": "Crypton Future Media, Inc.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["software", "music_technology", "ecommerce"],
+          "business_model": ["b2c", "b2b"],
+          "service": "SONICWIRE / D2R",
+          "country": "JP",
+          "website": "https://www.crypton.co.jp/",
+          "headquarters": {"address":"〒060-0003 北海道札幌市中央区北3条西4丁目1-1 日本生命札幌ビル11F","prefecture":"北海道","city":"札幌市","latitude":null,"longitude":null,"precision":"exact","source":"https://www.sapporo-cci.or.jp/web/nearshore/company/details/post-66.html"},
+          "employee_count": {"value":164,"unit":"employees","estimate_type":"reported","basis":"Gビズインフォ由来の事業者届出従業員数として掲載","confidence":"medium"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":420000,"unit":"records","estimate_type":"maximum","basis":"SONICWIRE会員・ニュースレター購読者で閲覧・取得された可能性がある最大件数。D2R登録店舗は別途対象で件数非公表。","confidence":"high"}
+        },
+        "incident": {
+          "title": "SONICWIRE・D2Rへの不正アクセスによる会員情報漏えいの可能性",
+          "types": ["unauthorized_access", "potential_data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-17",
+          "detected_time": {"start":"20:00","end":null,"timezone":"Asia/Tokyo","precision":"approximate","time_band":"evening","basis":"2026年10月17日20時頃にSONICWIRE・D2Rへの不正アクセスの可能性を確認したと公表。攻撃開始時刻ではない。"},
+          "disclosed_at": "2026-10-19",
+          "status": {"value":"investigating","as_of":"2026-10-21"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["SONICWIRE", "D2R", "SONICWIRE関連ECストア"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスと侵害アカウントへの対応は公表されているが、攻撃主体を特定する被害企業・捜査機関・フォレンジック等の帰属情報は確認できない。","source_urls":["https://integral-inc.dev/security-report/2026-rfe78046b/","https://rocket-boys.co.jp/security-measures-lab/crypton_sonicwire_d2r_unauthorized_access_420k_soundhouse_20261020/"],"reviewed_at":"2026-10-21"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "SONICWIRE会員・ニュースレター購読者最大約42万件が閲覧・取得された可能性。確定流出件数ではなく、D2R登録店舗の対象件数は非公表。",
+          "affected_organizations": 1,
+          "records": 420000,
+          "data_exposed": ["name", "email_address", "password_hash", "address", "registration_date", "last_login_date", "system_identifiers", "store_name", "login_id"],
+          "service_disruption": true,
+          "service_disruption_note": "10月17日23時39分頃までにSONICWIRE・D2Rのサーバーを停止し、関連ECストアも調査のため停止。10月19日時点で再開時期未定。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"news","publisher":"セキュリティ対策Lab","published_at":"2026-10-20","url":"https://rocket-boys.co.jp/security-measures-lab/crypton_sonicwire_d2r_unauthorized_access_420k_soundhouse_20261020/","title":"クリプトン・フューチャー・メディアのSONICWIRE（ソニックワイヤ）とD2Rへ不正アクセスによるサイバー攻撃、最大約42万件の個人情報漏洩の恐れ"},
+          {"kind":"security_report","publisher":"Integral Security Report","published_at":"2026-10-19","url":"https://integral-inc.dev/security-report/2026-rfe78046b/","title":"クリプトン・フューチャー・メディアのSONICWIRE・D2Rへの不正アクセス（最大約42万件の会員情報流出のおそれ）"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-21T12:02:23+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-19-hokan-suito-data-breach",
+        "organization": {
+          "name": "株式会社hokan",
+          "name_en": "hokan, Inc.",
+          "type": "company",
+          "size": "small_enterprise",
+          "industry": ["insurtech", "saas", "insurance_technology"],
+          "business_model": ["b2b"],
+          "service": "hokan出納",
+          "country": "JP",
+          "website": "https://www.corp.hkn.jp/",
+          "headquarters": {"address":"東京都中央区日本橋茅場町1-8-1 FinGATE KAYABA 202","prefecture":"東京都","city":"中央区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.corp.hkn.jp/"},
+          "employee_count": {"value":63,"unit":"employees","estimate_type":"reported","basis":"2026年6月時点のhokan単体従業員数として求人企業情報に掲載","confidence":"medium"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "hokan出納への不正アクセスによる保険代理店情報の漏えい",
+          "types": ["unauthorized_access", "data_breach"],
+          "occurred_at": "2026-10-14",
+          "detected_at": "2026-10-14",
+          "detected_time": {"start":"22:28","end":null,"timezone":"Asia/Tokyo","precision":"approximate","time_band":"night","basis":"追加調査で10月14日22時28分頃に外部第三者によるデータ取得の記録を確認し、情報漏えいの事実が判明。攻撃開始時刻とは扱わない。"},
+          "disclosed_at": "2026-10-19",
+          "status": {"value":"investigating","as_of":"2026-10-21"},
+          "attack_vector": "認証基盤として利用するシステムのアカウント登録機能を通じた第三者による不正アクセス。海外IPアドレスが使用されたと公表。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["hokan出納"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"海外IPアドレスからの不正アクセスは確認されているが、IP所在地を攻撃主体の所在地・帰属とはみなさず、攻撃者を特定する根拠は公表されていない。","source_urls":["https://www.corp.hkn.jp/news/category/press/261019"],"reviewed_at":"2026-10-21"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "影響が確認されている利用企業は保険代理店2社。個人単位の件数は第一報時点で非公表。",
+          "affected_organizations": 2,
+          "records": null,
+          "data_exposed": ["insurance_agency_customer_information"],
+          "service_disruption": false,
+          "service_disruption_note": "hokan CRMおよびhokan Peopleを含むhokan出納以外のサービスへの不正アクセスは確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社hokan","published_at":"2026-10-19","url":"https://www.corp.hkn.jp/news/category/press/261019","title":"「hokan出納」への不正アクセスによる情報漏えいに関するお知らせ（第一報）"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-21T12:02:23+09:00"
+      }
+    }
+  ]
+}
