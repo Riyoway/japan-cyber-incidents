@@ -1,0 +1,262 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-20-fuji-tv-promo-system-unauthorized-access",
+        "organization": {
+          "name": "株式会社フジテレビジョン",
+          "name_en": "Fuji Television Network, Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["media", "broadcasting"],
+          "business_model": ["b2b", "b2c"],
+          "service": "番組宣伝システム",
+          "country": "JP",
+          "website": "https://www.fujitv.co.jp/",
+          "headquarters": {"address":"〒137-8088 東京都港区台場二丁目4番8号","prefecture":"東京都","city":"港区","latitude":null,"longitude":null,"precision":"exact","source":"https://biz.fujitv.co.jp/company"},
+          "employee_count": {"value":1169,"unit":"employees","estimate_type":"reported","basis":"フジテレビ会社概要（2025年2月1日現在）","confidence":"high"},
+          "listing": {"is_listed":false,"market":null,"ticker":null}
+        },
+        "incident": {
+          "title": "番組宣伝システムへの不正アクセスによるメディア関係者情報漏えいの可能性",
+          "types": ["unauthorized_access", "potential_data_breach", "service_disruption"],
+          "occurred_at": "2026-10-19",
+          "occurred_time": {"start":null,"end":null,"timezone":"Asia/Tokyo","precision":"broad_period","time_band":"night","basis":"フジテレビは10月19日夜に第三者による不正アクセスが発生したと公表。具体的時計時刻は非公表。"},
+          "detected_at": "2026-10-19",
+          "disclosed_at": "2026-10-20",
+          "status": {"value":"investigating","as_of":"2026-10-21"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["番組宣伝システム"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスは確認されているが、被害企業・捜査機関・フォレンジック等による攻撃主体の帰属情報は公表されていない。","source_urls":["https://www.itmedia.co.jp/news/articles/2610/21/news049.html"],"reviewed_at":"2026-10-21"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "メディア関係者の個人情報が最大730件漏えいした可能性。件数は人数とは限らず、実流出は調査中。視聴者情報は当該システムに登録されていない。",
+          "affected_organizations": 1,
+          "records": 730,
+          "data_exposed": ["name", "company_name", "email_address"],
+          "service_disruption": true,
+          "service_disruption_note": "不正アクセス確認後、当該番組宣伝システムの利用を停止。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"news","publisher":"ITmedia NEWS","published_at":"2026-10-21","url":"https://www.itmedia.co.jp/news/articles/2610/21/news049.html","title":"フジテレビに不正アクセス、メディア関係者の個人情報最大730件漏えいか　番組宣伝システムが被害"},
+          {"kind":"news","publisher":"FNNプライムオンライン","published_at":"2026-10-20","url":"https://www.fnn.jp/articles/-/1136446","title":"フジテレビの番組宣伝システムに不正アクセス　関係者の個人情報最大730件漏えいの可能性"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-21T23:55:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-21-gmo-onamae-desktop-cloud-unauthorized-access",
+        "organization": {
+          "name": "GMOインターネット株式会社",
+          "name_en": "GMO Internet, Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["internet_infrastructure", "cloud", "hosting"],
+          "business_model": ["b2b", "b2c"],
+          "service": "お名前.com デスクトップクラウド",
+          "country": "JP",
+          "website": "https://internet.gmo/"
+        },
+        "incident": {
+          "title": "お名前.com デスクトップクラウドへの不正アクセスと不正プログラム設置",
+          "types": ["unauthorized_access", "malware", "potential_data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-20",
+          "disclosed_at": "2026-10-21",
+          "status": {"value":"investigating","as_of":"2026-10-21"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["お名前.com デスクトップクラウド", "一部顧客サーバー環境"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスと不正プログラム設置は確認済みだが、侵入経路、マルウェアファミリ、攻撃主体の帰属は公表されていない。","source_urls":["https://internet.gmo/news/article/246/","https://www.onamae.com/news/article/11584"],"reviewed_at":"2026-10-21"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "影響の可能性があるサーバーは26,739件。これは利用者数・侵害確認サーバー数・漏えい人数ではない。GMOが預かる顧客個人情報の漏えいは10月21日4時時点で未確認。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "2026年10月21日4:00以降、被害拡大防止のためデスクトップクラウド全プランのサーバーを順次停止。再開時期未定。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"GMOインターネット株式会社","published_at":"2026-10-21","url":"https://internet.gmo/news/article/246/","title":"「お名前.com デスクトップクラウド」への不正アクセスに関するお詫びとお知らせ"},
+          {"kind":"official","publisher":"お名前.com byGMO","published_at":"2026-10-21","url":"https://www.onamae.com/news/article/11584","title":"[お名前.com デスクトップクラウド]第三者による不正アクセスに関するお詫びとお知らせ（2026年10月21日 4:00時点）"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-21T23:55:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-21-okinawa-tourist-potential-data-breach",
+        "organization": {
+          "name": "沖縄ツーリスト株式会社",
+          "name_en": "OKINAWA TOURIST SERVICE INC.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["travel", "tourism", "car_rental"],
+          "business_model": ["b2c", "b2b"],
+          "service": "OTSレンタカー / OTS HOTELほか",
+          "country": "JP",
+          "website": "https://otspremium.com/",
+          "headquarters": {"address":"〒900-8602 沖縄県那覇市松尾1丁目2番3号","prefecture":"沖縄県","city":"那覇市","latitude":null,"longitude":null,"precision":"exact","source":"https://otspremium.com/aboutus/outline/"},
+          "employee_count": {"value":265,"unit":"employees","estimate_type":"reported","basis":"公式会社概要、2026年3月1日現在","confidence":"high"},
+          "listing": {"is_listed":false,"market":null,"ticker":null}
+        },
+        "incident": {
+          "title": "顧客個人情報漏えいの可能性に伴う予約サービス停止",
+          "types": ["potential_data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-20",
+          "disclosed_at": "2026-10-21",
+          "status": {"value":"investigating","as_of":"2026-10-21"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["OTSレンタカー", "OTS HOTEL", "個人情報を扱う関連予約サービス"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"社外からの問い合わせを契機に個人情報漏えいの可能性を確認して調査中であり、攻撃主体や不正アクセス手法は公表されていない。","source_urls":["https://act1.co.jp/2026-10-21-07/"],"reviewed_at":"2026-10-21"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "漏えい対象情報・件数は調査中。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "10月20日16:30からOTSレンタカー、OTS HOTELなど個人情報を扱う5サービスの新規予約受付を一時停止。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"news","publisher":"株式会社アクト","published_at":"2026-10-21","url":"https://act1.co.jp/2026-10-21-07/","title":"沖縄ツーリスト、個人情報漏えいの可能性で「OTSレンタカー」などの新規予約を停止"}
+        ],
+        "confidence": "medium",
+        "last_updated": "2026-10-21T23:55:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-20-monex-account-opening-vendor-access-attempt",
+        "organization": {
+          "name": "マネックス証券株式会社",
+          "name_en": "Monex, Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["financial_services", "securities", "fintech"],
+          "business_model": ["b2c"],
+          "service": "証券総合取引口座 新規口座開設システム",
+          "country": "JP",
+          "website": "https://www.monex.co.jp/"
+        },
+        "incident": {
+          "title": "外部委託先の口座開設システムに対する第三者アクセス試行",
+          "types": ["suspicious_access", "third_party_incident", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-20",
+          "disclosed_at": "2026-10-20",
+          "status": {"value":"investigating","as_of":"2026-10-21"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["外部委託先管理の口座開設システム"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者がアクセスを試みた形跡のみが公表され、侵入成立・情報漏えい・攻撃主体はいずれも確認されていない。","source_urls":["https://info.monex.co.jp/news/2026/20261020_04.html"],"reviewed_at":"2026-10-21"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "顧客情報漏えいは公表されておらず、アクセス試行の影響範囲を調査中。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "予防的措置としてウェブサイト・アプリからの証券総合取引口座の新規開設受付を一時停止。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"マネックス証券株式会社","published_at":"2026-10-20","url":"https://info.monex.co.jp/news/2026/20261020_04.html","title":"「証券総合取引口座」の新規開設受付の一時停止について"},
+          {"kind":"news","publisher":"INTERNET Watch","published_at":"2026-10-21","url":"https://internet.watch.impress.co.jp/docs/news/2150058.html","title":"マネックス証券、「証券総合取引口座」新規開設受付を一時停止。不正アクセス試行の形跡を確認し、予防的措置として"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-21T23:55:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-19-japan-post-yu-id-credential-stuffing",
+        "organization": {
+          "name": "日本郵政株式会社",
+          "name_en": "JAPAN POST HOLDINGS Co., Ltd.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["postal_services", "digital_identity"],
+          "business_model": ["b2c", "public"],
+          "service": "ゆうID / ゆうゆうポイント",
+          "country": "JP",
+          "website": "https://www.japanpost.jp/",
+          "headquarters": {"address":"〒100-8791 東京都千代田区大手町二丁目3番1号","prefecture":"東京都","city":"千代田区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.japanpost.jp/group/about/outline/"},
+          "employee_count": {"value":1235,"unit":"employees","estimate_type":"reported","basis":"公式会社概要、2025年3月31日現在","confidence":"high"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Prime","ticker":"6178"}
+        },
+        "incident": {
+          "title": "ゆうIDへのなりすましログインによる会員情報閲覧の可能性",
+          "types": ["credential_stuffing", "unauthorized_access", "potential_data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-15",
+          "disclosed_at": "2026-10-19",
+          "status": {"value":"contained","as_of":"2026-10-21"},
+          "attack_vector": "外部サービス等から漏えいしたID・パスワードを悪用したなりすましログイン（credential stuffing）。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["ゆうID", "ゆうゆうポイント公式サイト"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"外部で漏えいした認証情報を利用した不正ログインとされるが、攻撃主体を特定する公的・技術的帰属情報は確認できない。","source_urls":["https://www.rouei-navi.jp/incidents/japanpost-yuyupoint-2026/"],"reviewed_at":"2026-10-21"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": 249,
+          "affected_users_note": "249アカウントで会員情報が閲覧された可能性。うち1アカウントの住所録に登録された住所情報83件も不正取得された可能性がある。実閲覧・取得の全件確定値ではない。",
+          "affected_organizations": 1,
+          "records": 249,
+          "data_exposed": ["name", "address", "date_of_birth", "phone_number", "email_address"],
+          "service_disruption": true,
+          "service_disruption_note": "ゆうゆうポイント公式サイトを10月16日から停止。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"security_report","publisher":"情報漏えいナビ","published_at":"2026-10-19","url":"https://www.rouei-navi.jp/incidents/japanpost-yuyupoint-2026/","title":"「ゆうID」へのなりすましログインによる会員情報の閲覧の可能性（ゆうゆうポイントサイト、249アカウント）"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-21T23:55:00+09:00"
+      }
+    }
+  ]
+}
