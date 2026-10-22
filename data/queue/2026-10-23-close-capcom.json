@@ -1,0 +1,58 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-22-capcom-id-unauthorized-access",
+        "organization": {
+          "name": "株式会社カプコン",
+          "name_en": "CAPCOM CO., LTD.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["gaming", "digital_entertainment", "technology"],
+          "business_model": ["b2c"],
+          "service": "CAPCOM ID",
+          "country": "JP",
+          "website": "https://www.capcom.co.jp/",
+          "headquarters": {"address":"〒540-0037 大阪市中央区内平野町三丁目1番3号","prefecture":"大阪府","city":"大阪市","latitude":null,"longitude":null,"precision":"exact","source":"https://www.capcom.co.jp/ir/company/info.html"},
+          "employee_count": {"value":3976,"unit":"employees","estimate_type":"reported","basis":"カプコン公式会社情報、2026年3月31日時点の連結社員数。","confidence":"high"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Prime","ticker":"9697"},
+          "estimated_total_users": {"value":null,"unit":"accounts","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "CAPCOM IDへの不正アクセスによる1,177万4,247件の顧客情報漏えい",
+          "types": ["unauthorized_access", "data_breach", "account_compromise"],
+          "occurred_at": "2026-10-19",
+          "detected_at": "2026-10-19",
+          "disclosed_at": "2026-10-22",
+          "status": {"value":"contained_investigating","as_of":"2026-10-22"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["CAPCOM ID"],
+          "affected_regions": ["global"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"カプコンは第三者による不正アクセスを確認しているが、2026年10月22日時点の公式発表および確認した報道では攻撃主体を特定する帰属情報は公表されていない。攻撃手段は特定・対応済みとされるが具体的手法は非公表。","source_urls":["https://www.capcom.co.jp/ir/news/html/261022.html","https://internet.watch.impress.co.jp/docs/news/2150509.html"],"reviewed_at":"2026-10-22"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "全世界合計11,774,247件のメールアドレスおよびシステム固有の識別情報の漏えいを確認。公式発表は『件』単位であり、重複排除済みのユニーク人数とは明示されていないため affected_users は null。うち43件では生年月日、性別、国・地域、ニックネームも漏えいし、196アカウントではログインパスワードが不正変更された。利用者自身が設定したパスワードの漏えいとクレジットカード情報の漏えいは確認されていない。",
+          "affected_organizations": 1,
+          "records": 11774247,
+          "data_exposed": ["email_address", "account_created_at", "last_login_at", "login_count", "last_login_client_ip", "date_of_birth", "gender", "country_or_region", "nickname"],
+          "service_disruption": false,
+          "service_disruption_note": "必要な緊急対策を完了し、CAPCOM IDを使用したサービスは引き続き利用可能。全ゲームのプレイへの影響なし。196アカウントはパスワードをリセット済み。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社カプコン","published_at":"2026-10-22","url":"https://www.capcom.co.jp/ir/news/html/261022.html","title":"不正アクセスによるお客様情報漏えいのお詫びとお知らせ"},
+          {"kind":"news","publisher":"INTERNET Watch","published_at":"2026-10-22","url":"https://internet.watch.impress.co.jp/docs/news/2150509.html","title":"カプコンのオンラインサービスで約1177万件のユーザー情報漏えい、パスワードの不正な変更も"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-23T00:00:00+09:00"
+      }
+    }
+  ]
+}
