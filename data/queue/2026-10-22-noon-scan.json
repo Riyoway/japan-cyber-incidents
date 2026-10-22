@@ -1,0 +1,137 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-21-ototoy-unauthorized-access",
+        "organization": {
+          "name": "オトトイ株式会社",
+          "name_en": "OTOTOY Inc.",
+          "type": "company",
+          "size": "small_enterprise",
+          "industry": ["music", "digital_distribution", "ecommerce"],
+          "business_model": ["b2c", "b2b"],
+          "service": "OTOTOY",
+          "country": "JP",
+          "website": "https://ototoy.jp/",
+          "headquarters": {"address":"〒150-0046 東京都渋谷区松濤2-11-11 松涛伊藤ビル","prefecture":"東京都","city":"渋谷区","latitude":null,"longitude":null,"precision":"exact","source":"https://ototoy.jp/about/company"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "OTOTOYへの不正アクセスによる会員情報漏えいの可能性",
+          "types": ["unauthorized_access", "potential_data_breach", "service_disruption"],
+          "occurred_at": "2026-10-18",
+          "occurred_time": {"start":"22:00","end":null,"timezone":"Asia/Tokyo","precision":"approximate","time_band":"night","basis":"OTOTOYは2026年10月18日22時ごろにシステムへの脅威となるアクセスが開始されたと公表。"},
+          "detected_at": "2026-10-19",
+          "detected_time": {"start":"14:00","end":null,"timezone":"Asia/Tokyo","precision":"approximate","time_band":"afternoon","basis":"OTOTOYは翌10月19日14時ごろに本件を把握し、サービスを停止したと公表。"},
+          "disclosed_at": "2026-10-21",
+          "status": {"value":"investigating","as_of":"2026-10-22"},
+          "attack_vector": "原因となった脆弱性を特定し修正済みと公表しているが、脆弱性の具体的内容やCVEは公表されていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["OTOTOY web service", "OTOTOY member database"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスは確認されているが、OTOTOYの公表では攻撃主体を特定する帰属情報は示されていない。","source_urls":["https://ototoy.jp/feature/maintenance_20261020"],"reviewed_at":"2026-10-22"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "OTOTOYユーザーの一部会員情報、最大約48万件が閲覧・取得された可能性。最大件数であり、確定流出人数ではない。",
+          "affected_organizations": 1,
+          "records": 480000,
+          "data_exposed": ["internal_user_id", "email_address", "registration_date"],
+          "service_disruption": true,
+          "service_disruption_note": "2026年10月19日14時ごろにサービスを停止。原因となった脆弱性への修正と確認後、10月20日22時ごろまでにサービスを再開。",
+          "service_recovered_at": "2026-10-20"
+        },
+        "sources": [
+          {"kind":"official","publisher":"オトトイ株式会社","published_at":"2026-10-21","url":"https://ototoy.jp/feature/maintenance_20261020","title":"不正アクセスによるお客様情報漏洩の可能性に関するお知らせ"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-22T12:00:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-21-aeon-group-websites-unauthorized-access",
+        "organization": {
+          "name": "イオン株式会社",
+          "name_en": "AEON CO., LTD.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["retail", "conglomerate"],
+          "business_model": ["b2c", "b2b"],
+          "service": "イオングループ各社の一部Webサイト",
+          "country": "JP",
+          "website": "https://www.aeon.info/",
+          "headquarters": {"address":"〒261-8515 千葉県千葉市美浜区中瀬1-5-1","prefecture":"千葉県","city":"千葉市","latitude":null,"longitude":null,"precision":"exact","source":"https://www.aeon.info/company/overview/"},
+          "employee_count": {"value":670000,"unit":"employees","estimate_type":"reported","basis":"イオン公式『数字で見るイオン』、2026年2月末時点のグループ従業員数。","confidence":"high"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Prime","ticker":"8267"},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "イオングループ各社の一部Webサイトへの不正アクセス",
+          "types": ["unauthorized_access", "service_disruption", "potential_data_breach"],
+          "occurred_at": null,
+          "detected_at": "2026-10-20",
+          "disclosed_at": "2026-10-21",
+          "status": {"value":"investigating","as_of":"2026-10-22"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["イオングループ各社の一部Webサイト"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスは確認されているが、イオンおよび報道で攻撃主体を特定する帰属情報は確認できない。","source_urls":["https://www.aeon.info/wp-content/uploads/news/important/pdf/2026/10/261021R_2.pdf","https://k-tai.watch.impress.co.jp/docs/news/2150009.html"],"reviewed_at":"2026-10-22"}
+        },
+        "impact": {
+          "confirmed_breach": null,
+          "affected_users": null,
+          "affected_users_note": "個人情報流出の有無は2026年10月22日時点で調査中。",
+          "affected_organizations": 13,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "イオンリテールなど13社に関連する42サイトが安全確認のため閲覧できない状態。店舗営業システムやEC・ネットスーパーには影響しないと報道されている。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"イオン株式会社","published_at":"2026-10-21","url":"https://www.aeon.info/wp-content/uploads/news/important/pdf/2026/10/261021R_2.pdf","title":"イオングループの一部Webサイトへの不正アクセスによるシステムメンテナンスについて"},
+          {"kind":"news","publisher":"ケータイ Watch","published_at":"2026-10-21","url":"https://k-tai.watch.impress.co.jp/docs/news/2150009.html","title":"イオン、一部Webサイトで不正アクセスを検知　個人情報流出など調査"},
+          {"kind":"news","publisher":"FNNプライムオンライン","published_at":"2026-10-22","url":"https://www.fnn.jp/articles/-/1137423","title":"企業への不正アクセス相次ぐ　大手小売りや鉄道会社にも影響"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-22T12:00:00+09:00"
+      }
+    },
+    {
+      "operation": "patch",
+      "id": "2026-10-17-recruit-carsensor-suspicious-access",
+      "set": {
+        "incident.title": "カーセンサーnet・C-MATCHへの不正アクセスによる最大370万9551件の情報漏えい可能性",
+        "incident.types": ["unauthorized_access", "potential_data_breach", "service_disruption"],
+        "incident.status": {"value":"investigating","as_of":"2026-10-22"},
+        "incident.ransomware": false,
+        "incident.threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスは確認されたが、リクルートおよび確認した報道で攻撃主体の帰属情報は公表されていない。","source_urls":["https://www.recruit.co.jp/newsroom/pressrelease/2026/1021_149447.html","https://www.itmedia.co.jp/news/article/2610/21/2000002456/"],"reviewed_at":"2026-10-22"},
+        "impact.confirmed_breach": false,
+        "impact.affected_users": null,
+        "impact.affected_users_note": "利用者、販売店、従業員・委託先等を含め最大3,709,551件の個人情報が漏えいした可能性。件数であり、確定流出人数ではない。",
+        "impact.records": 3709551,
+        "impact.data_exposed": ["name", "address", "phone_number", "email_address", "inquiry_content", "review_information", "dealer_contact_information", "secondhand_dealer_permit_information", "employee_and_contractor_information"],
+        "impact.service_disruption_note": "2026年10月17日17時頃からカーセンサーnet、アプリ、C-MATCHを含む関連サービスを一時停止。10月22日時点で原因と影響範囲を調査中。"
+      },
+      "append": {
+        "sources": [
+          {"kind":"official","publisher":"株式会社リクルート","published_at":"2026-10-21","url":"https://www.recruit.co.jp/newsroom/pressrelease/2026/1021_149447.html","title":"カーセンサーnetおよびC-MATCHへの不正アクセスによる個人情報漏えいの可能性に関するお詫びとお知らせ"},
+          {"kind":"news","publisher":"ITmedia NEWS","published_at":"2026-10-21","url":"https://www.itmedia.co.jp/news/article/2610/21/2000002456/","title":"「カーセンサー」などに不正アクセス、最大371万件の個人情報漏えいか　問い合わせ客の氏名・住所など"}
+        ]
+      }
+    }
+  ]
+}
