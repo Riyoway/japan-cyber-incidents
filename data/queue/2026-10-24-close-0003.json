@@ -1,0 +1,93 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-23-green-monster-fxnavi-api-data-access",
+        "organization": {
+          "name": "グリーンモンスター株式会社",
+          "name_en": "Green Monster Inc.",
+          "type": "company",
+          "size": "small_enterprise",
+          "industry": ["financial_education", "fintech", "mobile_app"],
+          "business_model": ["b2c"],
+          "service": "FXなび",
+          "country": "JP",
+          "website": "https://greenmonster.co.jp/",
+          "headquarters": {"address":"〒150-0041 東京都渋谷区神南1丁目4-9","prefecture":"東京都","city":"渋谷区","latitude":null,"longitude":null,"precision":"exact","source":"https://greenmonster.co.jp/who-we-are/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Growth Market","ticker":"157A"}
+        },
+        "incident": {
+          "title": "FXなびAPIを通じた約619万件のユーザー情報取得のおそれ",
+          "types": ["unauthorized_access", "potential_data_breach"],
+          "occurred_at": "2026-04-27",
+          "occurred_time": {"start":"20:26","end":null,"timezone":"Asia/Tokyo","precision":"approximate","time_band":"evening","basis":"同社調査で、2026年4月27日20時26分頃から4月30日14時26分頃まで、10月17日に確認した不正アクセスとは別IPアドレスの第三者により継続的にユーザー情報等が取得されたおそれが判明。"},
+          "detected_at": "2026-10-17",
+          "disclosed_at": "2026-10-23",
+          "status": {"value":"investigating_contained","as_of":"2026-10-23"},
+          "attack_vector": "FXなびのAPI機能を通じた第三者による情報取得。具体的な脆弱性やCVEは公表されていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["FXなび", "FXなび API"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスと別IPアドレスからの継続的な情報取得のおそれは確認されたが、被害企業・捜査機関・フォレンジック等による攻撃主体の帰属情報は公表されていない。","source_urls":["https://greenmonster.co.jp/topics/2356/"],"reviewed_at":"2026-10-23"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "約619万件のユーザー情報等が第三者に取得されたおそれ。約619万件には個人情報に該当しない情報も含まれ、ユニーク人数とは公表されていない。メールアドレスは66,003件が対象と報じられている。",
+          "affected_organizations": 1,
+          "records": 6190000,
+          "data_exposed": ["email_address", "demographic_attributes", "survey_responses", "authentication_information", "app_transfer_code"],
+          "service_disruption": false,
+          "service_disruption_note": "同社はAPI機能を修正し、ログイン認証情報を修正、修正前に発行された認証情報をすべて無効化した。サービス停止は公表されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"グリーンモンスター株式会社","published_at":"2026-10-23","url":"https://greenmonster.co.jp/topics/2356/","title":"当社アプリ「FXなび」におけるユーザー情報等漏えいのおそれに関するお詫びとお知らせ"},
+          {"kind":"official","publisher":"グリーンモンスター株式会社","published_at":null,"url":"https://greenmonster.co.jp/who-we-are/","title":"私たちについて"},
+          {"kind":"official","publisher":"グリーンモンスター株式会社","published_at":null,"url":"https://greenmonster.co.jp/ir/info/","title":"株式基本情報"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-24T00:03:00+09:00"
+      }
+    },
+    {
+      "operation": "patch",
+      "id": "2026-10-21-okinawa-tourist-potential-data-breach",
+      "set": {
+        "incident.status": {"value":"confirmed_breach_investigating","as_of":"2026-10-23"},
+        "incident.threat_actor_attribution.reviewed_at": "2026-10-23",
+        "impact.confirmed_breach": true,
+        "impact.affected_users": 730000,
+        "impact.affected_users_note": "最大73万人の顧客情報が外部に漏えいしたことを同社が確認。運転免許証画像は最大6,000件が別DBに保存されており、その漏えい有無は引き続き調査中。73万人は上限値。",
+        "impact.records": 730000
+      },
+      "append": {
+        "incident.types": ["data_breach"],
+        "impact.data_exposed": ["name", "date_of_birth", "phone_number", "drivers_license_issue_date", "drivers_license_expiry_date", "drivers_license_number"],
+        "sources": [
+          {"kind":"news","publisher":"琉球新報","published_at":"2026-10-23","url":"https://ryukyushimpo.jp/economics/entry-5573865.html","title":"沖縄ツーリスト、最大73万人の顧客情報流出を発表　氏名や生年月日、免許証番号など"}
+        ]
+      }
+    },
+    {
+      "operation": "patch",
+      "id": "2026-10-22-capcom-id-data-breach",
+      "set": {
+        "incident.status": {"value":"investigation_completed_monitoring","as_of":"2026-10-23"},
+        "incident.threat_actor_attribution.reviewed_at": "2026-10-23"
+      },
+      "append": {
+        "incident.affected_systems": ["イーカプコン マイページ"],
+        "impact.data_exposed": ["name", "name_kana", "phone_number", "postal_code", "address", "gender", "date_of_birth", "purchase_history", "inquiry_history", "address_book"],
+        "sources": [
+          {"kind":"official","publisher":"株式会社カプコン","published_at":"2026-10-23","url":"https://www.capcom.co.jp/ir/news/html/261023.html","title":"不正アクセスによるお客様情報漏えいのお詫びとお知らせ （第二報）"}
+        ]
+      }
+    }
+  ]
+}
