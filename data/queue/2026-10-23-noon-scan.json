@@ -1,0 +1,164 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-22-valtec-php-unauthorized-access",
+        "organization": {
+          "name": "株式会社バルテック",
+          "name_en": "VALTEC CO., LTD.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["information_technology", "cloud_services", "business_software"],
+          "business_model": ["b2b"],
+          "service": "MOT/Cloud等の業務クラウドサービス",
+          "country": "JP",
+          "website": "https://www.webjapan.co.jp/",
+          "headquarters": {"address":"〒163-1103 東京都新宿区西新宿6-22-1 新宿スクエアタワー3階","prefecture":"東京都","city":"新宿区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.webjapan.co.jp/company/profile/"},
+          "employee_count": {"value":451,"unit":"employees","estimate_type":"reported","basis":"公式会社概要に掲載されたグループ社員数451名（連結・正社員、2019年2月末時点）。古い基準日のため現在人数ではない。","confidence":"medium"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"customers","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "PHPの脆弱性を標的とした不正アクセスによる顧客情報流出の可能性と多数サービス停止",
+          "types": ["unauthorized_access", "potential_data_breach", "service_disruption", "vulnerability_exploitation"],
+          "occurred_at": null,
+          "detected_at": null,
+          "disclosed_at": "2026-10-22",
+          "status": {"value":"investigating","as_of":"2026-10-23"},
+          "attack_vector": "バルテックはPHPの脆弱性を標的としたサイバー攻撃が原因と公表。具体的なCVE番号、侵入日時、侵入経路の詳細は公表していない。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["MOT/HG (MOT/Cloud)", "MOT/Cloud", "MOT/Rec", "MOT/Hotel", "MOT経費精算", "MOT勤怠管理", "MOT/Shift", "MOT文書管理", "MOT/SFA", "MOT/WEB請求書", "POS systems", "FreePOS", "Project-mot"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"PHP脆弱性を狙った第三者による攻撃であることは公表されているが、攻撃主体を特定する帰属情報は確認できない。","source_urls":["https://www.webjapan.co.jp/maintenance/serviceteishi261022/"],"reviewed_at":"2026-10-23"}
+        },
+        "impact": {
+          "confirmed_breach": null,
+          "affected_users": null,
+          "affected_users_note": "バルテックは顧客情報の『流出とみなされる事実』を確認したと公表しているが、対象となる情報項目、件数、顧客範囲は2026年10月23日時点で調査中。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "MOT/Cloud、勤怠、経費精算、POS、施設予約など20以上のサービス・機能を緊急メンテナンスのため停止。最短2026年10月26日中の復旧予定と案内しているが遅延の可能性あり。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社バルテック","published_at":"2026-10-22","url":"https://www.webjapan.co.jp/maintenance/serviceteishi261022/","title":"不正アクセスによるお客様情報流出の可能性および一部サービス停止のお知らせ"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-23T12:04:55+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-21-digital-arts-unauthorized-access",
+        "organization": {
+          "name": "デジタルアーツ株式会社",
+          "name_en": "Digital Arts Inc.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["cybersecurity", "software", "cloud_services"],
+          "business_model": ["b2b", "b2g"],
+          "service": "i-FILTER@Cloud等のクラウドサービス",
+          "country": "JP",
+          "website": "https://www.daj.jp/",
+          "headquarters": {"address":"東京都千代田区大手町1-5-1 大手町ファーストスクエア ウエストタワー14F","prefecture":"東京都","city":"千代田区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.daj.jp/company/about/"},
+          "employee_count": {"value":326,"unit":"employees","estimate_type":"reported","basis":"デジタルアーツ公式会社概要、2026年3月31日現在。","confidence":"high"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Prime","ticker":"2326"},
+          "estimated_total_users": {"value":null,"unit":"customers","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "クラウドサービス運用環境・社内環境への不正アクセス",
+          "types": ["unauthorized_access", "potential_data_breach", "credential_compromise"],
+          "occurred_at": "2025-07-01",
+          "detected_at": "2026-10-09",
+          "disclosed_at": "2026-10-21",
+          "status": {"value":"monitoring","as_of":"2026-10-23"},
+          "attack_vector": "クラウドサービスの運用に用いる認証情報が第三者に不正取得され、その認証情報を用いてサービス運用環境へ侵入。2026年10月9日のAIを活用した総点検で痕跡を発見し、痕跡には2025年7月頃まで遡るものが含まれる。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["i-FILTER@Cloud", "m-FILTER@Cloud Modern Edition", "m-FILTER MailAdviser Microsoft 365", "FINAL CODE@Cloud", "z-FILTER", "Desk", "cloud service operations environment", "internal environment"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"認証情報を不正取得した第三者による侵入は確認されているが、攻撃主体を特定する帰属情報は公式発表にない。","source_urls":["https://daj.jp/webtopics/1354/"],"reviewed_at":"2026-10-23"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "対象クラウドサービスを利用する一部顧客の情報が第三者に閲覧された可能性。2026年10月21日正午時点で外部への顧客情報持ち出しは確認されておらず、対象件数も公表されていない。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": false,
+          "service_disruption_note": "不正アクセスに使用された認証情報の無効化、運用認証情報とサーバー認証鍵の交換、不審プログラム停止を実施。10月21日正午時点で新たな不正アクセスは確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"デジタルアーツ株式会社","published_at":"2026-10-21","url":"https://daj.jp/webtopics/1354/","title":"当社への不正アクセスに関するお知らせとお詫び"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-23T12:04:55+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-22-smarthr-studio-breach",
+        "organization": {
+          "name": "株式会社SmartHR",
+          "name_en": "SmartHR, Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["saas", "human_resources", "software"],
+          "business_model": ["b2b"],
+          "service": "SmartHRグループのStudio利用Webサイト問い合わせフォーム",
+          "country": "JP",
+          "website": "https://smarthr.co.jp/",
+          "headquarters": {"address":"〒106-6217 東京都港区六本木3-2-1 住友不動産六本木グランドタワー","prefecture":"東京都","city":"港区","latitude":null,"longitude":null,"precision":"exact","source":"https://smarthr.co.jp/company/"},
+          "employee_count": {"value":1794,"unit":"employees","estimate_type":"reported","basis":"SmartHR採用サイト『数字で見るSmartHR』、2026年8月末時点の正社員・契約社員・アルバイト・パート在籍者総数。","confidence":"high"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":70000,"unit":"companies","estimate_type":"reported","basis":"SmartHRは2025年4月に登録社数70,000社突破を公表。ただし今回の影響対象はSmartHRクラウド利用企業データではなく、Studio利用Webフォームの問い合わせ者。","confidence":"high"}
+        },
+        "incident": {
+          "title": "Studioへの不正アクセスに伴うSmartHRグループ問い合わせ情報の漏えい可能性",
+          "types": ["third_party_incident", "unauthorized_access", "potential_data_breach"],
+          "occurred_at": "2026-09-30",
+          "detected_at": null,
+          "disclosed_at": "2026-10-22",
+          "status": {"value":"investigating","as_of":"2026-10-23"},
+          "attack_vector": "Webサイト制作・運用に利用していたStudioのクラウド環境への不正アクセスの影響。Studioは一部機能の脆弱性が悪用されたと公表している。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["Studio", "SmartHR group website inquiry forms"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"Studioへの第三者による脆弱性悪用の不正アクセスは確認されているが、SmartHRおよびStudioの公表で攻撃主体の帰属情報は示されていない。","source_urls":["https://smarthr.co.jp/news/info/20261022/","https://studio.design/ja/whats-new/unauthorized-access-2026-10"],"reviewed_at":"2026-10-23"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": 2012,
+          "affected_users_note": "SmartHRグループがStudioで運営する対象Webサイトの問い合わせフォーム利用者合計2,012名。第三者が実際に取得した事実は2026年10月22日時点で確認されていない。SmartHR等のクラウドサービスに保存される顧客データは対象外。",
+          "affected_organizations": 5,
+          "records": 2012,
+          "data_exposed": ["name", "organization_name", "phone_number", "email_address", "inquiry_form_data"],
+          "service_disruption": false,
+          "service_disruption_note": "対象は株式会社SmartHR、Smart相談室、AIRVISA、BYARD、LooperがStudioで作成・運営する一部Webサイトの問い合わせフォーム。クラウドサービス本体のデータは対象外。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社SmartHR","published_at":"2026-10-22","url":"https://smarthr.co.jp/news/info/20261022/","title":"ノーコードWeb制作プラットフォーム「Studio」への不正アクセスに伴う情報流出の可能性に関するお知らせ"},
+          {"kind":"official","publisher":"株式会社Smart相談室","published_at":"2026-10-22","url":"https://smart-sou.co.jp/news/20261022","title":"ノーコードWeb制作プラットフォーム「Studio」への不正アクセスに伴う情報流出の可能性に関するお知らせ"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-23T12:04:55+09:00"
+      }
+    }
+  ]
+}
