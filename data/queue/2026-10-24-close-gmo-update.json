@@ -1,0 +1,27 @@
+{
+  "operations": [
+    {
+      "operation": "patch",
+      "id": "2026-10-21-gmo-onamae-desktop-cloud-unauthorized-access",
+      "set": {
+        "incident.status": {"value":"contained_investigating","as_of":"2026-10-24"},
+        "incident.attack_vector": "GMOインターネットは本サービスのシステムにセキュリティ上の問題が存在したと公表しているが、具体的な侵入経路・脆弱性・CVEは未公表。第三者による不正アクセスと一部顧客サーバー環境への不正プログラム設置を確認。",
+        "incident.threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセス、情報持ち出し、金銭要求、追加攻撃・情報公開等の脅迫は公式確認されているが、被害企業・警察・フォレンジック等による攻撃主体の名称・帰属情報は公表されていない。攻撃者による脅迫内容だけから特定グループやランサムウェア運営者へ帰属させない。","source_urls":["https://internet.gmo/news/article/249/","https://www.onamae.com/news/article/11599/"],"reviewed_at":"2026-10-24"},
+        "impact.confirmed_breach": true,
+        "impact.affected_users": null,
+        "impact.affected_users_note": "GMOインターネットは顧客情報が外部に持ち出された事実を確認したが、個別の情報取得・不正利用の有無と範囲は調査中で、流出人数・件数は未公表。影響の可能性がある26,739件はサーバー数であり、侵害確認数・漏えい人数ではない。",
+        "impact.data_exposed": ["customer_server_stored_information", "trading_account_login_credentials"],
+        "impact.service_disruption": true,
+        "impact.service_disruption_note": "全プランのサーバー停止を継続。侵害された現行基盤はそのまま再開せず、独立したクラウド基盤上の代替サービスへの移行を案内する方針。一部顧客から取引口座の身に覚えのない取引が報告され、GMOは本件に起因すると認定した不正取引の実現損失を補償すると発表。"
+      },
+      "append": {
+        "incident.types": ["data_breach", "credential_theft", "financial_fraud"],
+        "incident.affected_systems": ["customer-stored trading account credentials"],
+        "sources": [
+          {"kind":"official","publisher":"GMOインターネット株式会社","published_at":"2026-10-24","url":"https://internet.gmo/news/article/249/","title":"お名前.com デスクトップクラウドサービスに対するサイバー攻撃について（第4報） お客様へのお見舞金のお支払いと不正取引による損失の補償について"},
+          {"kind":"official","publisher":"お名前.com byGMO","published_at":"2026-10-24","url":"https://www.onamae.com/news/article/11599/","title":"「お名前.com デスクトップクラウド」被害拡大の防止のためのお客様へのお願い（第5報）"}
+        ]
+      }
+    }
+  ]
+}
