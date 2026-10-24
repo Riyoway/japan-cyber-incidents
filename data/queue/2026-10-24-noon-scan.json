@@ -1,0 +1,169 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-23-pizzahut-japan-payment-api-breach",
+        "organization": {
+          "name": "日本ピザハット株式会社",
+          "name_en": "Pizza Hut Japan Ltd.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["food_service", "ecommerce"],
+          "business_model": ["b2c", "franchise"],
+          "service": "ピザハット日本国内向けオンライン注文サービス",
+          "country": "JP",
+          "website": "https://corp.pizzahut.jp/",
+          "headquarters": {"address":"〒220-0012 神奈川県横浜市西区みなとみらい4丁目4番5号 横浜アイマークプレイス","prefecture":"神奈川県","city":"横浜市","latitude":null,"longitude":null,"precision":"exact","source":"https://corp.pizzahut.jp/pizzahut-jp"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":"日本ピザハット単体の現在従業員数は確認できず。公式会社概要では親会社の日本ピザハット・コーポレーション連結で正社員499名・アルバイト約4,000名（2026年3月末時点）。","confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"customers","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "オンライン注文サービスの決済APIへの不正アクセスによる顧客情報漏えい",
+          "types": ["unauthorized_access", "data_breach", "api_compromise"],
+          "occurred_at": "2026-10-19",
+          "detected_at": null,
+          "disclosed_at": "2026-10-23",
+          "status": {"value":"investigating","as_of":"2026-10-24"},
+          "attack_vector": "第三者がオンライン注文サービスに関連する決済APIへ不正アクセスし、顧客情報等を含むデータベースから一部情報を取得。具体的な侵入経路・脆弱性は調査中。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["Japan online ordering service payment API", "customer database"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスは確認されているが、公式発表および確認した報道に攻撃主体を特定する帰属情報はない。","source_urls":["https://corp.pizzahut.jp/info/5540","https://www.sbbit.jp/article/cont1/187740"],"reviewed_at":"2026-10-24"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "日本ピザハットは情報の取得を確認しているが公式発表では件数未公表。ANN報道を引用したビジネス+ITは最大約448万件と報じているため、公式確認前の報道値として扱い確定件数には採用していない。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": ["customer_id", "email_address", "phone_number", "deleted_customer_records", "session_login_token", "transaction_records"],
+          "service_disruption": false,
+          "service_disruption_note": "攻撃元IPアドレスのブロックと脆弱性への対応を実施。クレジットカード情報は漏えい対象に含まれない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"日本ピザハット株式会社","published_at":"2026-10-23","url":"https://corp.pizzahut.jp/info/5540","title":"個人データ漏えいにつながる不正アクセスに関するお詫びとお知らせ"},
+          {"kind":"news","publisher":"ビジネス+IT","published_at":"2026-10-24","url":"https://www.sbbit.jp/article/cont1/187740","title":"日本ピザハット、決済APIへの不正アクセスで顧客情報が流出　報道では最大約448万件"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-24T12:01:12+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-23-andst-hd-server-breach",
+        "organization": {
+          "name": "株式会社アンドエスティHD",
+          "name_en": "and ST HD Co., Ltd.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["retail", "apparel"],
+          "business_model": ["b2c", "b2b"],
+          "service": "アンドエスティHDグループ業務システム",
+          "country": "JP",
+          "website": "https://www.andst-hd.co.jp/",
+          "headquarters": {"address":"〒150-8510 東京都渋谷区渋谷2丁目21番1号 渋谷ヒカリエ27F","prefecture":"東京都","city":"渋谷区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.andst-hd.co.jp/aboutus/outline/"},
+          "employee_count": {"value":6936,"unit":"employees","estimate_type":"reported","basis":"公式会社概要のグループ合算正社員数、2026年2月末時点。","confidence":"high"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Prime","ticker":"2685"},
+          "estimated_total_users": {"value":null,"unit":"customers","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "複数業務サーバーへの不正アクセスと顧客・取引先情報流出の可能性",
+          "types": ["unauthorized_access", "potential_data_breach", "service_disruption"],
+          "occurred_at": "2026-10-22",
+          "occurred_time": "morning",
+          "detected_at": "2026-10-22",
+          "detected_time": "morning",
+          "disclosed_at": "2026-10-23",
+          "status": {"value":"investigating","as_of":"2026-10-24"},
+          "attack_vector": "2026年10月22日7時30分頃から、外部から複数サーバーへ順次ログイン試行、侵入、データ抽出が行われた。具体的な初期侵入手段は未公表。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["business servers", "internal business systems", "membership point system"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"外部の第三者による侵入とデータ抽出は公式確認されているが、攻撃主体の帰属情報は公表されていない。","source_urls":["https://www.andst-hd.co.jp/news/notice/entry-17234/"],"reviewed_at":"2026-10-24"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": 2500000,
+          "affected_users_note": "顧客情報約250万件が流出した可能性。取引先情報約1万件と従業員情報（範囲確認中）も対象。件数はいずれも2026年10月23日時点の影響上限・調査値で、流出確定件数ではない。",
+          "affected_organizations": null,
+          "records": 2510000,
+          "data_exposed": ["name", "date_of_birth", "gender", "address", "phone_number", "email_address", "member_id", "company_name", "business_contact_name"],
+          "service_disruption": true,
+          "service_disruption_note": "社内業務システムの停止等を実施。WEBストア自体は影響を受けていないが、店舗およびWEBストアで会員ポイントが利用不能。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社アンドエスティHD","published_at":"2026-10-23","url":"https://www.andst-hd.co.jp/news/notice/entry-17234/","title":"当社業務サーバーへの不正アクセスの発生および個人情報等流出の可能性に関するお詫びとお知らせ"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-24T12:01:12+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-23-treasure-factory-case-system-breach",
+        "organization": {
+          "name": "株式会社トレジャー・ファクトリー",
+          "name_en": "Treasure Factory Co., Ltd.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["retail", "reuse", "ecommerce"],
+          "business_model": ["b2c"],
+          "service": "出張買取・トレファク引越の案件管理システム",
+          "country": "JP",
+          "website": "https://www.treasurefactory.co.jp/",
+          "headquarters": {"address":"〒101-0022 東京都千代田区神田練塀町3 大東ビル2F","prefecture":"東京都","city":"千代田区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.treasurefactory.co.jp/recruits/about/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Prime","ticker":"3093"},
+          "estimated_total_users": {"value":null,"unit":"customers","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "出張買取・トレファク引越の案件管理システムへの不正アクセスによる情報取得",
+          "types": ["unauthorized_access", "data_breach", "vulnerability_exploitation", "service_disruption"],
+          "occurred_at": "2026-10-20",
+          "occurred_time": "overnight",
+          "detected_at": "2026-10-20",
+          "detected_time": "morning",
+          "disclosed_at": "2026-10-23",
+          "status": {"value":"remediating","as_of":"2026-10-24"},
+          "attack_vector": "案件管理システムのデータベースへのアクセスに関する脆弱性を悪用した不正アクセス。2026年10月20日未明から朝にかけて実行され、PHPの脆弱性とは無関係と公表されている。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["business trip purchase case management system", "Treasure Factory moving service case management system", "application forms"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"脆弱性を悪用した第三者による不正アクセスは確認されているが、攻撃主体を特定する帰属情報は確認できない。","source_urls":["https://japanir.jp/company/company-3093/ir/3093-20261023-01_wp_disclosure_update/"],"reviewed_at":"2026-10-24"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "顧客情報746,277件（メールアドレス、うち11件は氏名・住所を含む）、取引先業者・従業員等750件（氏名・メールアドレス）、端末情報1,000件が不正取得されたと公表。件数はレコード数であり人数とは限らないためaffected_usersは未設定。",
+          "affected_organizations": 1,
+          "records": 748027,
+          "data_exposed": ["email_address", "name", "address", "device_identifier"],
+          "service_disruption": true,
+          "service_disruption_note": "10月20日10時30分に案件管理システムへの外部アクセスを停止し、11時05分に出張買取・引越等の申込フォーム受付を停止。10月28日を目途に再開予定。店舗・アプリ顧客情報および決済情報は対象外。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"regulatory_filing","publisher":"株式会社トレジャー・ファクトリー","published_at":"2026-10-23","url":"https://japanir.jp/company/company-3093/ir/3093-20261023-01_wp_disclosure_update/","title":"当社システムへの不正アクセスによる個人情報漏えいに関するお知らせ"},
+          {"kind":"news","publisher":"情シスのミカタ","published_at":"2026-10-23","url":"https://it-mikata.gameagelayer.com/articles/treasure-factory-case-management-system-unauthorized-access-746277-emails","title":"トレファクに不正アクセス 出張買取の顧客メール約74.6万件流出"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-24T12:01:12+09:00"
+      }
+    }
+  ]
+}
