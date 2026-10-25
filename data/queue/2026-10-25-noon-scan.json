@@ -1,0 +1,113 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-23-valuedesign-value-card-breach",
+        "organization": {
+          "name": "株式会社バリューデザイン",
+          "name_en": "Value Design Inc.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["fintech", "payment_services"],
+          "business_model": ["b2b2c"],
+          "service": "Value Card",
+          "country": "JP",
+          "website": "https://www.valuedesign.jp/",
+          "headquarters": {
+            "address": "〒104-0031 東京都中央区京橋3-1-1 東京スクエアガーデン14階",
+            "prefecture": "東京都",
+            "city": "中央区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.valuedesign.jp/company/profile/"
+          },
+          "employee_count": {
+            "value": 126,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "公式会社概要、2025年8月末現在。",
+            "confidence": "high"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "customers",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "Value Cardへの不正アクセスによるID・PIN・残高情報の流出",
+          "types": ["unauthorized_access", "data_breach", "vulnerability_exploitation"],
+          "occurred_at": null,
+          "detected_at": "2026-10-19",
+          "disclosed_at": "2026-10-23",
+          "status": {"value": "contained_investigating", "as_of": "2026-10-25"},
+          "attack_vector": "バリューデザインのシステムの一部環境に存在したWebサーバーの脆弱性を第三者が悪用した。不正アクセス経路は遮断済み。悪用された製品名、バージョン、CVE番号は公表されていないため、10月22日に別途案内されたPHPの重大脆弱性とは結び付けない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["Value Card house electronic money issuance service", "Value Card web server"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "第三者による脆弱性悪用と不正アクセスは公表されているが、被害企業・捜査機関・フォレンジック等による攻撃主体の名称や帰属情報は確認できない。",
+            "source_urls": [
+              "https://japanir.jp/company/company-4015/ir/4015-20261023-02_wp_disclosure_update/",
+              "https://rocket-boys.co.jp/security-measures-lab/paycloud_value_card_unauthorized_access_20261024/"
+            ],
+            "reviewed_at": "2026-10-25"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "流出件数は利用者人数ではなくValue CardのID件数。計1,424,748件のうち発行済みIDが569,224件、未発行IDが855,524件。氏名・住所等の個人情報は流出対象に該当しないと公表されている。発行済みIDには不正利用のおそれがあったが対処済みで、10月23日時点で本件による実被害は確認されていない。",
+          "affected_organizations": null,
+          "records": 1424748,
+          "data_exposed": ["electronic_money_id", "pin", "balance_information"],
+          "service_disruption": false,
+          "service_disruption_note": "不正アクセス経路を遮断し被害拡大防止措置を実施。影響を受けた発行済みIDについて不正利用防止の対処を実施。Value Card全体の流出件数にはモスフードサービスが別途公表したモスカード1,133,070件が含まれる範囲があり得るため単純合算しない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "regulatory_filing",
+            "publisher": "ペイクラウドホールディングス株式会社",
+            "published_at": "2026-10-23",
+            "url": "https://japanir.jp/company/company-4015/ir/4015-20261023-02_wp_disclosure_update/",
+            "title": "当社連結子会社が提供するシステムへの不正アクセスに関するお知らせ"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社バリューデザイン",
+            "published_at": null,
+            "url": "https://www.valuedesign.jp/company/profile/",
+            "title": "会社概要・アクセス"
+          },
+          {
+            "kind": "news",
+            "publisher": "セキュリティ対策Lab",
+            "published_at": "2026-10-25",
+            "url": "https://rocket-boys.co.jp/security-measures-lab/paycloud_value_card_unauthorized_access_20261024/",
+            "title": "ペイクラウド子会社「Value Card」で142万4,748件の情報流出 Webサーバーの脆弱性を悪用、ID・PIN・残高情報が対象"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-25T12:00:00+09:00"
+      }
+    }
+  ]
+}
