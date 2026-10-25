@@ -1,0 +1,113 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-08-lawson-id-app-reservation-breach",
+        "organization": {
+          "name": "株式会社ローソン",
+          "name_en": "Lawson, Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["retail", "convenience_store"],
+          "business_model": ["b2c"],
+          "service": "ローソンID / ローソンアプリ予約",
+          "country": "JP",
+          "website": "https://www.lawson.co.jp/",
+          "headquarters": {
+            "address": "東京都品川区大崎一丁目11番2号 ゲートシティ大崎イーストタワー",
+            "prefecture": "東京都",
+            "city": "品川区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.lawson.co.jp/company/corporate/data/about/"
+          },
+          "employee_count": {
+            "value": 12087,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "公式会社概要の2026年2月末現在の連結社員数。",
+            "confidence": "high"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null,
+            "basis": "ローソンは2024年7月24日に東京証券取引所プライム市場を上場廃止。"
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "ローソンID・ローソンアプリ予約への不正アクセスによる個人情報漏えい",
+          "types": ["unauthorized_access", "data_breach"],
+          "occurred_at": "2026-09-12",
+          "occurred_time": null,
+          "detected_at": "2026-10-07",
+          "detected_time": null,
+          "disclosed_at": "2026-10-08",
+          "status": {"value": "contained_monitoring", "as_of": "2026-10-24"},
+          "attack_vector": "ローソンアプリに関連するシステムが不正に利用され、本来アプリ上で利用者本人に情報を表示するためのセキュリティ機構が第三者による不正アクセスを受けた。具体的な脆弱性、CVE、認証情報窃取等の詳細は公表されていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["Lawson ID", "Lawson app reservation"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "第三者による不正アクセスはローソンが確認しているが、被害企業・捜査機関・フォレンジック等による攻撃主体の名称や帰属情報は公表されていない。",
+            "source_urls": ["https://www.lawson.co.jp/contents/cont07/1533174_3310.html"],
+            "reviewed_at": "2026-10-26"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": 2155371,
+          "affected_users_note": "ローソンID 2,155,345件とローソンアプリ予約26件。公式は各々を対象人数として公表しているが、両サービス間の人物重複有無は明示していないため、2,155,371は単純合計であり厳密なユニーク人数ではない。10月24日の詳細調査でローソンIDのメールアドレスとメルマガ取得情報は漏えいしていないことが判明し、生年月日は漏えいの可能性がある項目へ訂正された。",
+          "affected_organizations": null,
+          "records": 2155371,
+          "data_exposed": ["name", "date_of_birth_possible", "gender", "phone_number", "address", "partial_credit_card_number_app_reservation"],
+          "service_disruption": true,
+          "service_disruption_note": "ローソンアプリ予約機能を停止し、2026年10月19日に再開。",
+          "service_recovered_at": "2026-10-19"
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社ローソン",
+            "published_at": "2026-10-08",
+            "url": "https://www.lawson.co.jp/contents/cont07/1533174_3310.html",
+            "title": "第三者による不正アクセスに伴う個人情報漏えいに関するお詫びとお知らせ"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社ローソン",
+            "published_at": null,
+            "url": "https://www.lawson.co.jp/company/corporate/data/about/",
+            "title": "会社概要"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社ローソン",
+            "published_at": "2024-07-03",
+            "url": "https://www.lawson.co.jp/company/news/detail/1489023_2504.html",
+            "title": "株式併合並びに単元株式数の定めの廃止及び定款の一部変更に係る承認決議に関するお知らせ"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-26T00:05:00+09:00"
+      }
+    }
+  ]
+}
