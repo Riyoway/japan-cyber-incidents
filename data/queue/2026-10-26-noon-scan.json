@@ -1,0 +1,143 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-23-nexco-east-doratora-unauthorized-access",
+        "organization": {
+          "name": "東日本高速道路株式会社",
+          "name_en": "East Nippon Expressway Company Limited",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["transportation", "infrastructure"],
+          "business_model": ["b2c", "b2b"],
+          "service": "ドラとら（ドライブトラフィック）",
+          "country": "JP",
+          "website": "https://www.e-nexco.co.jp/",
+          "headquarters": {
+            "address": "〒100-8979 東京都千代田区霞が関三丁目3番2号 新霞が関ビルディング",
+            "prefecture": "東京都",
+            "city": "千代田区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.e-nexco.co.jp/company/overview/outline.html"
+          },
+          "employee_count": {
+            "value": 2643,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "NEXCO東日本公式会社概要、2026年3月31日時点の就業人員。",
+            "confidence": "high"
+          },
+          "listing": {"is_listed": false, "market": null, "ticker": null},
+          "estimated_total_users": {"value": null, "unit": "users", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "「ドラとら」への不正アクセスによる登録情報閲覧の可能性",
+          "types": ["unauthorized_access", "data_breach"],
+          "occurred_at": null,
+          "detected_at": null,
+          "disclosed_at": "2026-10-23",
+          "status": {"value": "contained_investigating", "as_of": "2026-10-26"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["ドラとら（ドライブトラフィック）"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "NEXCO東日本は第三者による不正アクセスを公表しているが、攻撃主体の名称や帰属を裏付ける情報は確認できない。",
+            "source_urls": ["https://www.e-nexco.co.jp/news/important_info/2026/1023/00016745.html"],
+            "reviewed_at": "2026-10-26"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "一部利用者の登録情報が閲覧された可能性がある。対象人数は公表されていない。対象者には個別メールで通知するとしている。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": ["email_address", "password", "gender", "prefecture", "birth_year"],
+          "service_disruption": true,
+          "service_disruption_note": "NEXCO東日本は10月21日に「ドラとら」および「マイルート」を一時停止し、10月23日にホームページ再開等を案内した。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "official", "publisher": "東日本高速道路株式会社", "published_at": "2026-10-23", "url": "https://www.e-nexco.co.jp/news/important_info/2026/1023/00016745.html", "title": "【お詫びとお知らせ】「ドラとら」（ドライブトラフィック）への不正アクセスに伴う登録情報の閲覧の可能性に関するお詫びとお知らせ"},
+          {"kind": "official", "publisher": "東日本高速道路株式会社", "published_at": null, "url": "https://www.e-nexco.co.jp/company/overview/outline.html", "title": "会社概要"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-26T12:00:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-23-headline-japan-ivs2025-studio-breach",
+        "organization": {
+          "name": "株式会社Headline Japan",
+          "name_en": "Headline Japan Co., Ltd.",
+          "type": "company",
+          "size": "unknown",
+          "industry": ["events", "media"],
+          "business_model": ["b2b", "b2c"],
+          "service": "IVS2025公式サイト",
+          "country": "JP",
+          "website": "https://www.ivs.events/",
+          "headquarters": {"address": null, "prefecture": "東京都", "city": null, "latitude": null, "longitude": null, "precision": "prefecture", "source": "https://www.ivs.events/news/20261023-ivs2025-security-incident"},
+          "employee_count": {"value": null, "unit": "employees", "estimate_type": "unknown", "basis": null, "confidence": "unknown"},
+          "listing": {"is_listed": false, "market": null, "ticker": null},
+          "estimated_total_users": {"value": null, "unit": "participants", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "IVS2025公式サイトのStudioフォーム回答漏えいの可能性",
+          "types": ["third_party_breach", "data_breach", "unauthorized_access"],
+          "occurred_at": "2026-09-30",
+          "detected_at": null,
+          "disclosed_at": "2026-10-23",
+          "status": {"value": "contained_monitoring", "as_of": "2026-10-26"},
+          "attack_vector": "IVS2025公式サイトが利用していたWeb制作サービスStudioのクラウド環境への第三者不正アクセス（2026年9月30日〜10月1日）の波及。IVS2025公式サイト自体への別個の侵入とは公表されていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["IVS2025 official website Studio forms", "Studio cloud environment"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "Studioへの第三者不正アクセスは確認されているが、Headline Japanの公表および確認した報道に攻撃主体の帰属情報はない。",
+            "source_urls": ["https://www.ivs.events/news/20261023-ivs2025-security-incident"],
+            "reviewed_at": "2026-10-26"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "IVS2025公式サイトに保存されていた全フォーム回答、計約4,200件が流出した可能性がある。4,200は回答記録数であり、重複を除いた人数や実際に取得された件数とは確認されていない。",
+          "affected_organizations": null,
+          "records": 4200,
+          "data_exposed": ["name", "email_address", "company_name", "job_title", "form_response_data"],
+          "service_disruption": false,
+          "service_disruption_note": "Studio側で脆弱性修正と不正アクセス経路の遮断が完了。IVS2026公式サイトは別サービス利用のため対象外。10月23日時点で不正利用・二次被害は確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "official", "publisher": "株式会社Headline Japan / IVS", "published_at": "2026-10-23", "url": "https://www.ivs.events/news/20261023-ivs2025-security-incident", "title": "IVS2025公式サイトで利用していたWeb制作サービス「Studio」への不正アクセスによる 個人情報漏洩の可能性に関するお知らせとお詫び"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-26T12:00:00+09:00"
+      }
+    }
+  ]
+}
