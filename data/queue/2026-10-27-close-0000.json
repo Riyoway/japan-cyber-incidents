@@ -1,0 +1,243 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-26-cotta-suspicious-access",
+        "organization": {
+          "name": "株式会社cotta",
+          "name_en": "cotta Co., Ltd.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["retail", "ecommerce", "food"],
+          "business_model": ["b2c", "b2b"],
+          "service": "cotta / cotta business",
+          "country": "JP",
+          "website": "https://www.cotta.co.jp/",
+          "headquarters": {"address":"〒879-2461 大分県津久見市上青江4478番地8","prefecture":"大分県","city":"津久見市","latitude":null,"longitude":null,"precision":"exact","source":"https://www.cotta.co.jp/"},
+          "employee_count": {"value":97,"unit":"employees","estimate_type":"reported","basis":"公式会社概要、2025年9月30日現在。パートタイマーを含む。","confidence":"high"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Growth / Fukuoka Stock Exchange Q-Board","ticker":"3359"},
+          "estimated_total_users": {"value":1800000,"unit":"members","estimate_type":"reported","basis":"公式採用情報でcottaの会員数180万人超と案内。","confidence":"high"}
+        },
+        "incident": {
+          "title": "cottaオンラインショップへの外部からの不正アクセスの可能性",
+          "types": ["suspicious_access", "service_disruption", "potential_data_breach"],
+          "occurred_at": null,
+          "detected_at": null,
+          "disclosed_at": "2026-10-26",
+          "status": {"value":"investigating","as_of":"2026-10-26"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["cotta online shop", "cotta business", "online shop credit-card payment", "some web functions"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"外部からの不正アクセスの可能性を確認した段階で、不正アクセスの成立、攻撃主体、侵入経路はいずれも調査中。","source_urls":["https://www.cotta.jp/information/security-incident-2026-01.php"],"reviewed_at":"2026-10-26"}
+        },
+        "impact": {
+          "confirmed_breach": null,
+          "affected_users": null,
+          "affected_users_note": "個人情報およびクレジットカード情報の流出有無を含め外部専門機関が調査中で、2026年10月26日時点で確定した漏えい事実はない。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "2026年10月26日9時からオンラインショップのクレジットカード決済（Yahoo!ウォレット含む）と一部Web機能を予防的に停止。その他の決済手段で注文は継続。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社cotta","published_at":"2026-10-26","url":"https://www.cotta.jp/information/security-incident-2026-01.php","title":"クレジットカード決済の一時停止および不正アクセスの可能性に関するお知らせ"},
+          {"kind":"official","publisher":"株式会社cotta","published_at":null,"url":"https://www.cotta.co.jp/","title":"会社概要"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-26T23:59:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-23-nihon-seirei-ai-lab-225-unauthorized-access",
+        "organization": {
+          "name": "日本成令株式会社",
+          "name_en": "Nihon Seirei Co., Ltd.",
+          "type": "company",
+          "size": "small_enterprise",
+          "industry": ["information_technology", "financial_education"],
+          "business_model": ["b2c", "b2b"],
+          "service": "AI Lab 225",
+          "country": "JP",
+          "website": "https://www.nihonsr.com/",
+          "headquarters": {"address":"〒142-0062 東京都品川区小山三丁目21番10号2F-17","prefecture":"東京都","city":"品川区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.nihonsr.com/company"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "AI Lab 225サーバーへの不正アクセスと会員・登録途中情報の漏えい可能性",
+          "types": ["unauthorized_access", "malware", "potential_data_breach", "credential_exposure"],
+          "occurred_at": "2026-09-13",
+          "detected_at": "2026-10-22",
+          "disclosed_at": "2026-10-23",
+          "status": {"value":"contained_investigating","as_of":"2026-10-26"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["AI Lab 225 web server", "AI Lab 225 membership data"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスと不正プログラム設置の痕跡は公表されているが、攻撃主体を特定する被害企業・捜査機関・フォレンジック等の帰属情報は確認できない。","source_urls":["https://rocket-boys.co.jp/security-measures-lab/ai_lab_225_nihon_seirei_unauthorized_access_password_leak_risk_20261026/"],"reviewed_at":"2026-10-26"}
+        },
+        "impact": {
+          "confirmed_breach": null,
+          "affected_users": null,
+          "affected_users_note": "退会者を含む会員約380名と、会員登録を完了していない利用者の情報約19,250件、件数非公表の問い合わせ情報に漏えいのおそれ。19,250はレコード件数であり人数として合算しない。パスワードは暗号化せず保存されていたと公表。",
+          "affected_organizations": 1,
+          "records": 19630,
+          "data_exposed": ["name", "email_address", "password", "inquiry_content"],
+          "service_disruption": true,
+          "service_disruption_note": "不正プログラムを削除し、全会員のパスワードを無効化、Facebookログインを停止。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"news","publisher":"セキュリティ対策Lab","published_at":"2026-10-26","url":"https://rocket-boys.co.jp/security-measures-lab/ai_lab_225_nihon_seirei_unauthorized_access_password_leak_risk_20261026/","title":"「AI Lab 225」に不正アクセス、登録途中の情報約1万9,250件に漏えいのおそれ　パスワードを暗号化せず保存"},
+          {"kind":"official","publisher":"日本成令株式会社","published_at":null,"url":"https://www.nihonsr.com/company","title":"日本成令株式会社について"}
+        ],
+        "confidence": "medium",
+        "last_updated": "2026-10-26T23:59:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-25-ejudo-blastmail-data-breach",
+        "organization": {
+          "name": "株式会社eJudo",
+          "name_en": "eJudo Co., Ltd.",
+          "type": "company",
+          "size": "small_enterprise",
+          "industry": ["media", "sports"],
+          "business_model": ["b2c"],
+          "service": "eJudo",
+          "country": "JP",
+          "website": "https://ejudo.info/",
+          "headquarters": {"address":"〒214-0021 神奈川県川崎市多摩区宿河原4-21-5-401","prefecture":"神奈川県","city":"川崎市","latitude":null,"longitude":null,"precision":"exact","source":"https://ejudo.info/management"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"members","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "委託先ブラストメールへの不正アクセスによるeJudoメール配信先リスト全件漏えい",
+          "types": ["third_party_incident", "data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-21",
+          "disclosed_at": "2026-10-25",
+          "status": {"value":"contained_service_suspended","as_of":"2026-10-25"},
+          "attack_vector": "株式会社ラクスライトクラウドのメール配信サービス『ブラストメール』への第三者による不正アクセス。eJudo自社システムへの独立した侵入は公表されていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["blastmail mailing list used by eJudo", "eJudo newsletter delivery"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"上流サービスへの第三者による不正アクセスは確認されているが、攻撃主体の名称や帰属情報は公表されていない。","source_urls":["https://ejudo.info/articles/34272","https://www.rakus.co.jp/news/2026/1021-3.html"],"reviewed_at":"2026-10-26"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "現会員・元会員を含む、ブラストメールに登録していたメール配信先リスト全件が漏えい。対象人数・件数は公表されていない。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": ["email_address"],
+          "service_disruption": true,
+          "service_disruption_note": "10月21日以降ブラストメールとのシステム連携を停止し、eJudoニュースレター配信を休止。再開時期未定。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社eJudo","published_at":"2026-10-25","url":"https://ejudo.info/articles/34272","title":"委託先メール配信サービス「ブラストメール」における個人情報の漏洩に関するお詫びとお知らせ"},
+          {"kind":"official","publisher":"株式会社eJudo","published_at":null,"url":"https://ejudo.info/management","title":"運営会社"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-26T23:59:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-26-giftee-egift-fraud",
+        "organization": {
+          "name": "株式会社ギフティ",
+          "name_en": "giftee, Inc.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["information_technology", "digital_gift", "fintech"],
+          "business_model": ["b2b", "b2c", "b2g"],
+          "service": "e-gift platform",
+          "country": "JP",
+          "website": "https://giftee.co.jp/",
+          "headquarters": {"address":null,"prefecture":"東京都","city":"品川区","latitude":null,"longitude":null,"precision":"city","source":"https://giftee.co.jp/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "一部システムへの不正アクセスによるeギフト不正発行",
+          "types": ["unauthorized_access", "vulnerability_exploitation", "financial_fraud", "service_disruption"],
+          "occurred_at": "2026-10-25",
+          "detected_at": "2026-10-25",
+          "disclosed_at": "2026-10-26",
+          "status": {"value":"contained_investigating","as_of":"2026-10-26"},
+          "attack_vector": "株式会社ギフティが運用する一部システムの脆弱性を第三者が悪用し、そのシステムを経由してeギフトを新規に不正発行。具体的な製品名・CVEは公表されていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["giftee e-gift issuance system (specific system undisclosed)", "some e-gift exchange services"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"脆弱性を悪用した第三者による不正アクセスは適時開示で確認されているが、攻撃主体を特定する帰属情報は公表されていない。","source_urls":["https://ufocatch.com/document/TD2026102600178"],"reviewed_at":"2026-10-26"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": 0,
+          "affected_users_note": "顧客保有eギフトの不正使用ではなく、顧客保有資産の減少・毀損および個人情報漏えいは2026年10月26日時点で確認されていない。不正発行によるグループの金銭的損失は約5.5億円見込み。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "10月25日に原因となった脆弱性を特定して当該システムを停止し、同経路からの不正発行を遮断。当該システムは再開しない方針。一部eギフト交換サービスに一時的な利用上の支障が発生。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"regulatory_filing","publisher":"株式会社ギフティグループ","published_at":"2026-10-26","url":"https://ufocatch.com/document/TD2026102600178","title":"当社連結子会社の一部システムへの不正アクセスに伴うeギフトの不正発行および特別損失計上見込みに関するお知らせ"},
+          {"kind":"official","publisher":"株式会社ギフティ","published_at":null,"url":"https://giftee.co.jp/","title":"株式会社ギフティ"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-26T23:59:00+09:00"
+      }
+    },
+    {
+      "operation": "patch",
+      "id": "2026-10-17-joshin-system-unauthorized-access",
+      "set": {
+        "organization.name": "株式会社Joshin",
+        "incident.status": {"value":"investigating","as_of":"2026-10-26"},
+        "incident.detected_at": "2026-10-16",
+        "impact.confirmed_breach": null,
+        "impact.affected_users": null,
+        "impact.affected_users_note": "会員情報DB最大約600万件、ジョーシンのサブスク最大約23万件、リフォーム写真アップロードシステム最大約800件に漏えいの可能性。各母集団の重複有無は公表されておらず、実漏えい件数・ユニーク人数は未確定。",
+        "impact.records": null,
+        "impact.data_exposed": ["name","address","phone_number","membership_number","handwritten_signature","login_id","initial_password","billing_history","contract_number","device_id","activation_code","driver_license_image","my_number_card_image","bank_account_number","renovation_photos"],
+        "impact.service_disruption_note": "10月16日の異常検知後の緊急措置により一部サービスが利用不能。10月26日時点でも影響範囲と情報漏えい有無を継続調査中。",
+        "incident.threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスは確認されているが、10月26日の第2報でも侵入経路・攻撃主体の帰属情報は公表されていない。","source_urls":["https://www.joshin.co.jp/ja/news.html","https://internet.watch.impress.co.jp/docs/news/2151273.html"],"reviewed_at":"2026-10-26"},
+        "last_updated": "2026-10-26T23:59:00+09:00"
+      },
+      "append": {
+        "incident.affected_systems": ["会員情報データベースサーバー", "ジョーシンのサブスク", "リフォーム写真アップロードシステム"],
+        "sources": [
+          {"kind":"news","publisher":"INTERNET Watch","published_at":"2026-10-26","url":"https://internet.watch.impress.co.jp/docs/news/2151273.html","title":"Ｊｏｓｈｉｎ、不正アクセスで最大約600万件の会員情報などが漏えいの可能性"}
+        ]
+      }
+    }
+  ]
+}
