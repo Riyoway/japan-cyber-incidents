@@ -1,0 +1,147 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-26-rakuten-travel-unauthorized-access",
+        "organization": {
+          "name": "楽天グループ株式会社",
+          "name_en": "Rakuten Group, Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["internet_services", "travel"],
+          "business_model": ["b2c", "b2b"],
+          "service": "楽天トラベル（海外ホテル予約サイトの一部ページ・多言語予約サイト）",
+          "country": "JP",
+          "website": "https://corp.rakuten.co.jp/",
+          "headquarters": {
+            "address": "〒158-0094 東京都世田谷区玉川一丁目14番1号 楽天クリムゾンハウス",
+            "prefecture": "東京都",
+            "city": "世田谷区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://corp.rakuten.co.jp/about/"
+          },
+          "employee_count": {"value": null, "unit": "employees", "estimate_type": "unknown", "basis": null, "confidence": "unknown"},
+          "listing": {"is_listed": true, "market": "Tokyo Stock Exchange Prime", "ticker": "4755"},
+          "estimated_total_users": {"value": null, "unit": "users", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "楽天トラベル海外ホテル予約・多言語予約サイトへの不正アクセス",
+          "types": ["unauthorized_access", "potential_data_breach"],
+          "occurred_at": null,
+          "detected_at": "2026-09-10",
+          "disclosed_at": "2026-10-26",
+          "status": {"value": "contained_monitoring", "as_of": "2026-10-27"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["Rakuten Travel Xchange-managed overseas hotel booking pages", "Rakuten Travel multilingual booking site"],
+          "affected_regions": ["Japan", "Europe", "North America", "Asia-Pacific"],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "楽天グループは社外の第三者による不正アクセスを確認しているが、公式発表および確認した報道に攻撃主体の名称・帰属を裏付ける情報はない。",
+            "source_urls": ["https://travel.rakuten.co.jp/info/announce/20261026.html", "https://www.reuters.com/jp/economy/AOUBOU5JGJNEJFLJUANJG4L2JY-2026-10-26/"],
+            "reviewed_at": "2026-10-27"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "海外ホテル予約ページではログイン利用者最大約260万件、予約者最大約4万件（うち最大約3万6千件に限定的な支払情報）、多言語予約サイトではログイン利用者最大約86万件、宿泊施設従業員最大約4万件が不正アクセスの対象。これらは情報レコードの上限であり、重複を除いた被害人数や外部への持ち出し件数とは確認されていない。",
+          "affected_organizations": null,
+          "records": 3540000,
+          "data_exposed": ["name", "email_address", "phone_number", "country_of_residence", "internal_identifier", "reservation_information", "companion_name", "payment_card_issuer_identification_number", "payment_card_last_four_digits", "payment_card_holder_name", "payment_card_expiration", "payment_card_brand", "account_name"],
+          "service_disruption": false,
+          "service_disruption_note": "事象1は2026年9月10日に異常を検知し9月15日に原因を特定、9月16日に改修完了。事象2は10月20日に不正アクセスの可能性を検知・原因特定し、10月21日に改修完了。10月26日時点で二次被害やその他サービスへの影響は確認されていない。",
+          "service_recovered_at": "2026-10-21"
+        },
+        "sources": [
+          {"kind": "official", "publisher": "楽天グループ株式会社 / 楽天トラベル", "published_at": "2026-10-26", "url": "https://travel.rakuten.co.jp/info/announce/20261026.html", "title": "海外ホテル予約サイトの一部ページならびに多言語予約サイトに関するお詫びとお知らせ"},
+          {"kind": "news", "publisher": "Reuters", "published_at": "2026-10-26", "url": "https://www.reuters.com/jp/economy/AOUBOU5JGJNEJFLJUANJG4L2JY-2026-10-26/", "title": "楽天トラベル、顧客情報260万件に不正アクセス　クレジットカード情報3.6万件"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27T12:00:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-26-sonicmoov-comsbi-enterprise-breach",
+        "organization": {
+          "name": "株式会社ソニックムーブ",
+          "name_en": "Sonicmoov Co., Ltd.",
+          "type": "company",
+          "size": "unknown",
+          "industry": ["software", "marketing_technology"],
+          "business_model": ["b2b"],
+          "service": "COMSBI エンタープライズ基盤",
+          "country": "JP",
+          "website": "https://sonicmoov.com/",
+          "headquarters": {
+            "address": "〒106-0041 東京都港区麻布台1丁目3番1号 麻布台ヒルズ 森JPタワー28階",
+            "prefecture": "東京都",
+            "city": "港区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://sonicmoov.com/news/xr5qdn-cnfsn"
+          },
+          "employee_count": {"value": null, "unit": "employees", "estimate_type": "unknown", "basis": null, "confidence": "unknown"},
+          "listing": {"is_listed": false, "market": null, "ticker": null},
+          "estimated_total_users": {"value": null, "unit": "users", "estimate_type": "unknown", "basis": null, "confidence": "unknown"}
+        },
+        "incident": {
+          "title": "COMSBI エンタープライズ基盤への認証情報悪用による不正アクセス",
+          "types": ["unauthorized_access", "data_breach", "service_disruption"],
+          "occurred_at": "2026-10-23",
+          "occurred_time": {"start": null, "end": null, "timezone": "Asia/Tokyo", "precision": "time_band", "time_band": "morning", "basis": "ソニックムーブは2026年10月23日午前に第三者が管理システムへ不正ログインしたと公表。"},
+          "detected_at": "2026-10-23",
+          "detected_time": {"start": "12:12", "end": null, "timezone": "Asia/Tokyo", "precision": "exact", "time_band": "afternoon", "basis": "同社は10月23日12時12分に不正アクセスを把握したと公表。"},
+          "disclosed_at": "2026-10-26",
+          "status": {"value": "contained_investigating_service_suspended", "as_of": "2026-10-27"},
+          "attack_vector": "第三者が不正に入手した管理画面の認証情報でログインし、管理画面の機能上の不備を通じてサーバーの認証情報を取得。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["COMSBI エンタープライズ基盤 管理システム", "COMSBI エンタープライズ基盤 server environment"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "ソニックムーブは第三者による認証情報悪用を確認しているが、攻撃主体の名称・組織・帰属を裏付ける情報は公表していない。",
+            "source_urls": ["https://sonicmoov.com/news/xr5qdn-cnfsn"],
+            "reviewed_at": "2026-10-27"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "一部法人顧客の情報および各顧客が保有する一般利用者の個人情報について、外部への漏えいが確認されたものと漏えいのおそれがあるものがある。対象件数・人数は公表されていない。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": ["name", "email_address", "encrypted_password", "LINE_official_account_configuration", "customer_held_user_information", "server_credentials"],
+          "service_disruption": true,
+          "service_disruption_note": "10月23日13時20分から外部アクセスを遮断して全機能を順次停止。15時41分以降の第三者によるアクセス試行はすべて失敗し、以降の情報取得は確認されていない。10月26日時点でも停止継続中。SaaS版COMSBIへの影響は確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind": "official", "publisher": "株式会社ソニックムーブ", "published_at": "2026-10-26", "url": "https://sonicmoov.com/news/xr5qdn-cnfsn", "title": "弊社サービス「COMSBI エンタープライズ基盤」への不正アクセスによる情報漏えいのおそれに関するお知らせとお詫び"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27T12:00:00+09:00"
+      }
+    }
+  ]
+}
