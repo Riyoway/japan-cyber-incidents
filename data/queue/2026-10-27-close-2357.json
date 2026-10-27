@@ -1,0 +1,154 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-27-sony-network-so-net-member-db-breach",
+        "organization": {
+          "name": "ソニーネットワークコミュニケーションズ株式会社",
+          "name_en": "Sony Network Communications Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["telecommunications", "internet_services"],
+          "business_model": ["b2c", "b2b"],
+          "service": "So-net / plala（Sコース）/ 一部メールサービス",
+          "country": "JP",
+          "website": "https://www.sonynetwork.co.jp/",
+          "headquarters": {"address":"〒108-0075 東京都港区港南1-7-1","prefecture":"東京都","city":"港区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.sonynetwork.co.jp/"},
+          "employee_count": {"value":802,"unit":"employees","estimate_type":"exact","basis":"2026年3月31日時点の単独従業員数。連結1,781名。","confidence":"medium"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "So-net会員データベースへの不正アクセスと会員・メール認証情報漏えい",
+          "types": ["unauthorized_access", "data_breach", "credential_theft", "service_disruption"],
+          "occurred_at": "2026-10-19",
+          "occurred_time": null,
+          "detected_at": "2026-10-23",
+          "detected_time": null,
+          "disclosed_at": "2026-10-27",
+          "status": {"value":"contained_investigating","as_of":"2026-10-27"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["So-net member database", "plala (S course) member information", "Mail Service (G)", "A-Box", "So-net VAIO Mail", "PostPet Mail Account Service"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"被害企業は外部からの不正アクセスと情報漏えいを確認しているが、攻撃主体を特定する被害企業・捜査機関・フォレンジック等の帰属情報は公表されていない。","source_urls":["https://www.sonynetwork.co.jp/corporation/release/2026/v5e5u00000000zwj-att/20261027.pdf","https://k-tai.watch.impress.co.jp/docs/news/2151581.html"],"reviewed_at":"2026-10-27"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": 2585481,
+          "affected_users_note": "So-net現・元会員2,141,986件とplala（Sコース）現・元会員443,495件、合計2,585,481件の会員情報漏えいを確認。別途、一部メールサービスで計54,401件のメールアドレスとメール送受信用パスワードが漏えいしており、会員母集団との人物重複が不明なため横断人数には加算しない。",
+          "affected_organizations": 1,
+          "records": 2585481,
+          "data_exposed": ["name", "phone_number", "email_address", "user_id", "date_of_birth", "gender", "internet_connection_id", "bank_account_information", "email_password", "password_reset_notice_information"],
+          "service_disruption": true,
+          "service_disruption_note": "10月23日に対象サーバーを停止し通信を遮断。漏えいした一部メールサービスのパスワードは10月27日に強制初期化し再設定を案内。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"ソニーネットワークコミュニケーションズ株式会社","published_at":"2026-10-27","url":"https://www.sonynetwork.co.jp/corporation/release/2026/v5e5u00000000zwj-att/20261027.pdf","title":"So-net 会員データベースへの不正アクセスに伴う情報漏洩に関するお詫びとお知らせ"},
+          {"kind":"news","publisher":"ケータイ Watch","published_at":"2026-10-27","url":"https://k-tai.watch.impress.co.jp/docs/news/2151581.html","title":"So-netなど258万件超の個人情報漏洩、ソニーネットワークが発表"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27T23:57:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-26-tsuku-tsuku-web-skimming-breach",
+        "organization": {
+          "name": "TSUKU TSUKU株式会社",
+          "name_en": "TSUKU TSUKU Inc.",
+          "type": "company",
+          "size": "small_enterprise",
+          "industry": ["ecommerce", "marketplace", "software"],
+          "business_model": ["b2c", "b2b"],
+          "service": "ツクツク!!! 通販 / ウェブチケット",
+          "country": "JP",
+          "website": "https://tsuku2.co.jp/",
+          "headquarters": {"address":"〒105-5112 東京都港区浜松町二丁目4番1号 世界貿易センタービルディング南館12F","prefecture":"東京都","city":"港区","latitude":null,"longitude":null,"precision":"exact","source":"https://tsuku2.co.jp/about-company/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "ECモールの脆弱性悪用と決済ページへの不正プログラム設置",
+          "types": ["unauthorized_access", "vulnerability_exploitation", "web_skimming", "potential_data_breach", "service_disruption"],
+          "occurred_at": "2025-05-10",
+          "occurred_time": null,
+          "detected_at": "2025-09-09",
+          "detected_time": null,
+          "disclosed_at": "2026-10-26",
+          "status": {"value":"contained_monitoring","as_of":"2026-10-26"},
+          "attack_vector": "同社管理システムの一部脆弱性を悪用した第三者の不正アクセスにより、通販・ウェブチケットサイトの一部ページへ不正プログラムが埋め込まれ、入力されたカード情報が外部転送された痕跡をフォレンジック調査で確認。具体的な脆弱性・CVEは未公表。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["ツクツク!!! 通販サイト", "ツクツク!!! ウェブチケットサイト", "credit-card input pages"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"脆弱性悪用と不正プログラム設置、カード情報の外部転送痕跡は確認されているが、攻撃主体を特定する被害企業・捜査機関・フォレンジック等の帰属情報は公表されていない。","source_urls":["https://home.tsuku2.jp/index.php","https://rocket-boys.co.jp/security-measures-lab/tsukutsuku-card-data-breach-19115-personal-info-362750/"],"reviewed_at":"2026-10-27"}
+        },
+        "impact": {
+          "confirmed_breach": null,
+          "affected_users": null,
+          "affected_users_note": "2025年5月10日〜9月9日にカード新規登録処理を行った19,115件はカード情報漏えいの可能性が極めて高く、外部転送痕跡を確認。別に個人情報362,750件は漏えい可能性を否定できないが外部送信痕跡は未確認。両母集団は重複し得るため人数として合算しない。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": ["cardholder_name", "credit_card_number", "credit_card_expiry", "credit_card_security_code", "name", "date_of_birth", "address", "phone_number", "gender", "email_address", "login_id", "password", "shipping_address", "occupation", "marital_status"],
+          "service_disruption": true,
+          "service_disruption_note": "2025年9月9日にクレジットカード決済を停止。不正プログラム除去と脆弱性修正後、Visa・Mastercardは再開したが、2026年10月26日時点でJCB・American Express・Diners Clubは停止中。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"TSUKU TSUKU株式会社","published_at":"2026-10-26","url":"https://home.tsuku2.jp/index.php","title":"第三者による不正アクセス発生および個人情報漏洩の可能性についてのお詫びとご報告"},
+          {"kind":"news","publisher":"セキュリティ対策Lab","published_at":"2026-10-27","url":"https://rocket-boys.co.jp/security-measures-lab/tsukutsuku-card-data-breach-19115-personal-info-362750/","title":"「ツクツク!!!」に不正アクセス、カード情報1万9,115件、36万2,750件の個人情報漏洩のおそれ"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27T23:57:00+09:00"
+      }
+    },
+    {
+      "operation": "patch",
+      "id": "2026-10-19-ymirlink-mail-systems-unauthorized-access",
+      "set": {
+        "incident.status": {"value":"investigating","as_of":"2026-10-26"},
+        "incident.attack_vector": "プログラム／ライブラリの脆弱性を起点にサポート・品質管理担当者のサービス用認証情報を取得。不正プログラムを設置してデータベースからデータを出力し、取得した認証情報や不正プログラム経由で得たセッション情報を用いて他システムへ横展開した。具体的な製品・CVEは未公表。",
+        "incident.threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"脆弱性悪用、認証情報・セッション情報の窃取、不正プログラム設置、複数システムへの横展開は確認されているが、攻撃主体を特定する被害企業・捜査機関・フォレンジック等の帰属情報は公表されていない。","source_urls":["https://act1.co.jp/2026-10-27-04/"],"reviewed_at":"2026-10-27"},
+        "incident.affected_systems": ["Cuenote FC: unauthorized-access attempts on 81 systems", "Cuenote FC: data output confirmed on 49 systems", "Cuenote BASE: contract information exposure on 1 system"],
+        "impact.affected_users": null,
+        "impact.affected_users_note": "Cuenote FCの49システムでデータ出力を確認し、漏えいのおそれがある情報は延べ51,628,280件。16システムは件数調査中で増加する可能性がある。延べ件数で重複を含み得るため実人数とは扱わない。Cuenote BASEでは契約者情報190件が閲覧可能な状態だった。",
+        "impact.records": 51628280,
+        "impact.affected_organizations": 49,
+        "impact.data_exposed": ["email_address", "customer-configured mailing attributes", "Cuenote BASE contract information"]
+      },
+      "append": {
+        "incident.types": ["credential_theft", "vulnerability_exploitation"],
+        "sources": [
+          {"kind":"news","publisher":"株式会社アクト","published_at":"2026-10-27","url":"https://act1.co.jp/2026-10-27-04/","title":"メール配信「Cuenote FC」の不正アクセス、漏えい確認は49システム、恐れのある件数は延べ約5,163万件に拡大"}
+        ]
+      }
+    },
+    {
+      "operation": "patch",
+      "id": "2026-10-21-gmo-onamae-desktop-cloud-unauthorized-access",
+      "set": {
+        "incident.status": {"value":"active_incident_response","as_of":"2026-10-27"},
+        "incident.threat_actor_attribution": {"name":null,"actor_type":"cybercriminal","aliases":[],"status":"attacker_claim","confidence":"low","basis":"攻撃者とみられる者が金銭要求、顧客情報の公開、顧客PCへのランサムウェア攻撃を予告し、10月27日に顧客情報とされる内容を自身のサイトで公開した。GMOは公開を確認したが、公開内容には未検証・事実と異なる情報が含まれる可能性があるとしており、固有グループ名への独立した技術的帰属はない。","source_urls":["https://group.gmo/info/alert/2026102703/","https://group.gmo/info/alert/2026102705/"],"reviewed_at":"2026-10-27"},
+        "impact.service_disruption": true,
+        "impact.service_disruption_note": "全プラン停止と代替基盤移行対応を継続。10月27日正午の攻撃予告に備えて顧客端末の電源断・解析を実施。GMOは攻撃者による顧客情報とされる内容の公開を確認し、公開が自社確認できた顧客向けの特別見舞金制度を発表。"
+      },
+      "append": {
+        "incident.types": ["extortion", "attacker_claim"],
+        "sources": [
+          {"kind":"official","publisher":"GMOインターネットグループ株式会社 / GMOインターネット株式会社","published_at":"2026-10-27","url":"https://group.gmo/info/alert/2026102703/","title":"「お名前.com デスクトップクラウド」への不正アクセスに関する現在の対応について（第10報）"},
+          {"kind":"official","publisher":"GMOインターネットグループ株式会社 / GMOインターネット株式会社","published_at":"2026-10-27","url":"https://group.gmo/info/alert/2026102705/","title":"「お名前.com デスクトップクラウド」への不正アクセスに関する現在の対応について（第12報）"}
+        ]
+      }
+    }
+  ]
+}
