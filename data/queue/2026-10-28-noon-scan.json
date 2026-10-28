@@ -1,0 +1,114 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-27-upsider-breakthrough-grid-data-breach",
+        "organization": {
+          "name": "株式会社UPSIDER",
+          "name_en": "UPSIDER, Inc.",
+          "type": "company",
+          "size": "startup",
+          "industry": ["fintech", "financial_services", "business_community"],
+          "business_model": ["b2b"],
+          "service": "Breakthrough GRID",
+          "country": "JP",
+          "website": "https://corp.up-sider.com/",
+          "headquarters": {"address":"東京都港区六本木7-15-7","prefecture":"東京都","city":"港区","latitude":null,"longitude":null,"precision":"exact","source":"https://corp.up-sider.com/ja/company/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "Breakthrough GRID会員向けサイトへの不正アクセスと情報持ち出し",
+          "types": ["unauthorized_access", "data_breach", "service_disruption"],
+          "occurred_at": "2026-10-27",
+          "occurred_time": null,
+          "detected_at": "2026-10-27",
+          "detected_time": null,
+          "disclosed_at": "2026-10-27",
+          "status": {"value":"contained_investigating","as_of":"2026-10-27"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["Breakthrough GRID member service website"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"UPSIDERは第三者による不正アクセスと保存情報の持ち出しを確認しているが、攻撃主体を特定する被害企業・捜査機関・フォレンジック等の帰属情報は公表されていない。","source_urls":["https://corp-news.up-sider.com/261027-pr-2/"],"reviewed_at":"2026-10-28"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "現会員および退会済み利用者の情報が対象。対象人数・件数は2026年10月27日時点で未公表。UPSIDERは対象情報が持ち出されたものとみなして対応している。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": ["name", "email_address", "company_name", "department", "event_information", "discussion_minutes"],
+          "service_disruption": true,
+          "service_disruption_note": "会員向けサービスサイトの全機能を停止し、外部からのアクセスを遮断。法人カードUPSIDER、PRESIDENT CARD等の他サービスの会員・カード・利用明細・決済情報を管理するシステムへの侵入・流出は確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社UPSIDER","published_at":"2026-10-27","url":"https://corp-news.up-sider.com/261027-pr-2/","title":"【重要】Breakthrough GRID | 不正アクセスおよび情報漏えいのお詫びとお知らせ"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-28T11:57:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-27-jetro-e-venue-unauthorized-access",
+        "organization": {
+          "name": "独立行政法人日本貿易振興機構",
+          "name_en": "Japan External Trade Organization (JETRO)",
+          "type": "government_agency",
+          "size": "large_organization",
+          "industry": ["government", "trade_promotion", "business_support"],
+          "business_model": ["public_service"],
+          "service": "JETRO e-Venue",
+          "country": "JP",
+          "website": "https://www.jetro.go.jp/",
+          "headquarters": {"address":"〒107-6006 東京都港区赤坂1丁目12-32 アーク森ビル","prefecture":"東京都","city":"港区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.jetro.go.jp/jetro/profile.html"},
+          "employee_count": {"value":1980,"unit":"employees","estimate_type":"exact","basis":"2026年4月1日現在の国内1,278名・海外702名の合計。","confidence":"high"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "JETRO e-Venueへの不正アクセスと最大133件の個人情報漏えい可能性",
+          "types": ["unauthorized_access", "potential_data_breach", "service_disruption"],
+          "occurred_at": "2026-09-24",
+          "occurred_time": null,
+          "detected_at": null,
+          "detected_time": null,
+          "disclosed_at": "2026-10-27",
+          "status": {"value":"investigating_service_suspended","as_of":"2026-10-27"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["JETRO e-Venue business matching system"],
+          "affected_regions": ["Japan", "global_users"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"JETROは9月24日、9月25日、10月14日の外部からの不正アクセスと非公開情報の取得を公表しているが、攻撃主体を特定する帰属情報は公表されていない。","source_urls":["https://www.jetro.go.jp/news/announcement/2026/5eebe72f41bc2230.html"],"reviewed_at":"2026-10-28"}
+        },
+        "impact": {
+          "confirmed_breach": null,
+          "affected_users": null,
+          "affected_users_note": "最大133件の個人情報が漏えいした可能性。件数は人物数とは限らないため affected_users は未確定。JETROは本来公開を想定していない情報が取得されたと考えられるとしている。",
+          "affected_organizations": 1,
+          "records": 133,
+          "data_exposed": ["name", "email_address", "phone_number", "mobile_phone_number", "fax_number"],
+          "service_disruption": true,
+          "service_disruption_note": "e-Venueを停止し、セキュリティ専門家と影響範囲・原因・再発防止策を調査。安全性確認まで停止を継続。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"独立行政法人日本貿易振興機構","published_at":"2026-10-27","url":"https://www.jetro.go.jp/news/announcement/2026/5eebe72f41bc2230.html","title":"e-Venueへの不正アクセスによる個人情報漏えいの可能性について"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-28T11:57:00+09:00"
+      }
+    }
+  ]
+}
