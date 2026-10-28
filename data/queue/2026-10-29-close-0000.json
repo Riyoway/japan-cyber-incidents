@@ -1,0 +1,221 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-28-hana-cupid-member-data-breach",
+        "organization": {
+          "name": "花キューピット株式会社",
+          "name_en": "Hana-cupid Co., Ltd.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["retail", "ecommerce", "florist"],
+          "business_model": ["b2c", "b2b"],
+          "service": "インターネット花キューピット / ビジネス花キューピット",
+          "country": "JP",
+          "website": "https://www.hana-cupid.co.jp/",
+          "headquarters": {"address":"〒140-8709 東京都品川区北品川4丁目11番9号 日本フラワー会館","prefecture":"東京都","city":"品川区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.hana-cupid.co.jp/corporate/profile/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"members","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "インターネット花キューピット等への不正アクセスによる会員情報漏えい",
+          "types": ["unauthorized_access", "data_breach", "credential_exposure"],
+          "occurred_at": "2026-10-14",
+          "detected_at": "2026-10-19",
+          "disclosed_at": "2026-10-28",
+          "status": {"value":"contained_investigating","as_of":"2026-10-28"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["インターネット花キューピット", "ビジネス花キューピット", "会員管理システム"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスと会員情報漏えいは確認されているが、攻撃主体を特定する被害企業・警察・フォレンジック等の帰属情報は公表されていない。","source_urls":["https://www.hana-cupid.co.jp/news/news/20261028/"],"reviewed_at":"2026-10-28"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": 4238242,
+          "affected_users_note": "公式発表の対象件数は4,238,242件（該当する可能性のあるお客様）。漏えい確認対象者には個別通知。ユーザーID、ハッシュ化パスワード、PC/携帯メールアドレスが対象。氏名、住所、電話、カード情報等は対象外。",
+          "affected_organizations": 1,
+          "records": 4238242,
+          "data_exposed": ["user_id", "password_hash", "email_address"],
+          "service_disruption": false,
+          "service_disruption_note": null,
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"花キューピット株式会社","published_at":"2026-10-28","url":"https://www.hana-cupid.co.jp/news/news/20261028/","title":"当社運営サイト（インターネット花キューピット等）への不正アクセスによる会員情報漏えいに関するお詫びとお知らせ"},
+          {"kind":"official","publisher":"花キューピット株式会社","published_at":null,"url":"https://www.hana-cupid.co.jp/corporate/profile/","title":"会社概要"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-28T23:59:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-28-jal-jta-amadeus-data-exposure",
+        "organization": {
+          "name": "日本航空株式会社",
+          "name_en": "Japan Airlines Co., Ltd.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["aviation", "transportation"],
+          "business_model": ["b2c", "b2b"],
+          "service": "JAL/JTA passenger service system (Amadeus)",
+          "country": "JP",
+          "website": "https://www.jal.com/",
+          "headquarters": {"address":"東京都品川区東品川二丁目4番11号 野村不動産天王洲ビル","prefecture":"東京都","city":"品川区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.jal.com/ja-jp/about/outline/"},
+          "employee_count": {"value":39076,"unit":"employees","estimate_type":"reported","basis":"JAL公式会社概要の連結従業員数、2026年3月31日現在。","confidence":"high"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Prime","ticker":"9201"},
+          "estimated_total_users": {"value":null,"unit":"customers","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "Amadeus旅客サービスシステムへの不正アクセスによるJAL・JTA予約情報約9万2000人分の外部参照痕跡",
+          "types": ["third_party_incident", "unauthorized_access", "potential_data_breach"],
+          "occurred_at": null,
+          "detected_at": "2026-10-23",
+          "disclosed_at": "2026-10-28",
+          "status": {"value":"vendor_contained_customer_notification","as_of":"2026-10-28"},
+          "attack_vector": "委託先Amadeus IT Groupの旅客サービスシステムへの不正アクセス。JAL/JTA側への独立した侵入は公表されていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["Amadeus passenger service system", "JAL/JTA reservation records"],
+          "affected_regions": ["Japan", "international"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"Amadeusへの不正アクセスは確認されているが、JAL公式公表および確認した報道には攻撃主体を特定する帰属情報がない。","source_urls":["https://www.jal.co.jp/ja-jp/news/general/2026/other/261028.html"],"reviewed_at":"2026-10-28"}
+        },
+        "impact": {
+          "confirmed_breach": null,
+          "affected_users": 92000,
+          "affected_users_note": "予約情報が外部から参照された形跡がある対象は合計約92,000名。約90,000名は予約番号、氏名、搭乗日、搭乗区間、搭乗クラス、約2,000名はこれらに加えメール、電話、パスポート番号、国籍、マイレージ番号等。カード番号と各種パスワードの漏えいはない。",
+          "affected_organizations": 2,
+          "records": null,
+          "data_exposed": ["reservation_number", "name", "travel_itinerary", "email_address", "phone_number", "passport_number", "nationality", "mileage_number", "ticket_number", "seat_number"],
+          "service_disruption": false,
+          "service_disruption_note": "運航への影響なし。Amadeusは必要なセキュリティ対策を完了。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"日本航空株式会社","published_at":"2026-10-28","url":"https://www.jal.co.jp/ja-jp/news/general/2026/other/261028.html","title":"Amadeus社が提供する旅客サービスシステムへの不正アクセスについて"},
+          {"kind":"official","publisher":"日本航空株式会社","published_at":null,"url":"https://www.jal.com/ja-jp/about/outline/","title":"会社概要"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-28T23:59:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-28-moi-twitcasting-unauthorized-access",
+        "organization": {
+          "name": "モイ株式会社",
+          "name_en": "Moi Corporation",
+          "type": "company",
+          "size": "small_enterprise",
+          "industry": ["information_technology", "live_streaming", "social_media"],
+          "business_model": ["b2c"],
+          "service": "ツイキャス",
+          "country": "JP",
+          "website": "https://twitcasting.tv/",
+          "headquarters": {"address":null,"prefecture":"東京都","city":"渋谷区","latitude":null,"longitude":null,"precision":"city","source":"https://about.moi.st/ja/company/"},
+          "employee_count": {"value":43,"unit":"employees","estimate_type":"reported","basis":"モイ公式会社概要、2026年7月1日現在。","confidence":"high"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Growth","ticker":"5031"},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "ツイキャスのサーバーへの不正アクセスとサービス停止",
+          "types": ["unauthorized_access", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-28",
+          "detected_time": {"start":"10:30","end":null,"timezone":"Asia/Tokyo","precision":"approximate","time_band":"morning","basis":"2026年10月28日10時30分頃にシステム異常を検知。不正アクセスの痕跡を確認したが、検知時刻を攻撃発生時刻とは扱わない。"},
+          "disclosed_at": "2026-10-28",
+          "status": {"value":"contained_service_suspended_investigating","as_of":"2026-10-28"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["TwitCasting servers", "TwitCasting service", "Moi corporate website"],
+          "affected_regions": ["Japan", "international"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスの痕跡は確認されたが、攻撃主体・侵入経路・マルウェア等は公表されていない。","source_urls":["https://about.moi.st/ja/company/"],"reviewed_at":"2026-10-28"}
+        },
+        "impact": {
+          "confirmed_breach": null,
+          "affected_users": null,
+          "affected_users_note": "2026年10月28日時点で情報漏えいの有無・影響範囲は調査中。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "10月28日10時40分頃からツイキャスとコーポレートサイト等を緊急メンテナンスで停止。ネットワークを遮断し調査中で、復旧には相応の時間を要する見込み。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"news","publisher":"週刊アスキー","published_at":"2026-10-28","url":"https://weekly.ascii.jp/elem/000/004/446/4446604/","title":"ツイキャス、不正アクセスの痕跡を確認　緊急メンテナンスでサービス停止続く"},
+          {"kind":"official","publisher":"モイ株式会社","published_at":null,"url":"https://about.moi.st/ja/company/","title":"Company | モイ株式会社"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-28T23:59:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-28-sony-life-unauthorized-access",
+        "organization": {
+          "name": "ソニー生命保険株式会社",
+          "name_en": "Sony Life Insurance Co., Ltd.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["insurance", "financial_services"],
+          "business_model": ["b2c"],
+          "service": "お客さまWEBサービス / ソニー生命アプリ",
+          "country": "JP",
+          "website": "https://www.sonylife.co.jp/",
+          "headquarters": {"address":"〒100-8179 東京都千代田区大手町一丁目9番2号 大手町フィナンシャルシティ グランキューブ","prefecture":"東京都","city":"千代田区","latitude":null,"longitude":null,"precision":"exact","source":"https://ns.sonylife.co.jp/company/corporate/outline/"},
+          "employee_count": {"value":10172,"unit":"employees","estimate_type":"reported","basis":"ソニー生命公式会社概要、2026年3月末現在。","confidence":"high"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"customers","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "契約者向けシステムへの不正アクセスによるメディケア生命契約者情報約38万5000件の漏えい",
+          "types": ["unauthorized_access", "data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-27",
+          "disclosed_at": "2026-10-28",
+          "status": {"value":"investigating_service_suspended","as_of":"2026-10-28"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["customer web services", "Sony Life app", "systems containing Medcare Life policyholder information"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"不正アクセスと情報漏えいは報道で確認できるが、攻撃主体を特定する被害企業・捜査機関・フォレンジック等の帰属情報は確認できない。","source_urls":["https://news.tv-asahi.co.jp/news_economy/articles/000543581.html"],"reviewed_at":"2026-10-28"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": 385000,
+          "affected_users_note": "ソニー生命が保険代理店として取り扱っていたメディケア生命保険の契約者情報約385,000件。氏名、住所、電話番号、契約内容等。マイナンバーやクレジットカード番号は含まれないと報道。",
+          "affected_organizations": 1,
+          "records": 385000,
+          "data_exposed": ["name", "address", "phone_number", "insurance_contract_information"],
+          "service_disruption": true,
+          "service_disruption_note": "被害拡大防止のため10月28日から契約者向けWebサービスやアプリ等を一時停止。28日時点で復旧見込み未定。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"news","publisher":"テレビ朝日","published_at":"2026-10-28","url":"https://news.tv-asahi.co.jp/news_economy/articles/000543581.html","title":"ソニー生命 不正アクセスで38.5万件情報漏洩 一部サービスの利用を一時停止"},
+          {"kind":"official","publisher":"ソニー生命保険株式会社","published_at":null,"url":"https://ns.sonylife.co.jp/company/corporate/outline/","title":"会社概要"}
+        ],
+        "confidence": "medium",
+        "last_updated": "2026-10-28T23:59:00+09:00"
+      }
+    }
+  ]
+}
