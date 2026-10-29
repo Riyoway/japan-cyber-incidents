@@ -1,0 +1,168 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-28-arara-message-data-breach",
+        "organization": {
+          "name": "アララ株式会社",
+          "name_en": "ARARA Inc.",
+          "type": "company",
+          "size": "small_enterprise",
+          "industry": ["information_technology", "email_marketing", "saas"],
+          "business_model": ["b2b"],
+          "service": "アララ メッセージ",
+          "country": "JP",
+          "website": "https://www.arara.com/",
+          "headquarters": {"address":"〒107-0062 東京都港区南青山2-24-15 青山タワービル","prefecture":"東京都","city":"港区","latitude":null,"longitude":null,"precision":"exact","source":"https://prtimes.jp/main/html/rd/p/000000507.000004318.html"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"recipients","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "アララ メッセージへの不正アクセスによるメールアドレス約301万件流出",
+          "types": ["unauthorized_access", "data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": null,
+          "disclosed_at": "2026-10-28",
+          "status": {"value":"service_suspended_investigating","as_of":"2026-10-28"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["アララ メッセージ", "bvam001"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスと情報流出は公式に確認されているが、攻撃主体を特定する被害企業・捜査機関・フォレンジック等の帰属情報は公表されていない。","source_urls":["https://am.arara.com/news/2026102802"],"reviewed_at":"2026-10-29"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "公式発表ではエンドユーザーリストに登録されたメールアドレス約301万件の流出を確認。301万件はメールアドレス件数であり人数とは扱わない。メールアドレス以外の情報流出は確認されていない。",
+          "affected_organizations": null,
+          "records": 3010000,
+          "data_exposed": ["email_address"],
+          "service_disruption": true,
+          "service_disruption_note": "メール配信サービスを停止。2026年10月28日時点で再開時期は未定。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"アララ株式会社","published_at":"2026-10-28","url":"https://am.arara.com/news/2026102802","title":"【重要】【アララ】弊社メール配信サービス停止および個人情報流出に関するお詫びとご報告"},
+          {"kind":"news","publisher":"セキュリティ対策Lab","published_at":"2026-10-29","url":"https://rocket-boys.co.jp/security-measures-lab/arara_message_3010000_email_leak_20261028/","title":"アララ メッセージ、メールアドレス 約301万件の情報漏えいを確認 不正アクセスで配信サービス停止、再開時期は未定"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-29T12:00:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-28-meti-dentorinet-unauthorized-access",
+        "organization": {
+          "name": "経済産業省 電力・ガス取引監視等委員会",
+          "name_en": "Electricity and Gas Market Surveillance Commission, Ministry of Economy, Trade and Industry",
+          "type": "government",
+          "size": "government_agency",
+          "industry": ["government", "energy_regulation"],
+          "business_model": ["government"],
+          "service": "デントリネット",
+          "country": "JP",
+          "website": "https://www.emsc.meti.go.jp/",
+          "headquarters": {"address":"〒100-8901 東京都千代田区霞が関1-3-1","prefecture":"東京都","city":"千代田区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.meti.go.jp/intro/index.html"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":1100,"unit":"organizations","estimate_type":"reported","basis":"報道では延べ約1100社の電力・ガス小売事業者が利用。","confidence":"medium"}
+        },
+        "incident": {
+          "title": "電力・ガス定期報告サイト「デントリネット」への不正アクセス",
+          "types": ["unauthorized_access", "potential_data_breach", "service_disruption"],
+          "occurred_at": "2026-10-27",
+          "occurred_time": {"start":null,"end":null,"timezone":"Asia/Tokyo","precision":"time_band","time_band":"overnight","basis":"公表・報道では10月27日未明に不正アクセスが発生。"},
+          "detected_at": "2026-10-28",
+          "disclosed_at": "2026-10-28",
+          "status": {"value":"service_suspended_investigating","as_of":"2026-10-28"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["デントリネット"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスは公表されているが、攻撃主体を特定する政府・捜査機関・フォレンジック等の帰属情報は確認できない。","source_urls":["https://rocket-boys.co.jp/security-measures-lab/meti-dentorinet-electricity-gas-reporting-system-cyberattack-20261028/"],"reviewed_at":"2026-10-29"}
+        },
+        "impact": {
+          "confirmed_breach": null,
+          "affected_users": null,
+          "affected_users_note": "2026年10月28日時点で情報流出の有無は調査中。デントリネットには電力・ガス小売事業者の販売量、契約件数、料金設定、財務関連情報等が報告されている。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "デントリネットの運用を停止し、定期報告はメール提出へ切り替え。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"news","publisher":"テレビ朝日系列","published_at":"2026-10-29","url":"https://www.kab.co.jp/news/article/17003861","title":"経産省サイトにも不正アクセス 電気・ガス小売り事業者が利用 財務情報流出の恐れ"},
+          {"kind":"news","publisher":"セキュリティ対策Lab","published_at":"2026-10-29","url":"https://rocket-boys.co.jp/security-measures-lab/meti-dentorinet-electricity-gas-reporting-system-cyberattack-20261028/","title":"経産省「デントリネット」に不正アクセス、電力・ガス事業者の報告情報流出のおそれ"}
+        ],
+        "confidence": "medium",
+        "last_updated": "2026-10-29T12:00:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-28-eneos-power-customer-data-breach",
+        "organization": {
+          "name": "ENEOS Power株式会社",
+          "name_en": "ENEOS Power Corporation",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["energy", "electricity"],
+          "business_model": ["b2c", "b2b"],
+          "service": "ENEOSでんき / でんきサービス",
+          "country": "JP",
+          "website": "https://www.eneos-power.co.jp/",
+          "headquarters": {"address":null,"prefecture":"東京都","city":"千代田区","latitude":null,"longitude":null,"precision":"city","source":"https://www.eneos-power.co.jp/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"customers","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "ENEOSでんき等への不正アクセスによる顧客57名の個人情報漏えい",
+          "types": ["unauthorized_access", "data_breach", "credential_exposure", "service_disruption"],
+          "occurred_at": "2026-10-19",
+          "occurred_time": {"start":"19:04","end":"05:11","timezone":"Asia/Tokyo","precision":"exact","time_band":"evening","basis":"公表された不正アクセス期間は10月19日19:04から10月20日05:11。開始時刻のバンドを記録。"},
+          "detected_at": "2026-10-27",
+          "detected_time": {"start":"01:30","end":null,"timezone":"Asia/Tokyo","precision":"approximate","time_band":"overnight","basis":"10月27日午前1時30分頃に不正アクセスと情報漏えいが判明。"},
+          "disclosed_at": "2026-10-28",
+          "status": {"value":"contained_investigating","as_of":"2026-10-28"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["ENEOSでんき", "でんきサービス", "お客さまページ"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスは確認されているが、攻撃主体を特定する被害企業・捜査機関・フォレンジック等の帰属情報は確認できない。","source_urls":["https://rocket-boys.co.jp/security-measures-lab/eneos-power-denki-57-customer-data-breach-20261028/"],"reviewed_at":"2026-10-29"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": 57,
+          "affected_users_note": "顧客57名の個人情報漏えいを確認。氏名、住所、お客さまページのログインID・パスワード、電力契約番号、使用量、請求金額、利用明細等が対象。銀行口座番号・クレジットカード番号は対象外。",
+          "affected_organizations": 1,
+          "records": 57,
+          "data_exposed": ["name", "address", "login_id", "password", "electricity_contract_number", "electricity_usage", "billing_amount", "billing_details"],
+          "service_disruption": true,
+          "service_disruption_note": "発覚後、顧客向けページ等の一部Webコンテンツへの外部アクセスを遮断。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"news","publisher":"セキュリティ対策Lab","published_at":"2026-10-29","url":"https://rocket-boys.co.jp/security-measures-lab/eneos-power-denki-57-customer-data-breach-20261028/","title":"ENEOSでんきに不正アクセス、情報漏えいの恐れ"}
+        ],
+        "confidence": "medium",
+        "last_updated": "2026-10-29T12:00:00+09:00"
+      }
+    }
+  ]
+}
