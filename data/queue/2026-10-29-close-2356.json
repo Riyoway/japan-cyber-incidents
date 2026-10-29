@@ -1,0 +1,125 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-29-nel-osina-data-breach",
+        "organization": {
+          "name": "NEL株式会社", "name_en": "NEL Inc.", "type": "company", "size": "small_enterprise",
+          "industry": ["information_technology", "retail_technology", "saas"], "business_model": ["b2c", "b2b"], "service": "osina", "country": "JP",
+          "website": "https://www.nel-all.com/",
+          "headquarters": {"address":"〒150-0043 東京都渋谷区道玄坂1-16-3 渋谷センタープレイス9階","prefecture":"東京都","city":"渋谷区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.nel-all.com/about/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "データ分析ツールの脆弱性悪用によるosina等の個人情報流出",
+          "types": ["unauthorized_access", "vulnerability_exploitation", "data_breach", "credential_exposure"],
+          "occurred_at": null, "detected_at": "2026-10-14", "disclosed_at": "2026-10-29",
+          "status": {"value":"contained_investigating","as_of":"2026-10-29"},
+          "attack_vector": "利用していたデータ分析ツールの脆弱性を悪用した不正アクセス", "threat_actor": null, "ransomware": false, "malware_family": null, "vulnerabilities": [],
+          "affected_systems": ["データ分析ツール", "osina関連データ"], "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"脆弱性を悪用した不正アクセスと情報流出は公式確認済みだが、攻撃主体を特定する被害企業・捜査機関・フォレンジック等の帰属情報は公表されていない。","source_urls":["https://www.nel-all.com/news/632/"],"reviewed_at":"2026-10-29"}
+        },
+        "impact": {
+          "confirmed_breach": true, "affected_users": 235329,
+          "affected_users_note": "2026年10月17日の個人情報保護委員会への速報で対象者数235,329人。osina会員、取引先担当者、問い合わせ者、提携候補クリエイター等を含む。",
+          "affected_organizations": null, "records": null,
+          "data_exposed": ["name", "address", "phone_number", "date_of_birth", "bank_account_information", "reward_amount", "sns_account_name", "sns_oauth_credentials", "external_service_id", "usage_history", "email_address", "hashed_password", "company", "job_title", "inquiry_content", "age", "gender", "region", "ip_address"],
+          "service_disruption": false, "service_disruption_note": null, "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"NEL株式会社","published_at":"2026-10-29","url":"https://www.nel-all.com/news/632/","title":"不正アクセスによる個人情報漏えいに関するお詫びとお知らせ"},
+          {"kind":"official","publisher":"NEL株式会社","published_at":null,"url":"https://www.nel-all.com/about/","title":"わたしたちについて"}
+        ],
+        "confidence": "high", "last_updated": "2026-10-29T23:56:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-29-ana-amadeus-data-exposure",
+        "organization": {
+          "name": "全日本空輸株式会社", "name_en": "ALL NIPPON AIRWAYS CO., LTD.", "type": "company", "size": "large_enterprise",
+          "industry": ["aviation", "transportation"], "business_model": ["b2c", "b2b"], "service": "旅客サービスシステム", "country": "JP",
+          "website": "https://www.ana.co.jp/",
+          "headquarters": {"address":"〒105-7140 東京都港区東新橋1-5-2 汐留シティセンター","prefecture":"東京都","city":"港区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.ana.co.jp/group/company/ana/"},
+          "employee_count": {"value":14983,"unit":"employees","estimate_type":"reported","basis":"全日本空輸会社概要、2026年3月31日現在","confidence":"high"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"passengers","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "Amadeusへの不正アクセスによるANA予約情報の外部参照痕跡",
+          "types": ["third_party_incident", "unauthorized_access", "potential_data_breach"],
+          "occurred_at": null, "detected_at": "2026-10-20", "disclosed_at": "2026-10-29",
+          "status": {"value":"investigating","as_of":"2026-10-29"},
+          "attack_vector": null, "threat_actor": null, "ransomware": null, "malware_family": null, "vulnerabilities": [],
+          "affected_systems": ["Amadeus旅客サービスシステム", "ANA便予約情報"], "affected_regions": ["Japan", "global"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"Amadeusへの第三者不正アクセスとANA予約情報への参照痕跡は公表されているが、ANA案件について攻撃主体を特定する帰属情報は確認できない。","source_urls":["https://www.itmedia.co.jp/news/article/2610/29/2000002722/"],"reviewed_at":"2026-10-29"}
+        },
+        "impact": {
+          "confirmed_breach": null, "affected_users": null,
+          "affected_users_note": "ANA便等の予約情報に含まれる一部顧客の個人情報が外部から参照された形跡あり。対象人数・情報項目・外部流出の有無は2026年10月29日時点で精査中。JAL/JTAの約92,000人はANAの人数ではない。",
+          "affected_organizations": 1, "records": null, "data_exposed": [], "service_disruption": false, "service_disruption_note": "運航影響は報告されていない。", "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"news","publisher":"ITmedia NEWS","published_at":"2026-10-29","url":"https://www.itmedia.co.jp/news/article/2610/29/2000002722/","title":"ANAの予約情報に不正アクセス、JALと同じ委託先経由で 個人情報をのぞき見た痕跡も"},
+          {"kind":"official","publisher":"全日本空輸株式会社","published_at":null,"url":"https://www.ana.co.jp/group/company/ana/","title":"会社概要（全日本空輸株式会社）"}
+        ],
+        "confidence": "high", "last_updated": "2026-10-29T23:56:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-29-solaseed-air-amadeus-data-exposure",
+        "organization": {
+          "name": "株式会社ソラシドエア", "name_en": "Solaseed Air Inc.", "type": "company", "size": "medium_enterprise",
+          "industry": ["aviation", "transportation"], "business_model": ["b2c", "b2b"], "service": "旅客サービスシステム", "country": "JP", "website": "https://www.solaseedair.jp/",
+          "headquarters": {"address":null,"prefecture":"宮崎県","city":"宮崎市","latitude":null,"longitude":null,"precision":"city","source":"https://www.solaseedair.jp/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"}, "listing":{"is_listed":false,"market":null,"ticker":null}, "estimated_total_users":{"value":null,"unit":"passengers","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title":"Amadeusへの不正アクセスによるソラシドエア予約情報の外部参照痕跡", "types":["third_party_incident","unauthorized_access","potential_data_breach"],
+          "occurred_at":null,"detected_at":null,"disclosed_at":"2026-10-29","status":{"value":"investigating","as_of":"2026-10-29"},"attack_vector":null,"threat_actor":null,"ransomware":null,"malware_family":null,"vulnerabilities":[],
+          "affected_systems":["Amadeus旅客サービスシステム","ソラシドエア便予約情報"],"affected_regions":["Japan"],
+          "threat_actor_attribution":{"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"Amadeusへの不正アクセスによる予約個人情報の参照痕跡は公式確認済みだが、攻撃主体を特定する帰属情報は公表されていない。","source_urls":["https://www.solaseedair.jp/info/2026/10/info-20261029.html"],"reviewed_at":"2026-10-29"}
+        },
+        "impact":{"confirmed_breach":null,"affected_users":null,"affected_users_note":"ANA経由でAmadeus管理の予約個人情報に参照痕跡があるとの報告を受領。人数・項目は調査中。","affected_organizations":1,"records":null,"data_exposed":[],"service_disruption":false,"service_disruption_note":null,"service_recovered_at":null},
+        "sources":[{"kind":"official","publisher":"株式会社ソラシドエア","published_at":"2026-10-29","url":"https://www.solaseedair.jp/info/2026/10/info-20261029.html","title":"【重要】Amadeus社が提供する旅客サービスシステムへの不正アクセスについて"}],
+        "confidence":"high","last_updated":"2026-10-29T23:56:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id":"2026-10-29-starflyer-amadeus-data-exposure",
+        "organization":{"name":"株式会社スターフライヤー","name_en":"Star Flyer Inc.","type":"company","size":"medium_enterprise","industry":["aviation","transportation"],"business_model":["b2c","b2b"],"service":"旅客サービスシステム","country":"JP","website":"https://www.starflyer.jp/","headquarters":{"address":null,"prefecture":"福岡県","city":"北九州市","latitude":null,"longitude":null,"precision":"city","source":"https://www.starflyer.jp/"},"employee_count":{"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},"listing":{"is_listed":true,"market":"Tokyo Stock Exchange Standard","ticker":"9206"},"estimated_total_users":{"value":null,"unit":"passengers","estimate_type":"unknown","basis":null,"confidence":"unknown"}},
+        "incident":{"title":"Amadeusへの不正アクセスによるスターフライヤー予約情報の外部参照痕跡","types":["third_party_incident","unauthorized_access","potential_data_breach"],"occurred_at":null,"detected_at":null,"disclosed_at":"2026-10-29","status":{"value":"investigating","as_of":"2026-10-29"},"attack_vector":null,"threat_actor":null,"ransomware":null,"malware_family":null,"vulnerabilities":[],"affected_systems":["Amadeus旅客サービスシステム","スターフライヤー便予約情報"],"affected_regions":["Japan"],"threat_actor_attribution":{"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"Amadeusへの不正アクセスによる予約個人情報の参照痕跡は公式確認済みだが、攻撃主体を特定する帰属情報は公表されていない。","source_urls":["https://www.starflyer.jp/news/2026/news_20261029_info.html"],"reviewed_at":"2026-10-29"}},
+        "impact":{"confirmed_breach":null,"affected_users":null,"affected_users_note":"ANA経由でAmadeus上のスターフライヤー便予約情報に含まれる一部顧客個人情報の参照痕跡があるとの報告を受領。人数・項目は調査中。","affected_organizations":1,"records":null,"data_exposed":[],"service_disruption":false,"service_disruption_note":null,"service_recovered_at":null},
+        "sources":[{"kind":"official","publisher":"株式会社スターフライヤー","published_at":"2026-10-29","url":"https://www.starflyer.jp/news/2026/news_20261029_info.html","title":"Amadeus社が提供する旅客サービスシステムへの不正アクセスについて"}],"confidence":"high","last_updated":"2026-10-29T23:56:00+09:00"
+      }
+    },
+    {
+      "operation":"create",
+      "record":{
+        "id":"2026-10-28-jfe-chemical-unauthorized-access",
+        "organization":{"name":"JFEケミカル株式会社","name_en":"JFE Chemical Corporation","type":"company","size":"large_enterprise","industry":["chemicals","manufacturing"],"business_model":["b2b"],"service":null,"country":"JP","website":"https://www.jfe-chem.com/","headquarters":{"address":null,"prefecture":"東京都","city":null,"latitude":null,"longitude":null,"precision":"prefecture","source":"https://www.jfe-chem.com/"},"employee_count":{"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},"listing":{"is_listed":false,"market":null,"ticker":null},"estimated_total_users":{"value":null,"unit":"people","estimate_type":"unknown","basis":null,"confidence":"unknown"}},
+        "incident":{"title":"IT環境への不正アクセスと最大約23万件の個人情報不正取得・漏えいのおそれ","types":["unauthorized_access","data_breach","potential_data_breach"],"occurred_at":null,"detected_at":"2026-10-14","disclosed_at":"2026-10-21","status":{"value":"contained_investigating","as_of":"2026-10-28"},"attack_vector":null,"threat_actor":null,"ransomware":null,"malware_family":null,"vulnerabilities":[],"affected_systems":["JFEケミカルIT環境"],"affected_regions":["Japan"],"threat_actor_attribution":{"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスとデータの不正取得は確認されているが、攻撃主体を特定する帰属情報は公表されていない。","source_urls":["https://www.jfe-chem.com/"],"reviewed_at":"2026-10-29"}},
+        "impact":{"confirmed_breach":true,"affected_users":null,"affected_users_note":"不正取得された、またはそのおそれのある個人情報は最大約23万件。同一人物の重複や単独では個人特定できないデータを含むため人数には換算しない。","affected_organizations":null,"records":230000,"data_exposed":["name","organization","phone_number","email_address"],"service_disruption":null,"service_disruption_note":null,"service_recovered_at":null},
+        "sources":[{"kind":"official","publisher":"JFEケミカル株式会社","published_at":"2026-10-28","url":"https://www.jfe-chem.com/","title":"当社IT環境への不正アクセスおよび情報漏洩に関するお詫びとお知らせ（第二報）"},{"kind":"news","publisher":"NEXSIGHT CYBER WIRE","published_at":"2026-10-28","url":"https://cyber.nexsight.co/articles/2026/10/28/jfe-chemical-breach-second-report-230k-personal-records-2026-10-28/","title":"JFEケミカルが不正アクセスの第二報を公表 — 漏えいおそれの個人情報は最大約23万件、口座情報の漏えいは確認されず"}],"confidence":"high","last_updated":"2026-10-29T23:56:00+09:00"
+      }
+    },
+    {
+      "operation":"create",
+      "record":{
+        "id":"2026-10-21-ntt-solmare-comic-cmoa-data-breach",
+        "organization":{"name":"NTTソルマーレ株式会社","name_en":"NTT Solmare Corporation","type":"company","size":"medium_enterprise","industry":["digital_content","ecommerce","information_technology"],"business_model":["b2c"],"service":"コミックシーモア","country":"JP","website":"https://www.nttsolmare.com/","headquarters":{"address":null,"prefecture":"大阪府","city":"大阪市","latitude":null,"longitude":null,"precision":"city","source":"https://www.nttsolmare.com/"},"employee_count":{"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},"listing":{"is_listed":false,"market":null,"ticker":null},"estimated_total_users":{"value":null,"unit":"members","estimate_type":"unknown","basis":null,"confidence":"unknown"}},
+        "incident":{"title":"コミックシーモアへの不正アクセス・情報流出とサービス停止","types":["unauthorized_access","data_breach","service_disruption"],"occurred_at":null,"detected_at":"2026-10-15","disclosed_at":"2026-10-15","status":{"value":"partially_recovered","as_of":"2026-10-29"},"attack_vector":null,"threat_actor":null,"ransomware":null,"malware_family":null,"vulnerabilities":[],"affected_systems":["コミックシーモア"],"affected_regions":["Japan"],"threat_actor_attribution":{"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"不正アクセスと情報流出は公式確認済みだが、攻撃主体を特定する帰属情報は公表されていない。","source_urls":["https://www.nttsolmare.com/press/2026/1021.html","https://www.nttsolmare.com/press/2026/1029.html"],"reviewed_at":"2026-10-29"}},
+        "impact":{"confirmed_breach":true,"affected_users":null,"affected_users_note":"第4報で会員データベース登録情報319件と、システムログに含まれる最大約420万件の情報流出を報告。後者は重複を含む可能性があり420万人とは扱わない。","affected_organizations":1,"records":null,"data_exposed":[],"service_disruption":true,"service_disruption_note":"10月15日から全面停止。10月29日に購入済み作品のWeb閲覧、読み放題Web利用、会員情報変更、月額・読み放題解約申請を再開。利用にはパスワード再発行が必要。本棚アプリ、作品・ポイント購入、新規会員登録等は停止継続。","service_recovered_at":null},
+        "sources":[{"kind":"official","publisher":"NTTソルマーレ株式会社","published_at":"2026-10-21","url":"https://www.nttsolmare.com/press/2026/1021.html","title":"『コミックシーモア』お客様の情報流出に関するご報告（第4報）"},{"kind":"official","publisher":"NTTソルマーレ株式会社","published_at":"2026-10-29","url":"https://www.nttsolmare.com/press/2026/1029.html","title":"『コミックシーモア』サービスの一部再開のお知らせ（第5報）"}],"confidence":"high","last_updated":"2026-10-29T23:56:00+09:00"
+      }
+    }
+  ]
+}
