@@ -1,0 +1,219 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-30-yakult-honsha-website-data-breach",
+        "organization": {
+          "name": "株式会社ヤクルト本社",
+          "name_en": "YAKULT HONSHA CO., LTD.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["food_and_beverage", "consumer_goods"],
+          "business_model": ["b2c", "b2b"],
+          "service": "ヤクルト本社公式ホームページ / たのしい給食",
+          "country": "JP",
+          "website": "https://www.yakult.co.jp/",
+          "headquarters": {"address":"〒105-8660 東京都港区海岸1丁目10番30号","prefecture":"東京都","city":"港区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.yakult.co.jp/company/map.html"},
+          "employee_count": {"value":29618,"unit":"employees","estimate_type":"reported","basis":"2026年3月31日時点の連結従業員数。","confidence":"high"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Prime","ticker":"2267"},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "ヤクルト本社公式ホームページへの不正アクセスによる個人情報約4万件漏えい",
+          "types": ["unauthorized_access", "data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-26",
+          "disclosed_at": "2026-10-30",
+          "status": {"value":"investigating","as_of":"2026-10-30"},
+          "attack_vector": null,
+          "threat_actor": "NullPointerException",
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["ヤクルト本社公式ホームページ", "メール問い合わせフォーム", "たのしい給食", "報道関係者向け問い合わせフォーム"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":"NullPointerException","actor_type":"unknown","aliases":[],"status":"attacker_claim","confidence":"low","basis":"NullPointerException名義のアカウントが10月24日にyakult.co.jpのデータベース取得・公開を主張し、第三者報道が関連データを確認した。ヤクルト本社は不正アクセスと約4万件の漏えいを確認したが、当該名義を実行主体として技術的・捜査的に帰属していないため attacker_claim とする。","source_urls":["https://rocket-boys.co.jp/security-measures-lab/yakult_20261030_data_breach/"],"reviewed_at":"2026-10-30"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "個人情報約4万件の漏えいを確認しているが、最終件数・対象期間・実人数は調査中。",
+          "affected_organizations": null,
+          "records": 40000,
+          "data_exposed": ["name", "gender", "age_band", "address", "phone_number", "email_address", "inquiry_content", "employer", "department", "job_title", "encrypted_password"],
+          "service_disruption": true,
+          "service_disruption_note": "2026年10月26日に公式ホームページの一部機能を停止。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"news","publisher":"セキュリティ対策Lab","published_at":"2026-10-30","url":"https://rocket-boys.co.jp/security-measures-lab/yakult_20261030_data_breach/","title":"ヤクルト 本社に不正アクセス、個人情報約4万件の漏えいを確認 ハッカーが先行しサイバー攻撃とデータ公開を主張"},
+          {"kind":"official","publisher":"株式会社ヤクルト本社","published_at":null,"url":"https://www.yakult.co.jp/company/ir/stock/basic.html","title":"株式基本情報"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-30T12:00:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-30-tinpan-alley-ragtag-data-breach",
+        "organization": {
+          "name": "株式会社ティンパンアレイ",
+          "name_en": "TIN PAN ALLEY CO., LTD.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["retail", "apparel", "ecommerce"],
+          "business_model": ["b2c"],
+          "service": "RAGTAG / rt / usebowl",
+          "country": "JP",
+          "website": "https://www.tinpanalley.co.jp/",
+          "headquarters": {"address":"東京都中央区銀座3丁目3番15号","prefecture":"東京都","city":"中央区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.tinpanalley.co.jp/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"members","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "ティンパンアレイ業務サーバーへの不正アクセスによる会員情報延べ約120万件流出の可能性",
+          "types": ["unauthorized_access", "potential_data_breach", "service_disruption"],
+          "occurred_at": "2026-10-17",
+          "occurred_time": {"start":"14:51","end":null,"timezone":"Asia/Tokyo","precision":"exact","time_band":"afternoon","basis":"公表では10月17日14時51分頃に外部から侵入しデータ抽出操作が行われた。"},
+          "detected_at": "2026-10-28",
+          "detected_time": {"start":"12:08","end":null,"timezone":"Asia/Tokyo","precision":"exact","time_band":"afternoon","basis":"10月28日12時08分頃に不審な操作を検知。"},
+          "disclosed_at": "2026-10-30",
+          "status": {"value":"investigating","as_of":"2026-10-30"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["ティンパンアレイ業務サーバー", "RAGTAG", "rt", "usebowl"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による侵入とデータ抽出操作は公表されているが、攻撃主体を特定する被害企業・捜査機関・フォレンジック等の帰属情報は確認できない。","source_urls":["https://rocket-boys.co.jp/security-measures-lab/world_tinpanalley_ragtag_unauthorized_access_1_2million_20261030/"],"reviewed_at":"2026-10-30"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "会員情報延べ約120万件が外部流出した可能性。延べ件数であり実人数とは扱わない。対象会員・件数の詳細は調査中。",
+          "affected_organizations": null,
+          "records": 1200000,
+          "data_exposed": ["name", "address", "phone_number", "date_of_birth", "gender", "email_address"],
+          "service_disruption": true,
+          "service_disruption_note": "対象サーバーを隔離し、不正アクセス経路を遮断、関連する社内業務システムの一部を停止。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"news","publisher":"セキュリティ対策Lab","published_at":"2026-10-30","url":"https://rocket-boys.co.jp/security-measures-lab/world_tinpanalley_ragtag_unauthorized_access_1_2million_20261030/","title":"ワールド 子会社「ティンパンアレイ」に不正アクセス、約120万件の個人情報漏洩の恐れ-RAGTAG（ラグタグ）など運営"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-30T12:00:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-29-iris-plaza-unauthorized-access",
+        "organization": {
+          "name": "株式会社アイリスプラザ",
+          "name_en": "IRIS PLAZA Co., Ltd.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["retail", "ecommerce"],
+          "business_model": ["b2c"],
+          "service": "アイリスプラザ",
+          "country": "JP",
+          "website": "https://www.irisplaza.co.jp/",
+          "headquarters": {"address":"宮城県仙台市青葉区中央2丁目1番7号","prefecture":"宮城県","city":"仙台市","latitude":null,"longitude":null,"precision":"exact","source":"https://www.irisplaza.co.jp/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "公式通販サイト「アイリスプラザ」への不正アクセス",
+          "types": ["unauthorized_access", "potential_data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": null,
+          "disclosed_at": "2026-10-29",
+          "status": {"value":"service_suspended_investigating","as_of":"2026-10-30"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["アイリスプラザ ECサイト"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"不正アクセスは公式に確認されているが、攻撃主体を特定する帰属情報は公表されていない。","source_urls":["https://www.irisohyama.co.jp/news/2026/?date=1029"],"reviewed_at":"2026-10-30"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "情報漏えいの可能性を含め調査中。現時点でクレジットカード情報の漏えいは確認されていない。その他の情報は調査中。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "利用者の安全確保のためECサイトを一時停止。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"アイリスオーヤマ株式会社","published_at":"2026-10-29","url":"https://www.irisohyama.co.jp/news/2026/?date=1029","title":"アイリスオーヤマ公式通販サイト「アイリスプラザ」 ECサイト一時停止のお知らせ"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-30T12:00:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-29-japan-post-mail-vendor-data-exposure",
+        "organization": {
+          "name": "日本郵便株式会社",
+          "name_en": "JAPAN POST CO., LTD.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["postal_services", "logistics"],
+          "business_model": ["b2c", "b2b"],
+          "service": "国際郵便マイページサービス / メールマガジン配信",
+          "country": "JP",
+          "website": "https://www.post.japanpost.jp/",
+          "headquarters": {"address":"〒100-8792 東京都千代田区大手町二丁目3番1号","prefecture":"東京都","city":"千代田区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.post.japanpost.jp/about/profile.html"},
+          "employee_count": {"value":168922,"unit":"employees","estimate_type":"reported","basis":"2026年3月31日現在。臨時従業員を含まない。","confidence":"high"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"members","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "メール配信委託先への不正アクセスによる国際郵便マイページ会員メールアドレス漏えいのおそれ",
+          "types": ["third_party_compromise", "potential_data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": null,
+          "disclosed_at": "2026-10-29",
+          "status": {"value":"investigating","as_of":"2026-10-30"},
+          "attack_vector": "third_party_vendor",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["委託先メール配信サービス"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"委託先の一部サーバーへの第三者不正アクセスは公表されているが、攻撃主体を特定する帰属情報は確認できない。","source_urls":["https://www.post.japanpost.jp/newsrelease/pressrelease/01175116571.html"],"reviewed_at":"2026-10-30"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "国際郵便マイページサービス会員のうち案内メール配信を希望する一部利用者のメールアドレスが漏えいしたおそれ。件数は未公表。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": ["email_address"],
+          "service_disruption": true,
+          "service_disruption_note": "委託先が提供するメール配信サービスは停止中。国際郵便マイページサービス自体への不正アクセスは確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"日本郵便株式会社","published_at":"2026-10-29","url":"https://www.post.japanpost.jp/newsrelease/pressrelease/01175116571.html","title":"当社委託先のメール配信サービスにおける情報漏えいのおそれについて"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-30T12:00:00+09:00"
+      }
+    }
+  ]
+}
