@@ -1,0 +1,167 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-30-ryohin-keikaku-muji-app-unauthorized-access",
+        "organization": {
+          "name": "株式会社良品計画",
+          "name_en": "RYOHIN KEIKAKU CO., LTD.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["retail", "ecommerce", "consumer_goods"],
+          "business_model": ["b2c", "b2b"],
+          "service": "MUJIアプリ",
+          "country": "JP",
+          "website": "https://www.ryohin-keikaku.jp/",
+          "headquarters": {"address":"〒112-0004 東京都文京区後楽2-5-1 住友不動産飯田橋ファーストビル","prefecture":"東京都","city":"文京区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.ryohin-keikaku.jp/corporate/overview"},
+          "employee_count": {"value":31400,"unit":"employees","estimate_type":"reported","basis":"2026年8月末時点の良品計画グループ従業員数。臨時従業員等16,205名を含む。","confidence":"high"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Prime","ticker":"7453"},
+          "estimated_total_users": {"value":18000000,"unit":"active_users","estimate_type":"reported","basis":"2026年8月末時点のMUJIアプリアクティブユーザー数。","confidence":"high"}
+        },
+        "incident": {
+          "title": "MUJIアプリへの不正アクセスによる顧客情報最大約2,726万件流出の可能性",
+          "types": ["unauthorized_access", "potential_data_breach"],
+          "occurred_at": null,
+          "detected_at": null,
+          "disclosed_at": "2026-10-30",
+          "status": {"value":"investigating","as_of":"2026-10-30"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["MUJIアプリ"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"外部からの不正アクセスは公表されているが、被害企業・捜査機関・フォレンジック等による攻撃主体の帰属情報は確認できない。","source_urls":["https://www.ryohin-keikaku.jp/news/2026_1030.html","https://prtimes.jp/main/html/rd/p/000001877.000000987.html"],"reviewed_at":"2026-10-30"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "退会者を含む最大約2,726万件の顧客情報が外部流出した可能性。件数は上限であり、実流出件数・ユニーク人数は未確定。",
+          "affected_organizations": null,
+          "records": 27260000,
+          "data_exposed": ["email_address", "date_of_birth", "gender"],
+          "service_disruption": false,
+          "service_disruption_note": "不正アクセス箇所は遮断・修正済み。公表時点でMUJIアプリと無印良品ネットストアは通常利用可能。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社良品計画","published_at":"2026-10-30","url":"https://prtimes.jp/main/html/rd/p/000001877.000000987.html","title":"無印良品の公式アプリ「MUJIアプリ」におけるお客さま情報流出の可能性について"},
+          {"kind":"official","publisher":"株式会社良品計画","published_at":null,"url":"https://www.ryohin-keikaku.jp/corporate/overview","title":"会社概要"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-30T23:55:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-29-matsuya-foods-app-unauthorized-access",
+        "organization": {
+          "name": "株式会社松屋フーズホールディングス",
+          "name_en": "MATSUYA FOODS HOLDINGS CO., LTD.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["food_service", "restaurant", "ecommerce"],
+          "business_model": ["b2c"],
+          "service": "松屋公式アプリ / 松弁ネット / モバイルオーダー / 松弁デリバリー",
+          "country": "JP",
+          "website": "https://www.matsuyafoods-holdings.co.jp/",
+          "headquarters": {"address":"〒180-0006 東京都武蔵野市中町1-14-5","prefecture":"東京都","city":"武蔵野市","latitude":null,"longitude":null,"precision":"exact","source":"https://www.matsuyafoods-holdings.co.jp/company/data/"},
+          "employee_count": {"value":2617,"unit":"employees","estimate_type":"reported","basis":"2026年3月期・連結従業員数。","confidence":"high"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Prime","ticker":"9887"},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "松屋公式アプリ管理システムへの不正アクセスによる約238万件の個人情報漏えい",
+          "types": ["unauthorized_access", "data_breach", "credential_exposure", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-28",
+          "disclosed_at": "2026-10-29",
+          "status": {"value":"service_suspended_investigating","as_of":"2026-10-30"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["松屋公式アプリ管理システム", "松弁ネット", "モバイルオーダー", "松弁デリバリー", "公式ホームページ"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスと情報漏えいは確認されているが、原因・経緯は調査中で、攻撃主体を特定する被害企業・捜査機関・フォレンジック等の帰属情報は確認できない。","source_urls":["https://www.watch.impress.co.jp/docs/news/2152625.html"],"reviewed_at":"2026-10-30"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "松弁ネット等利用者情報2,377,127件と、公式アプリ会員情報2,000件（最大3,000件の可能性）の漏えいを確認。両母集団の人物重複が不明なためユニーク人数として合算しない。",
+          "affected_organizations": null,
+          "records": 2379127,
+          "data_exposed": ["member_id", "prefecture", "delivery_address", "name", "phone_number", "date_of_birth", "email_address", "encrypted_password", "loyalty_points"],
+          "service_disruption": true,
+          "service_disruption_note": "松屋公式アプリ、松弁ネット、モバイルオーダー、松弁デリバリー、公式ホームページ等の関連サービスを停止し復旧作業中。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"news","publisher":"Impress Watch","published_at":"2026-10-30","url":"https://www.watch.impress.co.jp/docs/news/2152625.html","title":"松屋、不正アクセスで238万件の個人情報漏えい"},
+          {"kind":"official","publisher":"株式会社松屋フーズホールディングス","published_at":null,"url":"https://www.matsuyafoods-holdings.co.jp/company/data/","title":"会社概要"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-30T23:55:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-09-16-gmo-trust-login-public-storage-data-breach",
+        "organization": {
+          "name": "GMOグローバルサイン株式会社",
+          "name_en": "GMO GlobalSign K.K.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["information_security", "identity_and_access_management", "saas"],
+          "business_model": ["b2b"],
+          "service": "GMOトラスト・ログイン",
+          "country": "JP",
+          "website": "https://jp.globalsign.com/",
+          "headquarters": {"address":"東京都渋谷区道玄坂1-2-3 渋谷フクラス","prefecture":"東京都","city":"渋谷区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.info-globalsign.com/press/20220401"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "GMOトラスト・ログインの公開ストレージ設定不備による45,030人の情報取得",
+          "types": ["misconfiguration", "data_breach"],
+          "occurred_at": "2021-06-08",
+          "detected_at": "2026-09-14",
+          "detected_time": {"start":"17:48","end":null,"timezone":"Asia/Tokyo","precision":"exact","time_band":"afternoon","basis":"2026年9月14日17:48に脆弱性報告制度を通じて外部研究者から報告を受け判明。"},
+          "disclosed_at": "2026-09-16",
+          "status": {"value":"investigation_completed_remediation_ongoing","as_of":"2026-10-30"},
+          "attack_vector": "Publicly accessible cloud storage caused by configuration/design error",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["GMOトラスト・ログイン ストレージ公開領域", "一括操作ファイル", "契約情報ファイル"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"外部専門機関が第三者によるファイル取得を確認したが、取得主体を特定する帰属情報は公表されていない。","source_urls":["https://news.trustlogin.com/20261030"],"reviewed_at":"2026-10-30"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": 45030,
+          "affected_users_note": "外部専門機関等の分析で第三者に取得されたと判定された個人情報を含むファイルが対象。45,030人はメールアドレスの重複を除いた人数。対象企業は2,492社。",
+          "affected_organizations": 2492,
+          "records": null,
+          "data_exposed": ["email_address", "name", "application_name", "custom_attributes", "employee_number", "department", "company_id", "license_count", "service_usage", "cancellation_date", "billing_contact_name", "billing_contact_address", "billing_contact_phone", "billing_contact_email"],
+          "service_disruption": false,
+          "service_disruption_note": "外部取得を2026年9月14日23:45頃から段階的に遮断し、9月15日16:00までに全遮断。サービス停止の公表はない。",
+          "service_recovered_at": "2026-09-15T16:00:00+09:00"
+        },
+        "sources": [
+          {"kind":"official","publisher":"GMOグローバルサイン株式会社","published_at":"2026-10-30","url":"https://news.trustlogin.com/20261030","title":"【重要】GMOトラスト・ログインにおけるお客様情報の漏えいに関するお詫びとお知らせ（第三報）"},
+          {"kind":"official","publisher":"GMOグローバルサイン株式会社","published_at":null,"url":"https://www.info-globalsign.com/press/20220401","title":"GMOトラスト・ログイン名称変更・会社情報"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-30T23:55:00+09:00"
+      }
+    }
+  ]
+}
