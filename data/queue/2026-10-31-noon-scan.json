@@ -1,0 +1,222 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-30-mofa-external-network-unauthorized-access",
+        "organization": {
+          "name": "外務省",
+          "name_en": "Ministry of Foreign Affairs of Japan",
+          "type": "government",
+          "size": "government_agency",
+          "industry": ["government"],
+          "business_model": ["public_service"],
+          "service": "外部とのやり取りが可能なネットワーク",
+          "country": "JP",
+          "website": "https://www.mofa.go.jp/",
+          "headquarters": {"address":"〒100-8919 東京都千代田区霞が関2-2-1","prefecture":"東京都","city":"千代田区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.mofa.go.jp/mofaj/annai/address/index.html"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "外務省の外部接続ネットワークへの不正アクセスによる約3,600件の個人情報漏えい可能性",
+          "types": ["unauthorized_access", "potential_data_breach"],
+          "occurred_at": "2026-07-27",
+          "detected_at": "2026-07-27",
+          "disclosed_at": "2026-10-30",
+          "status": {"value":"contained_investigating","as_of":"2026-10-30"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["外部とのやり取りが可能なネットワーク", "同ネットワーク上のメール等"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"外務省は第三者による不正アクセスを公表しているが、攻撃主体を特定する帰属情報は公表していない。","source_urls":["https://www.mofa.go.jp/mofaj/press/release/pressit_000001_04395.html"],"reviewed_at":"2026-10-31"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "メールアドレスや氏名など約3,600件が漏えいした可能性。うち外務省員以外の情報は約900件。件数を実人数とは扱わない。",
+          "affected_organizations": null,
+          "records": 3600,
+          "data_exposed": ["name", "email_address"],
+          "service_disruption": false,
+          "service_disruption_note": null,
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"外務省","published_at":"2026-10-30","url":"https://www.mofa.go.jp/mofaj/press/release/pressit_000001_04395.html","title":"不正アクセスによる個人情報の漏えいの可能性について"},
+          {"kind":"news","publisher":"INTERNET Watch","published_at":"2026-10-30","url":"https://internet.watch.impress.co.jp/docs/news/2152757.html","title":"外務省に不正アクセス、約3600件の個人情報が漏えいの可能性"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-31T12:00:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-30-ntt-smile-energy-ecomegane-unauthorized-access",
+        "organization": {
+          "name": "株式会社NTTスマイルエナジー",
+          "name_en": "NTT Smile Energy Inc.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["energy", "information_technology"],
+          "business_model": ["b2c", "b2b"],
+          "service": "エコめがね",
+          "country": "JP",
+          "website": "https://nttse.com/",
+          "headquarters": {"address":"大阪府大阪市","prefecture":"大阪府","city":"大阪市","latitude":null,"longitude":null,"precision":"city","source":"https://nttse.com/news/pressrelease/2026/10-30/3288/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "太陽光発電遠隔監視サービス「エコめがね」への不正アクセスと顧客情報漏えいの可能性",
+          "types": ["unauthorized_access", "potential_data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-28",
+          "detected_time": {"start":"20:20","end":null,"timezone":"Asia/Tokyo","precision":"exact","time_band":"evening","basis":"2026年10月28日20時20分にWebサーバー上の不審なアクセスの形跡を検知。"},
+          "disclosed_at": "2026-10-30",
+          "status": {"value":"service_suspended_investigating","as_of":"2026-10-30"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["エコめがね Webサーバー", "顧客情報データベースサーバー", "監視用クラウド環境"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"不正アクセスとデータベースへの攻撃痕跡は確認されているが、具体的な侵入経路・技術的原因および攻撃主体は調査中。","source_urls":["https://nttse.com/news/pressrelease/2026/10-30/3288/"],"reviewed_at":"2026-10-31"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "顧客情報が外部へ漏えいした可能性があるが対象件数は精査中。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": ["name", "company_name", "address", "phone_number", "email_address", "login_id", "password"],
+          "service_disruption": true,
+          "service_disruption_note": "クラウド環境の全サーバー通信を遮断し、データベースを停止。エコめがねのサービス画面、異常通知メール、新規設置時の機器登録・設定等が利用できない。発電・売電設備そのものは停止していない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社NTTスマイルエナジー","published_at":"2026-10-30","url":"https://nttse.com/news/pressrelease/2026/10-30/3288/","title":"太陽光発電遠隔監視サービス『エコめがね』サービスのシステム停止および個人情報漏洩の可能性に関するお詫びとお知らせ"},
+          {"kind":"official","publisher":"株式会社NTTスマイルエナジー","published_at":"2026-10-29","url":"https://nttse.com/news/2026/10-29/3284/","title":"太陽光発電遠隔監視サービス『エコめがね』の緊急メンテナンスについて（初報）"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-31T12:00:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-30-vook-data-analysis-tool-breach",
+        "organization": {
+          "name": "株式会社Vook",
+          "name_en": "Vook Inc.",
+          "type": "company",
+          "size": "small_enterprise",
+          "industry": ["media", "information_technology"],
+          "business_model": ["b2c", "b2b"],
+          "service": "Vook",
+          "country": "JP",
+          "website": "https://vook.co.jp/",
+          "headquarters": {"address":"〒107-0052 東京都港区赤坂5-2-33-1111","prefecture":"東京都","city":"港区","latitude":null,"longitude":null,"precision":"exact","source":"https://vook.co.jp/company"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"members","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "社内データ分析ツールの脆弱性悪用によるVookデータベースへの不正アクセス",
+          "types": ["unauthorized_access", "potential_data_breach"],
+          "occurred_at": null,
+          "detected_at": "2026-10-14",
+          "disclosed_at": "2026-10-30",
+          "status": {"value":"contained_investigating","as_of":"2026-10-30"},
+          "attack_vector": "社内業務で利用していたデータ分析ツールの脆弱性を第三者が悪用し、同ツール経由でデータベースへ不正アクセス。具体的な製品名・CVEは公表されていない。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["社内データ分析ツール", "Vookデータベース"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"脆弱性を悪用した第三者によるアクセスは確認されているが、攻撃主体を特定する帰属情報は公表されていない。","source_urls":["https://vook.co.jp/574"],"reviewed_at":"2026-10-31"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "情報取得の可能性を確認しているが対象人数・件数は調査中。Vook会員、イベント申込者、問い合わせ者、法人担当者、取引先担当者等が対象になり得る。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": ["name", "email_address", "phone_number", "address", "date_of_birth", "employer", "employment_history", "education_history", "authentication_information", "content_password", "ip_address", "social_media_profile", "payment_service_customer_id", "survey_response", "notification_content"],
+          "service_disruption": false,
+          "service_disruption_note": "10月22日にサービスログイン用認証情報を全て無効化し、データ分析ツールの利用を停止。データ改ざん・破壊は確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社Vook","published_at":"2026-10-30","url":"https://vook.co.jp/574","title":"不正アクセスによる個人情報漏えいの可能性に関するお詫びとお知らせ【第一報】"},
+          {"kind":"official","publisher":"株式会社Vook","published_at":null,"url":"https://vook.co.jp/company","title":"会社概要"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-31T12:00:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-30-japanticket-external-analytics-tool-breach",
+        "organization": {
+          "name": "株式会社Japanticket",
+          "name_en": "Japanticket Co., Ltd.",
+          "type": "company",
+          "size": "small_enterprise",
+          "industry": ["travel", "information_technology"],
+          "business_model": ["b2c", "b2b"],
+          "service": "JapanTicketおよび連携予約サイト",
+          "country": "JP",
+          "website": "https://japanticket.com/",
+          "headquarters": {"address":"東京都渋谷区恵比寿1-20-18 三富ビル新館1F","prefecture":"東京都","city":"渋谷区","latitude":null,"longitude":null,"precision":"exact","source":"https://prestige.japanticket.com/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "JapanTicket利用の外部分析ツールへの不正アクセスによる最大約26.4万件の顧客情報漏えい",
+          "types": ["unauthorized_access", "data_breach"],
+          "occurred_at": null,
+          "detected_at": "2026-10-28",
+          "disclosed_at": "2026-10-30",
+          "status": {"value":"contained_investigating","as_of":"2026-10-30"},
+          "attack_vector": "JapanTicketで利用している外部分析ツールへの第三者による不正アクセス。具体的な製品名、脆弱性、CVEは公表情報から確認できない。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["JapanTicketで利用する外部分析ツール", "JapanTicketおよび連携予約サイトの顧客データ"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスは確認されているが、攻撃主体を特定する被害企業・捜査機関・フォレンジック等の帰属情報は確認できない。","source_urls":["https://japanticket.com/news-20261029/","https://www.pref.yamanashi.jp/fujisan/261030.html"],"reviewed_at":"2026-10-31"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "外部漏えいが確認された対象は最大約26.4万件。レコード件数であり実人数とは扱わない。正確な範囲は調査中。",
+          "affected_organizations": null,
+          "records": 264000,
+          "data_exposed": ["name", "name_kana", "email_address", "phone_number", "country_or_region", "reservation_details", "order_details", "free_text_notes"],
+          "service_disruption": false,
+          "service_disruption_note": "不正アクセス経路は10月28日中に遮断。連携先の一部では販売停止等が発生しているが、JapanTicket全体のサービス停止とは扱わない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社Japanticket","published_at":"2026-10-30","url":"https://japanticket.com/news-20261029/","title":"お客様情報の漏えいについて（ご報告・第1報）"},
+          {"kind":"government","publisher":"山梨県","published_at":"2026-10-30","url":"https://www.pref.yamanashi.jp/fujisan/261030.html","title":"令和6年度山梨県富士山吉田ルート通行予約システムに係る情報漏洩の可能性について"},
+          {"kind":"official","publisher":"株式会社CS-C","published_at":"2026-10-30","url":"https://s-cs-c.com/news/20261030/","title":"提携先（株式会社Japanticket）における不正アクセスおよび個人情報漏えいに関するお詫びとお知らせ"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-31T12:00:00+09:00"
+      }
+    }
+  ]
+}
