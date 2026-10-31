@@ -1,0 +1,438 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-30-saga-university-ransomware-data-exposure-update",
+        "organization": {
+          "name": "国立大学法人佐賀大学",
+          "name_en": "Saga University",
+          "type": "university",
+          "size": "large_organization",
+          "industry": ["education", "healthcare"],
+          "business_model": ["public_service"],
+          "service": "事務情報システム",
+          "country": "JP",
+          "website": "https://www.saga-u.ac.jp/",
+          "headquarters": {"address":"〒840-8502 佐賀県佐賀市本庄町1","prefecture":"佐賀県","city":"佐賀市","latitude":null,"longitude":null,"precision":"exact","source":"https://www.saga-u.ac.jp/gaiyo1/g26.html"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"people","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "佐賀大学の事務情報システムにおけるランサムウェア被害と約8万人分・患者情報の漏えい可能性",
+          "types": ["ransomware", "unauthorized_access", "potential_data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-09-24",
+          "detected_time": {"start":"08:42","end":null,"timezone":"Asia/Tokyo","precision":"exact","time_band":"morning","basis":"佐賀大学は2026年9月24日8時42分に事務部門が利用するNASでランサムウェアによると思われる被害を確認したと公表。検知時刻であり攻撃開始時刻ではない。"},
+          "disclosed_at": "2026-09-28",
+          "status": {"value":"investigating_partially_recovered","as_of":"2026-10-30"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": true,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["事務部門NAS", "事務情報システム", "事務用端末", "証明書発行システム"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"佐賀大学はランサムウェアによると思われる被害を公表しているが、マルウェアファミリや攻撃主体を特定する帰属情報は公表していない。","source_urls":["https://www.saga-u.ac.jp/koho/press/2026103041773","https://www.saga-u.ac.jp/koho/press/2026092841520"],"reviewed_at":"2026-11-01"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": 80000,
+          "affected_users_note": "学生、教職員、元学生、元教職員、関係者等約80,000人分について外部流出の可能性を否定できない。患者情報の対象人数は調査中で、8万人には加算していない。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": ["name", "date_of_birth", "gender", "address", "phone_number", "email_address", "password", "sensitive_health_information"],
+          "service_disruption": true,
+          "service_disruption_note": "2026年9月24日16:45に事務用端末を停止し、9月27日11:03に利用再開、9月28日から通常業務を再開。一部システムはその後も安全確認・復旧作業が継続。",
+          "service_recovered_at": "2026-09-28"
+        },
+        "sources": [
+          {"kind":"official","publisher":"国立大学法人佐賀大学","published_at":"2026-09-28","url":"https://www.saga-u.ac.jp/koho/press/2026092841520","title":"事務情報システムにおけるランサムウェア被害の発生について"},
+          {"kind":"official","publisher":"国立大学法人佐賀大学","published_at":"2026-10-30","url":"https://www.saga-u.ac.jp/koho/press/2026103041773","title":"事務情報システムにおけるランサムウェア被害の発生について"},
+          {"kind":"official","publisher":"佐賀大学医学部附属病院","published_at":"2026-10-30","url":"https://www.hospital.med.saga-u.ac.jp/ransomware/","title":"【お詫び】事務情報システムにおけるランサムウェア被害の発生について（10/30追記）"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-01T00:03:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-30-eplus-fes-app-data-breach",
+        "organization": {
+          "name": "株式会社イープラス",
+          "name_en": "eplus Inc.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["entertainment", "ticketing", "information_technology"],
+          "business_model": ["b2c", "b2b"],
+          "service": "FESアプリ管理システム（ポルノ超特急2021）",
+          "country": "JP",
+          "website": "https://eplus.jp/",
+          "headquarters": {"address":"〒150-6008 東京都渋谷区恵比寿4-20-3 恵比寿ガーデンプレイスタワー8階","prefecture":"東京都","city":"渋谷区","latitude":null,"longitude":null,"precision":"exact","source":"https://corp.eplus.jp/company/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":28000000,"unit":"members","estimate_type":"official","basis":"イープラス公式企業サイトは現在2,800万人の会員が利用と記載。","confidence":"high"}
+        },
+        "incident": {
+          "title": "イープラスのフェス専用アプリ管理システムへの不正アクセスによる3,571件の個人情報漏えい",
+          "types": ["unauthorized_access", "data_breach"],
+          "occurred_at": "2026-10-11",
+          "detected_at": "2026-10-13",
+          "disclosed_at": "2026-10-30",
+          "status": {"value":"contained_investigating","as_of":"2026-10-30"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["FESアプリ管理システム", "ポルノ超特急2021 前方指定観覧エリア申込情報"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"イープラスは第三者による不正アクセスとデータのダウンロードを確認しているが、攻撃主体を特定する帰属情報は公表していない。","source_urls":["https://support-qa.eplus.jp/hc/ja/articles/63706552326425"],"reviewed_at":"2026-11-01"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "3,571件の個人情報がダウンロードされ外部流出したことを確認。公表単位が件であり、ユニーク人数とは断定しない。",
+          "affected_organizations": null,
+          "records": 3571,
+          "data_exposed": ["personal_information_submitted_for_event_application"],
+          "service_disruption": false,
+          "service_disruption_note": null,
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社イープラス","published_at":"2026-10-30","url":"https://support-qa.eplus.jp/hc/ja/articles/63706552326425","title":"弊社システムに対する不正アクセスの発生および個人情報漏えいに関するお詫びとお知らせ（10月30日）"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-01T00:03:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-30-lifenet-kddi-linked-system-unauthorized-access",
+        "organization": {
+          "name": "ライフネット生命保険株式会社",
+          "name_en": "LIFENET INSURANCE COMPANY",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["insurance", "financial_services", "information_technology"],
+          "business_model": ["b2c", "b2b"],
+          "service": "KDDI連携システム（auの生命ほけん）",
+          "country": "JP",
+          "website": "https://www.lifenet-seimei.co.jp/",
+          "headquarters": {"address":"東京都千代田区","prefecture":"東京都","city":"千代田区","latitude":null,"longitude":null,"precision":"city","source":"https://www.lifenet-seimei.co.jp/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "ライフネット生命のKDDI連携システムの脆弱性悪用によるKDDI顧客情報最大22,541件の漏えい可能性",
+          "types": ["unauthorized_access", "vulnerability_exploitation", "third_party_incident", "potential_data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-23",
+          "disclosed_at": "2026-10-30",
+          "status": {"value":"contained_investigating_service_limited","as_of":"2026-10-30"},
+          "attack_vector": "悪意を持った第三者がライフネット生命のKDDI連携システムの一部機能の脆弱性を通じて、KDDI側システムが保有する顧客情報の一部を取得した可能性。脆弱性の種類・CVEは未公表。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["ライフネット生命 KDDI連携システム", "KDDI顧客情報連携経路", "auの生命ほけん一部機能"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"両社は悪意を持った第三者による脆弱性悪用を公表しているが、攻撃主体を特定する帰属情報は公表していない。","source_urls":["https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-82_4796/kddi_nr_s-82_4796_pdf_01.pdf"],"reviewed_at":"2026-11-01"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "KDDIが保有する顧客情報最大22,541件が漏えいした可能性。6区分の件数合計であり、実流出件数・ユニーク人数は未確定。",
+          "affected_organizations": 2,
+          "records": 22541,
+          "data_exposed": ["name", "postal_code", "phone_number", "email_address", "member_identifier", "gender", "date_of_birth"],
+          "service_disruption": true,
+          "service_disruption_note": "『auの生命ほけん』の申し込み受付を含む一部機能をメンテナンス中。KDDIの通信・サービス設備およびライフネット生命の他システムへの影響はない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"KDDI株式会社・ライフネット生命保険株式会社","published_at":"2026-10-30","url":"https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-82_4796/kddi_nr_s-82_4796_pdf_01.pdf","title":"ライフネット生命の一部システムへの不正アクセスによるKDDIお客さま情報の漏えいの可能性について"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-01T00:03:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-30-ida-mybrands-cloud-key-unauthorized-access",
+        "organization": {
+          "name": "株式会社iDA",
+          "name_en": "iDA Inc.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["human_resources", "information_technology", "fashion"],
+          "business_model": ["b2c", "b2b"],
+          "service": "MyBRANDS",
+          "country": "JP",
+          "website": "https://www.ida-mode.com/",
+          "headquarters": {"address":"東京都渋谷区代々木2-2-1 小田急サザンタワー7F","prefecture":"東京都","city":"渋谷区","latitude":null,"longitude":null,"precision":"exact","source":"https://sg.ida-mode.com/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"accounts","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "求人サイトMyBRANDSでクラウド管理アクセスキーが悪用され最大約13.5万アカウントの情報漏えいのおそれ",
+          "types": ["unauthorized_access", "credential_compromise", "potential_data_breach", "service_disruption"],
+          "occurred_at": "2026-10-21",
+          "detected_at": "2026-10-26",
+          "disclosed_at": "2026-10-30",
+          "status": {"value":"service_suspended_investigating","as_of":"2026-10-30"},
+          "attack_vector": "委託先で利用していたクラウド管理用アクセスキーが第三者に不正利用され、複製データベースから外部へデータが送信された記録を確認。アクセスキーが取得された経路は未公表。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["MyBRANDSサーバー環境", "クラウド管理環境", "複製データベース"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"クラウド管理用アクセスキーの第三者による不正利用は公表されているが、攻撃主体を特定する帰属情報は公表されていない。","source_urls":["https://www.ida-mode.com/lp/news/unauthorized_access_mybrands/"],"reviewed_at":"2026-11-01"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "退会者を含むMyBRANDS登録者最大約135,000アカウント。外部へのデータ送信記録はあるが送信内容を特定できていないため全件を対象としており、実流出件数・ユニーク人数は未確定。",
+          "affected_organizations": null,
+          "records": 135000,
+          "data_exposed": ["name", "email_address", "phone_number", "address", "profile", "employment_history", "password_transformed_value"],
+          "service_disruption": true,
+          "service_disruption_note": "MyBRANDSは安全性を確認できるまで停止。関連するiDA転職エージェントも10月21日20:00頃からシステム点検のため一時停止し、11月5日以降の再開を予定。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社iDA","published_at":"2026-10-30","url":"https://www.ida-mode.com/lp/news/unauthorized_access_mybrands/","title":"MyBRANDSへの不正アクセスによる個人情報漏えいのおそれについて（お詫びとお知らせ）"},
+          {"kind":"official","publisher":"株式会社iDA","published_at":null,"url":"https://agent.ida-mode.com/","title":"iDA転職エージェント サービス一時停止のお知らせ"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-01T00:03:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-30-dhc-online-shop-unauthorized-access",
+        "organization": {
+          "name": "株式会社ディーエイチシー",
+          "name_en": "DHC Corporation",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["retail", "ecommerce", "cosmetics", "health_products"],
+          "business_model": ["b2c"],
+          "service": "DHC公式オンラインショップ",
+          "country": "JP",
+          "website": "https://dhc-corporate.co.jp/",
+          "headquarters": {"address":"〒108-0014 東京都港区芝5-34-2 ミタマチテラス19F","prefecture":"東京都","city":"港区","latitude":null,"longitude":null,"precision":"exact","source":"https://dhc-corporate.co.jp/en/company/profile/"},
+          "employee_count": {"value":1831,"unit":"employees","estimate_type":"official_consolidated","basis":"DHC company profile, as of 2026-04-01","confidence":"high"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"accounts","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "DHC公式オンラインショップへの不正アクセスによる5,096アカウントの会員情報改ざんと不審注文",
+          "types": ["unauthorized_access", "vulnerability_exploitation", "data_tampering", "account_compromise", "fraud", "potential_data_exposure"],
+          "occurred_at": null,
+          "detected_at": "2026-10-28",
+          "disclosed_at": "2026-10-30",
+          "status": {"value":"contained_monitoring","as_of":"2026-10-30"},
+          "attack_vector": "DHCは原因となったシステムの脆弱性を特定して対処済みとしているが、被害拡大防止のため詳細は非公表。具体的なCVEは公表されていない。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["DHC公式オンラインショップ", "会員アカウント管理", "注文システム"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスと脆弱性悪用は確認されているが、攻撃主体を特定する帰属情報は公表されていない。","source_urls":["https://dhc-corporate.co.jp/"],"reviewed_at":"2026-11-01"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": 5096,
+          "affected_users_note": "5,096アカウントで会員情報の書き換えを確認。登録された届け先住所は最大5,520件。不審な注文27件、不正な新規会員登録71件。外部への情報持ち出しの形跡は確認されていない。",
+          "affected_organizations": null,
+          "records": 5096,
+          "data_exposed": ["member_number", "recipient_name", "address", "phone_number", "purchase_history", "credit_card_last_four_digits"],
+          "service_disruption": false,
+          "service_disruption_note": "不正通信を遮断し、脆弱性対処、改ざん情報の復元、不審注文の取消し、不正登録アカウントの無効化を実施。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社ディーエイチシー","published_at":"2026-10-30","url":"https://dhc-corporate.co.jp/","title":"当社オンラインショップへの不正アクセスに関するお詫びとお知らせ"},
+          {"kind":"news","publisher":"サイバーセキュリティ.com","published_at":"2026-10-31","url":"https://cybersecurity-jp.com/news/117992","title":"DHCの公式オンラインショップに不正アクセス 会員情報5,096アカウントが書き換え被害"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-01T00:03:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-30-shogun-burger-app-third-party-breach",
+        "organization": {
+          "name": "株式会社ガネーシャ",
+          "name_en": "Ganesha Inc.",
+          "type": "company",
+          "size": "small_enterprise",
+          "industry": ["food_service", "restaurant", "information_technology"],
+          "business_model": ["b2c"],
+          "service": "SHOGUN BURGER公式アプリ",
+          "country": "JP",
+          "website": "https://ganesha-inc.net/",
+          "headquarters": {"address":"〒939-8093 富山県富山市大泉東町1-4-7","prefecture":"富山県","city":"富山市","latitude":null,"longitude":null,"precision":"exact","source":"https://ganesha-inc.net/about/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "SHOGUN BURGER公式アプリの運営システムへの不正アクセスによる顧客情報漏えい",
+          "types": ["unauthorized_access", "third_party_incident", "data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": null,
+          "disclosed_at": "2026-10-30",
+          "status": {"value":"service_suspended_investigating","as_of":"2026-10-30"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["SHOGUN BURGER公式アプリ", "モバイルオーダーシステム", "株式会社DIRIGIO提供システム"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスは確認されているが、攻撃主体を特定する帰属情報は公表されていない。","source_urls":["https://shogun-burger.com/news/217"],"reviewed_at":"2026-11-01"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "一部顧客の個人情報が外部に漏えいしたことを確認し、情報取得の可能性がある顧客は特定済みだが対象人数・件数は非公表。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": ["name", "email_address", "phone_number", "date_of_birth", "gender", "order_history"],
+          "service_disruption": true,
+          "service_disruption_note": "SHOGUN BURGER公式アプリによるモバイルオーダーを一時停止。運営会社DIRIGIOがセキュリティ診断、原因調査、対策を実施中。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社ガネーシャ / SHOGUN BURGER","published_at":"2026-10-30","url":"https://shogun-burger.com/news/217","title":"SHOGUN BURGER公式アプリにおける個人情報漏えいに関するお詫びとお知らせ"},
+          {"kind":"official","publisher":"株式会社ガネーシャ","published_at":null,"url":"https://ganesha-inc.net/about/","title":"ガネーシャとは / 会社概要"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-01T00:03:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-30-ana-trading-egift-new-unauthorized-access",
+        "organization": {
+          "name": "全日空商事株式会社",
+          "name_en": "ANA TRADING CO., LTD.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["trading", "digital_gift", "information_technology"],
+          "business_model": ["b2b", "b2c", "b2g"],
+          "service": "選べるe-GIFT",
+          "country": "JP",
+          "website": "https://www.anatc.com/",
+          "headquarters": {"address":"〒105-7140 東京都港区東新橋1-5-2 汐留シティセンター","prefecture":"東京都","city":"港区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.anatc.com/company/profile/"},
+          "employee_count": {"value":1984,"unit":"employees","estimate_type":"official_consolidated","basis":"全日空商事会社概要、2026年3月31日現在","confidence":"high"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "全日空商事『選べるe-GIFT』への新たな不正アクセスと全サービス長期停止",
+          "types": ["unauthorized_access", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": null,
+          "disclosed_at": "2026-10-30",
+          "status": {"value":"service_suspended_investigating","as_of":"2026-10-30"},
+          "attack_vector": "2026年8月に発生した同サービスへの不正アクセスとは侵入経路・手口が異なる新たな事象。具体的手法・脆弱性は調査中で未公表。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["選べるe-GIFT"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"外部からの不正アクセスは確認されたが、攻撃主体を特定する帰属情報は公表されていない。","source_urls":["https://www.anatc.com/pressroom/20261030_02/"],"reviewed_at":"2026-11-01"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "2026年10月30日時点で個人情報漏えい、発行済みギフトの不正交換・利用等の被害は確認されていない。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "2026年10月23日8:00から全サービス停止。安全性が担保できるまで停止を継続し、再開まで長期間を要する見込み。ANAグループの他事業への影響はない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"全日空商事株式会社","published_at":"2026-10-30","url":"https://www.anatc.com/pressroom/20261030_02/","title":"『選べるe-GIFT』への不正アクセスの発生とサービス停止について（第1報）"},
+          {"kind":"official","publisher":"全日空商事株式会社","published_at":null,"url":"https://www.anatc.com/company/profile/","title":"会社概要"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-01T00:03:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-07-13-nihon-kotsu-malware-unauthorized-access",
+        "organization": {
+          "name": "日本交通株式会社",
+          "name_en": "Nihon Kotsu Co., Ltd.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["transportation", "taxi", "mobility"],
+          "business_model": ["b2c", "b2b", "public_service"],
+          "service": "社内システム・ハイヤーWEB受注予約管理・電話タクシー配車",
+          "country": "JP",
+          "website": "https://www.nihon-kotsu.co.jp/",
+          "headquarters": {"address":"東京都千代田区","prefecture":"東京都","city":"千代田区","latitude":null,"longitude":null,"precision":"city","source":"https://www.nihon-kotsu.co.jp/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"people","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "日本交通のマルウェアを伴う不正アクセスと約29.3万人分の個人情報漏えい可能性",
+          "types": ["unauthorized_access", "malware", "potential_data_breach", "service_disruption"],
+          "occurred_at": "2026-07-11",
+          "occurred_time": {"start":null,"end":null,"timezone":"Asia/Tokyo","precision":"time_band","time_band":"overnight","basis":"日本交通は2026年7月11日未明に外部からの不正アクセス（マルウェア感染）が発生したと公表。時計時刻は非公表。"},
+          "detected_at": "2026-07-11",
+          "disclosed_at": "2026-07-13",
+          "status": {"value":"contained_partially_recovered_monitoring","as_of":"2026-10-30"},
+          "attack_vector": "侵入に使われた経路は調査後に遮断されたが、具体的な侵入手法は公表されていない。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["社内ネットワーク", "ハイヤーWEB受注・予約管理システム", "電話タクシー配車", "採用・人事関連情報", "事故対応関連情報"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"日本交通はマルウェア感染を伴う外部からの不正アクセスを公表しているが、攻撃主体やマルウェアファミリを特定する帰属情報は公表していない。","source_urls":["https://nihon-kotsu-hire.jp/news/260713/","https://nihon-kotsu-hire.jp/news/261030/"],"reviewed_at":"2026-11-01"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": 292900,
+          "affected_users_note": "第6報の区分別概数は、ハイヤー客約13,100人、乗務員・職員約60,100人、採用応募者約107,900人、従業員家族約37,700人、取引先担当者約2,100人、事故等の相手方約72,000人。合計約292,900人について漏えいの可能性。一般のタクシー利用客情報は対象外。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": ["name", "address", "date_of_birth", "gender", "phone_number", "email_address", "identity_document_information", "employment_information", "salary_payment_information", "bank_account_information", "health_information", "my_number", "education_history", "employment_history", "accident_and_insurance_information"],
+          "service_disruption": true,
+          "service_disruption_note": "7月にハイヤーWEB受注・予約管理や電話タクシー配車等が停止。電話配車は10月5日に再開。一部の安全な環境への再構築を継続。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"日本交通株式会社","published_at":"2026-07-13","url":"https://nihon-kotsu-hire.jp/news/260713/","title":"弊社システムへの不正アクセスによるシステム停止に関するお詫びとご報告"},
+          {"kind":"official","publisher":"日本交通株式会社","published_at":"2026-07-22","url":"https://nihon-kotsu-hire.jp/news/260722/","title":"弊社システムへの不正アクセスによるシステム停止について（第3報）"},
+          {"kind":"official","publisher":"日本交通株式会社","published_at":"2026-10-30","url":"https://nihon-kotsu-hire.jp/news/261030/","title":"弊社システムへの不正アクセスに関するお知らせ（第6報）"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-01T00:03:00+09:00"
+      }
+    }
+  ]
+}
