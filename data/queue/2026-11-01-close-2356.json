@@ -1,0 +1,112 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-31-credit-saison-smart-real-estate-third-party-breach",
+        "organization": {
+          "name": "株式会社クレディセゾン",
+          "name_en": "Credit Saison Co., Ltd.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["financial_services", "securities"],
+          "business_model": ["b2c"],
+          "service": "セゾンのスマート不動産投資",
+          "country": "JP",
+          "website": "https://www.saisoncard.co.jp/",
+          "headquarters": {"address":"〒170-6073 東京都豊島区東池袋3-1-1 サンシャイン60・52F","prefecture":"東京都","city":"豊島区","latitude":null,"longitude":null,"precision":"exact","source":"https://corporate.saisoncard.co.jp/company/overview/"},
+          "employee_count": {"value":3624,"unit":"employees","estimate_type":"official","basis":"会社概要公表値。","confidence":"high"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Prime Market","ticker":"8253"},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "「セゾンのスマート不動産投資」委託先会員管理プラットフォームへの不正アクセスによる1,889名の個人情報漏えい",
+          "types": ["third_party_incident", "unauthorized_access", "data_breach", "service_disruption"],
+          "occurred_at": "2026-10-29",
+          "occurred_time": {"start":"03:42","end":"06:17","timezone":"Asia/Tokyo","precision":"exact","time_band":"overnight","basis":"公式公表で2026年10月29日3時42分から6時17分（日本時間）に第三者による不正アクセスが発生と明記。終了時刻はmorning帯にまたがる。"},
+          "detected_at": "2026-10-29",
+          "disclosed_at": "2026-10-31",
+          "status": {"value":"contained_service_suspended_investigating","as_of":"2026-10-31"},
+          "attack_vector": "外部委託先が提供する会員管理プラットフォームで、外部からアクセス可能となっていた認証の仕組みの不備が悪用された。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["外部委託先の会員管理プラットフォーム", "セゾンのスマート不動産投資"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスと認証機構の不備悪用は確認されているが、被害組織・委託先・法執行機関等による攻撃主体の帰属情報は確認できない。","source_urls":["https://www.saisoncard.co.jp/customer-support/information/20261031/"],"reviewed_at":"2026-11-01"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": 1889,
+          "affected_users_note": "個人情報の漏えいが確認された顧客1,889名。うち39名は氏名、メール、住所、生年月日、電話、国籍、配当金受取口座関連、投資家適合性関連、購入口数（項目は顧客ごとに異なる）、1,850名は氏名と購入口数。",
+          "affected_organizations": null,
+          "records": 1889,
+          "data_exposed": ["name", "email_address", "address", "date_of_birth", "phone_number", "nationality", "dividend_receipt_bank_account_information", "investor_suitability_information", "purchase_units"],
+          "service_disruption": true,
+          "service_disruption_note": "追加予防措置として10月29日22時から会員プラットフォームを緊急停止。公表時点で再開時期未定。資産記録の書き換えやブロックチェーン上の資産移転は確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社クレディセゾン","published_at":"2026-10-31","url":"https://www.saisoncard.co.jp/customer-support/information/20261031/","title":"「セゾンのスマート不動産投資」に関する外部委託先への不正アクセスによる個人情報漏えいに関するお知らせ"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-01T23:56:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-31-phillip-capital-digital-securities-third-party-breach",
+        "organization": {
+          "name": "フィリップ・キャピタル証券株式会社",
+          "name_en": "PhillipCapital Japan Ltd.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["financial_services", "securities"],
+          "business_model": ["b2c", "b2b"],
+          "service": "デジタル証券",
+          "country": "JP",
+          "website": "https://www.phillip.co.jp/",
+          "headquarters": {"address":"〒105-6308 東京都港区虎ノ門一丁目23番1号 虎ノ門ヒルズ 森タワー8階","prefecture":"東京都","city":"港区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.phillip.co.jp/company/profile.php"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":"公式会社概要で国内従業員数を確認できなかったため未設定。","confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "デジタル証券の外部委託先システムへの不正アクセスによる顧客162名の情報漏えい",
+          "types": ["third_party_incident", "unauthorized_access", "data_breach"],
+          "occurred_at": null,
+          "detected_at": "2026-10-29",
+          "disclosed_at": "2026-10-31",
+          "status": {"value":"contained_investigating","as_of":"2026-10-31"},
+          "attack_vector": "デジタル証券関連の外部委託先が提供するシステムへの第三者による不正アクセス。具体的侵入経路は公表されていない。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["デジタル証券関連の外部委託先システム"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"外部委託先への不正アクセスは確認済みだが、フィリップ・キャピタル証券の公表および通常の帰属調査で攻撃主体を支持する情報は確認できない。","source_urls":["https://www.phillip.co.jp/information/news/11486"],"reviewed_at":"2026-11-01"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": 162,
+          "affected_users_note": "顧客162名の情報漏えいをログ調査で確認。162名全員に氏名・取引数量・取引後保有数量・国・取引日時、うち100名に投資家ID・メール・生年月日・ステータス・登録日、1名に住所等が含まれる。銀行口座情報は委託先システムに登録されておらず対象外。",
+          "affected_organizations": null,
+          "records": 162,
+          "data_exposed": ["name", "transaction_quantity", "post_transaction_holdings", "country", "transaction_datetime", "investor_id", "email_address", "date_of_birth", "status", "registration_date", "address"],
+          "service_disruption": false,
+          "service_disruption_note": null,
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"フィリップ・キャピタル証券株式会社","published_at":"2026-10-31","url":"https://www.phillip.co.jp/information/news/11486","title":"デジタル証券に関する外部委託先１社への不正アクセスによるお客様情報の漏洩について"},
+          {"kind":"official","publisher":"フィリップ・キャピタル証券株式会社","published_at":null,"url":"https://www.phillip.co.jp/company/profile.php","title":"会社概要"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-01T23:56:00+09:00"
+      }
+    }
+  ]
+}
