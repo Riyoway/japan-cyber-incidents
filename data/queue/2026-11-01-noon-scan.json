@@ -1,0 +1,113 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-31-club-tourism-reservation-system-unauthorized-access",
+        "organization": {
+          "name": "クラブツーリズム株式会社",
+          "name_en": "Club Tourism International Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["travel"],
+          "business_model": ["b2c"],
+          "service": "インターネット予約システム",
+          "country": "JP",
+          "website": "https://www.club-tourism.co.jp/",
+          "headquarters": {"address":"〒135-0061 東京都江東区豊洲5丁目6番52号 NBF豊洲キャナルフロント","prefecture":"東京都","city":"江東区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.club-tourism.co.jp/jpn/corporate/"},
+          "employee_count": {"value":1350,"unit":"employees","estimate_type":"official","basis":"クラブツーリズム公式会社概要、2026年4月1日現在。","confidence":"high"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":7000000,"unit":"customers","estimate_type":"official","basis":"公式地域共創事業ページが顧客数約700万人と記載。インターネット会員数とは異なる。","confidence":"high"}
+        },
+        "incident": {
+          "title": "クラブツーリズムのインターネット予約システムへの不正アクセスによる約432万件の会員情報漏えい可能性",
+          "types": ["unauthorized_access", "potential_data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-10-30",
+          "detected_time": {"start":"05:45","end":null,"timezone":"Asia/Tokyo","precision":"exact","time_band":"overnight","basis":"2026年10月30日5時45分に外部からの不正アクセスを検知。攻撃開始時刻ではない。"},
+          "disclosed_at": "2026-10-31",
+          "status": {"value":"contained_investigating_service_suspended","as_of":"2026-10-31"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["クラブツーリズム サーバーの一部", "インターネット予約システム", "クラブツーリズムWebサイト"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"クラブツーリズムは外部からの不正アクセスを確認し、侵入経路・手段を特定して是正済みとしているが、第1信では具体的手法や攻撃主体の帰属情報を公表していない。通常の帰属調査でも被害組織・法執行機関・フォレンジック等による信頼できる攻撃主体の特定は確認できなかった。","source_urls":["https://www.club-tourism.co.jp/jpn/news/2026/1031/"],"reviewed_at":"2026-11-01"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "インターネット会員の登録情報約432万件が外部に漏えいした可能性。公表単位が件であり、実際に漏えいした件数・ユニーク人数は確定していない。",
+          "affected_organizations": null,
+          "records": 4320000,
+          "data_exposed": ["name", "nationality", "gender", "date_of_birth", "age", "address", "phone_number", "email_address", "member_id", "emergency_contact"],
+          "service_disruption": true,
+          "service_disruption_note": "不正アクセスを受けたサーバーを隔離し攻撃元通信を遮断。被害拡大防止と調査のためホームページを停止し、安全性再確認後に再開予定。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"クラブツーリズム株式会社","published_at":"2026-10-31","url":"https://www.club-tourism.co.jp/jpn/news/2026/1031/","title":"不正アクセスによる個人情報漏えいに関するお詫びとお知らせについて（第１信）"},
+          {"kind":"official","publisher":"クラブツーリズム株式会社","published_at":null,"url":"https://www.club-tourism.co.jp/jpn/corporate/","title":"企業情報"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-01T12:00:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-31-ntt-data-stdirectservices-third-party-saas-incident",
+        "organization": {
+          "name": "株式会社NTTデータ",
+          "name_en": "NTT DATA Japan Corporation",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["information_technology", "financial_services"],
+          "business_model": ["b2b"],
+          "service": "STdirectServices",
+          "country": "JP",
+          "website": "https://www.nttdata.com/jp/ja/",
+          "headquarters": {"address":"〒135-6033 東京都江東区豊洲3-3-3 豊洲センタービル","prefecture":"東京都","city":"江東区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.nttdata.com/jp/ja/about-us/profile/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "NTTデータ「STdirectServices」委託先SaaSへの不正アクセスに伴う個人情報漏えい可能性とサービス停止",
+          "types": ["third_party_incident", "unauthorized_access", "potential_data_breach", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": null,
+          "disclosed_at": "2026-10-31",
+          "status": {"value":"service_suspended_investigating","as_of":"2026-10-31"},
+          "attack_vector": "STdirectServicesで利用しているNTTデータ委託先のSaaSサービスへの第三者による不正アクセス。具体的な侵入経路・手法は公表されていない。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["委託先SaaSサービス", "STdirectServices"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"NTTデータは委託先SaaSへの第三者による不正アクセスを公表しているが、攻撃主体を特定する帰属情報は公表していない。通常の帰属調査でも信頼できる独立した帰属は確認できなかった。","source_urls":["https://www.nttdata.com/global/ja/news/release/2026/103101/"],"reviewed_at":"2026-11-01"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "委託先SaaSで取り扱う個人情報が漏えいした可能性があるが、NTTデータの第1報では対象件数・情報項目は公表されていない。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": ["personal_information_unspecified"],
+          "service_disruption": true,
+          "service_disruption_note": "STdirectServicesを停止中。ただし公表時点で特典付与対象の社債がないため、特典付与業務への影響はない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社NTTデータ","published_at":"2026-10-31","url":"https://www.nttdata.com/global/ja/news/release/2026/103101/","title":"STdirectServicesのサービス停止についてのお知らせ"},
+          {"kind":"official","publisher":"株式会社NTTデータ","published_at":null,"url":"https://www.nttdata.com/jp/ja/about-us/profile/","title":"プロフィール"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-01T12:00:00+09:00"
+      }
+    }
+  ]
+}
