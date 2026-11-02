@@ -1,0 +1,166 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-01-smartnews-second-unauthorized-access",
+        "organization": {
+          "name": "スマートニュース株式会社",
+          "name_en": "SmartNews, Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["information_technology", "media"],
+          "business_model": ["b2c", "b2b"],
+          "service": "SmartNews",
+          "country": "JP",
+          "website": "https://about.smartnews.com/ja/",
+          "headquarters": {"address":"〒150-0001 東京都渋谷区神宮前6丁目25-16 いちご神宮前ビル2F","prefecture":"東京都","city":"渋谷区","latitude":null,"longitude":null,"precision":"exact","source":"https://about.smartnews.com/ja/about/company.html"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "SmartNewsへの再度の不正アクセスによるポイント・特典システムの不正操作と一部機能停止",
+          "types": ["unauthorized_access", "service_disruption"],
+          "occurred_at": "2026-10-31",
+          "detected_at": null,
+          "disclosed_at": "2026-11-01",
+          "status": {"value":"contained_investigating_service_degraded","as_of":"2026-11-01"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["SmartNews ポイント・特典システム", "SmartNews パーソナライズ機能", "SmartNews プッシュ通知", "SmartNews 一部特典"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"SmartNewsは第三者による不正アクセスと不正操作を確認したが、攻撃主体の帰属情報は公表していない。通常の帰属調査でも被害組織・法執行機関・フォレンジック等による信頼できる帰属は確認できなかった。","source_urls":["https://about.smartnews.com/ja/news/2617.html"],"reviewed_at":"2026-11-02"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "ポイント・特典システムで第三者による不正な操作を確認しているが、顧客アカウントへの影響および情報漏えいの有無・件数は2026年11月1日15時時点で調査中。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "ポイント交換を一時停止。パーソナライズ機能、プッシュ通知、一部特典を停止・制限し、該当システム停止と認証情報の無効化・更新を実施。10月22日公表事案とは別事案。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"スマートニュース株式会社","published_at":"2026-11-01","url":"https://about.smartnews.com/ja/news/2617.html","title":"セキュリティ上の問題への対応について（続報：2026年11月1日15時時点）"},
+          {"kind":"official","publisher":"スマートニュース株式会社","published_at":null,"url":"https://about.smartnews.com/ja/about/company.html","title":"会社概要"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-02T12:00:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-31-starts-securities-securitize-pf-incident",
+        "organization": {
+          "name": "スターツ証券株式会社",
+          "name_en": "Starts Securities Inc.",
+          "type": "company",
+          "size": "small_enterprise",
+          "industry": ["financial_services", "securities"],
+          "business_model": ["b2c"],
+          "service": "スターツ・アセット・トークン～両国・千鳥町～（譲渡制限付）",
+          "country": "JP",
+          "website": "https://www.starts-sc.com/",
+          "headquarters": {"address":"〒134-0088 東京都江戸川区西葛西3-22-21 KYUビル6階","prefecture":"東京都","city":"江戸川区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.starts-sc.com/company/company.html"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"customers","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "Securitize PFへの不正アクセスに伴うスターツ証券の投資家情報漏えい懸念",
+          "types": ["third_party_incident", "unauthorized_access", "potential_data_breach"],
+          "occurred_at": null,
+          "detected_at": "2026-10-29",
+          "disclosed_at": "2026-10-31",
+          "status": {"value":"investigating","as_of":"2026-10-31"},
+          "attack_vector": "プラットフォーム提供会社Securitize社のSecuritize PFへの第三者による不正アクセス。具体的な侵入経路・手法は公表されていない。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["Securitize PF", "スターツ・アセット・トークン～両国・千鳥町～（譲渡制限付）"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"スターツ証券はSecuritize PFへの第三者による不正アクセスを公表しているが、攻撃主体の帰属情報は示していない。通常の帰属調査でも信頼できる独立した帰属は確認できなかった。","source_urls":["https://www.starts-sc.com/info/20261031.html"],"reviewed_at":"2026-11-02"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "Securitize社では顧客情報の一部取得が判明しているが、スターツ証券の対象商品については氏名・保有口数に漏えいの懸念がある段階で、対象人数は未公表。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": ["name", "holding_units"],
+          "service_disruption": false,
+          "service_disruption_note": null,
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"スターツ証券株式会社","published_at":"2026-10-31","url":"https://www.starts-sc.com/info/20261031.html","title":"不正アクセスによる個人情報流出の可能性に関するお知らせ"},
+          {"kind":"official","publisher":"スターツ証券株式会社","published_at":null,"url":"https://www.starts-sc.com/company/company.html","title":"会社概要"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-02T12:00:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-30-sony-bank-digital-securities-vendor-breach",
+        "organization": {
+          "name": "ソニー銀行株式会社",
+          "name_en": "Sony Bank Incorporated",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["financial_services", "banking"],
+          "business_model": ["b2c"],
+          "service": "デジタル証券",
+          "country": "JP",
+          "website": "https://sonybank.jp/",
+          "headquarters": {"address":"東京都千代田区内幸町二丁目1番6号","prefecture":"東京都","city":"千代田区","latitude":null,"longitude":null,"precision":"exact","source":"https://sonybank.jp/corporate/aboutus/profile.html"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"customers","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "デジタル証券関連委託先への不正アクセスによるソニー銀行顧客情報漏えい",
+          "types": ["third_party_incident", "unauthorized_access", "data_breach"],
+          "occurred_at": null,
+          "detected_at": "2026-10-29",
+          "disclosed_at": "2026-10-30",
+          "status": {"value":"contained_investigating","as_of":"2026-10-30"},
+          "attack_vector": "デジタル証券に関連する外部委託先1社のシステムへの第三者による不正アクセス。具体的な侵入経路・手法は公表されていない。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["デジタル証券関連の外部委託先システム"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"ソニー銀行は外部委託先への第三者による不正アクセスを公表しているが、攻撃主体を特定する帰属情報は公表していない。通常の帰属調査でも信頼できる独立した帰属は確認できなかった。","source_urls":["https://sonybank.jp/info/2026/1030-01.html"],"reviewed_at":"2026-11-02"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": 621,
+          "affected_users_note": "氏名・住所・生年月日・口座番号が4名、氏名が617名について外部漏えいをログ調査で確認。公表上は別群として示されており合計621名。",
+          "affected_organizations": null,
+          "records": 621,
+          "data_exposed": ["name", "address", "date_of_birth", "bank_account_number"],
+          "service_disruption": false,
+          "service_disruption_note": "ソニー銀行のデジタル証券以外のサービスには関係しない。公表時点で本件に起因する不正取引は確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"ソニー銀行株式会社","published_at":"2026-10-30","url":"https://sonybank.jp/info/2026/1030-01.html","title":"デジタル証券に関する外部委託先への不正アクセスによるお客さま情報（氏名、住所、生年月日、口座番号：4名、氏名：617名）の漏洩について"},
+          {"kind":"official","publisher":"ソニー銀行株式会社","published_at":null,"url":"https://sonybank.jp/corporate/aboutus/profile.html","title":"会社概要"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-02T12:00:00+09:00"
+      }
+    }
+  ]
+}
