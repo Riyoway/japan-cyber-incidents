@@ -1,0 +1,292 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-01-nojima-online-data-breach",
+        "organization": {
+          "name": "株式会社ノジマ",
+          "name_en": "Nojima Corporation",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["retail", "ecommerce", "consumer_electronics"],
+          "business_model": ["b2c"],
+          "service": "ノジマオンライン / 中古スマホ買取サイト",
+          "country": "JP",
+          "website": "https://www.nojima.co.jp/",
+          "headquarters": {"address":"〒108-6230 東京都港区港南2-15-3 品川インターシティC棟","prefecture":"東京都","city":"港区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.nojima.co.jp/corporation/profile/"},
+          "employee_count": {"value":16596,"unit":"employees","estimate_type":"reported","basis":"連結従業員数（2025年3月末時点）","confidence":"high"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Prime Market","ticker":"7419"},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "ノジマオンライン会員管理システムへの不正アクセスによる約700万件の個人情報漏えい",
+          "types": ["unauthorized_access", "data_breach", "credential_exposure", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-11-01",
+          "disclosed_at": "2026-11-02",
+          "status": {"value":"contained_investigating_service_suspended","as_of":"2026-11-02"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["ノジマオンライン会員管理システム", "ノジマオンライン", "中古スマホ買取サイト"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"ノジマは第三者による不正アクセスと個人情報の外部漏えいを確認したが、攻撃主体を特定する帰属情報は公表していない。通常の帰属調査でも被害企業・法執行機関・フォレンジック等による信頼できる帰属は確認できなかった。","source_urls":["https://www.nojima.co.jp/wp-content/uploads/2026/11/fa47750556e505f2ddb83dc080a6420f.pdf"],"reviewed_at":"2026-11-03"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "公式資料は『対象人数 約700万件』と表記しており、退会者は含まれない。件数と人数の表記が混在するため、厳密なユニーク人数としては扱わない。",
+          "affected_organizations": 1,
+          "records": 7000000,
+          "data_exposed": ["name", "date_of_birth", "gender", "postal_code", "address", "phone_number", "login_id", "encrypted_password", "email_address"],
+          "service_disruption": true,
+          "service_disruption_note": "ノジマオンラインと中古スマホ買取サイトを一時休止し、外部アクセスを遮断。再開時期は安全性確認後に案内予定。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社ノジマ","published_at":"2026-11-02","url":"https://www.nojima.co.jp/wp-content/uploads/2026/11/fa47750556e505f2ddb83dc080a6420f.pdf","title":"ノジマオンラインの不正アクセスに伴う個人情報漏えいに関するお詫びとお知らせ"},
+          {"kind":"official","publisher":"株式会社ノジマ","published_at":null,"url":"https://www.nojima.co.jp/corporation/profile/","title":"会社概要"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-03T00:06:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-28-istyle-atcosme-data-breach",
+        "organization": {
+          "name": "株式会社アイスタイル",
+          "name_en": "istyle Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["information_technology", "beauty", "ecommerce", "media"],
+          "business_model": ["b2c", "b2b"],
+          "service": "@cosme / @cosme共通ID",
+          "country": "JP",
+          "website": "https://www.istyle.co.jp/",
+          "headquarters": {"address":"〒107-6034 東京都港区赤坂1-12-32 アーク森ビル34階","prefecture":"東京都","city":"港区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.istyle.co.jp/company/info/"},
+          "employee_count": {"value":1395,"unit":"employees","estimate_type":"reported","basis":"連結従業員数（2026年6月末時点）","confidence":"high"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Prime Market","ticker":"3660"},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "@cosmeへの不正アクセスによる約300万人の会員情報漏えい",
+          "types": ["unauthorized_access", "data_breach"],
+          "occurred_at": "2026-10-28",
+          "detected_at": "2026-10-28",
+          "disclosed_at": "2026-11-02",
+          "status": {"value":"contained_investigating","as_of":"2026-11-02"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["@cosme", "@cosme共通ID"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"アイスタイルは第三者による不正アクセスと会員情報漏えいを確認したが、攻撃主体の帰属情報は公表していない。通常の帰属調査でも信頼できる独立した帰属は確認できなかった。","source_urls":["https://www.istyle.co.jp/news/info/2026/11/1102.html"],"reviewed_at":"2026-11-03"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": 3000000,
+          "affected_users_note": "公式発表で対象人数を約300万人と公表。退会済みでも不正アクセス時点で会員だった利用者を含む。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": ["user_id", "nickname", "name", "postal_code", "address", "phone_number", "email_address", "gender", "date_of_birth", "skin_type", "hair_type"],
+          "service_disruption": false,
+          "service_disruption_note": "不正アクセス確認後に被害拡大防止措置を実施。公表時点で本件起因の不正利用・二次被害は確認されていない。ログインパスワードとクレジットカード情報は対象外。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社アイスタイル","published_at":"2026-11-02","url":"https://www.istyle.co.jp/news/info/2026/11/1102.html","title":"不正アクセスによる個人情報漏えいに関するお詫びとお知らせについて"},
+          {"kind":"official","publisher":"株式会社アイスタイル","published_at":null,"url":"https://www.istyle.co.jp/company/info/","title":"会社概要"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-03T00:06:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-28-suntory-cloud-data-breach",
+        "organization": {
+          "name": "サントリーホールディングス株式会社",
+          "name_en": "Suntory Holdings Limited",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["food_and_beverage", "consumer_goods"],
+          "business_model": ["b2c", "b2b"],
+          "service": "サントリーグループ外部クラウドサービス",
+          "country": "JP",
+          "website": "https://www.suntory.co.jp/",
+          "headquarters": {"address":"〒530-8203 大阪府大阪市北区堂島浜2-1-40","prefecture":"大阪府","city":"大阪市北区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.suntory.co.jp/company/overview/"},
+          "employee_count": {"value":41628,"unit":"employees","estimate_type":"reported","basis":"サントリーグループ従業員数（2025年12月31日現在）","confidence":"high"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"people","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "外部クラウドサービスへの不正アクセスによるサントリーグループ個人情報漏えい",
+          "types": ["third_party_incident", "unauthorized_access", "data_breach"],
+          "occurred_at": null,
+          "detected_at": "2026-10-28",
+          "disclosed_at": "2026-11-02",
+          "status": {"value":"contained_investigating_notifying","as_of":"2026-11-02"},
+          "attack_vector": "サントリーグループが利用する外部クラウドサービスへの第三者による不正アクセス。具体的な侵入経路・手法は公表されていない。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["サントリーグループ利用の外部クラウドサービス"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"サントリーは外部クラウドサービスへの第三者による不正アクセスとファイルのダウンロードを確認したが、攻撃主体を特定する帰属情報は公表していない。通常の帰属調査でも信頼できる帰属は確認できなかった。","source_urls":["https://www.suntory.co.jp/note/detail/261102_008203.html"],"reviewed_at":"2026-11-03"}
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "公表された7区分は90,000名、7,323名、7,173名、1,097名、324名、96名、25名だが、区分間の人物重複が明示されていないためユニーク人数として合算しない。単純区分合計は106,038名。調査継続中。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": ["name", "email_address", "phone_number", "job_application_profile", "job_title", "delivery_location"],
+          "service_disruption": false,
+          "service_disruption_note": "不正アクセスを遮断し必要な対策を実施。公表時点で漏えい情報の不正利用は確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"サントリーホールディングス株式会社 / サントリービバレッジ＆フード株式会社","published_at":"2026-11-02","url":"https://www.suntory.co.jp/note/detail/261102_008203.html","title":"外部クラウドサービスへの不正アクセスによる個人情報漏えいに関するお詫び"},
+          {"kind":"official","publisher":"サントリーホールディングス株式会社","published_at":null,"url":"https://www.suntory.co.jp/company/overview/","title":"企業概要"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-03T00:06:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-02-tv-tokyo-direct-mart-unauthorized-access",
+        "organization": {
+          "name": "株式会社テレビ東京ダイレクト",
+          "name_en": "TV TOKYO Direct, Inc.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": ["ecommerce", "media", "retail"],
+          "business_model": ["b2c"],
+          "service": "テレ東マート",
+          "country": "JP",
+          "website": "https://www.txhd.co.jp/corporate/group/",
+          "headquarters": {"address":"東京都港区虎ノ門4-3-12 日経虎ノ門別館3F","prefecture":"東京都","city":"港区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.txhd.co.jp/corporate/group/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"customers","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "通販サイト「テレ東マート」への不正アクセスと緊急停止",
+          "types": ["unauthorized_access", "service_disruption"],
+          "occurred_at": null,
+          "detected_at": "2026-11-02",
+          "disclosed_at": "2026-11-02",
+          "status": {"value":"service_suspended_investigating","as_of":"2026-11-02"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["テレ東マート"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスは公表されているが、攻撃主体を特定する帰属情報は確認できない。","source_urls":["https://rocket-boys.co.jp/security-measures-lab/tvtokyo_mart_unauthorized_access_site_closed_20261102/"],"reviewed_at":"2026-11-03"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "2026年11月2日時点で個人情報およびクレジットカード情報の漏えいは確認されておらず、影響範囲と侵入経路を調査中。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "2026年11月2日03:53にテレ東マートを緊急停止。一方、番組紹介商品の電話注文は継続。03:53は停止時刻であり攻撃発生時刻・検知時刻には転用しない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"news","publisher":"セキュリティ対策Lab","published_at":"2026-11-02","url":"https://rocket-boys.co.jp/security-measures-lab/tvtokyo_mart_unauthorized_access_site_closed_20261102/","title":"テレ東マートに不正アクセス、11月2日午前3時53分に通販サイト緊急停止 個人情報・カード情報の漏えいは確認されず"}
+        ],
+        "confidence": "medium",
+        "last_updated": "2026-11-03T00:06:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-30-gmo-pg-vpreca-customer-data-exposure",
+        "organization": {
+          "name": "GMOペイメントゲートウェイ株式会社",
+          "name_en": "GMO Payment Gateway, Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": ["financial_services", "payment_processing", "information_technology"],
+          "business_model": ["b2b", "b2c"],
+          "service": "ライフカード向けイシュイングサポートサービス個別機能 / Vプリカ",
+          "country": "JP",
+          "website": "https://www.gmo-pg.com/",
+          "headquarters": {"address":null,"prefecture":"東京都","city":"渋谷区","latitude":null,"longitude":null,"precision":"city","source":"https://www.gmo-pg.com/company/profile/"},
+          "employee_count": {"value":null,"unit":"employees","estimate_type":"unknown","basis":null,"confidence":"unknown"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Prime Market","ticker":"3769"},
+          "estimated_total_users": {"value":null,"unit":"accounts","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "ライフカード向け個別機能での不正行為によるVプリカ関連顧客情報69アカウントの窃取可能性",
+          "types": ["unauthorized_access", "potential_data_breach", "service_disruption"],
+          "occurred_at": "2026-10-30",
+          "detected_at": null,
+          "disclosed_at": "2026-11-02",
+          "status": {"value":"contained_investigating_service_degraded","as_of":"2026-11-02"},
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": ["ライフカード向けイシュイングサポートサービス個別機能"],
+          "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"GMOペイメントゲートウェイは不正なユーザーによる行為を公表したが、攻撃主体を特定する帰属情報は示していない。通常の帰属調査でも信頼できる独立した帰属は確認できなかった。","source_urls":["https://www.gmo-pg.com/news/news/info/2026/1102.html"],"reviewed_at":"2026-11-03"}
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "窃取された可能性がある対象は計69アカウント。63件は氏名・メール・電話・住所の一部、3件はVプリカ番号・専用セキュリティコード・有効期限・氏名、3件はVプリカ番号の一部。69人とは断定しない。",
+          "affected_organizations": 1,
+          "records": 69,
+          "data_exposed": ["name", "email_address", "phone_number", "partial_address", "vpreca_number", "vpreca_security_code", "expiration_date"],
+          "service_disruption": true,
+          "service_disruption_note": "対象サービスの一部を停止し安全性を確認中。他顧客向けイシュイングサポートサービスおよび決済代行サービス等は別基盤で影響なし。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"GMOペイメントゲートウェイ株式会社","published_at":"2026-11-02","url":"https://www.gmo-pg.com/news/news/info/2026/1102.html","title":"お客様情報の一部が窃取された可能性に関するお詫びとお知らせ"}
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-03T00:06:00+09:00"
+      }
+    },
+    {
+      "operation": "patch",
+      "id": "2026-10-28-arara-message-data-breach",
+      "set": {
+        "incident.status": {"value":"service_suspended_investigating_expanded_scope","as_of":"2026-11-02"},
+        "incident.affected_systems": ["アララ メッセージ", "契約企業環境（サーバー97台、最大約380社）"],
+        "incident.threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"第三者による不正アクセスと大規模な情報持ち出しは確認されているが、攻撃主体を特定する被害企業・捜査機関・フォレンジック等の帰属情報は公表されていない。","source_urls":["https://am.arara.com/news/2026102802","https://internet.watch.impress.co.jp/docs/news/2153174.html"],"reviewed_at":"2026-11-03"},
+        "impact.records": 77000000,
+        "impact.affected_organizations": 380,
+        "impact.affected_users_note": "11月2日の第2報で、メールアドレス約7,700万件（精査中）と氏名等の会員情報が外部に持ち出されたことが判明。最大約380社の契約企業環境、サーバー97台への侵入が確認された。7,700万件はメールアドレス件数であり人数として扱わない。",
+        "impact.data_exposed": ["email_address", "name", "customer_member_information"],
+        "impact.service_disruption_note": "被害拡大防止のため2026年10月31日にアララ メッセージの提供を全停止。11月2日時点で再開時期未定。",
+        "last_updated": "2026-11-03T00:06:00+09:00"
+      },
+      "append": {
+        "sources": [
+          {"kind":"news","publisher":"INTERNET Watch","published_at":"2026-11-02","url":"https://internet.watch.impress.co.jp/docs/news/2153174.html","title":"ペイクラウドHD、「アララ メッセージ」への不正アクセスで約7700万件のメールアドレスが流出"}
+        ]
+      }
+    }
+  ]
+}
