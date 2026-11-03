@@ -1,0 +1,137 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-29-marui-group-securitize-data-breach",
+        "organization": {
+          "name": "株式会社丸井グループ", "name_en": "MARUI GROUP CO., LTD.", "type": "company", "size": "large_enterprise",
+          "industry": ["retail", "financial_services"], "business_model": ["b2c"], "service": "デジタル社債", "country": "JP",
+          "website": "https://www.0101maruigroup.co.jp/",
+          "headquarters": {"address":"〒164-8701 東京都中野区中野4丁目3番2号","prefecture":"東京都","city":"中野区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.0101.co.jp/company/ci/outline.html"},
+          "employee_count": {"value":3820,"unit":"employees","estimate_type":"reported","basis":"丸井グループおよび連結子会社合計、2026年3月末時点","confidence":"high"},
+          "listing": {"is_listed":true,"market":"Tokyo Stock Exchange Prime Market","ticker":"8252"},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "デジタル社債管理委託先Securitize Japanへの不正アクセスによる最大9,086名の個人情報漏えい",
+          "types": ["third_party_incident", "unauthorized_access", "data_breach"],
+          "occurred_at": "2026-10-29", "detected_at": "2026-10-29", "disclosed_at": "2026-11-02",
+          "status": {"value":"contained_investigating","as_of":"2026-11-02"},
+          "attack_vector": "委託先Securitize Japanのシステムへの第三者による不正アクセス。Securitize系事案では認証機能の脆弱性悪用が公表されているが、丸井グループ発表では詳細原因を調査中としているため、特定CVEは付与しない。",
+          "threat_actor": null, "ransomware": null, "malware_family": null, "vulnerabilities": [],
+          "affected_systems": ["Securitize Japan デジタル社債管理システム"], "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"丸井グループおよび関連するSecuritize事案の公表は第三者による不正アクセスを確認しているが、攻撃主体を特定する帰属情報は公表していない。通常の帰属調査でも信頼できる被害組織・法執行・フォレンジックによる帰属は確認できなかった。","source_urls":["https://www.0101maruigroup.co.jp/nr/o-20-0zfdye","https://www.nttdata.com/global/ja/news/release/2026/110200/"],"reviewed_at":"2026-11-03"}
+        },
+        "impact": {
+          "confirmed_breach": true, "affected_users": 9086,
+          "affected_users_note": "デジタル社債申込用アカウントを作成した顧客最大9,086名。うち銀行口座番号まで漏えいした可能性がある顧客は54名。",
+          "affected_organizations": 1, "records": null,
+          "data_exposed": ["name","address","phone_number","email_address","date_of_birth","gender","bank_account_number","investment_units"],
+          "service_disruption": false, "service_disruption_note": "丸井グループ自身のシステムからの漏えいは確認されておらず、公表時点で本件起因の二次被害も確認されていない。", "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社丸井グループ","published_at":"2026-11-02","url":"https://www.0101maruigroup.co.jp/nr/o-20-0zfdye","title":"デジタル社債の管理に関する外部委託先企業への不正アクセスによるお客さまの情報漏えいについて"},
+          {"kind":"official","publisher":"株式会社丸井グループ","published_at":null,"url":"https://www.0101.co.jp/company/ci/outline.html","title":"会社概要"}
+        ],
+        "confidence": "high", "last_updated": "2026-11-03T12:04:49+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-29-lifull-investment-securitize-data-breach",
+        "organization": {
+          "name": "株式会社LIFULL Investment", "name_en": "LIFULL Investment Co., Ltd", "type": "company", "size": "small_enterprise",
+          "industry": ["financial_services", "real_estate"], "business_model": ["b2c"], "service": "LIFULL 不動産クラウドファンディング", "country": "JP",
+          "website": "https://lifull-investment.co.jp/",
+          "headquarters": {"address":"〒102-0083 東京都千代田区麹町一丁目4番地4","prefecture":"東京都","city":"千代田区","latitude":null,"longitude":null,"precision":"exact","source":"https://lifull-investment.co.jp/company/"},
+          "employee_count": {"value":22,"unit":"employees","estimate_type":"reported","basis":"役員・非正規雇用者等を含む、2026年7月1日現在","confidence":"high"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "LIFULL不動産クラウドファンディング委託先Securitizeへの不正アクセスによる238名の顧客情報漏えい",
+          "types": ["third_party_incident", "unauthorized_access", "data_breach"],
+          "occurred_at": "2026-10-29", "detected_at": "2026-10-29", "disclosed_at": "2026-11-02",
+          "status": {"value":"contained_investigating_notifying","as_of":"2026-11-02"},
+          "attack_vector": "外部委託先Securitize Japanのシステムの一部機能の脆弱性を第三者が悪用して顧客情報を取得。特定CVEは公表されていない。",
+          "threat_actor": null, "ransomware": null, "malware_family": null, "vulnerabilities": [],
+          "affected_systems": ["Securitize Japan システム", "LIFULL 不動産クラウドファンディング関連顧客情報"], "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"LIFULL InvestmentはSecuritize Japanへの第三者による不正アクセスを確認したが攻撃主体の帰属情報は公表していない。通常の帰属調査でも信頼できる独立した帰属は確認できなかった。","source_urls":["https://lifull.com/news/50881/"],"reviewed_at":"2026-11-03"}
+        },
+        "impact": {
+          "confirmed_breach": true, "affected_users": 238,
+          "affected_users_note": "203名は氏名・投資口数、22名は氏名・銀行口座情報等、8名は氏名・メールアドレス、5名は氏名・生年月日・住所・電話番号・メールアドレス。",
+          "affected_organizations": 1, "records": null,
+          "data_exposed": ["name","investment_units","bank_name","bank_branch","bank_account_number","bank_account_holder","email_address","date_of_birth","address","phone_number"],
+          "service_disruption": false, "service_disruption_note": "顧客資産への影響はない。Securitize側は10月29日22:02に不正アクセスを遮断しシステムを一時停止。", "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"株式会社LIFULL / 株式会社LIFULL Investment","published_at":"2026-11-02","url":"https://lifull.com/news/50881/","title":"LIFULL Investmentが利用するクラウドサービスにおける不正アクセスに関するお知らせ"},
+          {"kind":"official","publisher":"株式会社LIFULL Investment","published_at":null,"url":"https://lifull-investment.co.jp/company/","title":"会社情報"}
+        ],
+        "confidence": "high", "last_updated": "2026-11-03T12:04:49+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-10-23-ucc-comsbi-email-breach",
+        "organization": {
+          "name": "UCC上島珈琲株式会社", "name_en": "UCC Ueshima Coffee Co., Ltd.", "type": "company", "size": "large_enterprise",
+          "industry": ["food_and_beverage"], "business_model": ["b2c", "b2b"], "service": "過去利用のCOMSBI エンタープライズ基盤", "country": "JP",
+          "website": "https://www.ucc.co.jp/",
+          "headquarters": {"address":"〒650-8577 兵庫県神戸市中央区港島中町7丁目7番7","prefecture":"兵庫県","city":"神戸市中央区","latitude":null,"longitude":null,"precision":"exact","source":"https://www.ucc.co.jp/company/outline/index.html"},
+          "employee_count": {"value":736,"unit":"employees","estimate_type":"reported","basis":"2025年12月末","confidence":"high"},
+          "listing": {"is_listed":false,"market":null,"ticker":null},
+          "estimated_total_users": {"value":null,"unit":"users","estimate_type":"unknown","basis":null,"confidence":"unknown"}
+        },
+        "incident": {
+          "title": "過去利用していたCOMSBI エンタープライズ基盤への不正アクセスによるメールアドレス5,529件漏えい",
+          "types": ["third_party_incident", "unauthorized_access", "data_breach"],
+          "occurred_at": "2026-10-23", "detected_at": "2026-10-23", "disclosed_at": "2026-11-02",
+          "status": {"value":"contained_notifying_monitoring","as_of":"2026-11-02"},
+          "attack_vector": "提供元ソニックムーブのCOMSBI エンタープライズ基盤への不正アクセス。提供元は不正取得された管理画面認証情報の悪用と管理画面機能上の不備を公表している。",
+          "threat_actor": null, "ransomware": null, "malware_family": null, "vulnerabilities": [],
+          "affected_systems": ["COMSBI エンタープライズ基盤"], "affected_regions": ["Japan"],
+          "threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"UCCおよびソニックムーブは第三者による不正アクセスを確認しているが、攻撃主体の帰属情報は公表していない。通常の帰属調査でも信頼できる帰属は確認できなかった。","source_urls":["https://www.ucc.co.jp/press/20261102.html","https://sonicmoov.com/news/xr5qdn-cnfsn"],"reviewed_at":"2026-11-03"}
+        },
+        "impact": {
+          "confirmed_breach": true, "affected_users": null,
+          "affected_users_note": "漏えいが確認されたのはメールアドレス5,529件。件数をユニーク人数とはみなさない。UCCの当該サービス利用期間は2019年12月〜2023年12月。",
+          "affected_organizations": 1, "records": 5529, "data_exposed": ["email_address"],
+          "service_disruption": false, "service_disruption_note": "UCC自身のシステムへの不正アクセスは確認されておらず、公表時点で本件起因の不正利用等も確認されていない。", "service_recovered_at": null
+        },
+        "sources": [
+          {"kind":"official","publisher":"UCC上島珈琲株式会社","published_at":"2026-11-02","url":"https://www.ucc.co.jp/press/20261102.html","title":"外部サービス提供元における不正アクセスに関するお詫びとお知らせ"},
+          {"kind":"official","publisher":"UCC上島珈琲株式会社","published_at":null,"url":"https://www.ucc.co.jp/company/outline/index.html","title":"会社概要"}
+        ],
+        "confidence": "high", "last_updated": "2026-11-03T12:04:49+09:00"
+      }
+    },
+    {
+      "operation": "patch",
+      "id": "2026-10-31-ntt-data-stdirectservices-third-party-saas-incident",
+      "set": {
+        "incident.detected_at": "2026-10-29",
+        "incident.status": {"value":"service_suspended_investigating_confirmed_breach","as_of":"2026-11-02"},
+        "incident.attack_vector": "Securitize JapanのSaaSサービスでシステムの認証機能の脆弱性が悪用され、第三者が管理者権限を不正取得してシステム内情報を持ち出した。特定CVEは公表されていない。",
+        "incident.vulnerabilities": [],
+        "incident.threat_actor_attribution": {"name":null,"actor_type":"unknown","aliases":[],"status":"unknown","confidence":"unknown","basis":"NTTデータは認証機能の脆弱性悪用と管理者権限の不正取得を確認したが、攻撃主体を特定する帰属情報は公表していない。通常の帰属調査でも信頼できる独立した帰属は確認できなかった。","source_urls":["https://www.nttdata.com/global/ja/news/release/2026/103101/","https://www.nttdata.com/global/ja/news/release/2026/110200/"],"reviewed_at":"2026-11-03"},
+        "impact.confirmed_breach": true,
+        "impact.affected_users": null,
+        "impact.affected_users_note": "発行体2社分の社債購入者111名、別の発行体1社分の社債購入者2,678名で漏えいを確認。さらに発行体・金融機関のシステム利用担当者は人数調査中のため、総ユニーク人数は確定していない。",
+        "impact.data_exposed": ["name","address","phone_number","email_address","gender","date_of_birth","name_kana","bond_purchase_quantity"],
+        "impact.service_disruption_note": "Securitize JapanのSaaSサービスおよびSTdirectServicesを停止中。不正アクセス経路を遮断し、不正取得された管理者権限を無効化。再開は必要な安全対策を確認後に判断。",
+        "impact.service_recovered_at": null,
+        "last_updated": "2026-11-03T12:04:49+09:00"
+      },
+      "append": {
+        "sources": [
+          {"kind":"official","publisher":"株式会社NTTデータ","published_at":"2026-11-02","url":"https://www.nttdata.com/global/ja/news/release/2026/110200/","title":"STdirectServicesのサービス停止についてのお知らせ（第2報）"}
+        ]
+      }
+    }
+  ]
+}
