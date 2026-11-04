@@ -1,0 +1,119 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-03-asoview-arara-message-data-breach",
+        "organization": {
+          "name": "アソビュー株式会社",
+          "name_en": "Asoview Inc.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [
+            "travel",
+            "leisure",
+            "online_services"
+          ],
+          "business_model": [
+            "b2c",
+            "b2b"
+          ],
+          "service": "アソビュー！",
+          "country": "JP",
+          "website": "https://www.asoview.co.jp/",
+          "headquarters": {
+            "address": null,
+            "prefecture": "東京都",
+            "city": "品川区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "city",
+            "source": "https://www.asoview.co.jp/news/articles/8z-MHRdb"
+          },
+          "employee_count": null,
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "メール配信委託先アララへの不正アクセスによりアソビュー！会員情報15,821,184件が流出",
+          "types": [
+            "third_party_incident",
+            "unauthorized_access",
+            "data_breach",
+            "service_disruption"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-11-02",
+          "disclosed_at": "2026-11-03",
+          "status": {
+            "value": "confirmed_breach_investigating_mail_delivery_suspended",
+            "as_of": "2026-11-03"
+          },
+          "attack_vector": "メール配信委託先アララの『アララメッセージ』への第三者による不正アクセス。アソビュー自身のシステムへの侵入は調査中。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "アララメッセージに預託したアソビュー！会員情報",
+            "メール配信機能"
+          ],
+          "affected_regions": [
+            "Japan"
+          ],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "委託先への不正アクセスと情報持ち出しは公表されているが、攻撃主体を特定する信頼できる帰属情報は確認できない。",
+            "source_urls": [
+              "https://www.asoview.co.jp/news/articles/AyTdT_tX"
+            ],
+            "reviewed_at": "2026-11-04"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "流出データ15,821,184件。重複等があり同数のユニーク会員が被害に遭ったことを意味しない。対象会員の照合は継続中。",
+          "affected_organizations": 1,
+          "records": 15821184,
+          "data_exposed": [
+            "email_address",
+            "name",
+            "phone_number",
+            "ticket_purchase_datetime",
+            "facility_name",
+            "ticket_usage_datetime"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "11月2日にアララメッセージを利用した全メール配信を停止し、管理画面パスワード・APIキー等を無効化。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "アソビュー株式会社",
+            "published_at": "2026-11-03",
+            "url": "https://www.asoview.co.jp/news/articles/AyTdT_tX",
+            "title": "委託先メール配信サービスへの不正アクセスに関するお詫びとお知らせ"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-04T12:00:00+09:00"
+      }
+    }
+  ]
+}
