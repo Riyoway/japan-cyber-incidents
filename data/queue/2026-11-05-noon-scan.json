@@ -1,0 +1,225 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-04-uchicomi-ransomware-accounts",
+        "organization": {
+          "name": "株式会社ウチコミ",
+          "name_en": "Uchicomi, Inc.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [
+            "real_estate",
+            "online_services"
+          ],
+          "business_model": [
+            "b2c"
+          ],
+          "service": "ウチコミ！",
+          "country": "JP",
+          "website": "https://uchicomi.co.jp/",
+          "headquarters": {
+            "address": "東京都新宿区西新宿6-14-1 新宿グリーンタワービル18階",
+            "prefecture": "東京都",
+            "city": "新宿区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "address",
+            "source": "https://uchicomi.co.jp/about"
+          },
+          "employee_count": null,
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "ウチコミ！のサーバーに対するランサムウェア攻撃、142,591アカウントの情報漏えいの可能性",
+          "types": [
+            "ransomware",
+            "unauthorized_access",
+            "data_breach",
+            "service_disruption"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-07-06",
+          "disclosed_at": "2026-11-04",
+          "status": {
+            "value": "investigating_possible_personal_data_breach",
+            "as_of": "2026-11-04"
+          },
+          "attack_vector": null,
+          "ransomware": true,
+          "affected_systems": [
+            "ウチコミ！サーバー",
+            "サーバー内保存ファイル"
+          ],
+          "threat_actor": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_regions": [
+            "Japan"
+          ],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "被害組織の公表および関連報道を確認したが、攻撃主体を特定する信頼できる公開帰属情報はない。",
+            "source_urls": [
+              "https://uchicomi.co.jp/news/647"
+            ],
+            "reviewed_at": "2026-11-05"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "142,591は漏えいの可能性があるアカウント数。暗号化と一部ファイルの窃取は確認されたが、各アカウントの全項目の漏えいは未確定。",
+          "affected_organizations": 1,
+          "records": 142591,
+          "data_exposed": [
+            "name",
+            "email_address",
+            "date_of_birth",
+            "gender",
+            "address",
+            "phone_number"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "2026年7月6日にサーバー障害を確認し、切り離しなどの緊急対応を実施。現在の全サービス停止状況は未公表。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社ウチコミ",
+            "published_at": "2026-11-04",
+            "url": "https://uchicomi.co.jp/news/647",
+            "title": "当社サイトへの不正アクセスによる個人情報漏えいの可能性に関するお詫びとお知らせ"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-05T12:00:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-04-misawa-unico-curtain-vendor-breach",
+        "organization": {
+          "name": "株式会社ミサワ",
+          "name_en": "Misawa & Co., Ltd.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [
+            "retail",
+            "home_furnishings"
+          ],
+          "business_model": [
+            "b2c"
+          ],
+          "service": "unico オーダーカーテン",
+          "country": "JP",
+          "website": "https://www.misawa-corp.co.jp/",
+          "headquarters": {
+            "address": "東京都渋谷区恵比寿四丁目20番3号",
+            "prefecture": "東京都",
+            "city": "渋谷区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "address",
+            "source": "https://www.misawa-corp.co.jp/company/"
+          },
+          "employee_count": 470,
+          "listing": {
+            "is_listed": true,
+            "market": "Tokyo Stock Exchange Standard Market",
+            "ticker": "3169"
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "unicoオーダーカーテン業務の再委託先サーバーへの不正アクセス、顧客情報約17万件の漏えいの可能性",
+          "types": [
+            "third_party_incident",
+            "unauthorized_access",
+            "data_breach"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-10-30",
+          "disclosed_at": "2026-11-04",
+          "status": {
+            "value": "investigating_possible_data_breach",
+            "as_of": "2026-11-04"
+          },
+          "attack_vector": "オーダーカーテン業務委託先テキスタイルデポのシステム再委託先ナノテックが管理するサーバーへの不正アクセス。ミサワの受注業務環境とは別サーバー。",
+          "ransomware": null,
+          "affected_systems": [
+            "株式会社ナノテック管理サーバー上のオーダーカーテン関連顧客情報"
+          ],
+          "threat_actor": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_regions": [
+            "Japan"
+          ],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "被害組織の公表および関連報道を確認したが、攻撃主体を特定する信頼できる公開帰属情報はない。",
+            "source_urls": [
+              "https://www.unico-fan.co.jp/blogs/news/info-2026-11-04"
+            ],
+            "reviewed_at": "2026-11-05"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "2016年9月1日〜2026年10月25日のオーダーカーテン購入者情報約17万件が対象となる可能性。実際の漏えい件数は調査中。",
+          "affected_organizations": 1,
+          "records": 170000,
+          "data_exposed": [
+            "name",
+            "address",
+            "phone_number"
+          ],
+          "service_disruption": false,
+          "service_disruption_note": "受注業務は別サーバーで運用され、当該環境の問題は確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社ミサワ",
+            "published_at": "2026-11-04",
+            "url": "https://www.unico-fan.co.jp/blogs/news/info-2026-11-04",
+            "title": "【重要なお知らせ】オーダーカーテンに関するお客さま情報の流出の可能性について"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-05T12:00:00+09:00"
+      }
+    }
+  ]
+}
