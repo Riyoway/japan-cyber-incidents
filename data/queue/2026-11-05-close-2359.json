@@ -1,0 +1,131 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-05-ntt-docomo-online-shop-mydocomo-unauthorized-access",
+        "organization": {
+          "name": "株式会社NTTドコモ",
+          "name_en": "NTT DOCOMO, INC.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": [
+            "telecommunications",
+            "ecommerce",
+            "technology"
+          ],
+          "business_model": [
+            "b2c",
+            "b2b"
+          ],
+          "service": "ドコモオンラインショップ / My docomo",
+          "country": "JP",
+          "website": "https://www.docomo.ne.jp/",
+          "headquarters": {
+            "address": "〒100-6150 東京都千代田区永田町2丁目11番1号 山王パークタワー",
+            "prefecture": "東京都",
+            "city": "千代田区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "address",
+            "source": "https://www.docomo.ne.jp/corporate/about/access/index.html"
+          },
+          "employee_count": {
+            "value": 9876,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "2026年3月31日時点の単体従業員数（グループ53,780名）",
+            "confidence": "high"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "ドコモオンラインショップ・My docomoへの不正アクセス、最大約30万件の顧客情報流出と手続き停止",
+          "types": [
+            "unauthorized_access",
+            "data_breach",
+            "service_disruption"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-11-04",
+          "disclosed_at": "2026-11-05",
+          "status": {
+            "value": "confirmed_data_breach_services_suspended_investigating",
+            "as_of": "2026-11-05"
+          },
+          "attack_vector": null,
+          "ransomware": false,
+          "affected_systems": [
+            "ドコモオンラインショップ",
+            "My docomo",
+            "関連する顧客情報を扱うサーバー"
+          ],
+          "threat_actor": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_regions": [
+            "Japan"
+          ],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "NTTドコモの2026年11月5日第二報を確認。第三者による不正アクセスと一部顧客情報の流出は確認されたが、攻撃主体の特定・技術的帰属は公表されていない。",
+            "source_urls": [
+              "https://www.docomo.ne.jp/info/notice/page/261105_03_m.html"
+            ],
+            "reviewed_at": "2026-11-05"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "最大約30万件は流出対象の上限見込みであり、確定したユニーク人数ではない。流出の事実は確認済みだが詳細件数・項目は調査中。",
+          "affected_organizations": 1,
+          "records": 300000,
+          "data_exposed": [
+            "name",
+            "address",
+            "date_of_birth",
+            "mobile_phone_number",
+            "contact_phone_number"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "2026年11月5日01:05頃からドコモオンラインショップ・My docomoの各種手続きを停止。11月5日18:30時点で継続、復旧見込み未定。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社NTTドコモ",
+            "published_at": "2026-11-05",
+            "url": "https://www.docomo.ne.jp/info/notice/page/261105_03_m.html",
+            "title": "当社サーバーへの不正アクセスによるお客さま情報流出に関するお知らせ（第二報：11月5日 午後6時30分時点）"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社NTTドコモ",
+            "published_at": "2026-11-05",
+            "url": "https://www.docomo.ne.jp/info/notice/page/261105_02_m.html",
+            "title": "ドコモオンラインショップ、My docomoの緊急メンテナンス実施について（11月5日午前9時00分時点）"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-05T23:59:00+09:00"
+      }
+    }
+  ]
+}
