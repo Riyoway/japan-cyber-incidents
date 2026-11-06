@@ -1,0 +1,224 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-04-solaseed-air-mail-provider-breach",
+        "organization": {
+          "name": "株式会社ソラシドエア",
+          "name_en": "Solaseed Air Inc.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [
+            "air_transportation"
+          ],
+          "business_model": [
+            "b2c"
+          ],
+          "service": "予約・搭乗関連メール配信",
+          "country": "JP",
+          "website": "https://www.solaseedair.jp/",
+          "headquarters": {
+            "address": null,
+            "prefecture": "宮崎県",
+            "city": "宮崎市",
+            "latitude": null,
+            "longitude": null,
+            "precision": "address",
+            "source": "https://www.solaseedair.jp/company/"
+          },
+          "employee_count": null,
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "外部メール送信システムへの不正アクセスでメールアドレス約49万件が漏えい",
+          "types": [
+            "third_party_incident",
+            "unauthorized_access",
+            "data_breach",
+            "service_disruption"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-10-28",
+          "disclosed_at": "2026-11-04",
+          "status": {
+            "value": "confirmed_email_address_breach_investigating",
+            "as_of": "2026-11-06"
+          },
+          "attack_vector": "外部委託先が運営するメール配信システムへの第三者による不正アクセス。具体的な侵入経路は未公表。",
+          "ransomware": null,
+          "affected_systems": [
+            "外部委託先メール配信システム"
+          ],
+          "threat_actor": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_regions": [
+            "Japan"
+          ],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "公式発表・報道で攻撃主体の技術的帰属や犯行声明を確認できない。",
+            "source_urls": [
+              "https://www.solaseedair.jp/info/2026/11/post-20260912.html"
+            ],
+            "reviewed_at": "2026-11-06"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "490,000件はメールアドレスの件数であり、ユニーク人数とは限らない。",
+          "affected_organizations": 1,
+          "records": 490000,
+          "data_exposed": [
+            "email_address"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "10月28日に一部メール停止、10月30日に一時復旧後、10月31日から予約・搭乗関連メールを停止。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社ソラシドエア",
+            "published_at": "2026-11-04",
+            "url": "https://www.solaseedair.jp/info/2026/11/post-20260912.html",
+            "title": "【重要】外部メール送信システムへの不正アクセスによる個人情報漏えいに関するお詫び"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-06T12:03:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-04-airdo-mail-provider-email-leak",
+        "organization": {
+          "name": "株式会社AIRDO",
+          "name_en": "AIRDO Co., Ltd.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [
+            "air_transportation"
+          ],
+          "business_model": [
+            "b2c"
+          ],
+          "service": "予約・運航案内メール配信",
+          "country": "JP",
+          "website": "https://www.airdo.jp/",
+          "headquarters": {
+            "address": null,
+            "prefecture": "北海道",
+            "city": "札幌市",
+            "latitude": null,
+            "longitude": null,
+            "precision": "address",
+            "source": "https://www.airdo.jp/"
+          },
+          "employee_count": null,
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "外部メール配信システムへの不正アクセスでメールアドレス最大673,920件が流出",
+          "types": [
+            "third_party_incident",
+            "unauthorized_access",
+            "data_breach",
+            "service_disruption"
+          ],
+          "occurred_at": null,
+          "detected_at": null,
+          "disclosed_at": "2026-11-04",
+          "status": {
+            "value": "confirmed_email_address_breach_investigating",
+            "as_of": "2026-11-06"
+          },
+          "attack_vector": "外部委託先が運営するメール配信システムへの第三者による不正アクセス。具体的な侵入経路は未公表。",
+          "ransomware": null,
+          "affected_systems": [
+            "外部委託先メール配信システム"
+          ],
+          "threat_actor": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_regions": [
+            "Japan"
+          ],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "公式発表・報道で攻撃主体の技術的帰属や犯行声明を確認できない。",
+            "source_urls": [
+              "https://www.fnn.jp/articles/-/1146487",
+              "https://chitose.guide/news/n0000254"
+            ],
+            "reviewed_at": "2026-11-06"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "673,920件はメールアドレスの件数であり、ユニーク人数とは限らない。",
+          "affected_organizations": 1,
+          "records": 673920,
+          "data_exposed": [
+            "email_address"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "10月31日から予約便の運航状況などに関するメール配信を停止。復旧時期は未定。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "news",
+            "publisher": "FNNプライムオンライン（北海道文化放送）",
+            "published_at": "2026-11-05",
+            "url": "https://www.fnn.jp/articles/-/1146487",
+            "title": "航空会社『エア・ドゥ』利用客のメアド“約67万件漏えい”委託先のメール配信システムに「第三者」が不正アクセス"
+          },
+          {
+            "kind": "news",
+            "publisher": "チトセガイド",
+            "published_at": "2026-11-05",
+            "url": "https://chitose.guide/news/n0000254",
+            "title": "AIRDO、メールアドレス最大673,920件流出の報告受ける"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-06T12:03:00+09:00"
+      }
+    }
+  ]
+}
