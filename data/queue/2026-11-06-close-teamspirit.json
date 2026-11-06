@@ -1,0 +1,134 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-06-teamspirit-development-server-breach",
+        "organization": {
+          "name": "株式会社チームスピリット",
+          "name_en": "TeamSpirit Inc.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": [
+            "technology",
+            "software",
+            "saas",
+            "human_resources"
+          ],
+          "business_model": [
+            "b2b"
+          ],
+          "service": "TeamSpirit / development server and cloud environment",
+          "country": "JP",
+          "website": "https://corp.teamspirit.com/",
+          "headquarters": {
+            "address": "東京都千代田区内幸町2-1-6 日比谷パークフロント19F",
+            "prefecture": "東京都",
+            "city": "千代田区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://corp.teamspirit.com/news/release/2026/03/70k/"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": true,
+            "market": "Tokyo Stock Exchange Growth",
+            "ticker": "4397"
+          },
+          "estimated_total_users": {
+            "value": 700000,
+            "unit": "users",
+            "estimate_type": "reported",
+            "basis": "2026年2月末のTeamSpirit等のサービス利用ユーザー数であり、被害者数ではない。",
+            "confidence": "high"
+          }
+        },
+        "incident": {
+          "title": "開発用サーバーへの不正ログインと認証情報を利用したクラウド環境からの情報流出",
+          "types": [
+            "unauthorized_access",
+            "data_breach",
+            "credential_compromise"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-10-27",
+          "disclosed_at": "2026-11-06",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-06"
+          },
+          "attack_vector": "開発用サーバーへの不正ログイン後、同サーバーに保存された認証情報を利用してクラウド環境からデータ取得。会社は開発サーバーの設定および情報管理の不備を原因と説明。具体的な侵入手法は非公表。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "software development server",
+            "cloud environment",
+            "non-production service maintenance data"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "公式発表は第三者の不正ログインと認証情報の利用を確認するが、攻撃者名や所属を帰属させていない。",
+            "sources": [
+              "https://corp.teamspirit.com/news/information/2026/11/2026_1106_01/"
+            ],
+            "reviewed_at": "2026-11-06"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "重複を除いた流出個人情報28,824件。ユニーク人数とは明記されていないため人数へ換算しない。要配慮個人情報35件を含む。",
+          "affected_organizations": null,
+          "records": 28824,
+          "data_exposed": [
+            "name",
+            "email_address",
+            "login_id",
+            "account_information",
+            "employee_number",
+            "employment_dates",
+            "birth_month_day",
+            "attendance_records",
+            "inquiry_records",
+            "sensitive_personal_information"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "開発用サーバーは10月27日に停止・外部接続遮断。本番サービス全体の停止は確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社チームスピリット",
+            "published_at": "2026-11-06",
+            "url": "https://corp.teamspirit.com/news/information/2026/11/2026_1106_01/",
+            "title": "不正アクセスによる情報漏えいに関するお詫びとお知らせ"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社チームスピリット",
+            "published_at": "2026-03-02",
+            "url": "https://corp.teamspirit.com/news/release/2026/03/70k/",
+            "title": "チームスピリット、利用ユーザー数が70万ユーザーを突破"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-06T14:59:00Z"
+      }
+    }
+  ]
+}
