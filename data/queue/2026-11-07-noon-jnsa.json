@@ -1,0 +1,129 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-06-jnsa-security-literacy-check-unauthorized-access",
+        "organization": {
+          "name": "特定非営利活動法人日本ネットワークセキュリティ協会",
+          "name_en": "Japan Network Security Association (JNSA)",
+          "type": "nonprofit",
+          "size": "unknown",
+          "industry": [
+            "cybersecurity",
+            "education"
+          ],
+          "business_model": [
+            "public",
+            "b2b"
+          ],
+          "service": "情報セキュリティ理解度チェックサービス",
+          "country": "JP",
+          "website": "https://www.jnsa.org/",
+          "headquarters": {
+            "address": "東京都港区新橋5-7-12 4F",
+            "prefecture": "東京都",
+            "city": "港区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://jnsa.org/en/aboutus/"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "情報セキュリティ理解度チェックサービスへの不正アクセスと最大15,128件の個人情報漏えいのおそれ",
+          "types": [
+            "unauthorized_access",
+            "potential_data_breach"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-11-04",
+          "disclosed_at": "2026-11-06",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-07"
+          },
+          "attack_vector": "侵入経路は調査中。2026年10月30日夜頃から不正アクセスが行われた可能性があるとの公式説明（確定した発生日時ではない）。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "情報セキュリティ理解度チェックサービス"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "2026年11月6日のJNSA第一報は第三者による不正アクセスを確認しているが、攻撃主体名・所属・帰属根拠を示していない。",
+            "sources": [
+              "https://www.jnsa.org/dl/annual/20261106.pdf"
+            ],
+            "reviewed_at": "2026-11-07"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "最大15,128件は漏えいの可能性がある対象件数であり、流出確定件数・ユニーク人数ではない。",
+          "affected_organizations": null,
+          "records": 15128,
+          "data_exposed": [
+            "administrator_name",
+            "administrator_company",
+            "administrator_email_address",
+            "organization_location",
+            "organization_employee_count",
+            "industry",
+            "registered_user_count",
+            "user_id",
+            "hashed_password"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "発覚後に対象サービスを停止し外部専門事業者と調査中。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "特定非営利活動法人日本ネットワークセキュリティ協会",
+            "published_at": "2026-11-06",
+            "url": "https://www.jnsa.org/dl/annual/20261106.pdf",
+            "title": "不正アクセスによる「情報セキュリティ理解度チェックサービス」からの利用者個人情報漏えいの恐れに関するお知らせ（第一報）"
+          },
+          {
+            "kind": "official",
+            "publisher": "Japan Network Security Association",
+            "published_at": null,
+            "url": "https://jnsa.org/en/aboutus/",
+            "title": "What is the JNSA?"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-07T03:00:00Z"
+      }
+    }
+  ]
+}
