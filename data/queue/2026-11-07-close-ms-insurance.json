@@ -1,0 +1,131 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-03-ms-insurance-policyholder-portal-breach",
+        "organization": {
+          "name": "三井住友海上火災保険株式会社",
+          "name_en": "Mitsui Sumitomo Insurance Company, Limited",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": [
+            "insurance",
+            "financial_services"
+          ],
+          "business_model": [
+            "b2c",
+            "b2b"
+          ],
+          "service": "ご契約者さま専用ページ",
+          "country": "JP",
+          "website": "https://www.ms-ins.com/",
+          "headquarters": {
+            "address": null,
+            "prefecture": "東京都",
+            "city": "千代田区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "city",
+            "source": "https://www.ms-ins.com/"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "ご契約者さま専用ページへの不正アクセスと契約者情報漏えい",
+          "types": [
+            "unauthorized_access",
+            "data_breach",
+            "service_disruption"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-11-02",
+          "disclosed_at": "2026-11-03",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-07"
+          },
+          "attack_vector": "ご契約者さま専用ページへの第三者による不正アクセス。具体的な侵入経路・原因は調査中。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "ご契約者さま専用ページ",
+            "1DAY保険",
+            "ネットde保険",
+            "Myエージェント",
+            "法人お客さまWebサービス"
+          ],
+          "affected_regions": [],
+          "detected_time": "evening",
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "被害会社の11月6日公表では第三者による不正アクセスを確認したが、攻撃主体を識別する根拠は公表されていない。",
+            "sources": [
+              "https://www.ms-ins.com/news/fy2026/pdf/1106_1.pdf"
+            ],
+            "reviewed_at": "2026-11-07"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "2026年11月6日9時時点で約3.7万件の契約者情報の漏えいを確認。件数はユニーク人数とは限らない。グループ他社の件数は加算しない。",
+          "affected_organizations": 1,
+          "records": 37000,
+          "data_exposed": [
+            "policy_number",
+            "name",
+            "address",
+            "phone_number",
+            "email_address"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "11月3日深夜から契約者専用ページと関連オンライン手続き等を停止。11月7日時点で一部停止継続。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "三井住友海上火災保険株式会社",
+            "published_at": "2026-11-06",
+            "url": "https://www.ms-ins.com/news/fy2026/pdf/1106_1.pdf",
+            "title": "当社システムへの不正アクセスに伴う情報漏えいについて"
+          },
+          {
+            "kind": "official",
+            "publisher": "三井住友海上火災保険株式会社",
+            "published_at": "2026-11-03",
+            "url": "https://www.ms-ins.com/information/2026/information_1103_1.pdf",
+            "title": "不正アクセス検知に伴う一部サービスの一時停止について"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-07T14:57:00Z"
+      }
+    }
+  ]
+}
