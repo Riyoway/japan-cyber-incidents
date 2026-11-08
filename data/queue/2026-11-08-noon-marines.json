@@ -1,0 +1,123 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-06-pacific-league-marketing-marines-site-breach",
+        "organization": {
+          "name": "パシフィックリーグマーケティング株式会社",
+          "name_en": "Pacific League Marketing Co., Ltd.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [
+            "sports",
+            "digital_services"
+          ],
+          "business_model": [
+            "b2c",
+            "b2b"
+          ],
+          "service": "千葉ロッテマリーンズ公式スマートフォンサイト",
+          "country": "JP",
+          "website": "https://www.pacificleague.jp/",
+          "headquarters": {
+            "address": null,
+            "prefecture": "東京都",
+            "city": "港区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "city",
+            "source": "https://career.pacificleague.jp/post/useful/144"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "千葉ロッテマリーンズ公式サイトへの不正アクセスによるメールアドレス・ニックネーム流出",
+          "types": [
+            "unauthorized_access",
+            "data_breach"
+          ],
+          "occurred_at": "2026-10-30",
+          "detected_at": "2026-11-04",
+          "disclosed_at": "2026-11-06",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-08"
+          },
+          "attack_vector": "公式サイト管理システム内に身に覚えのないページが作成され、第三者が会員情報を含むファイルをダウンロード。侵入経路と脆弱性の詳細は調査中。別経路のアララメッセージ事案とは区別。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "千葉ロッテマリーンズ公式スマートフォンサイト",
+            "球団公式サイト管理システム"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "2026年11月6日のPLMとパ・リーグ6球団の共同発表は第三者による不正アクセスとファイルダウンロードを確認するが、攻撃主体を特定していない。",
+            "sources": [
+              "https://www.pacificleague.jp/assets/pdf/pr261106_1.pdf"
+            ],
+            "reviewed_at": "2026-11-08"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "公式スマートフォンサイトの有料会員（退会者含む）についてメールアドレス11,875件とニックネーム37,070件の流出を確認。項目別件数であり合算して人数とはしない。別のアララメッセージ経由で5球団計13,711件のメールアドレス流出があるが本レコードの件数には含めない。",
+          "affected_organizations": 1,
+          "records": 37070,
+          "data_exposed": [
+            "email_address",
+            "nickname"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "球団公式サイトで緊急メンテナンス。2026年11月6日時点で復旧見込み未定。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "パシフィックリーグマーケティング株式会社・パ・リーグ6球団",
+            "published_at": "2026-11-06",
+            "url": "https://www.pacificleague.jp/assets/pdf/pr261106_1.pdf",
+            "title": "不正アクセスによるお客様メールアドレス等流出のお詫びとお知らせ"
+          },
+          {
+            "kind": "news",
+            "publisher": "ITmedia ビジネスオンライン",
+            "published_at": "2026-11-06",
+            "url": "https://www.itmedia.co.jp/business/articles/2611/06/news077.html",
+            "title": "パ・リーグ5球団で顧客のメアド流出　千葉ロッテは公式サイトへの侵入被害も"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-08T03:00:00Z"
+      }
+    }
+  ]
+}
