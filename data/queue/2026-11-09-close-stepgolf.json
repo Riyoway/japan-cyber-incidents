@@ -1,0 +1,146 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-07-stepgolf-business-reservation-system-unauthorized-access",
+        "organization": {
+          "name": "ステップゴルフ株式会社",
+          "name_en": "Step Golf Co., Ltd.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": [
+            "sports",
+            "fitness",
+            "education",
+            "leisure"
+          ],
+          "business_model": [
+            "b2c",
+            "b2b"
+          ],
+          "service": "STEPGOLF business and reservation systems",
+          "country": "JP",
+          "website": "https://www.stepgolf.co.jp/",
+          "headquarters": {
+            "address": null,
+            "prefecture": "東京都",
+            "city": "渋谷区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "city",
+            "source": "https://www.stepgolf.co.jp/news/2610030900"
+          },
+          "employee_count": {
+            "value": 98,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "マイナビ2028企業概要、2025年度従業員数（2026年2月4日更新）",
+            "confidence": "medium"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": 110000,
+            "unit": "members",
+            "estimate_type": "reported",
+            "basis": "2026年8月17日発表の累計会員数11万人超。今回の被害者数ではない。",
+            "confidence": "high"
+          }
+        },
+        "incident": {
+          "title": "業務・予約システムへの不正アクセスによる最大21.5万件の個人情報漏えいの可能性",
+          "types": [
+            "unauthorized_access",
+            "potential_data_breach"
+          ],
+          "occurred_at": "2026-10-23",
+          "detected_at": "2026-11-05",
+          "disclosed_at": "2026-11-07",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-08"
+          },
+          "attack_vector": "業務・予約システムへの第三者による不正アクセス。10月23日・25日のアクセスをログで確認。具体的な侵入経路やCVEは未公表。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "business system",
+            "reservation system",
+            "database backup files"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "被害企業の11月7日公式発表は第三者による不正アクセスを確認しているが、特定の攻撃者名・グループへの帰属を示していない。",
+            "sources": [
+              "https://www.stepgolf.co.jp/news/261107"
+            ],
+            "reviewed_at": "2026-11-08"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "最大215,000件はデータベース登録件数であり人数ではない。バックアップ等の外部漏えい可能性は極めて高いが実際の漏えい件数・対象範囲は調査中。",
+          "affected_organizations": null,
+          "records": 215000,
+          "data_exposed": [
+            "name",
+            "address",
+            "date_of_birth",
+            "phone_number",
+            "email_address",
+            "bank_name",
+            "bank_branch",
+            "bank_account_number",
+            "bank_account_holder",
+            "contract_status",
+            "reservation_history",
+            "purchase_history",
+            "lesson_records",
+            "face_photograph",
+            "sensitive_personal_information"
+          ],
+          "service_disruption": false,
+          "service_disruption_note": "アクセス元遮断・認証情報変更を実施。予約・レッスンは11月7日公表時点で通常利用可能。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "ステップゴルフ株式会社",
+            "published_at": "2026-11-07",
+            "url": "https://www.stepgolf.co.jp/news/261107",
+            "title": "当社業務システムへの不正アクセスによる個人情報漏えいのおそれに関するお詫びとご報告（第一報）"
+          },
+          {
+            "kind": "official",
+            "publisher": "ステップゴルフ株式会社",
+            "published_at": "2026-10-03",
+            "url": "https://www.stepgolf.co.jp/news/2610030900",
+            "title": "STEPGOLF EXtra 横浜元町 11月グランドオープン予定"
+          },
+          {
+            "kind": "other",
+            "publisher": "マイナビ",
+            "published_at": "2026-02-04",
+            "url": "https://job.mynavi.jp/28/pc/search/corp270303/outline.html",
+            "title": "ステップゴルフ(株)の2027年度会社概要"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-08T15:00:00Z"
+      }
+    }
+  ]
+}
