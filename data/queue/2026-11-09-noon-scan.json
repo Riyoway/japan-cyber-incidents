@@ -1,0 +1,242 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-07-signaltalk-marujan-member-data-breach",
+        "organization": {
+          "name": "株式会社シグナルトーク",
+          "name_en": "SignalTalk Corporation",
+          "type": "company",
+          "size": "unknown",
+          "industry": [
+            "it",
+            "digital_services"
+          ],
+          "business_model": [
+            "b2c",
+            "b2b"
+          ],
+          "service": "Maru-Jan",
+          "country": "JP",
+          "website": "https://www.signaltalk.com/",
+          "headquarters": {
+            "address": "東京都大田区蒲田5-8-7 蒲田K-1ビル8F",
+            "prefecture": "東京都",
+            "city": "大田区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "address",
+            "source": "https://www.signaltalk.com/press/20220323.php"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "オンライン麻雀Maru-Jan全会員185万5578人分の認証情報流出",
+          "types": [
+            "unauthorized_access",
+            "data_breach"
+          ],
+          "occurred_at": null,
+          "detected_at": null,
+          "disclosed_at": "2026-11-07",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-09"
+          },
+          "attack_vector": "管理システムの機能を悪用した不正アクセス。11月4日15時頃までにデータがダウンロードされたことを確認。侵入開始時刻・具体的脆弱性は未公表。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "Maru-Jan管理システム",
+            "Maru-Jan会員データ"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "公式発表と公開報道を確認したが、攻撃者・グループを特定する帰属根拠は示されていない。",
+            "sources": [
+              "https://www.signaltalk.com/press/20261107.php",
+              "https://www.signaltalk.com/press/20220323.php"
+            ],
+            "reviewed_at": "2026-11-09"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": 1855578,
+          "affected_users_note": "全会員1,855,578人分のパスワードおよびメールアドレス（登録者のみ）の流出を確認。パスワード保存方式は未公表。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [
+            "email_address",
+            "password"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "ログインとWeb会員ページを緊急停止後、2026-11-07 16:00 JSTに再開。",
+          "service_recovered_at": "2026-11-07T16:00:00+09:00"
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社シグナルトーク",
+            "published_at": "2026-11-07",
+            "url": "https://www.signaltalk.com/press/20261107.php",
+            "title": "オンライン麻雀「Maru-Jan」への不正アクセスによる会員情報流出のお詫びとご報告"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社シグナルトーク",
+            "published_at": "2022-03-23",
+            "url": "https://www.signaltalk.com/press/20220323.php",
+            "title": "AIが食品の健康度を判定する「FoodScore」Android版リリース"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-09T03:00:00Z"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-07-tsukaeru-net-portal-customer-data-breach",
+        "organization": {
+          "name": "使えるねっと株式会社",
+          "name_en": "Tsukaeru.net Co., Ltd.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [
+            "it",
+            "digital_services"
+          ],
+          "business_model": [
+            "b2c",
+            "b2b"
+          ],
+          "service": "使えるポータル・共有サーバー・VPS",
+          "country": "JP",
+          "website": "https://www.tsukaeru.net/",
+          "headquarters": {
+            "address": "長野県長野市南県町1082 ND南県町ビル3階",
+            "prefecture": "長野県",
+            "city": "長野市",
+            "latitude": null,
+            "longitude": null,
+            "precision": "address",
+            "source": "https://www.tsukaeru.net/about/"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "契約管理ポータルの顧客情報漏えいと共有サーバーへの不正アクセス",
+          "types": [
+            "unauthorized_access",
+            "data_breach"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-11-06",
+          "disclosed_at": "2026-11-07",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-09"
+          },
+          "attack_vector": "11月6日にサーバー異常を検知。第三者の不正アクセスを確認したが侵入経路と発生期間は調査中。",
+          "threat_actor": null,
+          "ransomware": null,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "使えるポータル",
+            "一部共有サーバー",
+            "VPS収容機（127件のVPSは影響調査対象）"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "公式発表と公開報道を確認したが、攻撃者・グループを特定する帰属根拠は示されていない。",
+            "sources": [
+              "https://www.tsukaeru.net/news/20261107/",
+              "https://www.tsukaeru.net/about/"
+            ],
+            "reviewed_at": "2026-11-09"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "契約管理ポータルの顧客情報漏えいは確認。情報項目・件数は調査中。127件は調査対象VPS数であり侵入確認数ではない。暗号化保存パスワードの解読可能性があるが解読・流出は未確認。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "一部共有サーバーを11月2日時点のバックアップから復元した結果、以降11月7日早朝までのWeb更新データ・送受信メールが消失。ポータルのパスワードリセットと2FA再設定を実施。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "使えるねっと株式会社",
+            "published_at": "2026-11-07",
+            "url": "https://www.tsukaeru.net/news/20261107/",
+            "title": "【重要・速報】不正アクセスおよびお客様情報の漏えいに関するお詫びとご報告"
+          },
+          {
+            "kind": "official",
+            "publisher": "使えるねっと株式会社",
+            "published_at": null,
+            "url": "https://www.tsukaeru.net/about/",
+            "title": "会社情報"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-09T03:00:00Z"
+      }
+    }
+  ]
+}
