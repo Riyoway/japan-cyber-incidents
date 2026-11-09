@@ -1,0 +1,131 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-09-nitori-holdings-customer-data-potential-breach",
+        "organization": {
+          "name": "株式会社ニトリホールディングス",
+          "name_en": "Nitori Holdings Co., Ltd.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": [
+            "retail",
+            "ecommerce",
+            "furniture"
+          ],
+          "business_model": [
+            "b2c",
+            "b2b"
+          ],
+          "service": "ニトリネット・ニトリ公式ショップおよびグループ会員管理",
+          "country": "JP",
+          "website": "https://www.nitorihd.co.jp/",
+          "headquarters": {
+            "address": "〒001-0907 北海道札幌市北区新琴似七条一丁目2番39号",
+            "prefecture": "北海道",
+            "city": "札幌市北区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "city",
+            "source": "https://www.nitorihd.co.jp/about_us/corporate_data.html"
+          },
+          "employee_count": {
+            "value": 18170,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "2026年3月期連結、臨時従業員19,920人は別枠",
+            "confidence": "high"
+          },
+          "listing": {
+            "is_listed": true,
+            "market": "東京証券取引所プライム市場・札幌証券取引所",
+            "ticker": "9843"
+          }
+        },
+        "incident": {
+          "title": "管理システムへの不正アクセス、会員・購入者情報など最大3,762万件が流出した可能性",
+          "types": [
+            "unauthorized_access",
+            "potential_data_breach"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-11-06",
+          "disclosed_at": "2026-11-09",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-09"
+          },
+          "attack_vector": "侵入経路は調査中。10月中旬〜下旬のアクセスは可能性段階で、攻撃開始日時は未確定。",
+          "threat_actor": null,
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "11月9日の公式公表で第三者による不正アクセスは確認されているが、固有の攻撃者・グループへの帰属は示されていない。",
+            "sources": [
+              "https://www.nitorihd.co.jp/news/items/2b702dbe4d438f7fef74945d68e5bd27_3.pdf"
+            ],
+            "reviewed_at": "2026-11-09"
+          },
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "company-managed systems",
+            "customer membership information",
+            "corporate membership information",
+            "Nitori Net order data",
+            "official Nitori EC mall shop order data"
+          ],
+          "affected_regions": []
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "最大37,620,000件は流出した可能性のある情報レコード数であり、実流出件数・ユニーク人数は未確定。",
+          "affected_organizations": null,
+          "records": 37620000,
+          "data_exposed": [
+            "member_number",
+            "name",
+            "name_kana",
+            "email_address",
+            "address",
+            "phone_number",
+            "date_of_birth",
+            "gender",
+            "company_name",
+            "department",
+            "corporate_representative_name",
+            "corporate_contact_information",
+            "order_information"
+          ],
+          "service_disruption": false,
+          "service_disruption_note": "不正アクセス経路を遮断。公式資料にサービス停止の記載なし。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社ニトリホールディングス",
+            "published_at": "2026-11-09",
+            "url": "https://www.nitorihd.co.jp/news/items/2b702dbe4d438f7fef74945d68e5bd27_3.pdf",
+            "title": "当社システムへの不正アクセスによる個人情報漏えいの可能性に関するお詫びとお知らせ"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社ニトリホールディングス",
+            "published_at": null,
+            "url": "https://www.nitorihd.co.jp/about_us/corporate_data.html",
+            "title": "会社概要"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-09T15:00:00Z"
+      }
+    }
+  ]
+}
