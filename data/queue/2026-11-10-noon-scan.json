@@ -1,0 +1,386 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-09-sharefull-admin-system-potential-breach",
+        "organization": {
+          "name": "シェアフル株式会社",
+          "name_en": "Sharefull Inc.",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": [
+            "human_resources",
+            "technology",
+            "employment"
+          ],
+          "business_model": [
+            "b2b",
+            "b2c"
+          ],
+          "service": "シェアフル",
+          "country": "JP",
+          "website": "https://sharefull.com/",
+          "headquarters": {
+            "address": "〒107-0062 東京都港区南青山1-15-5 パーソル南青山ビル4F",
+            "prefecture": "東京都",
+            "city": "港区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://sharefull.com/about/"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "シェアフル社内管理システムへの不正アクセス、最大約750万個人アカウントと約7500社の情報流出可能性",
+          "types": [
+            "unauthorized_access",
+            "potential_data_breach"
+          ],
+          "occurred_at": "2026-11-04",
+          "detected_at": "2026-11-05",
+          "disclosed_at": "2026-11-09",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-09"
+          },
+          "attack_vector": "侵入経路・脆弱性の具体的内容は未公表。11月4日23:30頃の不正アクセスを確認し、11月5日9:45頃検知、14:00までに遮断。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "社内管理システム"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "公式発表は外部第三者の不正アクセスのみで攻撃主体を特定していない。",
+            "sources": [
+              "https://sharefull.com/information/9480/"
+            ],
+            "reviewed_at": "2026-11-10"
+          },
+          "occurred_time": {
+            "local_time": "23:30",
+            "time_band": "night",
+            "timezone": "Asia/Tokyo"
+          },
+          "detected_time": {
+            "local_time": "09:45",
+            "time_band": "morning",
+            "timezone": "Asia/Tokyo"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "最大約750万個人アカウントが流出可能性の対象。約7500社の法人情報も対象。確定流出件数やユニーク人数ではない。",
+          "affected_organizations": null,
+          "records": 7500000,
+          "data_exposed": [
+            "name",
+            "name_kana",
+            "phone_number",
+            "email_address",
+            "address",
+            "date_of_birth",
+            "bank_account_information",
+            "profile_photo_url",
+            "emergency_contact",
+            "residence_status_information",
+            "account_attributes",
+            "company_contact_information"
+          ],
+          "service_disruption": false,
+          "service_disruption_note": "アクセス経路は遮断済み。シェアフルは通常提供中。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "シェアフル株式会社",
+            "published_at": "2026-11-09",
+            "url": "https://sharefull.com/information/9480/",
+            "title": "社内管理システムへの不正アクセスによる個人情報および法人情報流出の可能性に関するお詫びとお知らせ"
+          },
+          {
+            "kind": "official",
+            "publisher": "シェアフル株式会社",
+            "published_at": null,
+            "url": "https://sharefull.com/about/",
+            "title": "会社概要"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-10T03:00:00Z"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-09-sega-arara-message-email-breach",
+        "organization": {
+          "name": "株式会社セガ",
+          "name_en": "SEGA CORPORATION",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": [
+            "gaming",
+            "entertainment",
+            "technology"
+          ],
+          "business_model": [
+            "b2c",
+            "b2b"
+          ],
+          "service": "ゲーム・エンターテインメント",
+          "country": "JP",
+          "website": "https://www.sega.co.jp/",
+          "headquarters": {
+            "address": "〒141-0033 東京都品川区西品川一丁目1-1 住友不動産大崎ガーデンタワー",
+            "prefecture": "東京都",
+            "city": "品川区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.sega.co.jp/company/outline/index.html"
+          },
+          "employee_count": {
+            "value": 2922,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "2026年3月末時点、公式会社概要",
+            "confidence": "high"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "アララメッセージへの不正アクセスによりセガ・セガ フェイブのメール配信先219万6044件流出",
+          "types": [
+            "third_party_incident",
+            "unauthorized_access",
+            "data_breach"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-11-03",
+          "disclosed_at": "2026-11-09",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-09"
+          },
+          "attack_vector": "メール配信委託先アララのアララメッセージへの第三者による不正アクセス。セガ自身のシステムへの侵入を示す公表はない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "アララメッセージ",
+            "メールマガジン配信リスト"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "アララ社への不正アクセスは確認されたが、攻撃主体の帰属は公表されていない。",
+            "sources": [
+              "https://www.sega.co.jp/release/261109_1.html"
+            ],
+            "reviewed_at": "2026-11-10"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "メールアドレス2,196,044件（うち付随情報を含む92,273件）。人数ではなく件数。SEGA Accountは対象外。",
+          "affected_organizations": 2,
+          "records": 2196044,
+          "data_exposed": [
+            "email_address",
+            "email_distribution_metadata"
+          ],
+          "service_disruption": false,
+          "service_disruption_note": "メール配信委託先の不正アクセスに起因。セガ側サービス停止は公表されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社セガ",
+            "published_at": "2026-11-09",
+            "url": "https://www.sega.co.jp/release/261109_1.html",
+            "title": "業務委託企業への不正アクセスによる個人情報流出に関するお詫びとお知らせ"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社セガ",
+            "published_at": null,
+            "url": "https://www.sega.co.jp/company/outline/index.html",
+            "title": "会社概要"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-10T03:00:00Z"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-09-waseda-user-management-data-breach",
+        "organization": {
+          "name": "早稲田大学",
+          "name_en": "Waseda University",
+          "type": "university",
+          "size": "large_enterprise",
+          "industry": [
+            "education",
+            "research"
+          ],
+          "business_model": [
+            "public",
+            "b2c"
+          ],
+          "service": "MyWasedaユーザー情報管理システム",
+          "country": "JP",
+          "website": "https://www.waseda.jp/",
+          "headquarters": {
+            "address": "〒169-8050 東京都新宿区西早稲田1-6-1",
+            "prefecture": "東京都",
+            "city": "新宿区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.waseda.jp/fsss/sss/access/"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "早稲田大学のMyWaseda認証用ユーザー情報管理システムに侵入、延べ3342件の情報取得を確認",
+          "types": [
+            "unauthorized_access",
+            "data_breach"
+          ],
+          "occurred_at": "2026-08-31",
+          "detected_at": null,
+          "disclosed_at": "2026-11-09",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-09"
+          },
+          "attack_vector": "PHP脆弱性対応中の点検で8月31日の不正アクセス痕跡を発見。ただし当該PHP脆弱性が侵入原因と断定されていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "MyWaseda認証用ユーザー情報管理システム"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "大学は第三者による侵入・取得を確認したが、攻撃者の帰属を公表していない。",
+            "sources": [
+              "https://www.waseda.jp/top/news/topic/124183"
+            ],
+            "reviewed_at": "2026-11-10"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "延べ3,342件（個別81件、職員等の一体情報3,261件）。同一利用者の複数メールアドレスがあり実人数とは異なる。",
+          "affected_organizations": 1,
+          "records": 3342,
+          "data_exposed": [
+            "name",
+            "qualification",
+            "waseda_email_address",
+            "encrypted_password",
+            "staff_id",
+            "department"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "関係システム停止、学外アクセス制限、管理者パスワード変更。卒業生向けWaseda ID関連サービス一時停止。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "早稲田大学",
+            "published_at": "2026-11-09",
+            "url": "https://www.waseda.jp/top/news/topic/124183",
+            "title": "不正アクセスによる個人情報漏えいについて"
+          },
+          {
+            "kind": "official",
+            "publisher": "早稲田大学",
+            "published_at": null,
+            "url": "https://www.waseda.jp/fsss/sss/access/",
+            "title": "アクセス"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-10T03:00:00Z"
+      }
+    }
+  ]
+}
