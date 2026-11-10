@@ -1,0 +1,135 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-10-soft99-online-shop-potential-breach",
+        "organization": {
+          "name": "株式会社ソフト９９コーポレーション",
+          "name_en": "SOFT99 Corporation",
+          "type": "company",
+          "size": "medium_enterprise",
+          "industry": [
+            "manufacturing",
+            "automotive_products",
+            "ecommerce"
+          ],
+          "business_model": [
+            "b2c",
+            "b2b"
+          ],
+          "service": "ソフト９９公式オンラインショップ",
+          "country": "JP",
+          "website": "https://www.soft99.co.jp/",
+          "headquarters": {
+            "address": "〒540-0012 大阪府大阪市中央区谷町2-6-5",
+            "prefecture": "大阪府",
+            "city": "大阪市中央区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.soft99.co.jp/corporate/profile/outline/"
+          },
+          "employee_count": {
+            "value": 206,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "公式会社概要。グループ全体839名とは区別。",
+            "confidence": "high"
+          },
+          "listing": {
+            "is_listed": true,
+            "market": "Tokyo Stock Exchange Standard",
+            "ticker": "4464"
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "公式オンラインショップの問い合わせフォーム画像添付機能を悪用した不正アクセスと個人情報漏えいの可能性",
+          "types": [
+            "unauthorized_access",
+            "potential_data_breach",
+            "service_disruption"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-11-05",
+          "disclosed_at": "2026-11-10",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-10"
+          },
+          "attack_vector": "問い合わせフォームの画像添付機能からプログラムファイルをアップロードされ、外部から命令を送り込めるファイルが設置された。サイトプログラム権限でサーバー内の調査と設定ファイルの読み取りが行われたと公式に確認。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "ソフト９９公式オンラインショップ",
+            "問い合わせフォーム画像添付機能",
+            "オンラインショップのサーバー設定ファイル"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "公式発表では第三者によるファイルアップロードとサーバー操作を確認しているが、攻撃者個人・組織の特定や独立した帰属根拠は公表されていない。",
+            "sources": [
+              "https://tm11.soft99.co.jp/important/detail/261110/"
+            ],
+            "reviewed_at": "2026-11-11"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "2026年11月5日までの会員登録・購入者最大136,968人が潜在的対象。実際の流出人数・件数は調査中であり、136,968人の実流出確認ではない。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [
+            "name",
+            "address",
+            "email_address",
+            "phone_number",
+            "date_of_birth",
+            "gender",
+            "purchase_history",
+            "delivery_address",
+            "payment_card_last_four_digits",
+            "payment_card_expiry",
+            "payment_card_holder_name"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "公式オンラインショップを一時停止してアクセス経路を遮断。復旧日時は未公表。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社ソフト９９コーポレーション",
+            "published_at": "2026-11-10",
+            "url": "https://tm11.soft99.co.jp/important/detail/261110/",
+            "title": "ソフト９９公式オンラインショップへの不正アクセスによる 個人情報漏えいの可能性に関するお詫びとお知らせ"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社ソフト９９コーポレーション",
+            "published_at": null,
+            "url": "https://www.soft99.co.jp/corporate/profile/outline/",
+            "title": "会社概要"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-11T00:00:30+09:00"
+      }
+    }
+  ]
+}
