@@ -1,0 +1,52 @@
+{
+  "operations": [
+    {
+      "operation": "patch",
+      "id": "2026-10-28-arara-message-data-breach",
+      "set": {
+        "incident.status": {
+          "value": "service_suspended_investigating_expanded_scope",
+          "as_of": "2026-11-11"
+        },
+        "incident.threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "アララ公式第3報は第三者による不正アクセス・情報持ち出しを確認しているが、特定の攻撃者グループへの帰属を示していない。",
+          "source_urls": [
+            "https://www.arara.com/news/info/20261106_arara"
+          ],
+          "reviewed_at": "2026-11-11"
+        },
+        "impact.records": 81329467,
+        "impact.affected_organizations": 380,
+        "impact.affected_users_note": "2026年11月6日第3報：3環境間の重複を除く持ち出された、または持ち出されたおそれのあるメールアドレス81,329,467件。人数ではない。うち属性情報等を伴う47,044,380件。対象契約企業は最大約380社（精査中）。環境別78,102,937件、2,842,400件、3,249,492件は重複があるため合算不可。",
+        "impact.data_exposed": [
+          "email_address",
+          "name",
+          "gender",
+          "date_of_birth",
+          "phone_number",
+          "member_id",
+          "address",
+          "customer_member_information"
+        ],
+        "impact.service_disruption_note": "2026年10月31日よりアララメッセージの全サービス停止。2026年11月11日時点で再開日未定。10月28〜30日に同サービスを悪用してカード会社を装う不審メール最大約713万通が送信されたが、これは流出件数に含めない。",
+        "last_updated": "2026-11-11T23:59:00+09:00"
+      },
+      "append": {
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "アララ株式会社",
+            "published_at": "2026-11-06",
+            "url": "https://www.arara.com/news/info/20261106_arara",
+            "title": "「アララメッセージ」への不正アクセスに関するお詫びと今後の対応について"
+          }
+        ]
+      }
+    }
+  ]
+}
