@@ -1,0 +1,137 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-10-jcci-net-exam-management-unauthorized-access",
+        "organization": {
+          "name": "日本商工会議所",
+          "name_en": "The Japan Chamber of Commerce and Industry",
+          "type": "organization",
+          "size": "unknown",
+          "industry": [
+            "business_association",
+            "education"
+          ],
+          "business_model": [
+            "public"
+          ],
+          "service": "商工会議所ネット試験",
+          "country": "JP",
+          "website": "https://www.jcci.or.jp/",
+          "headquarters": {
+            "address": "〒100-0005 東京都千代田区丸の内3-2-2 丸の内二重橋ビル",
+            "prefecture": "東京都",
+            "city": "千代田区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.jcci.or.jp/about/profile/index.html"
+          },
+          "employee_count": {
+            "value": 140,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "日本商工会議所採用サイト、2026年4月時点の職員数",
+            "confidence": "high"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "商工会議所ネット試験管理システムへの不正アクセス、最大約98万人分の受験者情報漏えい可能性",
+          "types": [
+            "unauthorized_access",
+            "potential_data_breach"
+          ],
+          "occurred_at": "2026-11-01",
+          "detected_at": "2026-11-04",
+          "disclosed_at": "2026-11-10",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-11"
+          },
+          "attack_vector": "試験管理システムに不正ファイルが11月1日に設置されていた。脆弱性対策パッチは11月4日深夜に適用済みだが、具体的な侵入経路・CVEは公表されていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "商工会議所ネット試験の試験管理システム（外部サーバー）"
+          ],
+          "affected_regions": [
+            "Japan"
+          ],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "日本商工会議所の11月10日公表は不正アクセスと不正ファイルの設置を説明するが、攻撃者の特定や帰属を示していない。",
+            "sources": [
+              "https://www.jcci.or.jp/news/news/2026/1110170000.html"
+            ],
+            "reviewed_at": "2026-11-11"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "2022年4月1日〜2026年11月4日のネット試験受験者最大約98万人分、約197万件の受験者情報が漏えいした可能性。漏えい・不正利用はいずれも未確認。",
+          "affected_organizations": 1,
+          "records": 1970000,
+          "data_exposed": [
+            "name",
+            "name_kana",
+            "gender",
+            "date_of_birth",
+            "exam_pass_fail_result",
+            "exam_score",
+            "email_address_optional",
+            "phone_number_optional",
+            "address_optional"
+          ],
+          "service_disruption": false,
+          "service_disruption_note": "不正ファイル削除と脆弱性パッチ適用済み。ネット試験は通常どおり受験可能。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "日本商工会議所",
+            "published_at": "2026-11-10",
+            "url": "https://www.jcci.or.jp/news/news/2026/1110170000.html",
+            "title": "商工会議所ネット試験管理システムへの不正アクセスによる受験者情報（個人情報）漏えいの可能性について"
+          },
+          {
+            "kind": "official",
+            "publisher": "日本商工会議所",
+            "published_at": null,
+            "url": "https://www.jcci.or.jp/about/profile/index.html",
+            "title": "組織概要"
+          },
+          {
+            "kind": "official",
+            "publisher": "日本商工会議所",
+            "published_at": null,
+            "url": "https://recruit.jcci.or.jp/work/information/",
+            "title": "働く環境"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-11T03:00:00Z"
+      }
+    }
+  ]
+}
