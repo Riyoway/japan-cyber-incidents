@@ -1,0 +1,228 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-11-rinavis-arara-repica-email-leak",
+        "organization": {
+          "name": "株式会社リナビス",
+          "name_en": "Rinavis Co., Ltd.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [
+            "cleaning",
+            "ecommerce"
+          ],
+          "business_model": [
+            "b2c"
+          ],
+          "service": "宅配クリーニング「リナビス」",
+          "country": "JP",
+          "website": "https://rinavis.com/",
+          "headquarters": {
+            "address": "〒677-0052 兵庫県西脇市和田町69",
+            "prefecture": "兵庫県",
+            "city": "西脇市",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://prtimes.jp/main/html/rd/p/000000019.000084864.html"
+          },
+          "employee_count": {
+            "value": 180,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "Yahoo!しごとカタログの掲載従業員数（確認日2026-11-12）",
+            "confidence": "medium"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "メール配信委託先アララ「repica」への不正アクセスによるメールアドレス158,960件漏えい",
+          "types": [
+            "third_party_incident",
+            "unauthorized_access",
+            "data_breach"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-11-02",
+          "disclosed_at": "2026-11-11",
+          "status": {
+            "value": "confirmed_data_breach",
+            "as_of": "2026-11-12"
+          },
+          "attack_vector": "メール配信委託先アララのrepicaへの第三者による不正アクセス。リナビス自身のECサイトへの侵入は確認されていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "repica email delivery service"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "被害組織の公表および委託先への不正アクセスに関する情報を確認したが、特定の攻撃主体を裏付ける公開情報はない。",
+            "sources": [
+              "https://rinavis.com/f/notice_20261111",
+              "https://www.arara.com/news/info/20261106_arara"
+            ],
+            "reviewed_at": "2026-11-12"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "2026年10月8日〜29日に送信されたメールの宛先メールアドレス158,960件。ユニーク人数ではない。",
+          "affected_organizations": 1,
+          "records": 158960,
+          "data_exposed": [
+            "email_address"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "repicaを利用したメール配信を停止。ECサイトと注文情報に影響なし。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社リナビス",
+            "published_at": "2026-11-11",
+            "url": "https://rinavis.com/f/notice_20261111",
+            "title": "【重要】業務委託先への不正アクセスによるメールアドレス漏洩に関するお詫び"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-12T12:10:00+09:00"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-11-kawajun-keyuca-arara-email-leak",
+        "organization": {
+          "name": "河淳株式会社",
+          "name_en": "Kawajun Co., Ltd.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [
+            "retail",
+            "home_goods",
+            "manufacturing"
+          ],
+          "business_model": [
+            "b2c"
+          ],
+          "service": "KEYUCAオンラインショップ メールマガジン",
+          "country": "JP",
+          "website": "https://www.kawajun.co.jp/",
+          "headquarters": {
+            "address": "東京都中央区日本橋浜町3-15-1",
+            "prefecture": "東京都",
+            "city": "中央区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.kawajun.co.jp/company/"
+          },
+          "employee_count": {
+            "value": 2850,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "公式会社概要：2026年度グループ全体（河淳単体ではない）",
+            "confidence": "high"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "KEYUCAメールマガジン会員のメールアドレス1,214,183件流出（アララへの不正アクセス）",
+          "types": [
+            "third_party_incident",
+            "unauthorized_access",
+            "data_breach"
+          ],
+          "occurred_at": "2026-10-28",
+          "detected_at": "2026-11-07",
+          "disclosed_at": "2026-11-11",
+          "status": {
+            "value": "confirmed_data_breach",
+            "as_of": "2026-11-12"
+          },
+          "attack_vector": "アララメッセージへの第三者による不正アクセス。10月29日には非該当との報告だったが11月7日に漏えい判明。KEYUCAのオンラインショップ・会員管理システムは本件の影響を受けていない。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "アララメッセージ",
+            "KEYUCAオンラインショップ メールマガジン配信"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "被害組織の公表および委託先への不正アクセスに関する情報を確認したが、特定の攻撃主体を裏付ける公開情報はない。",
+            "sources": [
+              "https://www.keyuca.com/Page/delivery_delay261111.aspx",
+              "https://www.arara.com/news/info/20261106_arara"
+            ],
+            "reviewed_at": "2026-11-12"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "2026年7月1日〜10月28日のメルマガ受信者のメールアドレス1,214,183件。人数としては扱わない。ナノテック委託先サーバー侵害とは別の事案。",
+          "affected_organizations": 1,
+          "records": 1214183,
+          "data_exposed": [
+            "email_address"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "10月28日にアララメッセージの利用停止。10月30日以降、安全性確認済みの別システムで一部配信再開。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "河淳株式会社",
+            "published_at": "2026-11-11",
+            "url": "https://www.keyuca.com/Page/delivery_delay261111.aspx",
+            "title": "アララ社の不正アクセスによるケユカオンラインショップメールマガジン会員様メールアドレスの流出に関するお詫びとお願い"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-12T12:10:00+09:00"
+      }
+    }
+  ]
+}
