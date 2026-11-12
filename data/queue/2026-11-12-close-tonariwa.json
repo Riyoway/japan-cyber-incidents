@@ -1,0 +1,135 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-11-dentsu-digital-tonariwa-breach",
+        "organization": {
+          "name": "株式会社電通デジタル",
+          "name_en": "Dentsu Digital Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": [
+            "digital_marketing",
+            "technology",
+            "saas"
+          ],
+          "business_model": [
+            "b2b"
+          ],
+          "service": "TONARIWA",
+          "country": "JP",
+          "website": "https://www.dentsudigital.co.jp/",
+          "headquarters": {
+            "address": "〒105-7077 東京都港区東新橋1-8-1 電通本社ビル",
+            "prefecture": "東京都",
+            "city": "港区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.dentsudigital.co.jp/about/corporate-data/"
+          },
+          "employee_count": {
+            "value": 2596,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "公式会社概要、2025年12月末時点",
+            "confidence": "high"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "TONARIWA管理認証情報漏えいを起点とした不正アクセスと個人情報漏えい",
+          "types": [
+            "unauthorized_access",
+            "data_breach",
+            "credential_compromise",
+            "service_disruption"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-11-10",
+          "disclosed_at": "2026-11-11",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-12"
+          },
+          "attack_vector": "管理アカウント認証情報の漏えいを起点とする第三者の不正アクセスと権限昇格。認証情報の流出経路は未公表。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "TONARIWA",
+            "管理アカウント",
+            "LINE公式アカウント連携"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "公式第1報・第2報は不正アクセスを確認するが、攻撃者の帰属を示していない。",
+            "sources": [
+              "https://www.dentsudigital.co.jp/news/updates/services/2026-1111-001111",
+              "https://www.dentsudigital.co.jp/news/updates/services/2026-1112-001112"
+            ],
+            "reviewed_at": "2026-11-12"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "11月12日第2報で一部導入企業から預かった個人情報の実漏えいを確認。件数・人数は調査中。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": [
+            "name",
+            "date_of_birth",
+            "contact_information"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "TONARIWAを停止し全サーバー隔離。日本郵便のLINEアカウントにも影響。再開未定。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社電通デジタル",
+            "published_at": "2026-11-11",
+            "url": "https://www.dentsudigital.co.jp/news/updates/services/2026-1111-001111",
+            "title": "TONARIWAにおける不正アクセスに伴う個人情報漏えいの可能性に関するお詫びとご報告"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社電通デジタル",
+            "published_at": "2026-11-12",
+            "url": "https://www.dentsudigital.co.jp/news/updates/services/2026-1112-001112",
+            "title": "【第二報】TONARIWAにおける不正アクセスに伴う個人情報漏えいに関するお詫びとご報告"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社電通デジタル",
+            "published_at": null,
+            "url": "https://www.dentsudigital.co.jp/about/corporate-data/",
+            "title": "会社概要"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-12"
+      }
+    }
+  ]
+}
