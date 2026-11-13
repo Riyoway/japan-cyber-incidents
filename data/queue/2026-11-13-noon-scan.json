@@ -1,0 +1,269 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-12-yeny-api-member-data-leak",
+        "organization": {
+          "name": "株式会社Yeny",
+          "name_en": "Yeny Inc.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [
+            "fintech",
+            "payments"
+          ],
+          "business_model": [
+            "b2b",
+            "b2c"
+          ],
+          "service": "ultra pay / PayBlend",
+          "country": "JP",
+          "website": "https://yeny.jp/",
+          "headquarters": {
+            "address": "東京都新宿区西新宿8丁目17番1号",
+            "prefecture": "東京都",
+            "city": "新宿区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://yeny.jp/company/"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "API接続設定不備に伴う会員電話番号・会員IDの漏えい",
+          "types": [
+            "unauthorized_access",
+            "data_breach"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-10-31",
+          "disclosed_at": "2026-11-12",
+          "status": {
+            "value": "mitigated",
+            "as_of": "2026-11-12"
+          },
+          "attack_vector": "API接続設定不備。10月31日に接続先事業者から不審なAPIコールの連絡を受け、11月2日に緊急メンテナンスを実施。攻撃開始日は未公表。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "Yeny API",
+            "ultra pay カード",
+            "アスルクラロ沼津Pay",
+            "巫神こんPay",
+            "東芝ブレイブルーパス東京Pay"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "公式発表は第三者による不正アクセスを確認するが、特定の攻撃主体への帰属を示していない。",
+            "sources": [
+              "https://yeny.jp/pressrelease/1547/"
+            ],
+            "reviewed_at": "2026-11-13"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "1,332,505件は退会者を含む対象件数。重複排除後の人数は未公表。",
+          "affected_organizations": 1,
+          "records": 1332505,
+          "data_exposed": [
+            "phone_number",
+            "member_id"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "11月2日に緊急サービスメンテナンスを実施。復旧日時は未公表。決済情報の漏えいは確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社Yeny",
+            "published_at": "2026-11-12",
+            "url": "https://yeny.jp/pressrelease/1547/",
+            "title": "不正アクセスによる会員情報の漏えいに関するお詫びとお知らせ"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社Yeny",
+            "published_at": null,
+            "url": "https://yeny.jp/company/",
+            "title": "会社概要"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-13"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-12-sonicmoov-comsbi-saas-breach",
+        "organization": {
+          "name": "株式会社ソニックムーブ",
+          "name_en": "Sonicmoov Co., Ltd.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [
+            "technology",
+            "saas",
+            "digital_marketing"
+          ],
+          "business_model": [
+            "b2b",
+            "b2c"
+          ],
+          "service": "COMSBI (SaaS版)",
+          "country": "JP",
+          "website": "https://sonicmoov.com/",
+          "headquarters": {
+            "address": "〒106-0041 東京都港区麻布台1丁目3番1号 麻布台ヒルズ 森JPタワー28階",
+            "prefecture": "東京都",
+            "city": "港区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://sonicmoov.com/"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "COMSBI SaaS版の社内運用アカウント悪用による顧客情報漏えい",
+          "types": [
+            "unauthorized_access",
+            "credential_compromise",
+            "data_breach"
+          ],
+          "occurred_at": "2026-11-09",
+          "detected_at": "2026-11-10",
+          "disclosed_at": "2026-11-12",
+          "occurred_time": {
+            "local_time": "23:04",
+            "time_band": "night",
+            "timezone": "Asia/Tokyo"
+          },
+          "detected_time": {
+            "local_time": "07:36",
+            "time_band": "morning",
+            "timezone": "Asia/Tokyo"
+          },
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-12"
+          },
+          "attack_vector": "不正取得された社内運用・サポート用アカウント認証情報で管理画面にログイン。複数企業の情報とクラウド設定・認証情報を取得。認証情報の流出経路は調査中。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "COMSBI SaaS版",
+            "社内運用・サポートアカウント",
+            "COMSBI cloud environment",
+            "LINE公式アカウント連携"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "第三者によるアカウント悪用を確認したが、公式発表は攻撃主体を特定していない。",
+            "sources": [
+              "https://sonicmoov.com/news/5ttj9ndzh"
+            ],
+            "reviewed_at": "2026-11-13"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "複数の導入企業・団体の利用者情報とLINEプロフィール情報が取得された。人数・件数は未公表。10月のCOMSBIエンタープライズ基盤侵害とは別件。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": [
+            "name",
+            "phone_number",
+            "email_address",
+            "address",
+            "date_of_birth",
+            "gender",
+            "line_display_name",
+            "line_profile_image",
+            "line_status_message",
+            "line_user_id",
+            "cloud_configuration",
+            "credentials"
+          ],
+          "service_disruption": false,
+          "service_disruption_note": "11月10日午前に不正アクセスを遮断。SaaS版サービスは継続提供。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社ソニックムーブ",
+            "published_at": "2026-11-12",
+            "url": "https://sonicmoov.com/news/5ttj9ndzh",
+            "title": "「COMSBI（SaaS版）」への不正アクセスによる個人情報の漏えいに関するお知らせとお詫び"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社ソニックムーブ",
+            "published_at": null,
+            "url": "https://sonicmoov.com/",
+            "title": "株式会社ソニックムーブ"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-13"
+      }
+    }
+  ]
+}
