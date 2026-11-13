@@ -1,0 +1,129 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-13-athome-rental-management-unauthorized-access",
+        "organization": {
+          "name": "アットホーム株式会社",
+          "name_en": "At Home Co., Ltd.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": [
+            "real_estate",
+            "technology",
+            "business_software"
+          ],
+          "business_model": [
+            "b2b",
+            "b2c"
+          ],
+          "service": "賃貸管理システム",
+          "country": "JP",
+          "website": "https://www.athome.co.jp/",
+          "headquarters": {
+            "address": "〒144-0056 東京都大田区西六郷4-34-12",
+            "prefecture": "東京都",
+            "city": "大田区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.athome.co.jp/corporate/company/outline/"
+          },
+          "employee_count": {
+            "value": 1841,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "公式会社概要、2026年10月末現在",
+            "confidence": "high"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "賃貸管理システム管理サイトへの不正ログインと入居者・オーナー等の個人情報漏えい可能性",
+          "types": [
+            "unauthorized_access",
+            "potential_data_breach"
+          ],
+          "occurred_at": "2026-11-09",
+          "detected_at": null,
+          "disclosed_at": "2026-11-13",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-13"
+          },
+          "attack_vector": "賃貸管理システム管理サイトへの第三者による不正アクセス・ログイン。認証情報の取得経路および技術的原因は調査中。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "賃貸管理システム 管理サイト"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "11月13日付の公式公表は第三者の不正ログインを確認するが、特定の攻撃者・グループへの帰属を示していない。",
+            "sources": [
+              "https://www.athome.co.jp/corporate/news/topics/oshirase-202611/"
+            ],
+            "reviewed_at": "2026-11-13"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "漏えいした可能性のある登録情報6,901件。実際の持ち出し件数とユニーク人数は未確定。入居者、オーナー、取引先等の情報。口座情報の漏えいは確認されず、カード情報はシステムで保有していない。",
+          "affected_organizations": null,
+          "records": 6901,
+          "data_exposed": [
+            "name",
+            "date_of_birth",
+            "phone_number",
+            "mobile_phone_number",
+            "address",
+            "property_name",
+            "room_number",
+            "contract_status"
+          ],
+          "service_disruption": false,
+          "service_disruption_note": "不正アクセス元を遮断。対象システムの停止は11月13日の公式公表では確認できない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "アットホーム株式会社",
+            "published_at": "2026-11-13",
+            "url": "https://www.athome.co.jp/corporate/news/topics/oshirase-202611/",
+            "title": "「賃貸管理システム」の管理サイトへの不正アクセスによる個人情報漏えいの可能性に関するお詫びとご報告"
+          },
+          {
+            "kind": "official",
+            "publisher": "アットホーム株式会社",
+            "published_at": null,
+            "url": "https://www.athome.co.jp/corporate/company/outline/",
+            "title": "会社概要"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-13"
+      }
+    }
+  ]
+}
