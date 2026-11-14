@@ -1,0 +1,125 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-13-legalon-notion-fireworks-ai-exposure",
+        "organization": {
+          "name": "株式会社LegalOn Technologies",
+          "name_en": "LegalOn Technologies, Inc.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [
+            "legal_technology",
+            "software",
+            "artificial_intelligence"
+          ],
+          "business_model": [
+            "b2b"
+          ],
+          "service": "社内利用Notion AI Insights",
+          "country": "JP",
+          "website": "https://legalontech.jp/",
+          "headquarters": {
+            "address": "〒150-6219 東京都渋谷区桜丘町1-1 渋谷サクラステージSHIBUYAタワー19F",
+            "prefecture": "東京都",
+            "city": "渋谷区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://legalontech.jp/company/"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "Notion AI再委託先Fireworksへの不正アクセスに伴う社内AI利用記録の流出可能性",
+          "types": [
+            "unauthorized_access",
+            "data_breach"
+          ],
+          "occurred_at": "2026-10-05",
+          "detected_at": "2026-11-11",
+          "disclosed_at": "2026-11-13",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-14"
+          },
+          "attack_vector": "Notion AI Insightsの再委託先Fireworks AIのサービス環境が第三者の不正アクセスを受けた。侵入経路は未公表。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "Notion AI Insights",
+            "社内Notion AI利用記録"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "公式発表に攻撃者の帰属情報はない。",
+            "sources": [
+              "https://legalontech.jp/11330/"
+            ],
+            "reviewed_at": "2026-11-14"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "AI入力・回答と顧客担当者情報の一部が流出した可能性。件数は調査中。自社製品とその顧客保管データは対象外。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [
+            "ai_prompts_and_responses_potential",
+            "customer_company_name_potential",
+            "contact_name_potential",
+            "email_address_potential"
+          ],
+          "service_disruption": false,
+          "service_disruption_note": "自社製品は影響なし。NotionはFireworksとの接続を遮断しInsightsを停止。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社LegalOn Technologies",
+            "published_at": "2026-11-13",
+            "url": "https://legalontech.jp/11330/",
+            "title": "当社が利用するクラウドサービス（Notion）の再委託先（Fireworks社）への不正アクセスに伴う情報の流出の可能性に関するお知らせとお詫び"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社LegalOn Technologies",
+            "published_at": null,
+            "url": "https://legalontech.jp/company/",
+            "title": "会社案内"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-14"
+      }
+    }
+  ]
+}
