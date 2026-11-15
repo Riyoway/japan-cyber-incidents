@@ -1,0 +1,118 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-13-monex-account-opening-vendor-access",
+        "organization": {
+          "name": "マネックス証券株式会社",
+          "name_en": "Monex, Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": [
+            "financial_services",
+            "securities"
+          ],
+          "business_model": [
+            "b2c"
+          ],
+          "service": "Online securities account opening",
+          "country": "JP",
+          "website": "https://www.monex.co.jp/",
+          "headquarters": {
+            "address": null,
+            "prefecture": "東京都",
+            "city": "港区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "city",
+            "source": "https://info.monex.co.jp/press/pdf/press2026_11_13_monex_pr.pdf"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "委託先の口座開設システムへの不正アクセスと個人情報漏えいのおそれ",
+          "types": [
+            "third_party_incident",
+            "unauthorized_access",
+            "potential_data_breach"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-10-18",
+          "disclosed_at": "2026-11-13",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-13"
+          },
+          "attack_vector": "外部委託先が運営・管理する口座開設システムに対する第三者の不正アクセス。原因と侵入経路は調査中。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "Outsourced online account-opening system"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "被害企業の2026年11月13日公表は第三者による不正アクセスを報告するが、特定の攻撃者・グループへの帰属を示していない。",
+            "sources": [
+              "https://info.monex.co.jp/press/pdf/press2026_11_13_monex_pr.pdf"
+            ],
+            "reviewed_at": "2026-11-15"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "メールアドレス最大1,130,000件（重複・不完全なものや口座開設未完了者を含む）と本人確認書類等の画像1,592件について漏えいのおそれ。ユニーク人数・実際の取得件数は未確定。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [
+            "email_address",
+            "identity_document_images",
+            "driver_license_images",
+            "my_number_card_front_images",
+            "selfie_images"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "2026年10月19日から該当システムを外部ネットワークから遮断し、一部口座開設を停止。既存口座のログイン・売買取引への影響はない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "マネックス証券株式会社",
+            "published_at": "2026-11-13",
+            "url": "https://info.monex.co.jp/press/pdf/press2026_11_13_monex_pr.pdf",
+            "title": "外部委託先が運営・管理する一部の口座開設システムへの不正アクセスによる個人情報漏えいに関するお詫びとお知らせ"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-15T03:00:00+09:00"
+      }
+    }
+  ]
+}
