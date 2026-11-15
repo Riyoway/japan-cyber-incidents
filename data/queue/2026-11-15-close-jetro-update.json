@@ -1,0 +1,56 @@
+{
+  "operations": [
+    {
+      "operation": "patch",
+      "id": "2026-10-19-jetro-website-data-breach",
+      "set": {
+        "incident.status": {
+          "value": "investigating_partial_service_restoration",
+          "as_of": "2026-11-15"
+        },
+        "incident.threat_actor_attribution": {
+          "name": null,
+          "actor_type": "unknown",
+          "aliases": [],
+          "status": "unknown",
+          "confidence": "unknown",
+          "basis": "JETROの2026年10月19日発表および11月6日続報は不正アクセスと情報漏えいを確認するが、攻撃者の帰属を示す情報は公表していない。",
+          "source_urls": [
+            "https://www.jetro.go.jp/news/releases/2026/a6deaac68f2dbe3b.html",
+            "https://www.jetro.go.jp/news/announcement/2026/d475b9fab8ba23e5.html"
+          ],
+          "reviewed_at": "2026-11-15"
+        },
+        "impact.records": 10156,
+        "impact.affected_users_note": "10月19日公表の743件に加え、11月6日続報で新たにイベントカレンダー担当者142件、JETRO職員（退職者含む）9,252件、保守・制作会社担当者19件の漏えいを確認。公表区分の件数合計は10,156件だがユニーク人数ではない。",
+        "impact.data_exposed": [
+          "company_name",
+          "business_contact_email",
+          "name",
+          "email_address",
+          "organization_name",
+          "department_name"
+        ],
+        "impact.service_disruption_note": "10月17日にウェブサイトを一時停止。10月20日に一部機能を制限した暫定公開を再開したが、検索・認証を要するコンテンツ等には制限が残った。11月15日時点の完全復旧は未確認。"
+      },
+      "append": {
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "独立行政法人日本貿易振興機構",
+            "published_at": "2026-11-06",
+            "url": "https://www.jetro.go.jp/news/announcement/2026/d475b9fab8ba23e5.html",
+            "title": "当機構ウェブサイトへの不正アクセスについて（続報）"
+          },
+          {
+            "kind": "official",
+            "publisher": "独立行政法人日本貿易振興機構",
+            "published_at": "2026-10-20",
+            "url": "https://www.jetro.go.jp/news/announcement/2026/1e5d9962ca1cec2f.html",
+            "title": "当機構ウェブサイトの暫定再開について"
+          }
+        ]
+      }
+    }
+  ]
+}
