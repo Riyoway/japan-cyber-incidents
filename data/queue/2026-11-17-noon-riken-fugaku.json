@@ -1,0 +1,129 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-16-riken-fugaku-unauthorized-access",
+        "organization": {
+          "name": "国立研究開発法人理化学研究所",
+          "name_en": "RIKEN",
+          "type": "research_institute",
+          "size": "large_enterprise",
+          "industry": [
+            "research",
+            "science",
+            "technology"
+          ],
+          "business_model": [
+            "b2g"
+          ],
+          "service": "Supercomputers Fugaku and Rikyu",
+          "country": "JP",
+          "website": "https://www.riken.jp/",
+          "headquarters": {
+            "address": "〒351-0198 埼玉県和光市広沢2-1",
+            "prefecture": "埼玉県",
+            "city": "和光市",
+            "latitude": null,
+            "longitude": null,
+            "precision": "city",
+            "source": "https://www.riken.jp/about/map/index.html"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "スーパーコンピュータ「富岳」「理究」の運用系への不正侵入と認証情報漏えいのおそれ",
+          "types": [
+            "unauthorized_access",
+            "potential_data_breach",
+            "service_disruption"
+          ],
+          "occurred_at": "2026-11-10",
+          "detected_at": "2026-11-12",
+          "disclosed_at": "2026-11-16",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-17"
+          },
+          "attack_vector": "公開されていた富岳稼働状況ダッシュボードを足がかりに運用系内部ネットワークへ侵入。具体的な悪用手法は調査中。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "Fugaku operations network",
+            "Fugaku user home directories",
+            "Fugaku and Rikyu authentication systems"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "理研公式発表は外部の第三者による侵入を確認しているが、攻撃主体の特定情報を示していない。",
+            "sources": [
+              "https://www.riken.jp/pr/news/2026/20261116_2/index.html"
+            ],
+            "reviewed_at": "2026-11-17"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "最大4,597名（富岳4,222名、理究375名）の登録情報について外部持ち出しまたはその可能性。一部ファイルの持ち出しは確認されているが、対象者全員の流出確定ではない。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [
+            "name",
+            "email_address",
+            "user_id",
+            "ssh_private_keys",
+            "access_keys",
+            "research_files_possible"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "11月14日04:30に富岳運用停止、11月15日16:18に計算ジョブ停止。再開日未公表。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "理化学研究所",
+            "published_at": "2026-11-16",
+            "url": "https://www.riken.jp/pr/news/2026/20261116_2/index.html",
+            "title": "スーパーコンピュータ「富岳」および「理究（りきゅう）」への不正アクセスによる個人情報漏えいの可能性について"
+          },
+          {
+            "kind": "official",
+            "publisher": "理化学研究所",
+            "published_at": null,
+            "url": "https://www.riken.jp/about/map/index.html",
+            "title": "拠点"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-17T11:55:00+09:00"
+      }
+    }
+  ]
+}
