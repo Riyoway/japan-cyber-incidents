@@ -1,0 +1,134 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-17-rakuten-securities-test-environment-access",
+        "organization": {
+          "name": "楽天証券株式会社",
+          "name_en": "Rakuten Securities, Inc.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": [
+            "financial_services",
+            "securities",
+            "online_brokerage"
+          ],
+          "business_model": [
+            "b2c",
+            "b2b"
+          ],
+          "service": "楽天証券の証券取引サービス（テスト環境）",
+          "country": "JP",
+          "website": "https://www.rakuten-sec.co.jp/",
+          "headquarters": {
+            "address": "東京都港区南青山2-6-21",
+            "prefecture": "東京都",
+            "city": "港区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.rakuten-sec.co.jp/web/company/profile/"
+          },
+          "employee_count": {
+            "value": 720,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "公式会社概要、2025年12月現在",
+            "confidence": "high"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": 15000000,
+            "unit": "accounts",
+            "estimate_type": "reported",
+            "basis": "2026年11月2日発表の証券総合口座数1,500万口座超。今回の影響対象人数ではない。",
+            "confidence": "high"
+          }
+        },
+        "incident": {
+          "title": "テスト環境への不正アクセスに伴う顧客口座情報漏えいの可能性",
+          "types": [
+            "unauthorized_access",
+            "potential_data_breach"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-11-16",
+          "disclosed_at": "2026-11-17",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-17"
+          },
+          "attack_vector": "第三者による一部システムへの不正アクセス。2026年11月11日にテスト環境で管理していた情報が外部に漏えいしたおそれがあるが、侵入開始日時・具体的な経路は調査中。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "Test environment containing securities customer information"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "2026年11月17日の楽天証券公式公表では第三者による不正アクセスのみ言及し、攻撃グループ・実行主体の特定情報はない。",
+            "sources": [
+              "https://www.rakuten-sec.co.jp/web/info/info20261117-02.html"
+            ],
+            "reviewed_at": "2026-11-17"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "最大約447万口座は氏名・住所・出金先口座・資産情報等を含む区分、最大約1,125万口座は顧客コード・ログインIDの区分。両区分を足し合わせず、人数に換算しない。実際の漏えい人数・件数は未確定。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [
+            "customer_code",
+            "login_id",
+            "name",
+            "date_of_birth",
+            "address",
+            "phone_number",
+            "email_address",
+            "employer",
+            "withdrawal_bank_account",
+            "declared_income",
+            "financial_assets",
+            "product_asset_information",
+            "last_login_date"
+          ],
+          "service_disruption": false,
+          "service_disruption_note": "不正アクセス箇所を遮断・修正。顧客向け取引サービス停止の公表なし。ログインパスワード・暗証番号の漏えいおよび関連する不正取引は公表時点で未確認。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "楽天証券株式会社",
+            "published_at": "2026-11-17",
+            "url": "https://www.rakuten-sec.co.jp/web/info/info20261117-02.html",
+            "title": "当社お客様の情報漏えいの可能性に関するお詫びとお知らせ"
+          },
+          {
+            "kind": "official",
+            "publisher": "楽天証券株式会社",
+            "published_at": null,
+            "url": "https://www.rakuten-sec.co.jp/web/company/profile/",
+            "title": "会社概要"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-17T14:59:00Z"
+      }
+    }
+  ]
+}
