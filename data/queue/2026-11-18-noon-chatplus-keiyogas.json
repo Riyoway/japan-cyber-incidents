@@ -1,0 +1,225 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-17-chatplus-unauthorized-access",
+        "organization": {
+          "name": "チャットプラス株式会社",
+          "name_en": "ChatPlus Inc.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [],
+          "business_model": [],
+          "service": null,
+          "country": "JP",
+          "website": "https://chatplus.jp/",
+          "headquarters": {
+            "address": "〒100-7014 東京都千代田区丸の内2丁目7-2 JPタワー14階",
+            "prefecture": "東京都",
+            "city": "千代田区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://chatplus.jp/corporate/about/"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": true,
+            "market": "Tokyo Stock Exchange Growth",
+            "ticker": "598A"
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "ChatPlus・AI AgentPlus・FAQPlusの一部Webサーバーへの不正アクセス",
+          "types": [
+            "unauthorized_access",
+            "potential_data_breach"
+          ],
+          "occurred_at": "2026-11-13",
+          "detected_at": "2026-11-17",
+          "disclosed_at": "2026-11-17",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-18"
+          },
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "ChatPlus",
+            "AI AgentPlus",
+            "FAQPlus"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "公式発表では第三者による不正アクセスが確認されたが、特定の攻撃者・グループへの帰属情報は公表されていない。",
+            "sources": [
+              "https://chatplus.jp/news/news20261117/"
+            ],
+            "reviewed_at": "2026-11-18"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "預託個人データの閲覧・取得の可能性があるが、漏えいの有無、対象人数・件数・項目は調査中。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": false,
+          "service_disruption_note": "影響サーバーを遮断・隔離。3サービスは通常稼働。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "チャットプラス株式会社",
+            "published_at": "2026-11-17",
+            "url": "https://chatplus.jp/news/news20261117/",
+            "title": "【重要】当社システムへの不正アクセスに関するお知らせ"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-18T03:00:00Z"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-17-keiyogas-with-keiyogas-access",
+        "organization": {
+          "name": "京葉ガス株式会社",
+          "name_en": "Keiyo Gas Co., Ltd.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [],
+          "business_model": [],
+          "service": null,
+          "country": "JP",
+          "website": "https://www.keiyogas.co.jp/",
+          "headquarters": {
+            "address": "〒272-8580 千葉県市川市市川南2-8-8",
+            "prefecture": "千葉県",
+            "city": "市川市",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.keiyogas.co.jp/company/profile/outline.html"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "会員サイト「ウィズ京葉ガス」への不正アクセスと275件の情報漏えい可能性",
+          "types": [
+            "unauthorized_access",
+            "potential_data_breach"
+          ],
+          "occurred_at": null,
+          "detected_at": null,
+          "disclosed_at": "2026-11-17",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-18"
+          },
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "ウィズ京葉ガス"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "公式発表では第三者による不正アクセスが確認されたが、特定の攻撃者・グループへの帰属情報は公表されていない。",
+            "sources": [
+              "https://www.keiyogas.co.jp/press/20261117-01.html"
+            ],
+            "reviewed_at": "2026-11-18"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "275件は漏えい可能性のある個人情報の件数であり、確定漏えい人数ではない。銀行口座・カード情報は含まれない。",
+          "affected_organizations": 1,
+          "records": 275,
+          "data_exposed": [
+            "name",
+            "postal_code",
+            "address",
+            "phone_number",
+            "email_address",
+            "customer_number",
+            "supply_point_id",
+            "contract_number",
+            "member_id",
+            "encrypted_password",
+            "initial_password",
+            "security_question_answer",
+            "ip_address",
+            "billing_information"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "会員サイトを停止し外部アクセス経路を遮断。復旧日時は未公表。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "京葉ガス株式会社",
+            "published_at": "2026-11-17",
+            "url": "https://www.keiyogas.co.jp/press/20261117-01.html",
+            "title": "当社会員サイト「ウィズ京葉ガス」における不正アクセスによる情報漏えいの可能性についてのお詫びとお知らせ"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-18T03:00:00Z"
+      }
+    }
+  ]
+}
