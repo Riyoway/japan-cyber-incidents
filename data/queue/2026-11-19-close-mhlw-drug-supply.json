@@ -1,0 +1,119 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-18-mhlw-drug-supply-system-unauthorized-access",
+        "organization": {
+          "name": "厚生労働省",
+          "name_en": "Ministry of Health, Labour and Welfare",
+          "type": "government",
+          "size": "unknown",
+          "industry": [
+            "government",
+            "healthcare",
+            "pharmaceuticals"
+          ],
+          "business_model": [
+            "public",
+            "b2g"
+          ],
+          "service": "医薬品安定供給・流通確認システム",
+          "country": "JP",
+          "website": "https://www.mhlw.go.jp/",
+          "headquarters": {
+            "address": "〒100-8916 東京都千代田区霞が関1-2-2",
+            "prefecture": "東京都",
+            "city": "千代田区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.mhlw.go.jp/stf/newpage_77515.html"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "医薬品安定供給・流通確認システムへの不正アクセスと企業担当者情報の漏えい可能性",
+          "types": [
+            "unauthorized_access",
+            "potential_data_breach",
+            "service_disruption"
+          ],
+          "occurred_at": null,
+          "detected_at": null,
+          "disclosed_at": "2026-11-18",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-18"
+          },
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "医薬品安定供給・流通確認システム",
+            "報告システム",
+            "情報提供サイト"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "厚生労働省は第三者による不正アクセスを公表しているが、攻撃主体を特定する証拠やグループ名は示していない。",
+            "sources": [
+              "https://www.mhlw.go.jp/stf/newpage_77515.html"
+            ],
+            "reviewed_at": "2026-11-19"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "一部企業担当者の氏名・連絡先について漏えいの可能性があるが、人数・件数は調査中。保管データの一部閲覧痕跡と書き換え試行痕跡が確認されたが、実際の個人情報持ち出しは未確定。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": [
+            "name",
+            "contact_information"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "11月17日からシステム停止。報告システムおよび情報提供サイトが停止中。供給情報は厚労省サイトのExcelで公表継続。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "厚生労働省",
+            "published_at": "2026-11-18",
+            "url": "https://www.mhlw.go.jp/stf/newpage_77515.html",
+            "title": "医薬品安定供給・流通確認システムへの不正アクセスに係る 個人情報の漏えいについて"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-18T15:03:00Z"
+      }
+    }
+  ]
+}
