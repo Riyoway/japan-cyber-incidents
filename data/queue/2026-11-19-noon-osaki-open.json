@@ -1,0 +1,221 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-18-osaki-electric-ransomware",
+        "organization": {
+          "name": "大崎電気工業株式会社",
+          "name_en": "Osaki Electric Co., Ltd.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [],
+          "business_model": [],
+          "service": null,
+          "country": "JP",
+          "website": "https://www.osaki.co.jp/",
+          "headquarters": {
+            "address": "〒141-8646 東京都品川区東五反田2-10-2 東五反田スクエア",
+            "prefecture": "東京都",
+            "city": "品川区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.osaki.co.jp/ja/profile/office.html"
+          },
+          "employee_count": {
+            "value": 545,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "公式会社概要（単体）",
+            "confidence": "high"
+          },
+          "listing": {
+            "is_listed": true,
+            "market": "Tokyo Stock Exchange Prime",
+            "ticker": "6644"
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "ランサムウェアによるサーバー暗号化とスマートメーター生産・出荷停止",
+          "types": [
+            "ransomware",
+            "service_disruption",
+            "potential_data_breach"
+          ],
+          "occurred_at": null,
+          "detected_at": "2026-11-17",
+          "disclosed_at": "2026-11-18",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-19"
+          },
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": true,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "社内サーバー",
+            "埼玉事業所の生産関連システム",
+            "岩手大崎電気株式会社の生産関連システム",
+            "大崎プラテック株式会社の生産関連システム"
+          ],
+          "affected_regions": [
+            "埼玉県",
+            "岩手県"
+          ],
+          "detected_time": {
+            "value": "10:35",
+            "band": "morning",
+            "timezone": "Asia/Tokyo"
+          },
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "公式発表はランサムウェア被害を確認したが、攻撃主体・グループ名は特定していない。マルウェアの種類から運営者は推定しない。",
+            "sources": [
+              "https://www.osaki.co.jp/ja/notice/20261118.html"
+            ],
+            "reviewed_at": "2026-11-19"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "データ外部流出の可能性は調査中で、漏えい件数・人数は未公表。",
+          "affected_organizations": 1,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": true,
+          "service_disruption_note": "埼玉事業所および関連生産拠点でスマートメーター等の生産・出荷を停止。再開時期未定。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "大崎電気工業株式会社",
+            "published_at": "2026-11-18",
+            "url": "https://www.osaki.co.jp/ja/notice/20261118.html",
+            "title": "ランサムウェアによるサイバー攻撃に伴う生産停止に関するお知らせ（第一報）"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-19T03:00:00Z"
+      }
+    },
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-18-open-bizrobo-cloud-access",
+        "organization": {
+          "name": "オープン株式会社",
+          "name_en": "OPEN, Inc.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [],
+          "business_model": [],
+          "service": null,
+          "country": "JP",
+          "website": "https://open.co.jp/",
+          "headquarters": {
+            "address": "〒105-0003 東京都港区西新橋3-3-1 KDX西新橋ビル3階",
+            "prefecture": "東京都",
+            "city": "港区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://open.co.jp/about/"
+          },
+          "employee_count": {
+            "value": null,
+            "unit": "employees",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "BizRobo! mini認証サーバーを含むクラウド環境への不正アクセス",
+          "types": [
+            "unauthorized_access",
+            "potential_data_breach"
+          ],
+          "occurred_at": "2026-11-12",
+          "detected_at": "2026-11-16",
+          "disclosed_at": "2026-11-18",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-19"
+          },
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "BizRobo! mini認証サーバー",
+            "同一クラウド環境のその他のサーバー・サービス"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "第三者の不正アクセスと攻撃者が作成したクラウドリソースは公表されたが、特定の攻撃者・集団への帰属根拠はない。",
+            "sources": [
+              "https://open.co.jp/blog/202611181500/"
+            ],
+            "reviewed_at": "2026-11-19"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "約560社・約1,000アカウントの認証IDとパスワードを保存するサーバーへの不正アクセスログを確認。情報の持ち出し・漏えいは未確定。",
+          "affected_organizations": 560,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": false,
+          "service_disruption_note": "影響環境を隔離。BizRobo! miniは利用継続、11月21日に緊急メンテナンス予定。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "オープン株式会社",
+            "published_at": "2026-11-18",
+            "url": "https://open.co.jp/blog/202611181500/",
+            "title": "当社のクラウド環境への不正アクセスに関するお知らせ"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-19T03:00:00Z"
+      }
+    }
+  ]
+}
