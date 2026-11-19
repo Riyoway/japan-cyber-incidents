@@ -1,0 +1,137 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-18-terilogy-serviceware-cloudtriage-access",
+        "organization": {
+          "name": "株式会社テリロジーサービスウェア",
+          "name_en": "Terilogy Serviceware Corporation",
+          "type": "company",
+          "size": "small_enterprise",
+          "industry": [
+            "technology",
+            "it_services",
+            "cloud_services"
+          ],
+          "business_model": [
+            "b2b"
+          ],
+          "service": "CloudTriage",
+          "country": "JP",
+          "website": "https://terilogy-sw.com/",
+          "headquarters": {
+            "address": "〒102-0073 東京都千代田区九段北1-11-5 グリーンオーク九段4階",
+            "prefecture": "東京都",
+            "city": "千代田区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://terilogy-sw.com/company/"
+          },
+          "employee_count": {
+            "value": 57,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "2026年3月末現在の公式会社概要",
+            "confidence": "high"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "people",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "CloudTriage管理基盤への不正アクセスと顧客6社の情報漏えい可能性",
+          "types": [
+            "unauthorized_access",
+            "potential_data_breach"
+          ],
+          "occurred_at": "2026-11-09",
+          "occurred_time": {
+            "value": null,
+            "band": null,
+            "note": "2026年11月9日夜から10日未明に不審アクセス。単一の正確な開始時刻は未公表。"
+          },
+          "detected_at": "2026-11-10",
+          "detected_time": {
+            "value": "08:55",
+            "band": "morning",
+            "timezone": "Asia/Tokyo"
+          },
+          "disclosed_at": "2026-11-18",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-18"
+          },
+          "attack_vector": null,
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "CloudTriage management platform",
+            "6 customer accounts with suspicious sessions"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "親会社の2026年11月18日公表は第三者による不正アクセスを確認するが、特定の攻撃者・集団への帰属は示していない。",
+            "sources": [
+              "https://www.terilogy-hd.com/news/8168.html"
+            ],
+            "reviewed_at": "2026-11-19"
+          }
+        },
+        "impact": {
+          "confirmed_breach": false,
+          "affected_users": null,
+          "affected_users_note": "不審セッションが確認された顧客アカウント6件（6社）。監視情報・登録メールアドレスの閲覧取得は未確認だが、ログ制約により否定できない。人数不明。",
+          "affected_organizations": 6,
+          "records": null,
+          "data_exposed": [],
+          "service_disruption": false,
+          "service_disruption_note": "監視サービス停止は運用記録上確認されていない。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社テリロジーホールディングス",
+            "published_at": "2026-11-18",
+            "url": "https://www.terilogy-hd.com/news/8168.html",
+            "title": "当社連結子会社が提供するクラウドサービスへの不正アクセスに関するお知らせ"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社テリロジーサービスウェア",
+            "published_at": null,
+            "url": "https://terilogy-sw.com/company/",
+            "title": "会社概要"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社テリロジーサービスウェア",
+            "published_at": null,
+            "url": "https://www.joho-translation.com/company/",
+            "title": "会社情報"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-19T14:58:00Z"
+      }
+    }
+  ]
+}
