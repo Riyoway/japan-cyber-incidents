@@ -1,0 +1,141 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-20-tokyo-gas-karte-customer-data-breach",
+        "organization": {
+          "name": "東京ガス株式会社",
+          "name_en": "Tokyo Gas Co., Ltd.",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": [
+            "energy",
+            "utilities",
+            "gas",
+            "electricity"
+          ],
+          "business_model": [
+            "b2c",
+            "b2b"
+          ],
+          "service": "KARTE (third-party customer engagement service)",
+          "country": "JP",
+          "website": "https://www.tokyo-gas.co.jp/",
+          "headquarters": {
+            "address": "東京都港区海岸1-5-20",
+            "prefecture": "東京都",
+            "city": "港区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.tokyo-gas.co.jp/about/profile/index.html"
+          },
+          "employee_count": {
+            "value": 3769,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "単体、2026年3月31日現在（連結16,001人）",
+            "confidence": "high"
+          },
+          "listing": {
+            "is_listed": true,
+            "market": "東京証券取引所・名古屋証券取引所",
+            "ticker": "9531"
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "people",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "プレイド「KARTE」への不正アクセスに伴う東京ガス顧客情報の流出",
+          "types": [
+            "unauthorized_access",
+            "data_breach",
+            "third_party_compromise"
+          ],
+          "occurred_at": null,
+          "occurred_time": {
+            "value": null,
+            "band": null,
+            "note": "KARTEへの侵入発生日時は東京ガスの公表では特定されていない。"
+          },
+          "detected_at": "2026-11-16",
+          "detected_time": {
+            "value": null,
+            "band": null,
+            "note": "東京ガスがプレイドから顧客情報流出を確認した日。11月13日にKARTEへの不正アクセス通知を受領。"
+          },
+          "disclosed_at": "2026-11-20",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-20"
+          },
+          "attack_vector": "Third-party KARTE service compromise; initial intrusion method not publicly established in this disclosure.",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "Third-party KARTE service used by Tokyo Gas"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "東京ガス公式公表はKARTEへの第三者不正アクセスと顧客情報流出を確認するが、特定攻撃者の帰属を示していない。",
+            "sources": [
+              "https://www.tokyo-gas.co.jp/news/press/20261120-01.html"
+            ],
+            "reviewed_at": "2026-11-20"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "顧客情報の流出は確認済みだが、対象顧客数・ユニーク人数は調査中。KARTEの他利用企業の件数と合算しない。",
+          "affected_organizations": null,
+          "records": null,
+          "data_exposed": [
+            "customer information (specific fields under investigation)"
+          ],
+          "service_disruption": false,
+          "service_disruption_note": "東京ガスの顧客向けサービス停止は公表されていない。KARTE側では11月13日に緊急メンテナンスによる停止が通知された。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "東京ガス株式会社",
+            "published_at": "2026-11-20",
+            "url": "https://www.tokyo-gas.co.jp/news/press/20261120-01.html",
+            "title": "外部サービスへの不正アクセスによるお客さま情報の流出について"
+          },
+          {
+            "kind": "official",
+            "publisher": "東京ガス株式会社",
+            "published_at": null,
+            "url": "https://www.tokyo-gas.co.jp/about/profile/index.html",
+            "title": "会社概要・沿革"
+          },
+          {
+            "kind": "official",
+            "publisher": "東京ガス株式会社",
+            "published_at": null,
+            "url": "https://www.tokyo-gas.co.jp/IR/stock/stock_j.html",
+            "title": "株式の状況"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-20T14:56:00Z"
+      }
+    }
+  ]
+}
