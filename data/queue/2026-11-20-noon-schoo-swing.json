@@ -1,0 +1,131 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-19-schoo-swing-unauthorized-access",
+        "organization": {
+          "name": "株式会社Schoo",
+          "name_en": "Schoo, Inc.",
+          "type": "company",
+          "size": "unknown",
+          "industry": [
+            "education",
+            "technology"
+          ],
+          "business_model": [
+            "b2b"
+          ],
+          "service": "Schoo Swing",
+          "country": "JP",
+          "website": "https://corp.schoo.jp/",
+          "headquarters": {
+            "address": "〒150-0032 東京都渋谷区鶯谷町2-7 エクセルビル4階",
+            "prefecture": "東京都",
+            "city": "渋谷区",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://corp.schoo.jp/company/corporate-profile"
+          },
+          "employee_count": {
+            "value": 250,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "公式会社概要。派遣・業務委託を含む。",
+            "confidence": "high"
+          },
+          "listing": {
+            "is_listed": true,
+            "market": "Tokyo Stock Exchange Growth",
+            "ticker": "264A"
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "users",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "Schoo Swingのアクセス制御不備を悪用した不正アクセスと86名分の情報漏えい",
+          "types": [
+            "unauthorized_access",
+            "confirmed_data_breach"
+          ],
+          "occurred_at": "2026-11-14",
+          "detected_at": "2026-11-14",
+          "disclosed_at": "2026-11-19",
+          "occurred_time": {
+            "local_time": "02:30",
+            "timezone": "Asia/Tokyo",
+            "time_band": "overnight"
+          },
+          "status": {
+            "value": "service_recovered_investigating",
+            "as_of": "2026-11-19"
+          },
+          "attack_vector": "公開されていた体験用共通アカウントでログインし、学校間のアクセス制御が不十分な機能を画面を介さず直接操作。11月14日03:16〜04:40に他校情報を取得。",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "Schoo Swing LMS"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "公式発表は第三者による不正アクセスを確認しているが攻撃者・集団の帰属は示していない。",
+            "sources": [
+              "https://prtimes.jp/main/html/rd/p/000000388.000006391.html"
+            ],
+            "reviewed_at": "2026-11-20"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": 86,
+          "affected_users_note": "教員9名と77校の代表者77名。受講者情報・ログインパスワード・授業データは対象外。",
+          "affected_organizations": 78,
+          "records": null,
+          "data_exposed": [
+            "teacher_name",
+            "teacher_name_kana",
+            "teacher_nickname",
+            "teacher_email",
+            "school_representative_name",
+            "school_address",
+            "school_phone_number"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "11月14日05:30〜18:56に停止。アクセス制御不備修正、体験用共通アカウント停止。一部学校情報の改ざんも復元。",
+          "service_recovered_at": "2026-11-14T18:56:00+09:00"
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "株式会社Schoo",
+            "published_at": "2026-11-19",
+            "url": "https://prtimes.jp/main/html/rd/p/000000388.000006391.html",
+            "title": "「Schoo Swing」への不正アクセスに関するお詫びとお知らせ"
+          },
+          {
+            "kind": "official",
+            "publisher": "株式会社Schoo",
+            "published_at": null,
+            "url": "https://corp.schoo.jp/company/corporate-profile",
+            "title": "会社概要"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-20T11:55:00+09:00"
+      }
+    }
+  ]
+}
