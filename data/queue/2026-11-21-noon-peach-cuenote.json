@@ -1,0 +1,141 @@
+{
+  "operations": [
+    {
+      "operation": "create",
+      "record": {
+        "id": "2026-11-20-peach-aviation-cuenote-fc-data-breach",
+        "organization": {
+          "name": "Peach Aviation株式会社",
+          "name_en": "Peach Aviation Limited",
+          "type": "company",
+          "size": "large_enterprise",
+          "industry": [
+            "aviation",
+            "transportation",
+            "travel"
+          ],
+          "business_model": [
+            "b2c"
+          ],
+          "service": "Cuenote FC email distribution (Yumirulink)",
+          "country": "JP",
+          "website": "https://www.flypeach.com/",
+          "headquarters": {
+            "address": "大阪府泉佐野市泉州空港北1番地",
+            "prefecture": "大阪府",
+            "city": "泉佐野市",
+            "latitude": null,
+            "longitude": null,
+            "precision": "exact",
+            "source": "https://www.flypeach.com/corporate/about"
+          },
+          "employee_count": {
+            "value": 2166,
+            "unit": "employees",
+            "estimate_type": "reported",
+            "basis": "2026年4月1日現在、派遣社員・出向者を除く",
+            "confidence": "high"
+          },
+          "listing": {
+            "is_listed": false,
+            "market": null,
+            "ticker": null
+          },
+          "estimated_total_users": {
+            "value": null,
+            "unit": "people",
+            "estimate_type": "unknown",
+            "basis": null,
+            "confidence": "unknown"
+          }
+        },
+        "incident": {
+          "title": "ユミルリンクCuenote FCへの不正アクセスに伴うPeach顧客情報8,997,106件の漏えい",
+          "types": [
+            "unauthorized_access",
+            "data_breach",
+            "third_party_compromise"
+          ],
+          "occurred_at": "2026-10-18",
+          "occurred_time": {
+            "value": null,
+            "band": null,
+            "note": "委託先での発生日。時刻非公表。"
+          },
+          "detected_at": null,
+          "detected_time": {
+            "value": null,
+            "band": null,
+            "note": "委託先での不正アクセス検知日時は未公表。11月6日は影響範囲の確定日であり検知日ではない。"
+          },
+          "disclosed_at": "2026-11-20",
+          "status": {
+            "value": "investigating",
+            "as_of": "2026-11-20"
+          },
+          "attack_vector": "Third-party unauthorized access to Yumirulink Cuenote FC server environment; intrusion route remains under investigation.",
+          "threat_actor": null,
+          "ransomware": false,
+          "malware_family": null,
+          "vulnerabilities": [],
+          "affected_systems": [
+            "Yumirulink Cuenote FC email distribution servers",
+            "Peach email newsletters",
+            "Peach automated notification emails",
+            "Peach refund application form"
+          ],
+          "affected_regions": [],
+          "threat_actor_attribution": {
+            "name": null,
+            "actor_type": "unknown",
+            "aliases": [],
+            "status": "unknown",
+            "confidence": "unknown",
+            "basis": "Peach公式発表は第三者による委託先への不正アクセスを確認したが、攻撃主体の帰属情報はない。ユミルリンクはランサムウェアによる事案ではないと報告。",
+            "sources": [
+              "https://www.flypeach.com/application/files/3617/9515/4415/20261120_INFO_JP.pdf"
+            ],
+            "reviewed_at": "2026-11-21"
+          }
+        },
+        "impact": {
+          "confirmed_breach": true,
+          "affected_users": null,
+          "affected_users_note": "8,997,106は漏えい対象レコード数であり、ユニーク人数として扱わない。",
+          "affected_organizations": null,
+          "records": 8997106,
+          "data_exposed": [
+            "name",
+            "date of birth",
+            "gender",
+            "address",
+            "phone number",
+            "email address",
+            "itinerary"
+          ],
+          "service_disruption": true,
+          "service_disruption_note": "メールマガジン、自動通知メール、返金払い戻しフォーム停止。航空券予約・変更および運航への影響なし。",
+          "service_recovered_at": null
+        },
+        "sources": [
+          {
+            "kind": "official",
+            "publisher": "Peach Aviation株式会社",
+            "published_at": "2026-11-20",
+            "url": "https://www.flypeach.com/application/files/3617/9515/4415/20261120_INFO_JP.pdf",
+            "title": "ユミルリンク株式会社で発生した不正アクセスに伴うメールアドレス等の漏えいのお詫びとお知らせ"
+          },
+          {
+            "kind": "official",
+            "publisher": "Peach Aviation株式会社",
+            "published_at": null,
+            "url": "https://www.flypeach.com/corporate/about",
+            "title": "Peachについて（会社概要）"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-11-21T02:55:00Z"
+      }
+    }
+  ]
+}
